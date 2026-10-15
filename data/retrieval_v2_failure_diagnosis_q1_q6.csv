@@ -1,0 +1,17 @@
+﻿qid,support_group,present_in_library,dense_top5_hit,hybrid_diverse_top5_hit,hybrid_diverse_top10_hit,diagnosis
+Q1,contaminant_limits_2023_915,True,False,True,True,ranking_failure_improved_by_hybrid
+Q1,special_import_2019_1793,True,True,True,True,retrieval_ok
+Q1,general_food_law_178_2002,True,False,False,False,ranking_failure_not_fixed
+Q1,official_controls_2017_625,True,False,False,False,ranking_failure_not_fixed
+Q2,dried_figs_6_10_row,True,False,False,True,topk_capacity_or_diversity_issue
+Q3,dried_figs_scope_row,True,False,True,True,ranking_failure_improved_by_hybrid
+Q3,article_3_rule,True,False,True,True,ranking_failure_improved_by_hybrid
+Q4,turkiye_figs_annex_ii,True,True,True,True,retrieval_ok
+Q5,annex_ii_scope_and_30pct,True,False,False,False,ranking_failure_not_fixed
+Q5,identification_code,True,False,False,False,ranking_failure_not_fixed
+Q5,sampling_analysis_results,True,False,True,True,ranking_failure_improved_by_hybrid
+Q5,official_certificate,True,False,False,False,ranking_failure_not_fixed
+Q5,ched,True,False,False,False,ranking_failure_not_fixed
+Q5,prior_notification,True,False,False,False,ranking_failure_not_fixed
+Q6,fbo_article_19,True,True,True,True,retrieval_ok
+Q6,authority_article_66,True,False,False,False,ranking_failure_not_fixed

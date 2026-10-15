@@ -1,0 +1,23 @@
+{
+  "build": "Build02",
+  "retrieval_type": "frozen_static_rag",
+  "query_mode": "single_query_single_shot",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "chunk_source": "data\\chunks_legal_aware.json",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "dense_similarity": "cosine_via_normalized_dot_product",
+  "lexical_retriever": "BM25Okapi",
+  "fusion": "Reciprocal Rank Fusion",
+  "rrf_k": 60,
+  "candidate_depth_per_retriever": 50,
+  "diversification": {
+    "group": "file + article/location",
+    "max_per_group": 2
+  },
+  "top_k": 5,
+  "retrieval_method": "hybrid_dense_bm25_rrf_diverse_v1",
+  "query_decomposition": false,
+  "llm_used_in_retrieval": false,
+  "iterative_retrieval": false
+}

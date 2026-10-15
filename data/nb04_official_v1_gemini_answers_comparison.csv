@@ -1,0 +1,306 @@
+﻿qid,mode,model,answer,citation_markers,valid_marker_format,unknown_marker_count,prompt_tokens,completion_tokens,retrieved_chunk_ids
+Q1,prompt_only,gemini-3.6-flash,"### 1. Short answer
+
+The entry of dried figs containing aflatoxin B1 into the European Union is governed primarily by EU food safety and contaminants legislation, official controls regulations, and specific emergency import control measures. The relevant EU legal framework includes:
+
+*   **Contaminants Regulation:** Commission Regulation (EU) 2023/915 (replacing Regulation (EC) No 1881/2006) on maximum levels for certain contaminants in food.
+*   **General Food Law:** Regulation (EC) No 178/2002 on general food safety requirements and the Rapid Alert System for Food and Feed (RASFF).
+*   **Official Import Controls:** Regulation (EU) 2017/625 (Official Controls Regulation) and Commission Implementing Regulation (EU) 2019/1793 regarding increased controls and emergency measures on certain third-country food imports, specifically targeting aflatoxins in Turkish dried figs.
+
+---
+
+### 2. Legal basis and relevant conditions
+
+#### A. Contaminant limits (Aflatoxins)
+*   **Commission Regulation (EU) 2023/915** (which repealed and replaced Regulation (EC) No 1881/2006) sets legal maximum limits for mycotoxins, including Aflatoxin B1 and total aflatoxins (B1, B2, G1, G2), in various food categories.
+*   Dried figs intended for direct human consumption or as an ingredient in food must comply with strict maximum threshold limits. Food exceeding these limits is deemed unsafe under EU law and cannot be placed on the EU market, blended with compliant batches, or diluted.
+
+#### B. Import controls and special measures for Türkiye
+*   **Regulation (EU) 2017/625 (Official Controls Regulation):** Provides the legal framework for official checks performed at EU Border Control Posts (BCPs) to ensure compliance with food safety rules.
+*   **Commission Implementing Regulation (EU) 2019/1793:** Establishes temporary increases in official controls and special emergency conditions for specific goods entering the EU from certain third countries due to known risks (such as aflatoxins). Dried figs originating from Türkiye are specifically listed in the annexes to this regulation, subjecting shipments to:
+    *   Mandatory entry through designated Border Control Posts (BCPs).
+    *   Requirement for official health certificates and analytical test results issued by the competent authorities of Türkiye prior to export.
+    *   Fixed frequencies of documentary, identity, and physical checks (including sampling and laboratory testing for aflatoxins) upon arrival at the EU border.
+
+#### C. Notification and enforcement
+*   **Regulation (EC) No 178/2002:** Establishes the general principles of EU food law. Under Article 14, food unsafe due to contaminant levels must not be placed on the market.
+*   If a shipment tests positive for non-compliant aflatoxin levels at the border, it triggers border rejection procedures under Regulation (EU) 2017/625 (e.g., detention, re-dispatch outside the EU, or destruction).
+*   The finding must be reported via the **Rapid Alert System for Food and Feed (RASFF)** to inform Member States and prevent unauthorized entry into the single market.
+
+---
+
+### 3. Uncertainties / verification needed
+
+*   **Exact numerical limits:** Specific maximum allowable levels (measured in $\mu\text{g/kg}$ or ppb) for Aflatoxin B1 and total aflatoxins depend on whether the dried figs are intended for direct human consumption or are subject to further sorting or physical treatment before consumption. The exact current limits must be verified directly in the annexes of Regulation (EU) 2023/915.
+*   **Current sampling frequency and annex status:** The annexes of Implementing Regulation (EU) 2019/1793 are updated regularly (typically every six months). The precise required check frequency (e.g., percentage of consignments subjected to identity and physical checks) and applicable certification rules for Turkish dried figs must be verified in the latest active amendment of Regulation (EU) 2019/1793.",0,0,0,149,902,
+Q1,rag,gemini-3.6-flash,"### 1. Short answer
+Based on the provided legal excerpts, two main EU regulations apply to this case:
+* **Commission Implementing Regulation (EU) 2019/1793**, which lays down temporary increased controls and conditions for the entry into the EU of dried figs originating from Türkiye due to contamination risks from aflatoxins [E1].
+* **Commission Regulation (EU) 2023/915**, which establishes regulatory rules and maximum legal thresholds for mycotoxins—including Aflatoxin B1—in food [E3].
+
+---
+
+### 2. Legal basis and relevant conditions
+* **Import Controls and Surveillance (Commission Implementing Regulation (EU) 2019/1793):**
+  * **Scope:** Covers dried figs, mixtures containing dried figs, dried fig paste, and prepared/preserved dried figs originating from Türkiye [E1].
+  * **Hazards Identified:** Explicitly targets hazards from aflatoxins (as well as ochratoxin A) [E1].
+  * **Control Requirements:** Mandates specific border check frequencies; for the listed dried-fig entries from Türkiye, the baseline frequency for identity and physical checks is set at 30% [E1].
+
+* **Contaminant Thresholds (Commission Regulation (EU) 2023/915):**
+  * **Scope:** Governs maximum permissible limits for mycotoxins in food, specifically regulating Aflatoxin B1 and the sum of aflatoxins (B1, B2, G1, and G2) [E3].
+  * **Calculation Rules:** For the sum of aflatoxins, maximum levels are calculated based on lower-bound concentrations, assuming values below the limit of quantification are zero [E3].
+
+---
+
+### 3. Uncertainties / verification needed
+* **Specific Maximum Limit for Dried Figs:** The provided excerpts do not contain the specific numerical maximum limit ($\mu\text{g/kg}$) for Aflatoxin B1 in standard dried figs intended for direct human consumption or as food ingredients (the excerpts only provide Ochratoxin A limits for dried figs [E2] and Aflatoxin B1 limits for infant/special medical foods [E4, E5]). The evidence is insufficient to verify the exact concentration limit for standard dried figs, which must be cross-checked in the full text of Regulation (EU) 2023/915.
+* **Temporal Status:** The retrieved excerpts represent historical snapshot data (marked with version dates in 2026). Current official texts must be verified to confirm whether the specific frequency of checks or threshold values remain in force.",8,8,0,2388,555,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs|legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row3::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row22::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row21::01
+Q2,prompt_only,gemini-3.6-flash,"### 1. Short answer
+Under EU food safety rules, the maximum levels for aflatoxins in dried figs intended for direct human consumption (or for use as an ingredient in food) are generally set at:
+* **Aflatoxin B1:** **6.0 µg/kg** (ppb)
+* **Total aflatoxins (sum of B1, B2, G1, and G2):** **10.0 µg/kg** (ppb)
+
+*(Higher limits apply if the dried figs are explicitly destined to undergo further sorting or physical treatment before human consumption).*
+
+---
+
+### 2. Legal basis and relevant conditions
+* **Regulatory Framework:** Contaminant limits in food are established under **Commission Regulation (EU) 2023/915** on maximum levels for certain contaminants in food (which repealed and replaced the previous framework under Regulation (EC) No 1881/2006).
+* **Intended Use Condition:** 
+  * The lower limits (**6.0 µg/kg** for B1 and **10.0 µg/kg** total) apply strictly to dried figs placed on the market for **direct human consumption** or as an ingredient in food.
+  * Products intended for further physical processing/sorting before human consumption have higher regulatory thresholds (historically set at 9.0 µg/kg for B1 and 15.0 µg/kg total), reflecting the expectation that sorting will lower the contamination level before final retail release.
+* **Sum Calculation:** Total aflatoxins refer to the analytical sum of aflatoxins B1, B2, G1, and G2.
+
+---
+
+### 3. Uncertainties / verification needed
+* **Consolidated Annex Verification:** While these specific values (6.0 µg/kg and 10.0 µg/kg) reflect the long-standing thresholds established for dried figs, the exact current Annex I of Regulation (EU) 2023/915 (and any recent amending regulations) should be directly checked to confirm no subsequent adjustments have occurred.
+* **Sampling Protocols:** Legal compliance is tied strictly to official EU sampling and analytical procedures (governed primarily by Regulation (EC) No 401/2006). Analytical results are evaluated taking into account expanded measurement uncertainty and recovery corrections.
+* **Import Rules:** Special import controls or specific certificate requirements (e.g., under Regulation (EU) 2019/1793 for intensified official controls) may apply depending on the country of origin.",0,0,0,148,542,
+Q2,rag,gemini-3.6-flash,"1. Short answer
+The supplied legal evidence is insufficient to specify the applicable EU maximum levels for aflatoxin B1 and total aflatoxins in dried figs intended for direct human consumption, as the relevant category for dried figs is not contained in the provided excerpts.
+
+2. Legal basis and relevant conditions
+* Commission Regulation (EU) 2023/915 sets maximum levels for aflatoxins (Aflatoxin B1 and the sum of B1, B2, G1, and G2) across various food categories under Section 1.1 [E1, E2, E3, E4, E5].
+* For total aflatoxins (sum of B1, B2, G1, and G2), maximum levels refer to lower-bound concentrations calculated on the assumption that all values below the limit of quantification are zero [E1, E2, E3, E4, E5].
+* Because the provided extracts only cover other specific foods (such as maize, rice, dried spices, baby food, and foods for special medical purposes) [E1, E2, E4, E5], the specific conditions and numerical limits for dried figs cannot be established from this material.
+
+3. Uncertainties / verification needed
+* The exact numerical limits for dried figs intended for direct human consumption cannot be verified from the provided text. 
+* Verification in the complete text or additional rows of Annex I / Table 3 of Commission Regulation (EU) 2023/915 is required to determine the applicable standards for dried figs.",0,0,0,1926,324,legal::EU_2023_915_consolidated_2026-08-19.html::table3_row22::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row16::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row1::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row17::01|legal::EU_2023_915_consolidated_2026-08-19.html::table3_row21::01
+Q3,prompt_only,gemini-3.6-flash,"### 1. Short answer
+Yes. Under major regulatory frameworks—most notably European Union (EU) food safety law—the applicable maximum limits for certain contaminants (such as mycotoxins like aflatoxins) depend on the intended use of the dried figs. Higher (less stringent) limits apply to dried figs intended to undergo sorting or other physical treatments prior to human consumption, whereas stricter limits apply to dried figs intended for direct human consumption or for direct use as an ingredient in food products.
+
+---
+
+### 2. Legal basis and relevant conditions
+
+* **Primary Legal Basis (EU):** 
+  In the European Union, rules on maximum levels for contaminants in foodstuffs are governed by contaminant legislation (previously Commission Regulation (EC) No 1881/2006, superseded by Commission Regulation (EU) 2023/915).
+  
+* **Distinction by Intended Use:**
+  The legislation distinguishes between two main categories of dried fruit (including dried figs):
+  1. **Direct consumption/ingredient:** Dried figs intended for direct human consumption or for use as an ingredient in foodstuffs without prior physical treatment. These are subject to stricter maximum levels.
+  2. **Further processing/sorting:** Dried figs to be subjected to sorting, or other physical treatment, before human consumption or before being used as a food ingredient. These are permitted higher maximum levels because sorting and physical cleaning methods can significantly reduce contaminant concentrations (e.g., removing contaminated or damaged figs).
+
+* **Key Conditions for Further Processing:**
+  * **Traceability and Labeling:** Batches imported or traded under the higher limits designated for sorting/processing must be clearly labeled indicating their intended use (e.g., stating that the product must be subjected to sorting or other physical treatment to reduce contaminant levels before human consumption).
+  * **Processing Capability:** The destination facility must possess the required equipment and processes to carry out effective sorting or treatment.
+  * **Final Compliance:** After sorting or processing, the final product placed on the market for human consumption must meet the stricter maximum limit set for direct consumption.
+
+---
+
+### 3. Uncertainties / verification needed
+
+* **Exact Numerical Limits:** The exact maximum limits (expressed in micrograms per kilogram, µg/kg) for specific contaminants—such as Aflatoxin B1, Total Aflatoxins, or Ochratoxin A—are not specified here and must be verified directly in the current annexed tables of Commission Regulation (EU) 2023/915 or relevant national codes.
+* **Jurisdiction:** If the trade or product destination is outside the European Union (e.g., US FDA, Codex Alimentarius, or local national frameworks), the distinctions, definitions, and applicable thresholds may differ significantly or may not recognize a separate limit for processing batches.
+* **Sampling and Analytical Methodologies:** Official control protocols, sampling methods, and analytical uncertainty tolerances vary by jurisdiction and should be verified with local competent food safety authorities.",0,0,0,145,614,
+Q3,rag,gemini-3.6-flash,"### 1. Short answer
+The supplied evidence is insufficient to establish whether the applicable maximum contaminant limit for dried figs changes based on whether they are intended for direct consumption or for further processing/sorting.
+
+### 2. Legal basis and relevant conditions
+* **Import controls:** Commission Implementing Regulation (EU) 2019/1793 establishes an identity and physical check frequency (30%) for aflatoxins and Ochratoxin A on dried fig products from Türkiye [E1]. However, this excerpt does not establish specific maximum limits or differentiate limits by intended use [E1].
+* **Contaminant limits for processed/mixed products:** Commission Regulation (EU) 2023/915 establishes a maximum level for Ochratoxin A of 4,0 μg/kg for products containing at least 20% dried vine fruits and/or dried figs [E3].
+* **Insufficient evidence for intended use distinction:** None of the provided excerpts state whether maximum contaminant levels (e.g., for aflatoxins or Ochratoxin A) in standalone dried figs differ between direct human consumption and further processing or sorting. The remaining retrieved chunks cover cadmium limits for cocoa and chocolate products [E2, E4, E5], which are not relevant to dried figs.
+
+### 3. Uncertainties / verification needed
+* **Missing provisions:** To determine if differential limits apply, the relevant provisions of Regulation (EU) 2023/915 governing mycotoxins (aflatoxins and Ochratoxin A) specifically in dried figs—including any notes on sorting or physical treatment—must be reviewed directly, as they are not included in the supplied excerpts.
+* **Temporal status:** The provided documents represent historical consolidated snapshots and must be cross-referenced against the current official EU legislation.",3,3,0,2192,375,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs|legal::EU_2023_915_consolidated_2026-08-19.html::table19_row76::01|legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01|legal::EU_2023_915_consolidated_2026-08-19.html::table19_row74::01|legal::EU_2023_915_consolidated_2026-08-19.html::table19_row75::01
+Q4,prompt_only,gemini-3.6-flash,"### 1. Short Answer
+Yes. Dried figs (and certain derived products such as fig paste or mixtures) originating from Türkiye are subject to special import conditions and increased official controls upon entry into the European Union. This is primarily due to the risk of mycotoxin contamination, specifically **aflatoxins**.
+
+---
+
+### 2. Legal Basis and Relevant Conditions
+
+*   **Framework Legislation:**
+    *   **Regulation (EU) 2017/625** (Official Controls Regulation): Governs official controls and entry requirements for food and feed entering the EU.
+    *   **Commission Implementing Regulation (EU) 2019/1793**: Sets out temporary emergency measures and increased controls on certain food and feed of non-animal origin from specific third countries due to contamination risks (aflatoxins in the case of Turkish dried figs).
+
+*   **Key Special Import Conditions:**
+    *   **Official Certificate:** Consignments must be accompanied by an Official Health Certificate issued by the competent Turkish authority, certifying that sampling and analysis have been performed and the product complies with EU aflatoxin limits.
+    *   **Analytical Results:** Consignments must be accompanied by the official laboratory results of sampling and testing carried out prior to export.
+    *   **Prior Notification:** Importers must notify the Border Control Post (BCP) in advance of the consignment's arrival via the EU’s TRACES (Trade Control and Expert System) system using a Common Health Entry Document for Food and Feed of Non-Animal Origin (CHED-D).
+    *   **Entry Points:** Import is restricted to designated Border Control Posts (BCPs) equipped to handle these products.
+    *   **Controls at BCPs:**
+        *   **Documentary checks:** Conducted on 100% of consignments.
+        *   **Identity and physical checks (including sampling):** Performed at a specific mandatory frequency established in the annexes of Regulation (EU) 2019/1793.
+
+---
+
+### 3. Uncertainties / Verification Needed
+
+*   **Exact Control Frequencies:** The required percentage for physical and identity checks (e.g., whether it is currently 20%, 30%, or 50%) is updated regularly by the European Commission—typically every six months—based on compliance history and RASFF (Rapid Alert System for Food and Feed) notifications. The exact current rate cannot be confirmed without checking the latest amendment to Regulation (EU) 2019/1793.
+*   **Annex Classification:** Whether dried figs are listed under Annex I (increased controls) or Annex II (special emergency conditions requiring health certificates prior to export) can shift over time, though historically they fall under Annex II due to aflatoxin risks.
+*   **Exact Product Scope and Tariff Codes:** The specific Combined Nomenclature (CN) codes covered (e.g., whole dried figs, fig paste, flour, or prepared mixtures) must be verified in the latest version of the applicable regulation.
+*   **Maximum Contaminant Limits:** Maximum levels for aflatoxin B1 and total aflatoxins are governed by EU contaminants legislation (formerly Regulation (EC) No 1881/2006, replaced by Regulation (EU) 2023/915). Specific limit values must be verified against current consolidated texts.
+
+*Note: This response provides regulatory research support based on general EU framework rules and does not substitute for checking the official, currently applicable text on EUR-Lex.*",0,0,0,142,742,
+Q4,rag,gemini-3.6-flash,"### 1. Short answer
+Yes. Dried figs and related dried-fig products originating from Türkiye are subject to special import conditions and official controls when entering the EU due to the risk of contamination by aflatoxins and ochratoxin A, with identity and physical checks set at a frequency of 30% [E1]. Additionally, dried figs must comply with EU maximum limits for contaminants, such as Ochratoxin A [E5].
+
+---
+
+### 2. Legal basis and relevant conditions
+* **Commission Implementing Regulation (EU) 2019/1793 (Annex II, Section 1, Row 14):** Places dried figs, mixtures containing figs, dried fig paste, and prepared or preserved dried figs originating from Türkiye under special entry conditions [E1]. 
+  * **Identified hazards:** Aflatoxins and Ochratoxin A [E1].
+  * **Control frequency:** Identity and physical checks are mandated at a 30% frequency [E1].
+* **Commission Regulation (EU) 2023/915:** Establishes a maximum level of 8.0 μg/kg for Ochratoxin A in dried figs [E5].
+* **Regulation (EU) 2017/625 (Articles 73 & 74):** Defines the framework for approving pre-export controls by third countries [E2] and mandates increased controls or potential withdrawal of approval if serious or recurrent non-compliance is identified [E4].
+
+---
+
+### 3. Uncertainties / verification needed
+* **Accompanying Documentation & Entry Requirements:** While Annex II of Regulation (EU) 2019/1793 establishes control measures for dried figs from Türkiye [E1], the supplied excerpts do not contain the full text detailing mandatory accompanying documents (such as official health certificates or sampling results). The evidence provided is insufficient to confirm these specific procedural requirements.
+* **Derived Products (Flours/Meals):** Excerpt [E3] mentions ""Flours, meals and powder of dried figs"" under Regulation (EU) 2019/1793, but the excerpt does not show the country column or check frequency for that specific entry.
+* **Current Legal Status:** The provided excerpts are consolidated text snapshots (bearing version dates up to 2026). Because import control lists are frequently updated, the current official text on EUR-Lex must be cross-checked to verify if control frequencies or listed hazards have changed.",10,10,0,2515,527,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs|legal::EU_2017_625_consolidated_2025-01-05.html::art_73::02|legal::EU_2019_1793_consolidated_2026-06-30.html::table5_row169::01|legal::EU_2017_625_consolidated_2025-01-05.html::art_74::01|legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01
+Q5,prompt_only,gemini-3.6-flash,"### 1. Short answer
+
+Applicable controls, sampling/testing protocols, and documentation requirements depend on the specific product category, hazard, and target jurisdiction (e.g., EU food safety, chemical safety, or medical devices). 
+
+In general, highly regulated sectors mandate a combination of **official controls** (documentary, identity, and physical checks), **accredited laboratory sampling and testing** according to standardized methods, and **comprehensive traceability documentation** (such as Certificates of Analysis, Official Health/Sanitary Certificates, and Declarations of Compliance).
+
+---
+
+### 2. Legal basis and relevant conditions
+
+Depending on the specific regulatory regime (using general EU/international regulatory frameworks as a reference baseline), the requirements typically encompass:
+
+#### A. Official & Operational Controls
+* **Risk-Based Inspection:** Competent authorities perform documentary checks, identity checks, and physical inspections at border control posts or market placement points based on risk profiles.
+* **Operator Hygiene / Quality Management:** Business operators must maintain internal control systems (e.g., HACCP principles for food/feed, Good Manufacturing Practice (GMP) for pharmaceuticals/cosmetics, or ISO quality management systems).
+
+#### B. Sampling and Testing Requirements
+* **Accredited Laboratories:** Testing must generally be performed by laboratories accredited under ISO/IEC 17025 for the specific parameters evaluated.
+* **Representative Sampling:** Sampling must follow standardized, statistically valid sampling plans established by relevant performance criteria (e.g., standardized lot sampling protocols).
+* **Testing Scope:** Must screen for specific parameters such as Maximum Residue Limits (MRLs), maximum contaminant levels (e.g., heavy metals, mycotoxins, pesticides), microbiological criteria, or chemical purity/composition limits.
+
+#### C. Documentation Requirements
+* **Traceability Records:** Documentation proving one-step-back and one-step-forward traceability across the supply chain.
+* **Certificates of Analysis (CoA):** Issued by an accredited laboratory, confirming that batch/lot samples meet required statutory limits.
+* **Official Entry/Import Documents:** For imports subject to increased controls, mandatory official certificates (e.g., Common Health Entry Documents [CHED], fit-for-human-consumption certificates, or Phytosanitary Certificates) issued by the competent authority of the exporting country.
+* **Compliance Declarations / Technical Dossiers:** Declarations of Conformity, Safety Data Sheets (SDS) under chemical regulations (like REACH/CLP), or technical compliance files.
+
+---
+
+### 3. Uncertainties / verification needed
+
+To establish the exact, legally binding requirements, the following details must be verified:
+
+* **Product Context:** The specific product type, Harmonized System (HS) code, or chemical identification (CAS number).
+* **Jurisdiction:** The specific country or region where the goods are being produced, imported, or placed on the market.
+* **Exact Quantitative Limits:** Maximum residue limits, action levels, or specific percentage thresholds applicable to the product/substance.
+* **Current Consolidated Text:** The exact regulation numbers, implementing acts, and current emergency/increased-control measures in effect for the specific origin or product line cannot be confirmed without the specific context and must be checked against the latest official consolidated legislation.",0,0,0,140,670,
+Q5,rag,gemini-3.6-flash,"### 1. Short Answer
+Under Regulation (EU) 2017/625, official controls include documentary checks, identity checks, and physical checks [E4]. Sampling and testing must adhere to a defined hierarchy of Union, international, or validated national methods, with strict protocols for sample validity, laboratory performance, and reference laboratory standards [E1, E3, E5]. Documentation and notification requirements apply to Member State disclosures regarding national reference laboratories [E5] and official documentary checks [E4].
+
+---
+
+### 2. Legal Basis and Relevant Conditions
+
+#### A. Controls and Checks
+* **Types and Frequencies**: Official controls encompass documentary checks, identity checks, and physical checks [E4]. The European Commission lays down rules via implementing acts governing frequency rates and procedures for identity and physical checks based on risk factors and categories of goods [E4].
+
+#### B. Sampling and Testing Requirements
+* **Hierarchy of Methods**: Methods used for sampling, analyses, tests, and diagnoses must comply with relevant Union rules or performance criteria [E3]. In the absence of Union rules, laboratories must use:
+  1. Internationally recognised protocols (e.g., European Committee for Standardisation / CEN) or methods developed/recommended by EU Reference Laboratories (EURLs) [E3];
+  2. National rules, National Reference Laboratory (NRL) methods, or inter-/intra-laboratory validated methods [E3].
+* **Urgent Situations**: In emergencies where no validated method exists, an NRL or designated official laboratory may temporarily use non-validated methods until validation occurs [E1, E3].
+* **Sample Handling**: Samples must be taken, handled, and labelled to preserve their legal, scientific, and technical validity [E1]. Where possible, methods must be characterised by criteria set out in Annex III of the regulation [E1].
+* **Laboratory Performance & Derogations**: Certain official laboratories operating under derogations from mandatory accreditation must have quality assurance systems, participate in proficiency/comparative tests organised by NRLs, and send samples requiring confirmatory analysis to fully compliant official laboratories [E2].
+* **National Reference Laboratories (NRLs)**: Designated NRLs must maintain qualified staff, suitable equipment/infrastructure, emergency capabilities, and biosecurity standards where relevant [E5].
+
+#### C. Documentation Requirements
+* **Public and Regulatory Disclosures**: Member States must communicate the name and address of each designated NRL to the Commission, relevant EURLs, and other Member States, as well as make this information publicly available and update it as needed [E5].
+* **Official Checks**: Goods subject to controls undergo documentary checks as part of official control procedures [E4].
+
+---
+
+### 3. Uncertainties / Verification Needed
+* **Commodity-Specific Requirements**: The retrieved excerpts do not establish product-specific or sector-specific control frequencies, testing thresholds, or exact import documentation/certificate requirements; the evidence provided is insufficient to specify non-general commodity rules.
+* **Annex Criteria**: The specific performance parameters contained in Annex III (referenced in Article 34(4) [E1]) are not included in the provided text and cannot be verified.
+* **Temporal Status**: The provided texts are historical snapshots (version date January 5, 2025); verification against the current, official EU legal database is required to confirm whether subsequent implementing acts or amendments have altered these provisions.",15,15,0,2401,708,legal::EU_2017_625_consolidated_2025-01-05.html::art_34::02|legal::EU_2017_625_consolidated_2025-01-05.html::art_40::02|legal::EU_2017_625_consolidated_2025-01-05.html::art_34::01|legal::EU_2017_625_consolidated_2025-01-05.html::art_54::02|legal::EU_2017_625_consolidated_2025-01-05.html::art_100::02
+Q6,prompt_only,gemini-3.6-flash,"### 1. Short Answer
+Both **Food Business Operators (FBOs)** and **Competent Authorities (CAs)** share responsibilities when a non-compliant consignment is detected, with distinct roles:
+* **Food Business Operators** are primarily responsible for ensuring safety and compliance within their business activities. If non-compliance is detected or suspected, operators must immediately initiate withdrawal/recall procedures, inform the competent authorities, isolate the affected products, and bear the financial costs of remedial actions.
+* **Competent Authorities** are responsible for enforcement, official decision-making, and risk management. Upon detecting or being notified of non-compliance, CAs must officially detain the consignment, decide on the appropriate measure (e.g., re-export, destruction, special treatment, or change of intended use), notify other Member States/authorities via rapid alert systems (such as RASFF/IMSOC), and supervise the execution of required actions.
+
+---
+
+### 2. Legal Basis and Relevant Conditions
+
+#### Framework
+Under EU food law (principally General Food Law Regulation (EC) No 178/2002 and the Official Controls Regulation (EU) 2017/625):
+
+#### Obligations of Food Business Operators (FBOs)
+* **Initiation of Withdrawal and Recall:** If an FBO considers or suspects that a food/feed consignment is unsafe or non-compliant, it must immediately withdraw the product from the market and, if necessary, recall it from consumers.
+* **Notification:** FBOs must instantly notify the competent authorities if they have reason to believe that a food placed on the market may be injurious to human health or non-compliant.
+* **Cooperation:** Operators must cooperate with authorities to prevent or reduce risks posed by the non-compliant consignment.
+* **Financial Responsibility:** FBOs responsible for the consignment bear all costs arising from official detention, destruction, re-export, or special treatment ordered by authorities.
+
+#### Obligations and Powers of Competent Authorities (CAs)
+* **Official Detention:** CAs must place non-compliant consignments (especially those entering the EU at Border Control Posts) under official detention to prevent them from entering the market or chain of distribution prematurely.
+* **Ordering Action:** Following consultation with the responsible operator (where feasible), CAs decide and order appropriate measures, such as:
+  * Destruction of the consignment.
+  * Re-dispatch / re-export outside the EU (under strict conditions).
+  * Special treatment (e.g., decontamination or processing) to achieve compliance or bring risk to an acceptable level.
+  * Diversion for purposes other than food or feed.
+* **Information Sharing:** CAs must register non-compliance and notify relevant national and international networks (such as RASFF/IMSOC) to prevent entry through alternative ports or distribution channels.
+* **Supervision and Enforcement:** CAs monitor and confirm that the operator correctly executes the required measures.
+
+---
+
+### 3. Uncertainties / Verification Needed
+* **National Implementation & Specific Sector Rules:** Specific administrative procedures, deadlines for appeals, or authority structures vary by EU Member State and national legislation.
+* **Exact Article References:** Specific article numbers within Regulation (EC) No 178/2002 (e.g., Articles 19/20) and Regulation (EU) 2017/625 (e.g., Articles 65–69 regarding actions on non-compliant consignments) should be verified directly against current official texts.
+* **Non-EU Jurisdictions:** If the question relates to a jurisdiction outside the EU (e.g., US FDA/USDA framework or UK national rules post-Brexit), specific statutory powers and operator notification requirements differ and must be independently verified.",0,0,0,144,789,
+Q6,rag,gemini-3.6-flash,"### 1. Short answer
+When non-compliant food or feed is identified, responsibility is shared between business operators and Member State competent authorities:
+* **Food and Feed Business Operators (including importers, producers, manufacturers, processors, and distributors):** Responsible for immediately initiating procedures to withdraw non-compliant food or feed from the market, informing competent authorities, informing consumers/users, and recalling products if necessary [E2, E5]. Retailers and distributors must initiate withdrawals within their scope and cooperate with authorities and manufacturers [E2, E5].
+* **Competent Authorities / Member States:** Responsible for enforcing food and feed law, maintaining official controls, monitoring compliance, and determining whether non-compliant feed consignments must be destroyed or handled otherwise [E3, E5].
+
+---
+
+### 2. Legal basis and relevant conditions
+
+* **Food Business Operators (Article 19):**
+  * If an operator considers or believes food it imported, produced, processed, manufactured, or distributed is non-compliant with food safety requirements, it must immediately initiate market withdrawal (if outside its immediate control) and inform the competent authorities [E2].
+  * If the product may have reached consumers, the operator must inform consumers accurately and recall the product if other measures are insufficient [E2].
+  * Retail/distribution operators whose activities do not alter packaging, labelling, safety, or integrity must initiate market withdrawals within their scope, supply traceability information, and cooperate with manufacturers and authorities [E2].
+  * Operators must collaborate with competent authorities to avoid or reduce risks [E1].
+
+* **Feed Business Operators and Consignment Rules (Article 20):**
+  * Feed business operators have corresponding withdrawal, notification, user-informing, and recall duties [E5].
+  * Where a batch, lot, or **consignment** does not satisfy feed safety requirements, the feed must be destroyed unless the competent authority is satisfied with an alternative resolution [E5].
+
+* **Member States and Competent Authorities (Article 17 & 20):**
+  * Member States must enforce food law, monitor and verify compliance at all stages through official controls, public communication, and surveillance [E3].
+  * Member States are required to establish effective, proportionate, and dissuasive rules on measures and penalties for infringements [E3].
+  * Competent authorities receive mandatory notifications from operators and decide on the standard destruction requirement for non-compliant feed consignments [E2, E3, E5].
+
+---
+
+### 3. Uncertainties / verification needed
+
+* **Food Consignments vs. Feed Consignments:** The retrieved excerpts explicitly mention actions for a non-compliant ""consignment"" under feed responsibilities (Article 20) [E5]. Specific statutory actions dedicated strictly to *food* consignments (e.g., specific border rejection or detention procedures for food imports) are not fully defined in the provided chunks; evidence in these excerpts is insufficient to detail dedicated border control procedures for food consignments.
+* **Broader Official Controls Framework:** The provided text represents historical snapshots of Regulation (EC) No 178/2002 [E1–E5]. Detailed procedural rules for competent authorities handling non-compliant consignments at borders or official control posts are typically expanded in separate official control regulations (such as Regulation (EU) 2017/625), which are not included in the provided evidence and require separate verification.",9,9,0,2139,721,legal::EU_2002_178_consolidated_2026-01-01.html::art_19::02|legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01|legal::EU_2002_178_consolidated_2026-01-01.html::art_17::01|legal::EU_2002_178_consolidated_2026-01-01.html::art_20::02|legal::EU_2002_178_consolidated_2026-01-01.html::art_20::01

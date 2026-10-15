@@ -1,0 +1,21 @@
+﻿qid,subquery_id,subquery
+Q1,Q1_S1,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. A shipment of dried figs originating from Türkiye is found to contain aflatoxin B1. Which EU legislation is relevant to this case?
+Q1,Q1_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Which EU legislation governs aflatoxin maximum levels?
+Q1,Q1_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Which EU legislation governs official controls or import conditions?
+Q1,Q1_S4,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Which EU general food-law provisions are relevant to non-compliant food?
+Q2,Q2_S1,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What is the applicable EU maximum level for aflatoxin B1 and total aflatoxins in dried figs intended for direct human consumption?
+Q2,Q2_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Maximum level aflatoxin B1 in dried figs intended for direct human consumption.
+Q2,Q2_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Maximum level total aflatoxins B1 B2 G1 G2 in dried figs intended for direct human consumption.
+Q3,Q3_S1,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Does the applicable limit change depending on whether the dried figs are intended for direct consumption or further processing/sorting?
+Q3,Q3_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What rules apply to dried figs intended for direct human consumption?
+Q3,Q3_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What rules apply to dried figs intended for further processing or sorting?
+Q4,Q4_S1,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Are dried figs from Türkiye subject to increased official controls or special import conditions when entering the EU?
+Q4,Q4_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Increased official controls for dried figs from Türkiye.
+Q4,Q4_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Special import conditions for dried figs from Türkiye.
+Q5,Q5_S1,"EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. If so, what controls, sampling/testing requirements, or documentation requirements currently apply?"
+Q5,Q5_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What official controls currently apply to this consignment?
+Q5,Q5_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What sampling and testing requirements currently apply to this consignment?
+Q5,Q5_S4,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What documentation requirements currently apply to this consignment?
+Q6,Q6_S1,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. Which authorities or food business operators are responsible for the relevant actions when a non-compliant consignment is detected?
+Q6,Q6_S2,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What responsibilities do food business operators have when the consignment is non-compliant?
+Q6,Q6_S3,EU regulatory assessment for a shipment of dried figs originating from Türkiye involving aflatoxin B1. What actions or responsibilities do competent authorities have when the consignment is non-compliant?

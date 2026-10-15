@@ -1,0 +1,17 @@
+﻿qid,support_group,present_in_library,n_matching_chunks,example_chunk_id,example_location
+Q1,contaminant_limits_2023_915,True,21,legal::EU_2023_915_consolidated_2026-08-19.html::table3_row1::01,"Table 3, row 1"
+Q1,special_import_2019_1793,True,1,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs,"Annex II, Section 1, Row 14 — Türkiye dried-fig products"
+Q1,general_food_law_178_2002,True,9,legal::EU_2002_178_consolidated_2026-01-01.html::art_1::01,Article 1 — Aim and scope
+Q1,official_controls_2017_625,True,137,legal::EU_2017_625_consolidated_2025-01-05.html::art_1::01,Article 1 — Subject matter and scope
+Q2,dried_figs_6_10_row,True,1,legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01,"Table 3, row 6"
+Q3,dried_figs_scope_row,True,1,legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01,"Table 3, row 6"
+Q3,article_3_rule,True,1,legal::EU_2023_915_consolidated_2026-08-19.html::art_3::01,"Article 3 — Dried, diluted, processed and compound food"
+Q4,turkiye_figs_annex_ii,True,1,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs,"Annex II, Section 1, Row 14 — Türkiye dried-fig products"
+Q5,annex_ii_scope_and_30pct,True,1,legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs,"Annex II, Section 1, Row 14 — Türkiye dried-fig products"
+Q5,identification_code,True,1,legal::EU_2019_1793_consolidated_2026-06-30.html::art_9::01,Article 9 — Identification code
+Q5,sampling_analysis_results,True,1,legal::EU_2019_1793_consolidated_2026-06-30.html::art_10::01,Article 10 — Results of sampling and analyses performed by the competent authorities of the third country
+Q5,official_certificate,True,3,legal::EU_2019_1793_consolidated_2026-06-30.html::art_11::01,Article 11 — Official certificate
+Q5,ched,True,1,legal::EU_2017_625_consolidated_2025-01-05.html::art_56::01,Article 56 — Use of the Common Health Entry Document (CHED) by the operator and by the competent authorities
+Q5,prior_notification,True,1,legal::EU_2019__1013_original.html::art_1::01,Article 1 — Prior notification of consignments
+Q6,fbo_article_19,True,2,legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01,Article 19 — Responsibilities for food: food business operators
+Q6,authority_article_66,True,4,legal::EU_2017_625_consolidated_2025-01-05.html::art_66::01,Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union

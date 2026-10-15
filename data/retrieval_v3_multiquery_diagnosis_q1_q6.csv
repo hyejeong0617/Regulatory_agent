@@ -1,0 +1,17 @@
+﻿qid,support_group,present_in_library,dense_top5,single_hybrid_top5,multiquery_top5,multiquery_top10,diagnosis
+Q1,contaminant_limits_2023_915,True,False,True,True,True,improved_by_single_query_hybrid
+Q1,special_import_2019_1793,True,True,True,True,True,retrieval_ok_dense
+Q1,general_food_law_178_2002,True,False,False,False,False,still_missed
+Q1,official_controls_2017_625,True,False,False,False,False,still_missed
+Q2,dried_figs_6_10_row,True,False,False,True,True,improved_by_multiquery
+Q3,dried_figs_scope_row,True,False,True,True,True,improved_by_single_query_hybrid
+Q3,article_3_rule,True,False,True,False,False,improved_by_single_query_hybrid
+Q4,turkiye_figs_annex_ii,True,True,True,True,True,retrieval_ok_dense
+Q5,annex_ii_scope_and_30pct,True,False,False,True,True,improved_by_multiquery
+Q5,identification_code,True,False,False,False,False,still_missed
+Q5,sampling_analysis_results,True,False,True,False,False,improved_by_single_query_hybrid
+Q5,official_certificate,True,False,False,False,False,still_missed
+Q5,ched,True,False,False,False,False,still_missed
+Q5,prior_notification,True,False,False,False,False,still_missed
+Q6,fbo_article_19,True,True,True,True,True,retrieval_ok_dense
+Q6,authority_article_66,True,False,False,False,True,topk_capacity_issue

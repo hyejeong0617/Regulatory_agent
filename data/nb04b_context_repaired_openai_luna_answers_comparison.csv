@@ -1,0 +1,318 @@
+qid,question,prompt_only_answer,rag_answer
+Q1,A shipment of dried figs originating from Türkiye is found to contain aflatoxin B1. Which EU legislation is relevant to this case?,"## 1. Short answer
+
+The main EU legislation relevant to dried figs from Türkiye found to contain aflatoxin B1 is:
+
+- **Commission Regulation (EU) 2023/915**, which sets maximum levels for certain contaminants in food, including aflatoxins.
+- **Regulation (EU) 2017/625** on official controls, together with **Commission Implementing Regulation (EU) 2019/1793**, as amended, which provides for increased official controls or special import conditions for certain foods from specified non-EU countries.
+- **Regulation (EC) No 178/2002**, the general food-law framework, including food-business operators’ responsibilities and rules concerning unsafe food and traceability.
+- **Commission Implementing Regulation (EU) 2023/2782**, concerning sampling and analysis for the official control of mycotoxins.
+
+## 2. Legal basis and relevant conditions
+
+Regulation 2023/915 is the key legislation for assessing whether the detected aflatoxin level exceeds the applicable EU maximum. The relevant entry and limit must be matched to the product and its intended use; the fact that the product is described as “dried figs” does not by itself establish every detail needed for that comparison.
+
+Regulation 2017/625 and Implementing Regulation 2019/1793 are relevant to official import controls. Whether a particular certificate, test result, or other import document is required depends on the current provisions applying to the product and country of origin—not merely on the finding of aflatoxin B1.
+
+Regulation 178/2002 is relevant to the general obligations of the responsible food-business operators, including ensuring food law compliance and addressing food that is unsafe. Regulation 2023/2782 is relevant to how official sampling and analysis for mycotoxins are conducted.
+
+## 3. Uncertainties / verification needed
+
+The concentration detected, the intended use of the figs, and any processing or sorting status have not been provided. Those facts may affect which contaminant limit applies and whether it has been exceeded.
+
+The current consolidated version of Regulation 2019/1793 should also be checked to confirm the shipment’s precise import-control status and any applicable frequency of checks or documentation. No particular import certificate, test result, or other shipment document can be inferred from the facts given alone.","## 1. Short answer
+The supplied evidence identifies two relevant EU acts:
+
+- **Commission Regulation (EU) 2023/915**, which sets maximum levels for aflatoxins in dried figs. [E2]
+- **Commission Implementing Regulation (EU) 2019/1793**, which lists dried figs originating in Türkiye for increased official controls concerning aflatoxins and ochratoxin A. [E1]
+
+## 2. Legal basis and relevant conditions
+Under the cited entry in Regulation (EU) 2023/915, the maximum level for aflatoxin B1 in dried figs is **6.0 μg/kg**; the maximum for the sum of aflatoxins B1, B2, G1 and G2 is **10.0 μg/kg**. The entry also addresses products consisting only of dried figs and processed products containing at least 80% dried figs. [E2]
+
+The cited entry in Regulation (EU) 2019/1793 covers dried figs from Türkiye and specifies a **30% frequency of identity and physical checks** for the listed hazard entry. [E1]
+
+## 3. Uncertainties / verification needed
+The supplied evidence does not establish the shipment’s measured concentration, product classification or intended use, so it does not determine whether the shipment exceeds the applicable maximum level. The cited consolidated texts are dated 2026; their current applicability and the exact product/CN-code classification should be verified for the shipment."
+Q2,What is the applicable EU maximum level for aflatoxin B1 and total aflatoxins in dried figs intended for direct human consumption?,"## 1. Short answer
+
+For dried figs intended for direct human consumption, the EU maximum levels are:
+
+- **Aflatoxin B1: 6 µg/kg**
+- **Total aflatoxins: 10 µg/kg**
+
+“Total aflatoxins” means the sum of aflatoxins **B1, B2, G1 and G2**.
+
+## 2. Legal basis and relevant conditions
+
+These limits are set by **Commission Regulation (EU) 2023/915, Annex I, Section 1.1**, in the entry for dried figs. They apply to the direct-consumption category specified in the question.
+
+## 3. Uncertainties / verification needed
+
+The fact that aflatoxin B1 was detected does not by itself establish that the shipment exceeds the maximum level; its measured concentration is needed. The applicable consolidated version of the Regulation should also be checked for any amendments relevant to the assessment date.","## 1. Short answer
+For dried figs intended for direct human consumption, the applicable maximum levels shown are **6.0 μg/kg for aflatoxin B1** and **10.0 μg/kg for the sum of aflatoxins B1, B2, G1 and G2**. [E5]
+
+## 2. Legal basis and relevant conditions
+The supplied evidence identifies these limits in Commission Regulation (EU) 2023/915, Table 3, row 1.1.3 (“Dried figs”). For the total-aflatoxins limit, the regulation uses a lower-bound calculation: values below the limit of quantification are treated as zero. [E5]
+
+## 3. Uncertainties / verification needed
+The evidence gives the dried-fig limits but does not separately describe a direct-consumption subcategory. Confirm the current applicable consolidated text if the answer is to be relied on for a live compliance decision."
+Q3,Does the applicable limit change depending on whether the dried figs are intended for direct consumption or further processing/sorting?,"## 1. Short answer
+
+Yes. EU maximum levels for dried figs distinguish between figs intended for sorting or another physical treatment before human consumption and figs marketed for final consumption or use as a food ingredient.
+
+Under the applicable limits, the maximum for **aflatoxin B1** is **6 μg/kg** for the first category and **5 μg/kg** for the second. The maximum for **total aflatoxins** is **10 μg/kg** in both categories.
+
+## 2. Legal basis and relevant conditions
+
+The limits are set by **Commission Regulation (EU) 2023/915, Annex I, as amended**, on maximum levels for certain contaminants in food.
+
+The higher B1 limit applies where the dried figs are **intended to undergo sorting or another physical treatment before human consumption or use as a food ingredient**. “Further processing” should not automatically be treated as qualifying: the intended operation must fit the category’s wording.
+
+## 3. Uncertainties / verification needed
+
+The stated facts do not establish which category applies to this shipment. Its intended use and any qualifying treatment should be verified. Nor is a measured concentration given, so compliance cannot be determined; the total-aflatoxin level is also relevant, not just aflatoxin B1.","## 1. Short answer
+
+The supplied evidence does **not** show a separate aflatoxin limit for dried figs based solely on whether they are intended for direct consumption or for further sorting or processing.
+
+For dried figs, the listed maximum levels are **6.0 μg/kg for aflatoxin B1** and **10.0 μg/kg for the sum of aflatoxins**. Those same levels apply to processed products consisting of at least 80% dried figs. [E2]
+
+## 2. Legal basis and relevant conditions
+
+Regulation (EU) 2023/915 lists those limits for dried figs and expressly applies them to food consisting only of dried figs and to processed products consisting of at least 80% dried figs. [E2]
+
+For other dried, processed or compound foods where no specific Union maximum level is set, Article 3 requires relevant factors to be taken into account, including concentration changes from processing, ingredient proportions and the analytical limit of quantification. During an official control, the food business operator must provide and justify applicable processing or concentration factors and ingredient proportions. [E4]
+
+## 3. Uncertainties / verification needed
+
+The supplied evidence does not establish whether sorting, by itself, changes the applicable limit, or provide a separate limit for figs intended for sorting. Nor does the stated detection of aflatoxin B1 establish whether the shipment exceeds the limit: its measured concentration is not given."
+Q4,Are dried figs from Türkiye subject to increased official controls or special import conditions when entering the EU?,"## 1. Short answer
+
+**Yes.** Dried figs originating in Türkiye have been subject to EU special import conditions for aflatoxins under the EU’s enhanced import-control regime. The precise current scope and requirements should be checked against the version in force for the shipment.
+
+## 2. Legal basis and relevant conditions
+
+The relevant framework is Commission Implementing Regulation (EU) 2019/1793, as amended. Its **Annex II** provides for special conditions for certain foods from specified countries because of contamination risks; dried figs from Türkiye are listed in connection with aflatoxins.
+
+For a product within the listing, the regime entails official controls and specified consignment documentation, generally including an official certificate and sampling-and-analysis results. The exact product description, applicable tariff codes, certificate wording and control arrangements must be checked in the current consolidated regulation.
+
+## 3. Uncertainties / verification needed
+
+The question does not identify the figs’ tariff classification, processing or intended use. Those details may affect whether the specific consignment falls within the listing. Verify the current Annex II entry and any amendments, and confirm the applicable entry procedure with the relevant Member State authority. The fact that aflatoxin B1 was detected does not, by itself, establish whether the shipment complies with the applicable limit or what action the authority will take.","## 1. Short answer
+
+Yes. The supplied evidence lists dried figs from Türkiye under Annex II, Section 1 of Regulation (EU) 2019/1793, which is the entry for goods subject to special conditions governing entry. For the listed dried-fig products, the stated frequency of identity and physical checks is **30%**. [E1]
+
+## 2. Legal basis and relevant conditions
+
+The entry identifies aflatoxins and ochratoxin A as the hazards. Its product scope includes dried figs, with dried figs under CN code 0804 20 90. [E1] The supplied extract of Article 47 of Regulation (EU) 2017/625 provides for official controls at entry where applicable EU acts establish conditions or measures whose compliance must be checked at entry. [E2]
+
+## 3. Uncertainties / verification needed
+
+The supplied evidence does not establish any specific certificate, sampling, or other document requirements, so those should not be inferred from the 30% check frequency. Verify the applicable requirements and the legislation in force for the shipment’s actual product classification and date of entry."
+Q5,"If so, what controls, sampling/testing requirements, or documentation requirements currently apply?","## 1. Short answer
+
+**If the consignment’s product description and CN code fall within the current Annex II listing for dried figs from Türkiye in Regulation (EU) 2019/1793, special import conditions apply.** These generally include official controls at the relevant EU border control post, advance notification and a CHED-D, plus an official certificate and sampling-and-analysis results from the competent authority in the country of origin.
+
+The listing and its control frequency can change. Confirm the applicable entry against the consolidated legislation in force on the date of import.
+
+## 2. Legal basis and relevant conditions
+
+- **Regulation (EU) 2019/1793** sets temporary increased official controls and special import conditions for certain foods from specified countries. For goods listed in **Annex II**, the special conditions include an official certificate and results of sampling and analysis. The exact requirements depend on the current Annex entry and whether the consignment’s product and CN code are covered.
+- Official controls on entry are conducted under **Regulation (EU) 2017/625**. For covered consignments, the importer or responsible operator must make the required advance notification through the relevant EU system and submit a **CHED-D**. The consignment must be presented at an appropriate border control post.
+- The official-check frequency in the applicable Annex entry determines how often identity and physical checks, including sampling, are carried out. It does **not** necessarily mean every consignment is sampled. Documentary checks and any required origin-country certificate and analysis results are separate requirements.
+- Official sampling and analysis for mycotoxins are governed by **Commission Implementing Regulation (EU) 2023/2782**. The aflatoxin results must also be assessed against the applicable maximum levels in **Regulation (EU) 2023/915**.
+
+## 3. Uncertainties / verification needed
+
+- Verify the **current Annex II entry**, CN codes, named aflatoxins and prescribed control frequency for the particular dried-fig product and import date. Do not assume the requirements apply to every fig product or preparation.
+- Check the current certificate model, the required scope of the accompanying analysis results, the notification timing and the designated border control post. These details depend on the applicable entry and current implementing rules.
+- The fact that aflatoxin B1 was detected does not, by itself, establish that the consignment exceeds the applicable legal maximum or determine its import outcome. That requires the relevant product category, valid sampling and analysis, and the applicable limits.","## 1. Short answer
+
+The supplied evidence supports a **conditional** answer: if this dried-fig consignment falls within the relevant entries in Annex I or II of Regulation (EU) 2019/1793, the sampling and analysis for aflatoxins must follow Commission Implementing Regulation (EU) 2023/2782. The evidence provided does **not** establish whether dried figs from Türkiye are currently listed, what control frequency or sampling rate applies, or which documents this particular consignment must carry.
+
+## 2. Legal basis and relevant conditions
+
+- Regulation (EU) 2019/1793, Article 3, specifies that sampling and analyses for food listed in its Annexes I and II because of possible mycotoxin contamination, including aflatoxins, must be performed in accordance with Regulation (EU) 2023/2782. The provision concerns competent-authority checks at border control posts or control points and, where the regulation requires results to accompany consignments, analyses performed in third countries. **The condition that the food is listed in the relevant Annex must first be verified.** [E4]
+- For official controls and other official activities, Regulation (EU) 2017/625, Article 34, requires applicable Union sampling or analytical methods to be followed. It also requires samples to be taken, handled and labelled so their legal, scientific and technical validity is ensured. [E1][E2]
+- The cited Article 3 refers to analytical results accompanying consignments **where those results are required by the regulation**; it does not establish from the evidence supplied that such results, a particular certificate, or any other specified document are required for this shipment. The general certification provision cited in Article 86 of Regulation (EU) 2017/625 does not identify the documents applicable to these figs. [E4][E5]
+
+## 3. Uncertainties / verification needed
+
+Verify the current Annex entry for dried figs originating in Türkiye, including any applicable conditions, control frequency, sampling rate, and required accompanying documents. The supplied excerpts do not establish those details or whether the detected aflatoxin B1 makes the shipment non-compliant: that also requires the applicable maximum level and a legally valid analytical result."
+Q6,Which authorities or food business operators are responsible for the relevant actions when a non-compliant consignment is detected?,"## 1. Short answer
+
+Responsibility is shared, but the roles differ:
+
+- **The responsible food business operator (FBO)**—usually the importer for an imported consignment, and any later operator handling it—must ensure the food under its control complies with EU food law. It must not place or keep non-compliant figs on the market or use them as an ingredient.
+- **The competent authority in the Member State**, including the relevant border-control authority where applicable, conducts official controls and decides what action to take on the consignment.
+- **Customs** may help enforce a border decision, but food-safety compliance and the official-control decision belong to the competent authority.
+
+## 2. Legal basis and relevant conditions
+
+Regulation (EC) No 178/2002 places primary responsibility for compliance on FBOs and requires Member States to enforce food law. If affected food has already been distributed and is considered unsafe, the responsible operator must take the required withdrawal or recall steps and inform the competent authority.
+
+For official controls, Regulation (EU) 2017/625 gives competent authorities powers to act on non-compliant food, including consignments entering the Union. Depending on the case, the authority may prevent release or marketing and require an appropriate measure, such as treatment, re-dispatch or destruction.
+
+For these figs, the applicable contaminant requirements are found in Regulation (EU) 2023/915. The exact import-control procedure may also depend on the rules currently applying to dried figs from Türkiye.
+
+## 3. Uncertainties / verification needed
+
+The facts given do not establish where the consignment is, whether it has been released or distributed, which authority has sampled it, or whether the laboratory result establishes legal non-compliance under the applicable sampling and analysis rules. Those facts affect the immediate action and which authority handles it.
+
+The current import-control listing and procedure for dried figs from Türkiye should be checked against the legislation in force at the time of import. The precise measure is for the competent authority to determine; a detected result alone does not establish which particular measure it will order.","## 1. Short answer
+
+For food that is non-compliant with food-safety requirements, the food business operator (FBO) that imported, produced, processed, manufactured or distributed it has duties to act and notify the competent authorities. Other FBOs involved in retail or distribution may also have withdrawal, information-sharing and cooperation duties within their activities. The supplied evidence does not identify which authority detects a non-compliant import consignment or specify that authority’s enforcement actions.
+
+## 2. Legal basis and relevant conditions
+
+Under Article 19 of Regulation (EC) No 178/2002, if an FBO considers or has reason to believe that food it imported, produced, processed, manufactured or distributed does not comply with food-safety requirements, it must immediately initiate withdrawal procedures if the food has left its immediate control and inform the competent authorities. If the product may have reached consumers, the operator must inform them accurately of the reason for withdrawal and, if necessary, recall supplied products when other measures are insufficient to achieve a high level of health protection. [E1]
+
+A retail or distribution FBO whose activities do not affect the food’s packaging, labelling, safety or integrity must, within the limits of its activities, initiate withdrawal procedures for non-compliant food and provide relevant traceability information and cooperate with the action taken by other operators or the competent authorities. [E1] FBOs must also collaborate with competent authorities on action to avoid or reduce risks from food they supply or have supplied. [E3]
+
+## 3. Uncertainties / verification needed
+
+The evidence does not establish that this particular consignment has left the importer’s control, reached consumers, or been found non-compliant under a specified legal limit. It also does not set out the competent authorities’ powers or required response to a border detection, or identify which authority is responsible in Türkiye or in a particular EU Member State. Those points require shipment-specific facts and verification against the applicable current import-control and enforcement rules."
+Q7,What regulatory actions may follow if aflatoxin levels exceed the applicable maximum level?,"## 1. Short answer
+
+If the shipment is confirmed to exceed the applicable aflatoxin maximum level, it is non-compliant and may not be placed on the EU market. Depending on where it is in the supply chain, authorities may prevent its entry or require measures such as re-dispatch, destruction or an authorised treatment. If any of it has already been distributed, withdrawal—and, where required, recall—may follow.
+
+Exceeding a limit does **not by itself establish which particular measure will be chosen**. That depends on the official findings, the shipment’s status and the competent authority’s decision.
+
+## 2. Legal basis and relevant conditions
+
+- **Commission Regulation (EU) 2023/915** sets maximum levels for certain contaminants in food, including aflatoxins. The relevant limit must be identified for the product category and the intended use. A confirmed exceedance of the applicable aflatoxin B1 limit means the food cannot be marketed in accordance with those requirements.
+- Under **Regulation (EU) 2017/625**, competent authorities can act on non-compliant consignments at official controls. Possible measures include holding the goods and requiring re-dispatch out of the EU, destruction, special treatment, or another appropriate measure. The appropriate option is for the authority to determine; destruction is not automatic.
+- If non-compliant food has already entered distribution, **Regulation (EC) No 178/2002, Article 19** may require the responsible food business operator to withdraw it and inform the competent authority; recall may be required if the food has reached consumers. Whether those duties apply in the particular circumstances must be assessed against the facts.
+- Enforcement consequences, including any penalties, depend on the applicable national rules.
+
+## 3. Uncertainties / verification needed
+
+- Confirm the applicable maximum level for the precise dried-fig product and its intended use, and whether the result exceeds the limit under the legally applicable sampling and analytical rules. A result for aflatoxin B1 should not be confused with a result for total aflatoxins.
+- Verify the official-control status of this product and origin at the relevant time, including whether specific import-control conditions apply to dried figs from Türkiye.
+- The facts provided do not establish whether the result is from an official control, whether the goods are still at the border, or whether any have been distributed. Those facts affect the measures available and required.","## 1. Short answer
+
+The supplied evidence does not establish what regulatory actions may follow, or which actions would apply to this shipment. It gives aflatoxin limits for several categories of nuts and oilseeds, but not for dried figs, and it does not describe enforcement consequences [E1]–[E5].
+
+## 2. Legal basis and relevant conditions
+
+The cited extracts are from Regulation (EU) 2023/915 and concern maximum levels for other product categories. They do not support a conclusion about the applicable dried-fig limit or the actions available when that limit is exceeded.
+
+## 3. Uncertainties / verification needed
+
+The applicable maximum level for dried figs and the relevant enforcement and import-control rules must be verified in current law. Possible measures—such as refusing entry, requiring withdrawal or recall, or directing another disposition—cannot be confirmed from the supplied evidence."
+Q8,Which parts of the assessment depend on current legislation and therefore require checking for amendments or updates?,"## 1. Short answer
+
+The assessment’s **legal requirements and the measures currently applying to imports from Türkiye** need checking against the law in force on the relevant date, including any amendments. The fact that aflatoxin B1 was detected does not, by itself, establish that the figs exceed a legal limit or that a particular import measure applies.
+
+## 2. Legal basis and relevant conditions
+
+The parts most dependent on current legislation are:
+
+- **The applicable maximum level for aflatoxin B1.** Check the current consolidated contaminant rules and the correct product category. The applicable category may depend, for example, on whether the figs are placed on the market for direct consumption or intended for further processing.
+- **The sampling and analysis rules used to assess compliance.** The applicable procedures and any relevant transition arrangements should be checked for the date and circumstances of the sampling.
+- **Import-control requirements for this product and origin.** Any enhanced or special official controls, their frequency, and associated entry or documentation conditions can change through amendments. The current measure applicable to dried figs from Türkiye must therefore be verified for the shipment’s relevant date.
+- **Official-control and enforcement rules.** The legal options available to competent authorities, and the respective duties of food business operators and authorities, should be checked against the current rules and applied to the actual findings.
+- **The date on which the rules apply.** Amendments, effective dates and transitional provisions may affect which requirements govern a particular consignment.
+
+Relevant instruments to check include, as applicable, Regulation (EU) 2023/915 on contaminants in food, Regulation (EU) 2019/1793 on certain imports subject to increased official controls or emergency measures, Regulation (EU) 2017/625 on official controls, and the current EU rules on sampling and analysis for mycotoxins.
+
+## 3. Uncertainties / verification needed
+
+The supplied facts do not give the aflatoxin B1 result, sampling details, intended use of the figs, or the shipment’s relevant import date. Those details are needed to determine the applicable limit and assess compliance. The current consolidated texts and any amendments in force on the relevant date should also be checked before concluding what documentation or import controls apply, or what regulatory action is required.","## 1. Short answer
+
+The parts of the assessment that depend on the law in force at the relevant time are the **applicable aflatoxin limits**, the **product’s use or processing classification**, and the **import-control requirements applying to dried figs from Türkiye**. Any conclusions about required certificates or attestations, official checks, or action following a result above a legal limit also need to be checked against the current rules.
+
+The supplied evidence specifically shows that the import-control lists in Regulation (EU) 2019/1793 are reviewed regularly, at intervals not exceeding six months [E1]. It does **not** establish the current limit, whether this product-origin combination is currently listed, or what requirements apply to this shipment.
+
+## 2. Legal basis and relevant conditions
+
+- **Import-control listing and measures:** Check the current Annexes I, II and IIa of Regulation (EU) 2019/1793. The Commission must review those lists regularly, no less often than every six months, taking account of new risk and non-compliance information [E1]. Therefore, any assessment of whether these figs are subject to special controls, and what those controls entail, may change.
+- **Limits and product classification:** The applicable aflatoxin limit and whether the relevant category depends on intended use or processing must be verified in the current applicable contaminant legislation. The supplied evidence does not give those limits or classification rules.
+- **Certificates and attestations:** Regulation (EU) 2017/625 sets conditions for official attestations **when another applicable rule requires one**; it does not, in the excerpt supplied, establish that this shipment needs a particular certificate or attestation [E2].
+- **Official controls and third-country matters:** The general framework for official controls and Commission controls in third countries is relevant background [E2][E3], but these excerpts do not establish shipment-specific requirements or consequences for this consignment.
+
+## 3. Uncertainties / verification needed
+
+Check the current consolidated and amending legislation applicable to the shipment’s relevant date, especially for:
+
+1. the aflatoxin B1 and any other applicable aflatoxin limits;
+2. how the product is categorised in light of its intended use or any processing;
+3. the current import-control listing and any associated sampling, testing, certification or entry conditions for dried figs from Türkiye; and
+4. the rules governing any action if the result exceeds the applicable limit.
+
+The evidence provided is insufficient to state the current numerical limits, the current listing status, which documents are required, or the appropriate shipment-specific regulatory action."
+Q9,"Provide the legal basis for each major conclusion, including regulation number and relevant article/annex where possible.","## 1. Short answer
+
+The principal legal basis is **Commission Regulation (EU) 2023/915**, especially **Article 3 and Annex I, Section 1.1**, which set maximum levels for aflatoxins in food. For dried figs, the applicable row depends in part on whether they are intended for ordinary consumption or for sorting or other physical treatment before consumption or use as an ingredient.
+
+The detection of aflatoxin B1 alone does not establish that this consignment exceeds the applicable maximum: the measured concentration, the applicable product-use category, and the relevant aflatoxin results must be established. Import controls and required documents also depend on the **current** listing of dried figs from Türkiye under Commission Implementing Regulation (EU) 2019/1793.
+
+## 2. Legal basis and relevant conditions
+
+- **Maximum levels and marketability:** Regulation (EU) 2023/915, **Article 3 and Annex I, Section 1.1**. The Annex sets levels for aflatoxin B1 and for the sum of aflatoxins B1, B2, G1 and G2. Its dried-fig entries distinguish figs from those intended to undergo sorting or other physical treatment. The applicable entry and any associated conditions should be checked against the product’s actual intended use and the current consolidated Annex.
+- **Food-business-operator responsibilities:** Regulation (EC) No 178/2002, **Article 17** (operator responsibility), **Article 14** (unsafe food), and **Article 19** (withdrawal and notification where applicable). These provisions do not, by themselves, establish that this particular consignment is non-compliant; that depends on the evidence and applicable maximum level.
+- **Official controls and action on a non-compliant consignment:** Regulation (EU) 2017/625, particularly **Article 47** (official controls on certain goods entering the Union), **Articles 56–57** (CHED and related entry-control arrangements), and **Article 66** (measures concerning non-compliant consignments). The appropriate measure is for the competent authority to determine under the circumstances; detection alone does not establish which measure will be ordered.
+- **Türkiye-specific import controls:** Commission Implementing Regulation (EU) 2019/1793, particularly **Article 1 and Annexes I and II**. Those Annexes identify foods subject to increased official controls or special conditions, including any applicable control frequency and documentary conditions. The current consolidated listing must be checked before stating that a particular certificate, laboratory result, or control frequency applies.
+- **Sampling and analysis:** Commission Implementing Regulation (EU) 2023/2782 lays down methods of sampling and analysis for the official control of mycotoxins. Whether a result establishes non-compliance depends on the applicable sampling and analytical rules as well as the reported result.
+
+## 3. Uncertainties / verification needed
+
+- The actual **aflatoxin B1 concentration**, the results for the other aflatoxins needed to assess the total, and whether the sampling and analysis were conducted under the applicable official-control rules.
+- Whether the figs are intended for ordinary consumption or are genuinely intended for sorting or other physical treatment, and whether any conditions attached to that category are met.
+- The **current** status of dried figs originating in Türkiye under Regulation (EU) 2019/1793 on the relevant date. Because the Annexes can change, do not infer a present certificate, analytical-report, notification, or inspection-frequency requirement without checking the version in force.
+- Any shipment-specific facts—such as its presentation, intended destination or use, and official-control findings—that could affect the applicable category or action.","## 1. Short answer
+
+The supplied evidence supports only a limited set of legal references. It does **not** establish the aflatoxin limit applicable to these dried figs or the legal consequences of the reported detection. In particular, the evidence gives no concentration result, so it cannot establish from detection alone that the consignment exceeds an applicable limit or is non-compliant.
+
+The clearest potentially relevant provision is Regulation (EU) 2017/625, Article 55: it provides for a competent-authority decision on consignments within the categories covered by Article 47(1), following official controls, including the checks specified there. Its application to this shipment is conditional because the supplied evidence does not include Article 47 or establish that the shipment falls within its scope. [E2]
+
+## 2. Legal basis and relevant conditions
+
+- **Decision on a consignment — Regulation (EU) 2017/625, Article 55.** For consignments within Article 47(1), the competent authorities must decide whether the consignment complies with the rules referred to in Article 1(2), following the relevant official controls. The evidence does not establish the shipment’s Article 47(1) category or identify the substantive contaminant rule against which compliance would be assessed. [E2]
+
+- **Administrative assistance between Member States — Regulation (EU) 2017/625, Article 102.** This provision concerns cooperation between Member States where a case has relevance in more than one Member State. It does not, by itself, establish an import-document requirement or a particular action against this consignment. [E1]
+
+- **Annual reporting — Regulation (EU) 2017/625, Article 113.** This concerns Member States’ annual reports on official controls and non-compliance. It is not a legal basis in the supplied evidence for a shipment-specific decision. [E5]
+
+The other supplied excerpts do not provide a substantive basis for conclusions about aflatoxin limits or enforcement in this case: the excerpt from Regulation (EU) No 178/2002, Article 27, concerns the Advisory Forum [E3]; the excerpt from Regulation (EU) 2017/625, Article 4, is a fragment concerning competent-authority designation and contact details [E4].
+
+## 3. Uncertainties / verification needed
+
+The supplied evidence does not support a citation for the applicable aflatoxin B1 maximum level, any distinction based on intended use or processing, the import-control regime or required documents, the actors responsible for particular steps, or specific actions such as rejection, destruction, re-dispatch, or notification. Those conclusions require the relevant current legislation and facts to be verified.
+
+In particular, verification would be needed of the measured concentration, the product’s relevant intended use or processing status, the provisions governing contaminants and import controls, and the shipment’s classification under Regulation (EU) 2017/625. No regulation number, article, annex, or numerical limit for those matters can be substantiated from the evidence supplied."
+Q10,"Based on the evidence above, prepare a concise regulatory assessment for an EU food business operator handling this shipment. Clearly distinguish confirmed requirements from information that still requires verification.","## 1. Short answer
+
+Aflatoxin B1 has been detected, but the information provided does **not** establish that the shipment is non-compliant: no concentration, sampling details, intended use or import-control documents are given. The operator should keep the shipment from being marketed while checking the result against the applicable requirements and confirming its import status.
+
+## 2. Legal basis and relevant conditions
+
+- Under Regulation (EC) No 178/2002, food must not be placed on the market if it is unsafe; operators must maintain traceability and take appropriate action if food they have placed on the market is found not to comply.
+- Aflatoxin maximum levels are set by Regulation (EU) 2023/915. The measured level must be assessed against the limit for the correctly classified product, including any relevant distinction about whether the figs are for direct consumption or for sorting or other processing. Detection alone does not show that a limit has been exceeded.
+- Imports are subject to official controls under Regulation (EU) 2017/625. Turkish dried figs may also be covered by specific increased-control requirements under Regulation (EU) 2019/1793. Whether those requirements apply to this shipment—and what checks or documents they require—depends on the current product listing and the shipment’s circumstances.
+
+If the applicable limit is exceeded, the shipment should not be marketed as food; if it has already been supplied, the operator should assess withdrawal/recall and notification duties. If the result is within the applicable limit and the import requirements are met, detection by itself does not establish a legal basis to reject the shipment.
+
+## 3. Uncertainties / verification needed
+
+Verify the analytical result and sampling basis; the applicable maximum levels for both aflatoxin B1 and total aflatoxins; the product’s intended use and any processing-related conditions; and the current 2019/1793 listing and required import-control documents or checks. The evidence provided does not establish the concentration, whether the lot exceeds a limit, whether special import controls were completed, or whether the shipment has already been released or supplied.","## 1. Short answer
+
+The evidence confirms that the food business operator must ensure and verify compliance with food-law requirements relevant to its activities [E3]. But it does **not** establish whether this shipment breaches an aflatoxin limit: no test result, applicable limit, product category or intended use is provided.
+
+The operator should promptly assess the result against the applicable requirements. If it considers, or has reason to believe, that food it imported or handled is non-compliant, the relevant withdrawal and notification duties may apply [E2].
+
+## 2. Legal basis and relevant conditions
+
+- **Operator responsibility:** Food business operators must ensure and verify that food under their control meets the requirements relevant to their activities [E3].
+- **If the food is considered or believed non-compliant:** The operator must immediately initiate withdrawal if the food has left its immediate control and inform the competent authorities. If it may have reached consumers, consumer information and, where necessary, recall are required [E2].
+- **If the food may be injurious to health:** An operator that placed it on the market must immediately inform the competent authorities and report action taken to prevent risks to consumers [E2]. Operators must cooperate with competent authorities [E5].
+
+## 3. Uncertainties / verification needed
+
+The supplied evidence does not establish:
+
+- the applicable maximum level for aflatoxin B1 in these dried figs, or whether any product-use or processing distinction changes the applicable requirement;
+- the measured concentration, sampling and test details, or whether the result establishes non-compliance;
+- whether the shipment is still under the operator’s control, has been placed on the market, or may have reached consumers;
+- any shipment-specific import controls, documentation or competent-authority action.
+
+These points should be verified against the current applicable rules and shipment records before concluding that the shipment is compliant or non-compliant, or determining what action is required."

@@ -1,0 +1,17 @@
+{
+  "experiment_id": "nb04b_context_repaired_full_rerun_v1",
+  "created_utc": "2026-10-14T12:05:19.189115+00:00",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_output_tokens": 4096,
+  "benchmark_context_sha256": "6d540ebf6b35f579ff490e3f94becc04634a361a6fec8bfedbb6befddd361f3a",
+  "benchmark_context": "All questions belong to one fixed EU food-regulation benchmark concerning the same case:\na shipment of dried figs originating from Türkiye in which aflatoxin B1 has been detected.\n\nQ1–Q10 form one regulatory-assessment sequence. Answer only the current question, but when\nthe wording refers to “if so”, “the assessment”, “major conclusions”, “the evidence above”,\nor similar cross-question references, interpret those references within this shared benchmark case.\n\nAcross the sequence, the regulatory issues being examined include:\nrelevant EU legislation, contaminant limits, product-use/processing distinctions,\nimport controls and documentation, responsible actors, possible regulatory actions,\nand which conclusions require current-law verification.\n\nDo not assume shipment-specific facts that are not stated in the current question or supplied evidence.\nDo not invent legal provisions, numerical limits, or documentary requirements.",
+  "system_prompt": "You are evaluating an EU food-regulation question.\n\nAnswer conservatively and distinguish:\n1. what is supported,\n2. what remains uncertain or requires verification.\n\nDo not invent legal provisions, numerical limits, or documentary requirements.\n\nUse this structure:\n## 1. Short answer\n## 2. Legal basis and relevant conditions\n## 3. Uncertainties / verification needed",
+  "retrieval_config_file": "data\\retrieval_config_nb03_final_hybrid_static_rag.json",
+  "retrieval_results_file": "data\\retrieval_results_nb03_final_hybrid_static_rag.csv",
+  "retrieval_frozen": true,
+  "retrieval_rerun_in_nb04b": false,
+  "same_context_for_prompt_only_and_rag": true,
+  "previous_model_answers_in_context": false,
+  "gold_reference_in_generation_prompt": false
+}
