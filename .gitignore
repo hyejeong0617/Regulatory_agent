@@ -1,0 +1,20 @@
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Local environments / secrets
+.env
+.env.*
+.venv/
+venv/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local-only temporary files
+*.tmp
+*.log
