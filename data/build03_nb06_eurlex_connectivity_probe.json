@@ -1,0 +1,18 @@
+{
+  "regulation": "2019/1793",
+  "basic_celex": "32019R1793",
+  "official_basic_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R1793",
+  "snapshot_date": "2026-06-30",
+  "snapshot_file": "EU_2019_1793_consolidated_2026-06-30.html",
+  "checked_utc": "2026-10-19T11:04:32.048099+00:00",
+  "status": "unverified",
+  "source": "EUR-Lex basic act page",
+  "latest_date_candidate": null,
+  "date_comparison": "not_verified",
+  "article_level_changes_verified": false,
+  "application_date_verified": false,
+  "current_legal_status_verified": false,
+  "resolved_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R1793",
+  "http_status": 202,
+  "error": "http_202"
+}

@@ -1,0 +1,108 @@
+{
+  "regulation": "2019/1793",
+  "basic_celex": "32019R1793",
+  "snapshot_date": "2026-06-30",
+  "snapshot_file": "EU_2019_1793_consolidated_2026-06-30.html",
+  "official_basic_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019R1793",
+  "official_metadata_endpoint": "https://publications.europa.eu/webapi/rdf/sparql",
+  "checked_utc": "2026-10-19T11:41:39.535733+00:00",
+  "status": "metadata_found",
+  "source": "EU Publications Office / Cellar SPARQL",
+  "latest_date_candidate": "2026-06-30",
+  "latest_celex_candidate": "02019R1793-20260630",
+  "observed_consolidations": [
+    {
+      "celex": "02019R1793-20260630",
+      "date": "2026-06-30",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20260630"
+    },
+    {
+      "celex": "02019R1793-20260226",
+      "date": "2026-02-26",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20260226"
+    },
+    {
+      "celex": "02019R1793-20260218",
+      "date": "2026-02-18",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20260218"
+    },
+    {
+      "celex": "02019R1793-20250812",
+      "date": "2025-08-12",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20250812"
+    },
+    {
+      "celex": "02019R1793-20250108",
+      "date": "2025-01-08",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20250108"
+    },
+    {
+      "celex": "02019R1793-20240702",
+      "date": "2024-07-02",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20240702"
+    },
+    {
+      "celex": "02019R1793-20240206",
+      "date": "2024-02-06",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20240206"
+    },
+    {
+      "celex": "02019R1793-20230627",
+      "date": "2023-06-27",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20230627"
+    },
+    {
+      "celex": "02019R1793-20230216",
+      "date": "2023-02-16",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20230216"
+    },
+    {
+      "celex": "02019R1793-20220703",
+      "date": "2022-07-03",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20220703"
+    },
+    {
+      "celex": "02019R1793-20220106",
+      "date": "2022-01-06",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20220106"
+    },
+    {
+      "celex": "02019R1793-20211123",
+      "date": "2021-11-23",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20211123"
+    },
+    {
+      "celex": "02019R1793-20210505",
+      "date": "2021-05-05",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20210505"
+    },
+    {
+      "celex": "02019R1793-20201026",
+      "date": "2020-10-26",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20201026"
+    },
+    {
+      "celex": "02019R1793-20200527",
+      "date": "2020-05-27",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20200527"
+    },
+    {
+      "celex": "02019R1793-20191029",
+      "date": "2019-10-29",
+      "official_celex_url": "https://publications.europa.eu/resource/celex/02019R1793-20191029"
+    }
+  ],
+  "date_comparison": "matches_latest_observed_consolidation",
+  "article_level_changes_verified": false,
+  "application_date_verified": false,
+  "current_legal_status_verified": false,
+  "complete_consolidation_list_verified": false,
+  "as_of_date": "2026-10-19",
+  "relation_row_count": 0,
+  "celex_index_row_count": 19,
+  "lookup_methods": [
+    "relation",
+    "celex_index"
+  ],
+  "latest_candidate_official_url": "https://publications.europa.eu/resource/celex/02019R1793-20260630"
+}

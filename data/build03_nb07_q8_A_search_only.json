@@ -1,0 +1,291 @@
+{
+  "experiment": "NB07_Q8_matched_ablation",
+  "arm": "A",
+  "question_id": "Q8",
+  "question": "Which parts of the assessment depend on current legislation and therefore require checking for amendments or updates?",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_output_tokens": 4096,
+  "shared_context": "All questions belong to one fixed EU food-regulation benchmark concerning the same case:\na shipment of dried figs originating from Türkiye in which aflatoxin B1 has been detected.\n\nQ1–Q10 form one regulatory-assessment sequence. Answer only the current question, but when\nthe wording refers to “if so”, “the assessment”, “major conclusions”, “the evidence above”,\nor similar cross-question references, interpret those references within this shared benchmark case.\n\nAcross the sequence, the regulatory issues being examined include:\nrelevant EU legislation, contaminant limits, product-use/processing distinctions,\nimport controls and documentation, responsible actors, possible regulatory actions,\nand which conclusions require current-law verification.\n\nDo not assume shipment-specific facts that are not stated in the current question or supplied evidence.\nDo not invent legal provisions, numerical limits, or documentary requirements.",
+  "shared_system_prompt": "You are evaluating an EU food-regulation question.\n\nAnswer conservatively and distinguish:\n1. what is supported,\n2. what remains uncertain or requires verification.\n\nDo not invent legal provisions, numerical limits, or documentary requirements.\n\nUse this structure:\n## 1. Short answer\n## 2. Legal basis and relevant conditions\n## 3. Uncertainties / verification needed",
+  "matched_rules": "Use available tools to ground legal claims in the frozen 5-law corpus.\nWhen available, official Cellar consolidation metadata can supplement local evidence; when unavailable,\nstate that live currentness was not verified, rather than implying that dates are current.\nIdentify provisions requiring checks for amendments, entry into force, application date,\ntransitional rules, annex changes and product-specific classification.\nNever infer effective article-level law solely from a matching consolidation date.\nDistinguish verified observations from legal conclusions. No invented limits, rates or requirements.\nUse 3 headings: 1. Short answer; 2. Legal basis and relevant conditions;\n3. Uncertainties / verification needed.",
+  "tools_available": [
+    "search_regulation"
+  ],
+  "retrieval_parity": {
+    "matched": 50,
+    "total": 50
+  },
+  "search_calls": [
+    {
+      "query": "EU food law responsibilities operators non-compliant food withdrawal recall official controls measures Regulation 178/2002 Regulation 2017/625 amendments current law",
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 590,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_17::01",
+          "rrf_score": 0.032266458495966696,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 17",
+          "location": "Article 17 — Responsibilities",
+          "heading": "Responsibilities",
+          "text": "Article 17 Responsibilities 1. Food and feed business operators at all stages of production, processing and distribution within the businesses under their control shall ensure that foods or feeds satisfy the requirements of food law which are relevant to their activities and shall verify that such requirements are met. 2. Member States shall enforce food law, and monitor and verify that the relevant requirements of food law are fulfilled by food and feed business operators at all stages of production, processing and distribution. For that purpose, they shall maintain a system of official controls and other activities as appropriate to the circumstances, including public communication on food and feed safety and risk, food and feed safety surveillance and other monitoring activities covering all stages of production, processing and distribution. Member States shall also lay down the rules on measures and penalties applicable to infringements of food and feed law. The measures and penalties provided for shall be effective, proportionate and dissuasive."
+        },
+        {
+          "rank": 2,
+          "chunk_index": 593,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::02",
+          "rrf_score": 0.03225806451612903,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators",
+          "text": "ities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a food. 4. Food business operators shall collaborate with the competent authorities on action taken to avoid or reduce risks posed by a food which they supply or have supplied."
+        },
+        {
+          "rank": 3,
+          "chunk_index": 595,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_20::02",
+          "rrf_score": 0.029386529386529386,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 20",
+          "location": "Article 20 — Responsibilities for feed: feed business operators",
+          "heading": "Responsibilities for feed: feed business operators",
+          "text": "atisfy the feed safety requirements. It shall inform the competent authorities of the action taken to prevent risk arising from the use of that feed and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a feed. 4. Feed business operators shall collaborate with the competent authorities on action taken in order to avoid risks posed by a feed which they supply or have supplied."
+        },
+        {
+          "rank": 4,
+          "chunk_index": 874,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::02",
+          "rrf_score": 0.027984344422700584,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance",
+          "text": "ect to increased or systematic official controls; (g) order the recall, withdrawal, removal and destruction of goods, authorising, where appropriate, the use of the goods for purposes other than those for which they were originally intended; (h) order the isolation or closure, for an appropriate period of time, of all or part of the business of the operator concerned, or its establishments, holdings or other premises; (i) order the cessation for an appropriate period of time of all or part of the activities of the operator concerned and, where relevant, of the internet sites it operates or employs; (j) order the suspension or withdrawal of the registration or approval of the establishment, plant, holding or means of transport concerned, of the authorisation of a transporter or of the certificate of competence of the driver; (k) order the slaughter or killing of animals provided that this is the most appropriate measure to safeguard human health as well as animal health and welfare. 3. The competent authorities shall provide the operator concerned, or its representative, with: (a) written notification of their decision concerning the action or measure to be taken in accordance with paragraphs 1 and 2, together with the reasons for that decision; and (b) information on any right of appeal against such decisions and on the applicable procedure and time limits with respect to such right of appeal. 4. All expenditure incurred under this Article shall be borne by the responsible operators. 5. The competent authorities, in the case of issuance of false or misleading official certificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the"
+        },
+        {
+          "rank": 5,
+          "chunk_index": 592,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01",
+          "rrf_score": 0.026494565217391304,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators",
+          "text": "Article 19 Responsibilities for food: food business operators 1. If a food business operator considers or has reason to believe that a food which it has imported, produced, processed, manufactured or distributed is not in compliance with the food safety requirements, it shall immediately initiate procedures to withdraw the food in question from the market where the food has left the immediate control of that initial food business operator and inform the competent authorities thereof. Where the product may have reached the consumer, the operator shall effectively and accurately inform the consumers of the reason for its withdrawal, and if necessary, recall from consumers products already supplied to them when other measures are not sufficient to achieve a high level of health protection. 2. A food business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the food shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the food-safety requirements and shall participate in contributing to the safety of the food by passing on relevant information necessary to trace a food, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A food business operator shall immediately inform the competent authorities if it considers or has reason to believe that a food which it has placed on the market may be injurious to human health. Operators shall inform the competent authorities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent"
+        }
+      ]
+    },
+    {
+      "query": "EU official control import documentation dried figs aflatoxin Türkiye certificate results health certificate TRACES current requirements 2017/625 2022/…",
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 1132,
+          "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+          "rrf_score": 0.030798389007344232,
+          "file": "EU_2019_1793_consolidated_2026-06-30.html",
+          "regulation_title": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793",
+          "article": null,
+          "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+          "heading": null,
+          "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14."
+        },
+        {
+          "rank": 2,
+          "chunk_index": 929,
+          "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_11::01",
+          "rrf_score": 0.030621785881252923,
+          "file": "EU_2019_1793_consolidated_2026-06-30.html",
+          "regulation_title": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793",
+          "article": "Article 11",
+          "location": "Article 11 — Official certificate",
+          "heading": "Official certificate",
+          "text": "Article 11 Official certificate 1. Each consignment of food and feed listed in Annex II shall be accompanied by an official certificate in accordance with the model set out in Annex IV (‘official certificate’). 2. The official certificate shall comply with the following requirements: (a) the official certificate shall be issued by the competent authority of the third country of origin or of the third country where the consignment is consigned from if that country is different from the country of origin; (b) the official certificate shall bear the identification code of the consignment to which it relates, referred to in Article 9(1); (c) the official certificate shall bear the signature of the certifying officer and the official stamp; (d) where the official certificate contains multiple or alternative statements, the statements which are not relevant shall be crossed out, initialled and stamped by the certifying officer, or completely removed from the certificate; (e) the official certificate shall consist of one of the following: (i) a single sheet of paper; (ii) several sheets of paper where all sheets are indivisible and constitute an integrated whole; (iii) a sequence of pages with each page numbered so as to indicate that it is a particular page in a finite sequence; (f) where the official certificate consists of a sequence of pages as referred to in point (e)(iii) of this paragraph, each page shall bear the unique code referred to in Article 89(1)(a) of Regulation (EU) 2017/625, the signature of the certifying officer and the official stamp; (g) the official certificate shall be presented to the competent authority of the border control post of entry into the Union where the consignment is subjected to official controls; (h) the official certificate shall be"
+        },
+        {
+          "rank": 3,
+          "chunk_index": 931,
+          "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_11::03",
+          "rrf_score": 0.02946912242686891,
+          "file": "EU_2019_1793_consolidated_2026-06-30.html",
+          "regulation_title": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793",
+          "article": "Article 11",
+          "location": "Article 11 — Official certificate",
+          "heading": "Official certificate",
+          "text": "ertificate only in accordance with the rules laid down in Article 6 of Commission Implementing Regulation (EU) 2020/2235 ( 4 ). 8. The official certificate shall be completed on the basis of the notes set out in Annex IV."
+        },
+        {
+          "rank": 4,
+          "chunk_index": 807,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_89::01",
+          "rrf_score": 0.02819138376017471,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 89",
+          "location": "Article 89 — Guarantees of reliability for official certificates",
+          "heading": "Guarantees of reliability for official certificates",
+          "text": "Article 89 Guarantees of reliability for official certificates 1. Official certificates shall: (a) bear a unique code; (b) not be signed by the certifying officer where they are blank or incomplete; (c) be drawn up in one or more of the official languages of the institutions of the Union understood by the certifying officer and, where relevant, in one of the official languages of the Member State of destination; (d) be authentic and accurate; (e) allow for the identification of the person who signed them and the date of issue; and (f) allow the easy verification of the links between the certificate, the issuing authority and the consignment, lot or individual animal or good covered by the certificate. 2. The competent authorities shall take all appropriate measures to prevent the issuance of false or misleading official certificates or the abuse of official certificates."
+        },
+        {
+          "rank": 5,
+          "chunk_index": 804,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_87::01",
+          "rrf_score": 0.02803921568627451,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 87",
+          "location": "Article 87 — Official certificates",
+          "heading": "Official certificates",
+          "text": "Article 87 Official certificates Articles 88, 89 and 90 shall apply: (a) when the rules referred to in Article 1(2) require the issuance of an official certificate; and (b) to official certificates which are necessary for the purposes of exporting consignments of animals and goods to third countries or which are requested from the competent authority of a Member State of dispatch by the competent authority of a Member State of destination in respect of consignments of animals and goods which are to be exported to third countries."
+        }
+      ]
+    },
+    {
+      "query": "EU current legislation aflatoxin dried figs maximum levels Regulation (EU) 2023/915 Annex product categories processed dried figs intended sorting physical treatment amendments application transitional measures",
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 1132,
+          "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+          "rrf_score": 0.03252247488101534,
+          "file": "EU_2019_1793_consolidated_2026-06-30.html",
+          "regulation_title": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793",
+          "article": null,
+          "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+          "heading": null,
+          "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14."
+        },
+        {
+          "rank": 2,
+          "chunk_index": 52,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+          "rrf_score": 0.031754032258064516,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 4, row 18",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0"
+        },
+        {
+          "rank": 3,
+          "chunk_index": 39,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+          "rrf_score": 0.031746031746031744,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 4, row 3",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0"
+        },
+        {
+          "rank": 4,
+          "chunk_index": 28,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row13::01",
+          "rrf_score": 0.027046783625730993,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 3, row 13",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.10 | Hazelnuts and Brazil nuts, to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food | 8,0 | 15,0 | - | If hazelnuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part."
+        },
+        {
+          "rank": 5,
+          "chunk_index": 21,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01",
+          "rrf_score": 0.026597524255603883,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 3, row 6",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply."
+        }
+      ]
+    },
+    {
+      "query": "EU import controls dried figs Türkiye aflatoxin B1 Regulation 2019/1793 increased official controls emergency measures amendment annex frequency certificate analytical results border control post",
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 754,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_51::01",
+          "rrf_score": 0.02919863597612958,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 51",
+          "location": "Article 51 — Specific rules for official controls at border control posts",
+          "heading": "Specific rules for official controls at border control posts",
+          "text": "Article 51 Specific rules for official controls at border control posts 1. The Commission shall adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning rules to establish: (a) the cases where, and the conditions under which, the competent authorities of a border control post may authorise the onward transportation of consignments of the categories of animals and goods referred to in Article 47(1) to the place of final destination pending the availability of the results of physical checks, where such checks are required; (b) the time limits and arrangements for carrying out documentary checks and, where necessary, identity checks and physical checks on categories of animals and goods subject to the official controls provided for in Article 47(1) which enter the Union by sea or by air transport from a third country, when those animals or goods are moved from a vessel or aircraft and are transported under customs supervision to another vessel or aircraft in the same port or airport in preparation for onward travel (‘transhipped consignments’); (c) the cases where, and the conditions under which, identity checks and physical checks of transhipped consignments and of animals arriving by air or sea and staying on the same means of transport for onward travel may be performed at a border control post other than the one of first arrival into the Union; (d) the cases where, and the conditions under which, the transit of consignments of the categories of animals and goods referred to in Article 47(1) may be authorised and certain official controls to be performed at border control posts on such consignments, including the cases and conditions for the storage of goods in specially approved customs warehouses or in free zones; (e) the cases"
+        },
+        {
+          "rank": 2,
+          "chunk_index": 757,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_53::01",
+          "rrf_score": 0.02900988017658188,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 53",
+          "location": "Article 53 — Official controls not performed at border control posts",
+          "heading": "Official controls not performed at border control posts",
+          "text": "Article 53 Official controls not performed at border control posts 1. The Commission shall adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning rules establishing the cases where and the conditions under which: (a) identity checks and physical checks on consignments of the categories of animals and goods referred to in Article 47(1) may be performed by competent authorities at control points other than border control posts provided that those control points comply with the requirements provided for in Article 64(3) and in the implementing acts adopted in accordance with Article 64(4); (b) physical checks on consignments which have undergone documentary checks and identity checks at a border control post of first arrival into the Union may be performed at another border control post in a different Member State; (c) identity checks and physical checks on consignments which have undergone documentary checks at a border control post of first arrival into the Union may be performed at another border control post in a different Member State; (d) specific control tasks may be performed by customs authorities or other public authorities, insofar as those tasks are not already falling under the responsibility of those authorities, on: (i) consignments referred to in Article 65(2); (ii) passengers’ personal luggage; (iii) goods ordered by sales through distance contracts, including by telephone or via the internet; (iv) pet animals which meet the conditions laid down in Article 5 of Regulation (EU) No 576/2013 of the European Parliament and of the Council ( 14 ); (e) documentary checks on consignments of plant, plant products and other objects referred to in point (c) of Article 47(1) may be performed at distance from a border control"
+        },
+        {
+          "rank": 3,
+          "chunk_index": 751,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_49::01",
+          "rrf_score": 0.028258706467661692,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 49",
+          "location": "Article 49 — Official controls at border control posts",
+          "heading": "Official controls at border control posts",
+          "text": "Article 49 Official controls at border control posts 1. To verify compliance with the applicable requirements laid down in the rules referred to in Article 1(2), the competent authorities shall perform official controls on the consignments of the categories of animals and goods referred to in Article 47(1) upon arrival of the consignment at the border control post. Those official controls shall include documentary checks, identity checks and physical checks. 2. Physical checks shall be performed where those checks concern: (a) animals, except aquatic animals, or meat and edible meat offal, by an official veterinarian, who may be assisted by staff trained in accordance with the requirements established under paragraph 5 in veterinary matters and designated by the competent authorities for that purpose; (b) aquatic animals, products of animal origin other than the ones referred to in point (a) of this paragraph, germinal products or animal by-products, by an official veterinarian or by staff trained in accordance with the requirements established under paragraph 5 and designated by the competent authorities for that purpose; (c) plants, plant products and other objects, by an official plant health officer. 3. The competent authorities at border control posts shall systematically perform official controls on consignments of animals being transported and on means of transport to verify compliance with the animal welfare requirements laid down in the rules referred to in Article 1(2). Competent authorities shall put in place arrangements to give priority to official controls on animals being transported and to reduce delays on such controls. 4. The Commission may, by means of implementing acts, lay down rules on the practical arrangements for presentation of consignments of"
+        },
+        {
+          "rank": 4,
+          "chunk_index": 758,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_53::02",
+          "rrf_score": 0.02797339593114241,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 53",
+          "location": "Article 53 — Official controls not performed at border control posts",
+          "heading": "Official controls not performed at border control posts",
+          "text": "nd of the Council ( 14 ); (e) documentary checks on consignments of plant, plant products and other objects referred to in point (c) of Article 47(1) may be performed at distance from a border control post. 2. Point (b) of Article 56(3), point (a) of Article 57(2), Article 59(1), points (a) and (d) of Article 60(1) and Articles 62 and 63 shall also apply to the control points referred to in point (a) of paragraph 1 of this Article."
+        },
+        {
+          "rank": 5,
+          "chunk_index": 770,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_64::01",
+          "rrf_score": 0.026171741361614778,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 64",
+          "location": "Article 64 — Minimum requirements for border control posts",
+          "heading": "Minimum requirements for border control posts",
+          "text": "Article 64 Minimum requirements for border control posts 1. Border control posts shall be located in the immediate vicinity of the point of entry into the Union and either in a place which is designated by the customs authorities in accordance with Article 135(1) and (2) of Regulation (EU) No 952/2013 or in a free zone. 2. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning the cases where and conditions under which a border control post may be situated at a distance other than in the immediate vicinity of the point of entry into the Union in cases of specific geographical constraints. 3. Border control posts shall have: (a) a sufficient number of suitably qualified staff; (b) premises or other facilities appropriate to the nature and volume of the categories of animals and goods handled; (c) equipment and premises or other facilities to allow the performance of official controls for each of the categories of animals and goods for which the border control post has been designated; (d) arrangements in place to ensure, as appropriate, access to any other equipment, premise and service necessary to apply the measures taken in accordance with Articles 65, 66 and 67 in cases of suspicion of non-compliance, non-compliant consignments or consignments presenting a risk; (e) contingency arrangements to ensure the smooth operation of official controls and the effective application of the measures taken in accordance with Articles 65, 66 and 67 in cases of unforeseeable and unexpected conditions or events; (f) the technology and equipment necessary for the efficient operation of the IMSOC and, as appropriate, of other computerised information management systems necessary for the handling and exchange of data"
+        }
+      ]
+    }
+  ],
+  "current_law_calls": [],
+  "final_output": "## 1. Short answer\n\nThe assessment’s conclusions about **whether the shipment may be placed on the EU market, what import controls and documents apply, and what action must be taken after a finding of aflatoxin B1** depend on the law in force for the relevant date and product classification. They require checking for amendments or updates.\n\nThe frozen corpus contains provisions relevant to those issues, but it does **not** establish that those provisions are currently effective for this shipment. Live currentness was not verified.\n\n## 2. Legal basis and relevant conditions\n\nThe main parts to recheck are:\n\n- **Contaminant limits and product classification.** Regulation (EU) 2023/915 sets maximum levels in an annex. The applicable entry may depend on whether the goods are dried figs, a processed product, or a product containing figs, and on its intended use or processing. Check for annex changes, the product-specific classification and any applicable transitional rules. A finding that aflatoxin B1 was detected, without the level and applicable category, does not by itself establish whether a limit is exceeded.\n- **Import controls and documentation.** The frozen corpus identifies a Türkiye dried-fig entry in Regulation (EU) 2019/1793 and provisions concerning controls and certification. Whether the consignment falls within the current listing—and the controls, checks, certificates or other documentation that follow—must be verified against the current annexes and requirements. Product form and customs classification may matter.\n- **Official-control procedures and possible measures.** Regulations (EU) 2017/625 and 2019/1793 contain relevant control and response provisions. Check their current text and any implementing measures before concluding what the competent authority may or must do in this case.\n- **Operator responsibilities.** Regulations (EC) 178/2002 and (EU) 2017/625 are relevant to food-business-operator responsibilities and action in cases of non-compliance. The assessment should be checked against the law applicable at the time and the actual status of the food—for example, whether it has been placed on the market.\n\n## 3. Uncertainties / verification needed\n\nThe search results are observations from the supplied corpus, not confirmation of the law currently applicable to the shipment. Before relying on any conclusion, verify the relevant acts and annexes for amendments, entry into force, application dates and transitional rules. Do not infer effective article-level law solely from a matching consolidation date.\n\nThe shipment’s exact product description, processing and intended use, customs classification, sampling and analytical results, and import date are not supplied here. Those facts may affect which limit or import-control requirements apply.",
+  "run_utc": "2026-10-19T12:08:23.347131+00:00",
+  "status": "evaluation_pending"
+}
