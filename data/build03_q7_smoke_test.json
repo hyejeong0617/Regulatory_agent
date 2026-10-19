@@ -1,0 +1,202 @@
+{
+  "build": "Build03",
+  "experiment": "q7_smoke_test",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "question_id": "Q7",
+  "question": "What regulatory actions may follow if aflatoxin levels exceed the applicable maximum level?",
+  "model": "gpt-6-luna",
+  "retrieval_method": "hybrid_dense_bm25_rrf_diverse_v1",
+  "retrieval_difference_from_build02": "same frozen retriever exposed as repeatable agent tool",
+  "tool_calls": [
+    {
+      "timestamp_utc": "2026-10-19T09:56:57.545955+00:00",
+      "query": "aflatoxin exceed maximum level food action non-compliant food withdrawal recall Regulation 178/2002 Regulation 2017/625",
+      "top_k": 6,
+      "results": [
+        {
+          "rank": 1,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 11",
+          "heading": null
+        },
+        {
+          "rank": 2,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 13",
+          "heading": null
+        },
+        {
+          "rank": 3,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 9",
+          "heading": null
+        },
+        {
+          "rank": 4,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 14",
+          "heading": null
+        },
+        {
+          "rank": 5,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 7",
+          "heading": null
+        },
+        {
+          "rank": 6,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 12",
+          "heading": null
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-19T09:56:59.561409+00:00",
+      "query": "Regulation (EU) 2017/625 official controls non-compliance food authority measures Article 138 withdrawal recall destruction treatment prohibit placing on market aflatoxin",
+      "top_k": 8,
+      "results": [
+        {
+          "rank": 1,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance"
+        },
+        {
+          "rank": 2,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance"
+        },
+        {
+          "rank": 3,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 74",
+          "location": "Article 74 — Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries",
+          "heading": "Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries"
+        },
+        {
+          "rank": 4,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 19",
+          "location": "Article 19 — Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed",
+          "heading": "Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed"
+        },
+        {
+          "rank": 5,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 19",
+          "location": "Article 19 — Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed",
+          "heading": "Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed"
+        },
+        {
+          "rank": 6,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 13",
+          "heading": null
+        },
+        {
+          "rank": 7,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 11",
+          "heading": null
+        },
+        {
+          "rank": 8,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 3, row 9",
+          "heading": null
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-19T09:57:02.785270+00:00",
+      "query": "Regulation (EC) No 178/2002 Article 14 food unsafe not placed on market Article 19 withdrawal recall notify competent authorities food business operator",
+      "top_k": 5,
+      "results": [
+        {
+          "rank": 1,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "article": "Article 14",
+          "location": "Article 14 — Food safety requirements",
+          "heading": "Food safety requirements"
+        },
+        {
+          "rank": 2,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators"
+        },
+        {
+          "rank": 3,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators"
+        },
+        {
+          "rank": 4,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "article": "Article 148",
+          "location": "Article 148 — Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+          "heading": "Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments"
+        },
+        {
+          "rank": 5,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "article": "Article 14",
+          "location": "Article 14 — Food safety requirements",
+          "heading": "Food safety requirements"
+        }
+      ]
+    },
+    {
+      "timestamp_utc": "2026-10-19T09:57:05.836701+00:00",
+      "query": "Commission Regulation (EU) 2023/915 Article 3 food containing contaminant exceeding maximum level shall not be placed on the market",
+      "top_k": 3,
+      "results": [
+        {
+          "rank": 1,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": "Article 2",
+          "location": "Article 2 — General rules",
+          "heading": "General rules"
+        },
+        {
+          "rank": 2,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "article": null,
+          "location": "Table 4, row 14",
+          "heading": null
+        },
+        {
+          "rank": 3,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "article": "Article 14",
+          "location": "Article 14 — Food safety requirements",
+          "heading": "Food safety requirements"
+        }
+      ]
+    }
+  ],
+  "target_coverage_diagnostic": {
+    "Article 66": false,
+    "Article 67": false,
+    "Article 71": false,
+    "Article 72": false
+  },
+  "final_output": "If an aflatoxin result exceeds the applicable maximum level, the food listed in Annex I **must not be placed on the market or used as a food raw material or ingredient** (Regulation (EU) 2023/915, Article 2(1)). The relevant aflatoxin limit depends on the food category (Annex I, section 1.1).\n\nPossible follow-up actions include:\n\n- **Operator action:** If the food has left the operator’s immediate control, the food business operator must initiate withdrawal and inform the competent authority. If it may have reached consumers, the operator must inform them; a consumer recall is required where necessary to protect health (Regulation (EC) No 178/2002, Article 19(1)).\n- **Authority action:** For established non-compliance, the competent authority may order measures including restriction or prohibition of placing the food on the market, withdrawal or recall, removal, or destruction; it may also allow use for a different purpose where appropriate (Regulation (EU) 2017/625, Article 138(1)–(2)).\n- **Batch assessment:** If food in a batch, lot or consignment is found unsafe, the rest is presumed unsafe unless a detailed assessment shows otherwise (Regulation (EC) No 178/2002, Article 14(6)).\n\nThese are potential measures, not a claim that every case automatically results in recall or destruction.",
+  "saved_at_utc": "2026-10-19T10:20:05.982499+00:00"
+}
