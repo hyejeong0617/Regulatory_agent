@@ -1,0 +1,1445 @@
+{
+  "experiment_id": "NB09_build04_investigation_v3",
+  "build": "Build04",
+  "qid": "Q10",
+  "question": "Based on the evidence above, prepare a concise regulatory assessment for an EU food business operator handling this shipment. Clearly distinguish confirmed requirements from information that still requires verification.",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "settings": {
+    "experiment_id": "NB09_build04_investigation_v3",
+    "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+    "initial_max": 5,
+    "targeted_max": 3,
+    "validation_max": 2,
+    "max_llm_calls": 12,
+    "enable_cellar_live": false,
+    "coverage_tracker": "planner_task_plus_subissue_v1",
+    "gap_classification": "type_aware_v1",
+    "runtime_version": "nb09_build04_v3"
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "plan": [
+    {
+      "task_id": "T1",
+      "question": "Retrieve the frozen-corpus legal text governing aflatoxin in dried figs, including the applicable product category, any distinction based on intended use or processing, and the relevant limit and sampling or analysis provisions. Identify the source instrument and whether cited text is in its own Annex or in an amending act.",
+      "priority": "high",
+      "search_query": "EU contaminant rules aflatoxin B1 dried figs product category intended use processing limit sampling analysis Annex",
+      "expected_evidence_type": "Exact retrieved legal provisions and Annex text, with instrument identity and evidence IDs",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T2",
+      "question": "Check the frozen corpus for import-control rules applicable to dried figs originating in Türkiye, including whether the product-origin combination is listed, the conditions and frequency of any official controls, and any required accompanying documents or entry procedures. Do not infer applicability if the relevant listing or facts are absent.",
+      "priority": "high",
+      "search_query": "EU official import controls Türkiye dried figs aflatoxins listing frequency border control accompanying documents entry procedure",
+      "expected_evidence_type": "Retrieved listing, operative control provisions, and documentary or entry requirements, with evidence IDs",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T3",
+      "question": "Retrieve the rules assigning food-business-operator responsibilities relevant to receiving, handling, traceability, and ensuring food compliance for this shipment; distinguish duties supported by the frozen text from duties dependent on facts not supplied.",
+      "priority": "high",
+      "search_query": "EU food business operator responsibilities compliance traceability receiving handling contaminated food food law",
+      "expected_evidence_type": "Exact legal provisions on operator duties and traceability, with evidence IDs",
+      "needs_currentness": false
+    },
+    {
+      "task_id": "T4",
+      "question": "Retrieve the frozen-corpus provisions on actions and notifications when food is considered unsafe or non-compliant, including any withdrawal, recall, or cooperation duties and the conditions triggering them. Do not treat detection alone as proof that a trigger is met.",
+      "priority": "high",
+      "search_query": "EU unsafe food non-compliant contaminant withdrawal recall notify competent authority food business operator conditions",
+      "expected_evidence_type": "Exact conditional response and notification provisions, with evidence IDs",
+      "needs_currentness": false
+    },
+    {
+      "task_id": "T5",
+      "question": "Identify the dates and version status shown by the retrieved frozen-corpus texts, and flag which relied-on requirements need later verification against official current EU sources. Do not determine present legal effectiveness from consolidation metadata alone.",
+      "priority": "medium",
+      "search_query": "frozen corpus instrument dates amendments consolidated text provisions requiring later official current-law verification",
+      "expected_evidence_type": "Document identity and date metadata plus a list of provisions for external currentness follow-up",
+      "needs_currentness": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E3f00c01bc7",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 18",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E133737bd5a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 3",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E84bba6f619",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Effd100d7a6",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E0f3287ac2b",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row9::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 9",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.6 | Tree nuts to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food except products listed in 1.1.8 and 1.1.10 | 5,0 | 10,0 | - | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3718f00663",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_64::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 64",
+      "location": "Article 64 — Minimum requirements for border control posts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 64 Minimum requirements for border control posts 1. Border control posts shall be located in the immediate vicinity of the point of entry into the Union and either in a place which is designated by the customs authorities in accordance with Article 135(1) and (2) of Regulation (EU) No 952/2013 or in a free zone. 2. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning the cases where and conditions under which a border control post may be situated at a distance other than in the immediate vicinity of the point of entry into the Union in cases of specific geographical constraints. 3. Border control posts shall have: (a) a sufficient number of suitably qualified staff; (b) premises or other facilities appropriate to the nature and volume of the categories of animals and goods handled; (c) equipment and premises or other facilities to allow the performance of official controls for each of the categories of animals and goods for which the border control post has been designated; (d) arrangements in place to ensure, as appropriate, access to any other equipment, premise and service necessary to apply the measures taken in accordance with Articles 65, 66 and 67 in cases of suspicion of non-compliance, non-compliant consignments or consignments presenting a risk; (e) contingency arrangements to ensure the smooth operation of official controls and the effective application of the measures taken in accordance with Articles 65, 66 and 67 in cases of unforeseeable and unexpected conditions or events; (f) the technology and equipment necessary for the efficient operation of the IMSOC and, as appropriate, of other computerised information management systems necessary for the handling and exchange of data",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ec0a4be4ee2",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_51::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 51",
+      "location": "Article 51 — Specific rules for official controls at border control posts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 51 Specific rules for official controls at border control posts 1. The Commission shall adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning rules to establish: (a) the cases where, and the conditions under which, the competent authorities of a border control post may authorise the onward transportation of consignments of the categories of animals and goods referred to in Article 47(1) to the place of final destination pending the availability of the results of physical checks, where such checks are required; (b) the time limits and arrangements for carrying out documentary checks and, where necessary, identity checks and physical checks on categories of animals and goods subject to the official controls provided for in Article 47(1) which enter the Union by sea or by air transport from a third country, when those animals or goods are moved from a vessel or aircraft and are transported under customs supervision to another vessel or aircraft in the same port or airport in preparation for onward travel (‘transhipped consignments’); (c) the cases where, and the conditions under which, identity checks and physical checks of transhipped consignments and of animals arriving by air or sea and staying on the same means of transport for onward travel may be performed at a border control post other than the one of first arrival into the Union; (d) the cases where, and the conditions under which, the transit of consignments of the categories of animals and goods referred to in Article 47(1) may be authorised and certain official controls to be performed at border control posts on such consignments, including the cases and conditions for the storage of goods in specially approved customs warehouses or in free zones; (e) the cases",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Eacf23d7a1f",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_51::02",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 51",
+      "location": "Article 51 — Specific rules for official controls at border control posts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "trols to be performed at border control posts on such consignments, including the cases and conditions for the storage of goods in specially approved customs warehouses or in free zones; (e) the cases where, and the conditions under which, derogations from the rules on identity checks and physical checks shall apply as regards transhipped consignments and transit of consignments of the goods referred to in point (c) of Article 47(1). 2. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning rules to establish the cases where, and the conditions under which, derogations from the rules on documentary checks shall apply as regards transhipped consignments and transit of consignments of the goods referred to in point (c) of Article 47(1).",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E46c1b89564",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 19",
+      "location": "Article 19 — Responsibilities for food: food business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 19 Responsibilities for food: food business operators 1. If a food business operator considers or has reason to believe that a food which it has imported, produced, processed, manufactured or distributed is not in compliance with the food safety requirements, it shall immediately initiate procedures to withdraw the food in question from the market where the food has left the immediate control of that initial food business operator and inform the competent authorities thereof. Where the product may have reached the consumer, the operator shall effectively and accurately inform the consumers of the reason for its withdrawal, and if necessary, recall from consumers products already supplied to them when other measures are not sufficient to achieve a high level of health protection. 2. A food business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the food shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the food-safety requirements and shall participate in contributing to the safety of the food by passing on relevant information necessary to trace a food, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A food business operator shall immediately inform the competent authorities if it considers or has reason to believe that a food which it has placed on the market may be injurious to human health. Operators shall inform the competent authorities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E42ee08dfc5",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 19",
+      "location": "Article 19 — Responsibilities for food: food business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "ities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a food. 4. Food business operators shall collaborate with the competent authorities on action taken to avoid or reduce risks posed by a food which they supply or have supplied.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E32d56f6d3a",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_17::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 17",
+      "location": "Article 17 — Responsibilities",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 17 Responsibilities 1. Food and feed business operators at all stages of production, processing and distribution within the businesses under their control shall ensure that foods or feeds satisfy the requirements of food law which are relevant to their activities and shall verify that such requirements are met. 2. Member States shall enforce food law, and monitor and verify that the relevant requirements of food law are fulfilled by food and feed business operators at all stages of production, processing and distribution. For that purpose, they shall maintain a system of official controls and other activities as appropriate to the circumstances, including public communication on food and feed safety and risk, food and feed safety surveillance and other monitoring activities covering all stages of production, processing and distribution. Member States shall also lay down the rules on measures and penalties applicable to infringements of food and feed law. The measures and penalties provided for shall be effective, proportionate and dissuasive.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ed48dc8de6a",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_148::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 148",
+      "location": "Article 148 — Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 148 Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments 1. Competent authorities shall establish procedures for food business operators to follow when applying for the approval of their establishments in accordance with Regulations (EC) No 852/2004 and (EC) No 853/2004. 2. Upon receipt of an application for approval from a food business operator, the competent authority shall make an on-site visit. 3. The competent authority shall approve an establishment for the activities concerned only if the food business operator has demonstrated that it complies with the relevant requirements of food law. 4. The competent authority may grant conditional approval if it appears that the establishment meets all the infrastructure and equipment requirements. It shall grant full approval only if it appears from a new official control of the establishment, carried out within three months of granting conditional approval, that the establishment meets the other relevant requirements of food law. If clear progress has been made but the establishment still does not meet all of the relevant requirements, the competent authority may prolong the conditional approval. However, conditional approval shall not exceed a total of six months, except in the case of factory and freezer vessels flying the flag of Member States, for which such conditional approval shall not exceed a total of 12 months. 5. The competent authority shall keep the approval of establishments under review when carrying out official controls.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Eb0e57f51a1",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_18::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 18",
+      "location": "Article 18 — Traceability",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 18 Traceability 1. The traceability of food, feed, food-producing animals, and any other substance intended to be, or expected to be, incorporated into a food or feed shall be established at all stages of production, processing and distribution. 2. Food and feed business operators shall be able to identify any person from whom they have been supplied with a food, a feed, a food-producing animal, or any substance intended to be, or expected to be, incorporated into a food or feed. To this end, such operators shall have in place systems and procedures which allow for this information to be made available to the competent authorities on demand. 3. Food and feed business operators shall have in place systems and procedures to identify the other businesses to which their products have been supplied. This information shall be made available to the competent authorities on demand. 4. Food or feed which is placed on the market or is likely to be placed on the market in the Community shall be adequately labelled or identified to facilitate its traceability, through relevant documentation or information in accordance with the relevant requirements of more specific provisions. 5. Provisions for the purpose of applying the requirements of this Article in respect of specific sectors may be adopted in accordance with the procedure laid down in Article 58(2).",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee636d4e1db",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_14::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 14",
+      "location": "Article 14 — Food safety requirements",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "fe, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment is unsafe. 7. Food that complies with specific Community provisions governing food safety shall be deemed to be safe insofar as the aspects covered by the specific Community provisions are concerned. 8. Conformity of a food with specific provisions applicable to that food shall not bar the competent authorities from taking appropriate measures to impose restrictions on it being placed on the market or to require its withdrawal from the market where there are reasons to suspect that, despite such conformity, the food is unsafe. 9. Where there are no specific Community provisions, food shall be deemed to be safe when it conforms to the specific provisions of national food law of the Member State in whose territory the food is marketed, such provisions being drawn up and applied without prejudice to the Treaty, in particular Articles 28 and 30 thereof.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee6355d4f25",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_14::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 14",
+      "location": "Article 14 — Food safety requirements",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 14 Food safety requirements 1. Food shall not be placed on the market if it is unsafe. 2. Food shall be deemed to be unsafe if it is considered to be: (a) injurious to health; (b) unfit for human consumption. 3. In determining whether any food is unsafe, regard shall be had: (a) to the normal conditions of use of the food by the consumer and at each stage of production, processing and distribution, and (b) to the information provided to the consumer, including information on the label, or other information generally available to the consumer concerning the avoidance of specific adverse health effects from a particular food or category of foods. 4. In determining whether any food is injurious to health, regard shall be had: (a) not only to the probable immediate and/or short-term and/or long-term effects of that food on the health of a person consuming it, but also on subsequent generations; (b) to the probable cumulative toxic effects; (c) to the particular health sensitivities of a specific category of consumers where the food is intended for that category of consumers. 5. In determining whether any food is unfit for human consumption, regard shall be had to whether the food is unacceptable for human consumption according to its intended use, for reasons of contamination, whether by extraneous matter or otherwise, or through putrefaction, deterioration or decay. 6. Where any food which is unsafe is part of a batch, lot or consignment of food of the same class or description, it shall be presumed that all the food in that batch, lot or consignment is also unsafe, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment is unsafe. 7. Food that complies with specific Community provisions governing food safety",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ecc493450df",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_154::02",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 154",
+      "location": "Article 154 — Amendments to Regulation (EC) No 1/2005 and related transitional measures",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "provisions of this Regulation, until 14 December 2022 or an earlier date to be determined in the delegated act adopted in accordance with paragraph 3 of this Article. 3. The Commission is empowered to adopt delegated acts in accordance with Article 144 to amend this Regulation concerning the date referred to in paragraph 2 of this Article. That date shall be the date of application of the corresponding rules to be established pursuant to the delegated or implementing acts provided for in Article 21.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E03df8363d1",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_166::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 166",
+      "location": "Article 166 — Transitional measures for the adoption of delegated and implementing acts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 166 Transitional measures for the adoption of delegated and implementing acts Without prejudice to the dates of application referred to in Article 167 and transitional provisions provided for in this Chapter, the Commission is empowered to adopt delegated and implementing acts provided for in this Regulation as from 28 April 2017. Such acts shall apply from the date of application in accordance with Article 167, without prejudice to any transitional rules provided for in this Chapter.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E2451b3e715",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_164::02",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 164",
+      "location": "Article 164 — Amendments to Regulation (EU) 2016/429 and related transitional provisions",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "on (EU) 2016/429, until the date of application of that Regulation: (a) Article 9 of Directive 89/662/EEC; (b) Article 10 of Directive 90/425/EEC; (c) Article 18(1), (3), (4), (5), (6), (7) and (8) of Directive 91/496/EEC; (d) Article 22(1), (3), (4), (5), (6) and (7) of Directive 97/78/EC. 3. Having regard to Article 14 of Regulation (EU) 2016/429 and notwithstanding the date of application provided for in that Regulation, for the purpose of Article 31(2) of this Regulation, the condition for its application shall be considered to be fulfilled already from 14 December 2019.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E2eac4fa87c",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_165::06",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 165",
+      "location": "Article 165 — Amendments to Regulation (EU) 2016/2031 and related transitional provisions",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "llowing: ‘Article 103 Establishment of electronic notification system The Commission shall establish an electronic system for the submission of notifications by the Member States. That system shall be connected to, and compatible with, the IMSOC.’; (16) in Article 109, paragraph 1 is replaced by the following: ‘Directive 2000/29/EC is repealed, without prejudice to Article 165(2), (3) and (4) of Regulation ►C1 (EU) 2017/625 ◄ .’. 2. ►M2 In relation to matters governed by Directive 2000/29/EC, Article 47(2), Article 48, points (b), (c) and (d) of Article 51(1), and point (a) of Article 58 of this Regulation shall apply from 15 December 2019 instead of the relevant provisions of that Directive, which shall cease to be applicable as of the same date. The relevant provisions of Directive 2000/29/EC shall continue to apply in relation to the matters governed by points (a) of Article 53(1) of this Regulation instead of that latter provision until 13 December 2020. The relevant provisions of Directive 2000/29/EC shall continue to apply in relation to the matters governed by Article 54(1) and (3) of this Regulation instead of these latter provisions until 13 December 2022. ◄ 3. The Commission is empowered to adopt delegated acts in accordance with Article 144 to amend this Regulation concerning the date referred to in paragraph 2 of this Article. 4. Without prejudice to paragraphs 2 and 3 of this Article and the date of application provided for in Article 167(1), the Commission shall adopt the delegated acts referred to in points (a) and (e) of Article 53(1), as regards goods referred to in point (c) of Article 47(1), at the latest 12 months before their date of application.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3b6ff9f429",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_155::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 155",
+      "location": "Article 155 — Amendments to Regulation (EC) No 396/2005 and related transitional measures",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 155 Amendments to Regulation (EC) No 396/2005 and related transitional measures 1. Articles 26 and 27, Article 28(1) and (2) and Article 30 of Regulation (EC) No 396/2005 are deleted. 2. Article 26, Article 27(1) and Article 30 of Regulation (EC) No 396/2005 shall continue to apply instead of the corresponding provisions of this Regulation until 14 December 2022 or an earlier date to be determined in the delegated act adopted in accordance with paragraph 3 of this Article. 3. The Commission is empowered to adopt delegated acts in accordance with Article 144 to amend this Regulation concerning the date referred to in paragraph 2 of this Article. That date shall be the date of application of the corresponding rules to be established pursuant to the delegated or implementing acts provided for in Article 19.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E66850f2e6b",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_20::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 20",
+      "location": "Article 20 — Responsibilities for feed: feed business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 20 Responsibilities for feed: feed business operators 1. If a feed business operator considers or has reason to believe that a feed which it has imported, produced, processed, manufactured or distributed does not satisfy the feed safety requirements, it shall immediately initiate procedures to withdraw the feed in question from the market and inform the competent authorities thereof. In these circumstances or, in the case of Article 15(3), where the batch, lot or consignment does not satisfy the feed safety requirement, that feed shall be destroyed, unless the competent authority is satisfied otherwise. The operator shall effectively and accurately inform users of the feed of the reason for its withdrawal, and if necessary, recall from them products already supplied when other measures are not sufficient to achieve a high level of health protection. 2. A feed business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the feed shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the feed-safety requirements and shall participate in contributing to the safety of food by passing on relevant information necessary to trace a feed, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A feed business operator shall immediately inform the competent authorities if it considers or has reason to believe that a feed which it placed on the market may not satisfy the feed safety requirements. It shall inform the competent authorities of the action taken to prevent risk arising from the use of that feed and shall not prevent or discourage any person from",
+      "retrieved_by": "scoped_search_after_stale_exact"
+    },
+    {
+      "evidence_id": "E48009b56ee",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_20::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 20",
+      "location": "Article 20 — Responsibilities for feed: feed business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "atisfy the feed safety requirements. It shall inform the competent authorities of the action taken to prevent risk arising from the use of that feed and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a feed. 4. Feed business operators shall collaborate with the competent authorities on action taken in order to avoid risks posed by a feed which they supply or have supplied.",
+      "retrieved_by": "scoped_search_after_stale_exact"
+    },
+    {
+      "evidence_id": "Edfc5d5696a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row17::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 17",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.14 | Following dried spices: Capsicum spp. (dried fruits thereof, whole or ground, including chillies, chilli powder, cayenne or paprika) Pepper (fruits of Piper spp, including white and black pepper) Nutmeg ( Myristica fragrans ) Turmeric ( Curcuma longa ) Mixtures of dried spices containing one or more of the abovementioned dried spices | 5,0 | 10,0 | -",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "Edd362917e2",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row5::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 5",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.2 | Dried fruits used as only ingredient or processed products from dried fruits, placed on the market for the final consumer or use as an ingredient in food except products listed in 1.1.3 | 2,0 | 4,0 | - | In the case of food consisting of dried fruits used as only ingredient or in the case of processed products consisting at least of 80 % from the dried fruits concerned, the maximum levels as established for the corresponding dried fruits apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "Ed60af6c3a8",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table21_row21::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 21, row 21",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 3.4 | Arsenic | Maximum level (mg/kg) | Remarks || Inorganic arsenic (sum of As (III) and As (V) ) | The maximum level for inorganic arsenic applies to products listed in 3.4.1 to 3.4.8.. Row: 3.4.6 | Crustaceans | The maximum level applies to the wet weight. The maximum level applies to muscle meat from appendages and abdomen, which means that the cephalothorax of crustaceans is excluded. In case of crabs and crab-like crustaceans ( Brachyura and Anomura ) the maximum level applies to the muscle meat from appendages. In case of dried, diluted, processed and/or compound food, Article 3(1) and (2) applies.",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "E4f95b205f3",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_9::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": "Article 9",
+      "location": "Article 9 — Repeal",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "Article 9 Repeal Regulation (EC) No 1881/2006 is repealed. References to the repealed Regulation shall be construed as references to this Regulation and shall be read in accordance with the correlation table in Annex II.",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "E1977c39193",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.3 | Pistachios to be subjected to sorting or other physical treatment before placing on the market for final consumer or use as an ingredient in food | 10,0 | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the ochratoxin A content, that all the contamination is on the edible part.",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "Eedd7a21275",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_10::02",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": "Article 10",
+      "location": "Article 10 — Transitional measures",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "as regards the maximum levels for ergot alkaloids set out in point 1.8.2.1 of Annex I; (m) 1 July 2025 as regards the maximum levels for ergot sclerotia set out in point 1.8.1.2 of Annex I; (n) 1 July 2028 as regards the maximum levels for ergot alkaloids set out in points 1.8.2.1a and 1.8.2.3 of Annex I; ▼M9 (o) 1 July 2025 as regards the maximum levels for nickel set out in the entry 3.6 of Annex I, with the exception of the maximum levels for nickel set out in points 3.6.11.1 to 3.6.11.5 of Annex I; (p) 1 July 2026 as regards the maximum levels for nickel set out in points 3.6.11.1 to 3.6.11.5 of Annex I; ▼M10 (q) 8 October 2025 as regards the maximum levels for inorganic arsenic set out in points 3.4.5, 3.4.6, 3.4.7 and 3.4.8 of Annex I; ▼M11 (r) 1 January 2027 as regards the maximum levels for sum of 3-monochloropropanediol (3-MCPD) and 3-MCPD fatty acid esters, expressed as 3-MCPD set out in points 5.3.2 and 5.3.4 of Annex I and the maximum levels for glycidyl fatty acid esters set out in points 5.4.2 and 5.4.4. of Annex I. ▼B 2. Food lawfully placed on the market before 1 July 2022 may remain on the market until 31 December 2023 as regards the maximum levels for pyrrolizidine alkaloids set out in point 2.4 of Annex I. 3. The burden of proving the date when the products were lawfully placed on the market shall be borne by the food business operator.",
+      "retrieved_by": "scoped_search"
+    }
+  ],
+  "claims": [
+    {
+      "statement": "Regulation (EU) 2023/915’s Table 3 lists dried figs with maximum levels of 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins. These are the listed limits; the reported detection cannot be assessed against them because no measured concentration is supplied.",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "Dried figs | 6,0 | 10,0",
+      "status": "supported",
+      "scope_note": "The table also says the sum is calculated on a lower-bound basis. Confirm the applicable sampling and analytical rules before relying on a test result.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "For food consisting only of dried figs, or processed products consisting of at least 80% dried figs, the dried-fig maximum levels apply; the evidence refers other cases to Article 3(1) and (2).",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "processed products consisting at least of 80 % from dried figs",
+      "status": "supported",
+      "scope_note": "The shipment’s composition, processing and intended use are not supplied, so the applicable product category cannot be conclusively determined.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The frozen Regulation (EU) 2019/1793 Annex II, Section 1 snapshot lists Türkiye-origin dried figs and specified fig-containing or processed products for aflatoxins and ochratoxin A, with a 30% frequency of identity and physical checks.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "This establishes what the supplied snapshot lists, not that the listing or frequency is currently effective or applicable to this consignment.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The snapshot gives CN code 0804 20 90 for dried figs; whether that or another listed code applies to this shipment requires classification verification.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Dried figs | 0804 20 90",
+      "status": "supported",
+      "scope_note": "No shipment-specific CN/TARIC classification is provided.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Food business operators must ensure and verify compliance with food-law requirements relevant to their activities; traceability systems must identify suppliers and businesses supplied and make that information available to competent authorities on demand.",
+      "evidence_ids": [
+        "E32d56f6d3a",
+        "Eb0e57f51a1"
+      ],
+      "support_quote": "shall ensure that foods or feeds satisfy the requirements of food law",
+      "status": "supported",
+      "scope_note": "These duties apply within the operator’s business and activities; the operator’s role and records for this shipment are not supplied.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Withdrawal and consumer-notification or recall duties under Article 19 are conditional: they arise when an operator considers or has reason to believe food it handled is not compliant with food-safety requirements, with recall from consumers required if necessary and other measures are insufficient.",
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "support_quote": "If a food business operator considers or has reason to believe",
+      "status": "supported",
+      "scope_note": "Aflatoxin detection alone does not establish that this trigger is met; the result, applicable limit and relevant assessment are needed. Operators must also cooperate with competent authorities on action to avoid or reduce risks.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Frequency of identity and physical checks: 30%",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The supplied prior legal-text finding identifies dried figs in Regulation (EU) 2023/915 with maximum levels of 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins. The detected aflatoxin B1 cannot be assessed against the B1 level because its measured concentration is not supplied.",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "Dried figs | 6,0 | 10,0",
+      "status": "supported",
+      "scope_note": "The cited finding also states that the sum is calculated on a lower-bound basis. Applicable sampling and analysis rules, the test result and current legal status still require verification.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The dried-fig levels apply to food consisting only of dried figs and to processed products consisting of at least 80% dried figs; other cases are referred to Article 3(1) and (2).",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "processed products consisting at least of 80 % from dried figs",
+      "status": "supported",
+      "scope_note": "Composition, processing and intended use of this shipment are not provided, so its product category cannot be conclusively established.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The frozen Regulation (EU) 2019/1793 Annex II, Section 1 snapshot lists Türkiye-origin dried figs and specified fig-containing or processed products, identifies aflatoxins and ochratoxin A as hazards, and records a 30% frequency of identity and physical checks.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "This supports what the supplied snapshot records, not that the listing or frequency is currently in force or applies to this consignment. The snapshot also gives CN code 0804 20 90 for dried figs; shipment classification is unconfirmed.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Food business operators must ensure and verify food-law compliance relevant to their activities, and maintain traceability systems that identify suppliers and businesses supplied and make the information available to competent authorities on demand.",
+      "evidence_ids": [
+        "E32d56f6d3a",
+        "Eb0e57f51a1"
+      ],
+      "support_quote": "shall ensure that foods or feeds satisfy the requirements of food law",
+      "status": "supported",
+      "scope_note": "These duties operate within the operator’s business and activities; the operator’s role and shipment records have not been supplied.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Withdrawal and related notification or recall duties are conditional: Article 19 applies where an operator considers or has reason to believe food is not compliant with food-safety requirements; consumer recall is required if necessary when other measures are insufficient. Operators must also cooperate with competent authorities on risk-reduction action.",
+      "evidence_ids": [
+        "E46c1b89564",
+        "E42ee08dfc5"
+      ],
+      "support_quote": "If a food business operator considers or has reason to believe",
+      "status": "supported",
+      "scope_note": "Detection alone does not establish that the trigger is met. The measured result, applicable limit and assessment are needed.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The supplied import-control evidence does not establish the operative requirements giving effect to that listing, the applicable entry procedure, or the accompanying documents required for this consignment.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "status": "unverified",
+      "scope_note": "The Annex snapshot alone does not establish those requirements. Verify the relevant operative provisions and the current listing, product scope and commodity classification.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The supplied texts and snapshots show version metadata, but that metadata does not by itself verify present legal effectiveness or current applicability.",
+      "evidence_ids": [
+        "E0f3287ac2b",
+        "Effd100d7a6",
+        "E32d56f6d3a"
+      ],
+      "support_quote": "source_version",
+      "status": "unverified",
+      "scope_note": "Verify relied-on requirements and import-control listings against official current EU sources before acting on their present status. | Quote/evidence-ID check failed",
+      "quote_verified": false,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Verify the current dried-fig aflatoxin B1 and total-aflatoxin entries, product-use/processing conditions, and the applicable sampling and analysis provisions in Regulation (EU) 2023/915.",
+      "query": "Regulation (EU) 2023/915 current Annex I aflatoxins dried figs sampling analysis Article 3",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "critical": true
+    },
+    {
+      "description": "Verify the current Türkiye dried-fig import-control listing and retrieve the operative provisions governing the listed controls, entry procedure and accompanying documents.",
+      "query": "Regulation (EU) 2019/1793 current Annex II Türkiye dried figs implementing articles border control documents entry",
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "critical": true
+    },
+    {
+      "description": "Obtain the consignment’s laboratory result, product composition and processing/intended-use details, and CN/TARIC classification to assess the relevant limit and import-control scope.",
+      "query": "consignment aflatoxin B1 concentration dried figs composition processing intended use CN TARIC classification",
+      "regulation_id": null,
+      "exact_provision": null,
+      "critical": true
+    }
+  ],
+  "conflicts": [],
+  "coverage_items": [
+    {
+      "coverage_id": "C1",
+      "task_id": "T1",
+      "issue": "The supplied frozen-text claim reports dried-fig maximum levels of 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins, and describes the stated product-composition threshold for applying those levels. It also notes that the shipment’s composition and processing are unknown.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        0,
+        1
+      ],
+      "missing_elements": [],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C2",
+      "task_id": "T1",
+      "issue": "Applicable sampling and analytical provisions needed to assess whether a test result can be compared with the stated limits are not established.",
+      "status": "missing_legal_evidence",
+      "gap_type": "legal_evidence",
+      "critical": true,
+      "evidence_ids": [],
+      "claim_indices": [],
+      "missing_elements": [
+        "Applicable sampling and analysis provisions"
+      ],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "Retrieve the specific Regulation (EU) 2023/915 provision or incorporated provision governing sampling and analysis for aflatoxins in dried figs; identify its exact location and applicability.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C3",
+      "task_id": "T1",
+      "issue": "The evidence identifies the dried-fig entry as Table 3, row 6 of Regulation (EU) 2023/915, but does not establish whether the cited text is in that regulation’s own Annex or in an amending act’s Annex.",
+      "status": "missing_legal_evidence",
+      "gap_type": "legal_evidence",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        0
+      ],
+      "missing_elements": [
+        "Source Annex identity"
+      ],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "Verify the source instrument and Annex containing Regulation (EU) 2023/915 Table 3, row 6, and distinguish it from any amending act Annex.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T1",
+      "issue": "The measured aflatoxin B1 concentration is not supplied, so whether the shipment exceeds the reported B1 maximum level cannot be determined.",
+      "status": "missing_case_fact",
+      "gap_type": "case_fact",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        0,
+        10
+      ],
+      "missing_elements": [
+        "Measured concentration and relevant test-result details"
+      ],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C5",
+      "task_id": "T1",
+      "issue": "The current legal effect and applicability of the dried-fig levels and product-category rule require verification against official current EU sources.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        0,
+        1,
+        10,
+        11
+      ],
+      "missing_elements": [
+        "Official current-law verification"
+      ],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "Check official current EU sources for the legal effect and applicability of the dried-fig aflatoxin entries and product-composition rule in Regulation (EU) 2023/915.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T2",
+      "issue": "The frozen snapshot lists Türkiye-origin dried-fig products, specified hazards and a 30% frequency of identity and physical checks; whether that listing, scope and frequency currently apply requires verification.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "claim_indices": [
+        2,
+        6,
+        7,
+        8,
+        12
+      ],
+      "missing_elements": [
+        "Verification of current listing, scope and control frequency"
+      ],
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "search_query": "Verify from official current EU sources whether Türkiye-origin dried figs remain listed under Regulation (EU) 2019/1793 and the applicable product scope and identity and physical check frequency.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C7",
+      "task_id": "T2",
+      "issue": "The snapshot gives CN code 0804 20 90 for dried figs, but the shipment’s applicable CN/TARIC classification is not provided.",
+      "status": "missing_case_fact",
+      "gap_type": "case_fact",
+      "critical": true,
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "claim_indices": [
+        3,
+        9,
+        12
+      ],
+      "missing_elements": [
+        "Shipment-specific CN/TARIC classification"
+      ],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C8",
+      "task_id": "T2",
+      "issue": "The operative import-control provisions, entry procedures and required accompanying documents are not established by the supplied claims.",
+      "status": "missing_legal_evidence",
+      "gap_type": "legal_evidence",
+      "critical": true,
+      "evidence_ids": [],
+      "claim_indices": [],
+      "missing_elements": [
+        "Applicable entry procedures and documentary requirements"
+      ],
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "search_query": "Retrieve the operative provisions of Regulation (EU) 2019/1793 governing entry of goods listed in Annex II, Section 1, including applicable border-control procedures and required accompanying documents.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C9",
+      "task_id": "T3",
+      "issue": "The supplied claims address operator duties to ensure and verify food-law compliance relevant to their activities and to maintain specified traceability information; the operator’s role and records for this shipment remain unknown.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E32d56f6d3a",
+        "Eb0e57f51a1"
+      ],
+      "claim_indices": [
+        4,
+        13
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C10",
+      "task_id": "T4",
+      "issue": "Conditional withdrawal, consumer-information or recall duties and cooperation with competent authorities are addressed; detection alone is not shown to meet the triggering condition.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E46c1b89564",
+        "E42ee08dfc5"
+      ],
+      "claim_indices": [
+        5,
+        14
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C11",
+      "task_id": "T4",
+      "issue": "A distinct duty to notify a competent authority and its precise triggering conditions are not separately resolved by the supplied claims.",
+      "status": "missing_legal_evidence",
+      "gap_type": "legal_evidence",
+      "critical": true,
+      "evidence_ids": [
+        "E46c1b89564",
+        "E42ee08dfc5"
+      ],
+      "claim_indices": [
+        5,
+        14
+      ],
+      "missing_elements": [
+        "Exact authority-notification duty and trigger"
+      ],
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 19",
+      "search_query": "Verify the exact duty, if any, under Regulation (EC) No 178/2002 Article 19 for a food business operator to notify competent authorities when food may be unsafe or non-compliant, including the triggering conditions.",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C12",
+      "task_id": "T5",
+      "issue": "The evidence catalog supplies frozen source-version dates for the cited texts; those dates describe the supplied snapshots and do not establish present legal effectiveness.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": false,
+      "evidence_ids": [
+        "E84bba6f619",
+        "Effd100d7a6",
+        "E32d56f6d3a",
+        "Eb0e57f51a1",
+        "E46c1b89564"
+      ],
+      "claim_indices": [],
+      "missing_elements": [],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C13",
+      "task_id": "T5",
+      "issue": "The contaminant requirements, import-control listing and procedures, and their applicability must be checked against official current EU sources; frozen-text dates or consolidation metadata cannot establish current legal effect.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619",
+        "Effd100d7a6"
+      ],
+      "claim_indices": [
+        0,
+        1,
+        2,
+        12
+      ],
+      "missing_elements": [
+        "Official current-law verification of relied-on requirements"
+      ],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "Check official current EU sources for the legal effect and applicability of the dried-fig aflatoxin rules in Regulation (EU) 2023/915 and Türkiye dried-fig import controls and procedures in Regulation (EU) 2019/1793.",
+      "rationale": ""
+    }
+  ],
+  "coverage_summary": {
+    "items": 13,
+    "critical_covered": 3,
+    "critical_total": 12,
+    "critical_coverage_ratio": 0.25,
+    "unresolved_critical": 9,
+    "missing_parent_tasks": [],
+    "unresolved_by_type": {
+      "case_fact": 2,
+      "current_law": 3,
+      "interpretation_conflict": 0,
+      "legal_evidence": 4,
+      "unsupported_claim": 0
+    },
+    "note": "LLM-derived diagnostic coverage; NOT benchmark completeness or legal correctness."
+  },
+  "classified_gaps": [
+    {
+      "coverage_id": "C2",
+      "task_id": "T1",
+      "issue": "Applicable sampling and analytical provisions needed to assess whether a test result can be compared with the stated limits are not established.",
+      "gap_type": "legal_evidence",
+      "status": "missing_legal_evidence",
+      "critical": true,
+      "search_query": "Retrieve the specific Regulation (EU) 2023/915 provision or incorporated provision governing sampling and analysis for aflatoxins in dried figs; identify its exact location and applicability.",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "missing_elements": [
+        "Applicable sampling and analysis provisions"
+      ]
+    },
+    {
+      "coverage_id": "C3",
+      "task_id": "T1",
+      "issue": "The evidence identifies the dried-fig entry as Table 3, row 6 of Regulation (EU) 2023/915, but does not establish whether the cited text is in that regulation’s own Annex or in an amending act’s Annex.",
+      "gap_type": "legal_evidence",
+      "status": "missing_legal_evidence",
+      "critical": true,
+      "search_query": "Verify the source instrument and Annex containing Regulation (EU) 2023/915 Table 3, row 6, and distinguish it from any amending act Annex.",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "missing_elements": [
+        "Source Annex identity"
+      ]
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T1",
+      "issue": "The measured aflatoxin B1 concentration is not supplied, so whether the shipment exceeds the reported B1 maximum level cannot be determined.",
+      "gap_type": "case_fact",
+      "status": "missing_case_fact",
+      "critical": true,
+      "search_query": "",
+      "regulation_id": null,
+      "exact_provision": null,
+      "missing_elements": [
+        "Measured concentration and relevant test-result details"
+      ]
+    },
+    {
+      "coverage_id": "C5",
+      "task_id": "T1",
+      "issue": "The current legal effect and applicability of the dried-fig levels and product-category rule require verification against official current EU sources.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Check official current EU sources for the legal effect and applicability of the dried-fig aflatoxin entries and product-composition rule in Regulation (EU) 2023/915.",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "missing_elements": [
+        "Official current-law verification"
+      ]
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T2",
+      "issue": "The frozen snapshot lists Türkiye-origin dried-fig products, specified hazards and a 30% frequency of identity and physical checks; whether that listing, scope and frequency currently apply requires verification.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify from official current EU sources whether Türkiye-origin dried figs remain listed under Regulation (EU) 2019/1793 and the applicable product scope and identity and physical check frequency.",
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "missing_elements": [
+        "Verification of current listing, scope and control frequency"
+      ]
+    },
+    {
+      "coverage_id": "C7",
+      "task_id": "T2",
+      "issue": "The snapshot gives CN code 0804 20 90 for dried figs, but the shipment’s applicable CN/TARIC classification is not provided.",
+      "gap_type": "case_fact",
+      "status": "missing_case_fact",
+      "critical": true,
+      "search_query": "",
+      "regulation_id": null,
+      "exact_provision": null,
+      "missing_elements": [
+        "Shipment-specific CN/TARIC classification"
+      ]
+    },
+    {
+      "coverage_id": "C8",
+      "task_id": "T2",
+      "issue": "The operative import-control provisions, entry procedures and required accompanying documents are not established by the supplied claims.",
+      "gap_type": "legal_evidence",
+      "status": "missing_legal_evidence",
+      "critical": true,
+      "search_query": "Retrieve the operative provisions of Regulation (EU) 2019/1793 governing entry of goods listed in Annex II, Section 1, including applicable border-control procedures and required accompanying documents.",
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "missing_elements": [
+        "Applicable entry procedures and documentary requirements"
+      ]
+    },
+    {
+      "coverage_id": "C11",
+      "task_id": "T4",
+      "issue": "A distinct duty to notify a competent authority and its precise triggering conditions are not separately resolved by the supplied claims.",
+      "gap_type": "legal_evidence",
+      "status": "missing_legal_evidence",
+      "critical": true,
+      "search_query": "Verify the exact duty, if any, under Regulation (EC) No 178/2002 Article 19 for a food business operator to notify competent authorities when food may be unsafe or non-compliant, including the triggering conditions.",
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 19",
+      "missing_elements": [
+        "Exact authority-notification duty and trigger"
+      ]
+    },
+    {
+      "coverage_id": "C13",
+      "task_id": "T5",
+      "issue": "The contaminant requirements, import-control listing and procedures, and their applicability must be checked against official current EU sources; frozen-text dates or consolidation metadata cannot establish current legal effect.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Check official current EU sources for the legal effect and applicability of the dried-fig aflatoxin rules in Regulation (EU) 2023/915 and Türkiye dried-fig import controls and procedures in Regulation (EU) 2019/1793.",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "missing_elements": [
+        "Official current-law verification of relied-on requirements"
+      ]
+    }
+  ],
+  "current_law_calls": [],
+  "trace": [
+    {
+      "node": "planner",
+      "planned_tasks": 5,
+      "queued": 5
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU contaminant rules aflatoxin B1 dried figs product category intended use processing limit sampling analysis Annex",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E3f00c01bc7",
+        "E133737bd5a",
+        "E84bba6f619",
+        "Effd100d7a6",
+        "E0f3287ac2b"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 1
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU official import controls Türkiye dried figs aflatoxins listing frequency border control accompanying documents entry procedure",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E3718f00663",
+        "Ec0a4be4ee2",
+        "Eacf23d7a1f"
+      ],
+      "new_evidence_count": 3,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 2
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU food business operator responsibilities compliance traceability receiving handling contaminated food food law",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E46c1b89564",
+        "E42ee08dfc5",
+        "E32d56f6d3a",
+        "Ed48dc8de6a",
+        "Eb0e57f51a1"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 3
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU unsafe food non-compliant contaminant withdrawal recall notify competent authority food business operator conditions",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "Ee636d4e1db",
+        "Ee6355d4f25"
+      ],
+      "new_evidence_count": 2,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 4
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "frozen corpus instrument dates amendments consolidated text provisions requiring later official current-law verification",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "Ecc493450df",
+        "E03df8363d1",
+        "E2451b3e715",
+        "E2eac4fa87c",
+        "E3b6ff9f429"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 5
+    },
+    {
+      "node": "validator",
+      "round": 1,
+      "claims": 12,
+      "supported": 10,
+      "gaps": 4,
+      "conflicts": 0,
+      "extracted_source_facts": 4,
+      "covered_source_facts": 4
+    },
+    {
+      "node": "coverage_tracker",
+      "round": 1,
+      "critical_covered": 3,
+      "critical_total": 11,
+      "unresolved_by_type": {
+        "case_fact": 1,
+        "current_law": 3,
+        "interpretation_conflict": 0,
+        "legal_evidence": 4,
+        "unsupported_claim": 0
+      }
+    },
+    {
+      "node": "gap_planner",
+      "targeted_queries": [
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Regulation (EC) No 178/2002 Article 19: exact food business operator duty, if any, to notify competent authorities when food is considered unsafe or non-compliant, and its conditions",
+          "top_k": 5,
+          "regulation_id": "178/2002",
+          "provision": "Article 19",
+          "coverage_id": "C10"
+        },
+        {
+          "phase": "targeted",
+          "mode": "search",
+          "query": "Regulation (EU) 2023/915 provisions governing sampling and analysis for aflatoxins in dried figs; identify the applicable provision and method",
+          "top_k": 5,
+          "regulation_id": "2023/915",
+          "coverage_id": "C2"
+        },
+        {
+          "phase": "targeted",
+          "mode": "search",
+          "query": "Identify the source instrument and Annex location of the dried-fig entry in Table 3, row 6, including whether it is an amending act Annex",
+          "top_k": 5,
+          "regulation_id": "2023/915",
+          "coverage_id": "C3"
+        }
+      ],
+      "deferred_live_only": [
+        "Current legal effect and applicability of the dried-fig limits and processing-category rule require verification against official current EU sources.",
+        "The frozen snapshot identifies Türkiye-origin dried-fig products, listed hazards, and a 30% identity and physical check frequency; it does not establish current effectiveness or applicability to this consignment.",
+        "The snapshot gives CN code 0804 20 90, but the shipment’s applicable CN/TARIC classification is not supplied.",
+        "Current effectiveness and applicability of the contaminant limits and the import listing, control frequency, and related procedures remain for verification against official current sources."
+      ]
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "exact",
+      "actual_mode": "scoped_search_after_stale_exact",
+      "phase": "targeted",
+      "query": "Regulation (EC) No 178/2002 Article 19: exact food business operator duty, if any, to notify competent authorities when food is considered unsafe or non-compliant, and its conditions",
+      "provision": "Article 19",
+      "law_scope": "178/2002",
+      "retrieved": 5,
+      "added_ids": [
+        "E66850f2e6b",
+        "E48009b56ee"
+      ],
+      "new_evidence_count": 2,
+      "fallback_used": true,
+      "error": null,
+      "search_count": 6
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "scoped_search",
+      "phase": "targeted",
+      "query": "Regulation (EU) 2023/915 provisions governing sampling and analysis for aflatoxins in dried figs; identify the applicable provision and method",
+      "provision": null,
+      "law_scope": "2023/915",
+      "retrieved": 5,
+      "added_ids": [
+        "Edfc5d5696a",
+        "Edd362917e2"
+      ],
+      "new_evidence_count": 2,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 7
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "scoped_search",
+      "phase": "targeted",
+      "query": "Identify the source instrument and Annex location of the dried-fig entry in Table 3, row 6, including whether it is an amending act Annex",
+      "provision": null,
+      "law_scope": "2023/915",
+      "retrieved": 5,
+      "added_ids": [
+        "Ed60af6c3a8",
+        "E4f95b205f3",
+        "E1977c39193",
+        "Eedd7a21275"
+      ],
+      "new_evidence_count": 4,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 8
+    },
+    {
+      "node": "validator",
+      "round": 2,
+      "claims": 17,
+      "supported": 15,
+      "gaps": 3,
+      "conflicts": 0,
+      "extracted_source_facts": 4,
+      "covered_source_facts": 4
+    },
+    {
+      "node": "coverage_tracker",
+      "round": 2,
+      "critical_covered": 3,
+      "critical_total": 12,
+      "unresolved_by_type": {
+        "case_fact": 2,
+        "current_law": 3,
+        "interpretation_conflict": 0,
+        "legal_evidence": 4,
+        "unsupported_claim": 0
+      }
+    },
+    {
+      "node": "reporter",
+      "length": 3663,
+      "supported": 15
+    },
+    {
+      "node": "auditor",
+      "issues": [],
+      "resolution": "original_passed",
+      "used_fallback": false
+    }
+  ],
+  "final_output": "## 1. Short assessment\n\nAflatoxin B1 has been detected, but the concentration and relevant test details are not provided. **Non-compliance is therefore not established**: the finding cannot be compared with the reported dried-fig limit, and the applicable product category and current legal status still need verification. Do not treat detection alone as proof that withdrawal, refusal or recall is required.\n\n## 2. Evidence-supported law\n\n- The supplied text for Regulation (EU) 2023/915 lists dried figs at **6.0 μg/kg for aflatoxin B1** and **10.0 μg/kg for the sum of aflatoxins**; the sum is calculated on a lower-bound basis. It states: “In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products.” The shipment’s result and product category are not established. [E84bba6f619]\n- A frozen Regulation (EU) 2019/1793 snapshot lists Türkiye-origin dried figs and specified fig-containing or processed products for **aflatoxins and ochratoxin A**, with a **30% frequency of identity and physical checks**. The snapshot states: “Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.” It gives CN code **0804 20 90** for dried figs. This records the snapshot only; current applicability and this shipment’s classification are unverified. [Effd100d7a6]\n- Operators must ensure and verify food-law compliance relevant to their activities and maintain traceability identifying suppliers and businesses supplied, with information available to competent authorities on demand. [E32d56f6d3a] [Eb0e57f51a1]\n- Withdrawal and consumer-information or recall duties are conditional on the operator considering or having reason to believe food is not compliant with food-safety requirements. Consumer recall is required if necessary when other measures are insufficient; operators must cooperate with competent authorities on risk-reduction action. Detection alone does not establish that trigger. [E46c1b89564] [E42ee08dfc5]\n\n## 3. Facts and currentness to verify\n\nThe supplied legal-text snapshots do not establish present legal effect. Verify the current contaminant rules and import controls in official EU sources. Also establish the measured result and test details; product composition, processing and intended use; and the shipment’s CN/TARIC classification.\n\n**Critical unresolved issues — investigation gaps:**\n- **Legal evidence:** applicable sampling and analysis provisions; the source Annex identity for the cited contaminant entry; operative import procedures and accompanying-document requirements; and the precise competent-authority notification duty and trigger.\n- **Current law:** present applicability of the contaminant limits and the Türkiye import-control listing, scope and frequency.\n- **Case facts:** measured concentration and test details; shipment-specific classification, composition and processing/intended use.\n\n## 4. Practical next checks\n\n1. Obtain the laboratory result and supporting test information; assess it using the applicable sampling and analysis rules.\n2. Confirm product composition, processing, intended use and CN/TARIC classification.\n3. Check official current EU sources for the contaminant requirements, import-control listing, procedures and documents applicable to this consignment.\n4. Maintain traceability records and, if the assessment gives reason to believe the food is non-compliant, promptly determine the required action with the competent authority.",
+  "source_facts": [
+    {
+      "fact_id": "F869ec2d5af",
+      "category": "product_scope",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures."
+    },
+    {
+      "fact_id": "F2696e62e07",
+      "category": "hazards",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Hazards listed for this logical entry: aflatoxins and ochratoxin A."
+    },
+    {
+      "fact_id": "F7eb008d703",
+      "category": "inspection_frequency",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Frequency of identity and physical checks: 30%",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Frequency of identity and physical checks: 30%"
+    },
+    {
+      "fact_id": "Fef9ae317ff",
+      "category": "commodity_code_example",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90"
+    }
+  ],
+  "audit_resolution": "original_passed",
+  "draft_output": "## 1. Short assessment\n\nAflatoxin B1 has been detected, but the concentration and relevant test details are not provided. **Non-compliance is therefore not established**: the finding cannot be compared with the reported dried-fig limit, and the applicable product category and current legal status still need verification. Do not treat detection alone as proof that withdrawal, refusal or recall is required.\n\n## 2. Evidence-supported law\n\n- The supplied text for Regulation (EU) 2023/915 lists dried figs at **6.0 μg/kg for aflatoxin B1** and **10.0 μg/kg for the sum of aflatoxins**; the sum is calculated on a lower-bound basis. It states: “In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products.” The shipment’s result and product category are not established. [E84bba6f619]\n- A frozen Regulation (EU) 2019/1793 snapshot lists Türkiye-origin dried figs and specified fig-containing or processed products for **aflatoxins and ochratoxin A**, with a **30% frequency of identity and physical checks**. The snapshot states: “Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.” It gives CN code **0804 20 90** for dried figs. This records the snapshot only; current applicability and this shipment’s classification are unverified. [Effd100d7a6]\n- Operators must ensure and verify food-law compliance relevant to their activities and maintain traceability identifying suppliers and businesses supplied, with information available to competent authorities on demand. [E32d56f6d3a] [Eb0e57f51a1]\n- Withdrawal and consumer-information or recall duties are conditional on the operator considering or having reason to believe food is not compliant with food-safety requirements. Consumer recall is required if necessary when other measures are insufficient; operators must cooperate with competent authorities on risk-reduction action. Detection alone does not establish that trigger. [E46c1b89564] [E42ee08dfc5]\n\n## 3. Facts and currentness to verify\n\nThe supplied legal-text snapshots do not establish present legal effect. Verify the current contaminant rules and import controls in official EU sources. Also establish the measured result and test details; product composition, processing and intended use; and the shipment’s CN/TARIC classification.\n\n**Critical unresolved issues — investigation gaps:**\n- **Legal evidence:** applicable sampling and analysis provisions; the source Annex identity for the cited contaminant entry; operative import procedures and accompanying-document requirements; and the precise competent-authority notification duty and trigger.\n- **Current law:** present applicability of the contaminant limits and the Türkiye import-control listing, scope and frequency.\n- **Case facts:** measured concentration and test details; shipment-specific classification, composition and processing/intended use.\n\n## 4. Practical next checks\n\n1. Obtain the laboratory result and supporting test information; assess it using the applicable sampling and analysis rules.\n2. Confirm product composition, processing, intended use and CN/TARIC classification.\n3. Check official current EU sources for the contaminant requirements, import-control listing, procedures and documents applicable to this consignment.\n4. Maintain traceability records and, if the assessment gives reason to believe the food is non-compliant, promptly determine the required action with the competent authority.",
+  "search_calls": 8,
+  "initial_searches": 5,
+  "targeted_searches": 3,
+  "validation_rounds": 2,
+  "llm_calls": 7,
+  "usage": {
+    "input_tokens": 45787,
+    "output_tokens": 12225
+  },
+  "audit_issues": [],
+  "stop_reason": "validation_budget",
+  "targeted_search_yield": 8,
+  "started_utc": "2026-10-21T12:39:01.826841+00:00",
+  "completed_utc": "2026-10-21T12:42:51.193083+00:00",
+  "latency_seconds": 229.37,
+  "status": "completed_pending_human_review"
+}

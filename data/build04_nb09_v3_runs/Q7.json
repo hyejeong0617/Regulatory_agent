@@ -1,0 +1,1315 @@
+{
+  "experiment_id": "NB09_build04_investigation_v3",
+  "build": "Build04",
+  "qid": "Q7",
+  "question": "What regulatory actions may follow if aflatoxin levels exceed the applicable maximum level?",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "settings": {
+    "experiment_id": "NB09_build04_investigation_v3",
+    "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+    "initial_max": 5,
+    "targeted_max": 3,
+    "validation_max": 2,
+    "max_llm_calls": 12,
+    "enable_cellar_live": false,
+    "coverage_tracker": "planner_task_plus_subissue_v1",
+    "gap_classification": "type_aware_v1",
+    "runtime_version": "nb09_build04_v3"
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "plan": [
+    {
+      "task_id": "T1",
+      "question": "Identify the frozen-corpus provisions governing official-authority measures when food is found non-compliant with an applicable contaminant maximum level, including the conditions for selecting among measures.",
+      "priority": "high",
+      "search_query": "EU official controls food non-compliance contaminant maximum level competent authority measures dried figs aflatoxin applicable provisions",
+      "expected_evidence_type": "Retrieved operative legal text on competent-authority powers and conditions for action",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T2",
+      "question": "Determine the legal options for a non-compliant imported consignment at the point of entry, including any relevant decision-making and disposition procedures.",
+      "priority": "high",
+      "search_query": "EU imported food non-compliant consignment border control rejection return destruction special treatment official controls aflatoxin provisions",
+      "expected_evidence_type": "Retrieved legal text on border-control decisions, available disposition measures, and procedural conditions",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T3",
+      "question": "Find the food-business operator duties that may apply to affected food already placed on the market, including withdrawal, recall, and notification, and identify the conditions triggering each duty.",
+      "priority": "high",
+      "search_query": "EU food business operator unsafe or non-compliant food withdrawal recall competent authority notification conditions retrieved legal text",
+      "expected_evidence_type": "Retrieved legal text establishing operator duties and their triggering conditions",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T4",
+      "question": "Verify which product category and intended-use distinctions determine the applicable aflatoxin maximum level for dried figs, and what evidence is needed before concluding that a consignment exceeds it.",
+      "priority": "high",
+      "search_query": "EU aflatoxin maximum levels dried figs product category intended use processing applicable limit sampling analysis legal text",
+      "expected_evidence_type": "Retrieved contaminant-limit and sampling/analysis text, with category and use conditions",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T5",
+      "question": "Check whether the frozen corpus provides for notification or information-sharing after a serious food-safety risk or non-compliance is identified, and determine the relevant triggers and responsible actors.",
+      "priority": "medium",
+      "search_query": "EU food safety serious risk non-compliance notification information exchange RASFF competent authority operator trigger legal text",
+      "expected_evidence_type": "Retrieved legal text on notification or information-sharing triggers, responsible actors, and procedure",
+      "needs_currentness": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "Ef624e98067",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_19::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 19",
+      "location": "Article 19 — Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 19 Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed 1. Official controls to verify compliance with the rules referred to in points (a) and (c) of Article 1(2) shall include official controls, to be performed at any stage of production, processing and distribution, on relevant substances including substances to be used in food contact materials, contaminants, non-authorised, prohibited and undesirable substances whose use or presence on crops or animals or to produce or process food or feed may result in residues of those substances in food or feed. 2. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation by laying down rules for the performance of the official controls referred to in paragraph 1 of this Article and for action to be taken by the competent authorities following those official controls. Those delegated acts shall lay down rules on: (a) specific requirements for the performance of official controls, including, where appropriate, the range of samples and the stage of production, processing and distribution where the samples are to be taken in compliance with the methods to be used for sampling and laboratory analyses established in accordance with points (a) and (b) of Article 34(6), having regard to the specific hazards and risks related to substances referred to in paragraph 1 of this Article; (b) the cases where the competent authorities in relation to non-compliance or suspicion thereof are to take one or more of the measures referred to in Articles 137(2) and 138(2); (c) the cases where the competent authorities in relation to non-compliance or suspicion thereof of animals and goods",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E9a5b802b00",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_19::02",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 19",
+      "location": "Article 19 — Specific rules on official controls and for action taken by the competent authorities in relation to the residues of relevant substances in food and feed",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "are to take one or more of the measures referred to in Articles 137(2) and 138(2); (c) the cases where the competent authorities in relation to non-compliance or suspicion thereof of animals and goods from third countries are to take one or more of the measures referred to Articles 65 to 72. 3. The Commission may, by means of implementing acts, lay down rules on uniform practical arrangements for the performance of the official controls referred to in paragraph 1 and for action to be taken by the competent authorities following those official controls, regarding: (a) uniform minimum frequency of such official controls, having regard to the hazards and risks related to substances referred to in paragraph 1; (b) specific additional arrangements and specific additional content to those provided for in Article 110, for the preparation of the relevant parts of the multi-annual national control plan (MANCP) provided for in Article 109(1); (c) specific practical arrangements for the activation of the mechanism of administrative assistance provided for in Articles 102 to 108. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2). 4. For the purpose of Article 30, the delegation of certain official control tasks, referred to in this Article, to one or more natural persons shall be allowed.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Eb2674e6c28",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_3::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": "Article 3",
+      "location": "Article 3 — Dried, diluted, processed and compound food",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "Article 3 Dried, diluted, processed and compound food 1. Where no specific Union maximum levels are set out in Annex I for food which is dried, diluted, processed or compound food (i.e. composed of more than one ingredient), the following aspects shall be taken into account when applying the maximum levels set out in Annex I to such food: (a) changes of the concentration of the contaminant caused by drying or dilution processes; (b) changes of the concentration of the contaminant caused by processing; (c) the relative proportions of the ingredients in the product; (d) the analytical limit of quantification. 2. Where the competent authority carries out an official control, the food business operator shall provide and justify the specific concentration, dilution or processing factors for the drying, diluting or processing operations concerned or the specific concentration, dilution or processing factors for the dried, diluted, processed or compound food concerned as well as the proportion of ingredients for mixing operations concerned. Where the food business operator does not provide the necessary concentration, dilution or processing factor or where the competent authority deems that factor inappropriate in view of the justification given, the competent authority shall itself define that factor, based on the available information and with the objective of maximum protection of human health. 3. Where no specific Union maximum levels for food for infants and young children are set out in Annex I, Member States may provide for stricter maximum levels for such food.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Eab5ca5a598",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_27::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 27",
+      "location": "Article 27 — Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 27 Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed 1. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation by laying down rules for the performance of official controls on certain categories of food or feed to verify compliance with the rules referred to in points (a) to (e) of Article 1(2) and for action to be taken by the competent authorities following such official controls. Those delegated acts shall address newly identified risks which may arise through food or feed to human or animal health or, in relation to GMOs and plant protection products, also to the environment, or any such risks emerging from new patterns of production or consumption of food or feed, and which cannot be effectively addressed in the absence of such common rules. Those delegated acts shall lay down rules on: (a) uniform specific requirements for the performance of official controls to respond to the specific hazards and risks which exist in relation to each category of food and feed and the different processes it undergoes; and (b) the cases where the competent authorities, in relation to specific non-compliances, are to take one or more of the measures referred to in Articles 137(2) and 138(2). 2. The Commission may, by means of implementing acts, lay down rules on uniform practical arrangements on official controls performed on certain categories of food or feed to verify compliance with the rules referred to in points (a) to (e) of Article 1(2) to address newly identified risks which may arise through food or feed to human or animal health or, in relation to GMOs and plant protection products, also to the environment,",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3f00c01bc7",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 18",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E6659dc58c6",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_5::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": "Article 5",
+      "location": "Article 5 — List of food and feed of non-animal origin",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "Article 5 List of food and feed of non-animal origin 1. Consignments of food and feed listed in Annex I shall be subject to a temporary increase of official controls at border control posts at their entry into the Union and at control points. 2. The identification of the food and feed referred to in paragraph 1 for official controls shall be made on the basis of the codes from the Combined Nomenclature and the TARIC sub-division indicated in Annex I.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E8faee60ab8",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_48::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 48",
+      "location": "Article 48 — Animals and goods exempted from official controls at border control posts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 48 Animals and goods exempted from official controls at border control posts The Commission shall adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning rules establishing the cases where, and the conditions under which, the following categories of animals and goods are exempted from Article 47, and when such exemption is justified: (a) goods sent as trade samples or as display items for exhibitions, which are not intended to be placed on the market; (b) animals and goods intended for scientific purposes; (c) goods on board means of transport operating internationally which are not unloaded and are intended for consumption by the crew and passengers; (d) goods which form part of passengers personal luggage and are intended for personal consumption or use; (e) small consignments of goods sent to natural persons which are not intended to be placed on the market; (f) pet animals as defined in point (11) of Article 4 of Regulation (EU) 2016/429; (g) goods which have undergone specific treatment and do not exceed quantities to be established in those delegated acts; (h) categories of animals or goods posing a low risk or no specific risk and for which controls at border control posts are therefore not necessary.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee1a983f9cd",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::table4_row109::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Table 4, row 109",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Table context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Row: ex 2008 97 14 | 15 | Aflatoxins | 20",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E97b6c4ce16",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_47::03",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 47",
+      "location": "Article 47 — Animals and goods subject to official controls at border control posts",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "of paragraph 1, this Article shall also apply to consignments of the categories of animals and goods referred to in points (a), (b) and (c) of paragraph 1 when they are of a non-commercial nature. 5. Operators responsible for the consignment shall ensure that animals and goods of the categories referred to in paragraph 1 are presented for official controls at the border control post referred to therein.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E9d99216c2f",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::table4_row29::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Table 4, row 29",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Table context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Row: ex 2008 97 14 | 15 | Aflatoxins | 20",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ed48dc8de6a",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_148::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 148",
+      "location": "Article 148 — Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 148 Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments 1. Competent authorities shall establish procedures for food business operators to follow when applying for the approval of their establishments in accordance with Regulations (EC) No 852/2004 and (EC) No 853/2004. 2. Upon receipt of an application for approval from a food business operator, the competent authority shall make an on-site visit. 3. The competent authority shall approve an establishment for the activities concerned only if the food business operator has demonstrated that it complies with the relevant requirements of food law. 4. The competent authority may grant conditional approval if it appears that the establishment meets all the infrastructure and equipment requirements. It shall grant full approval only if it appears from a new official control of the establishment, carried out within three months of granting conditional approval, that the establishment meets the other relevant requirements of food law. If clear progress has been made but the establishment still does not meet all of the relevant requirements, the competent authority may prolong the conditional approval. However, conditional approval shall not exceed a total of six months, except in the case of factory and freezer vessels flying the flag of Member States, for which such conditional approval shall not exceed a total of 12 months. 5. The competent authority shall keep the approval of establishments under review when carrying out official controls.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E46c1b89564",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 19",
+      "location": "Article 19 — Responsibilities for food: food business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 19 Responsibilities for food: food business operators 1. If a food business operator considers or has reason to believe that a food which it has imported, produced, processed, manufactured or distributed is not in compliance with the food safety requirements, it shall immediately initiate procedures to withdraw the food in question from the market where the food has left the immediate control of that initial food business operator and inform the competent authorities thereof. Where the product may have reached the consumer, the operator shall effectively and accurately inform the consumers of the reason for its withdrawal, and if necessary, recall from consumers products already supplied to them when other measures are not sufficient to achieve a high level of health protection. 2. A food business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the food shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the food-safety requirements and shall participate in contributing to the safety of the food by passing on relevant information necessary to trace a food, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A food business operator shall immediately inform the competent authorities if it considers or has reason to believe that a food which it has placed on the market may be injurious to human health. Operators shall inform the competent authorities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E42ee08dfc5",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 19",
+      "location": "Article 19 — Responsibilities for food: food business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "ities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a food. 4. Food business operators shall collaborate with the competent authorities on action taken to avoid or reduce risks posed by a food which they supply or have supplied.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee636d4e1db",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_14::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 14",
+      "location": "Article 14 — Food safety requirements",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "fe, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment is unsafe. 7. Food that complies with specific Community provisions governing food safety shall be deemed to be safe insofar as the aspects covered by the specific Community provisions are concerned. 8. Conformity of a food with specific provisions applicable to that food shall not bar the competent authorities from taking appropriate measures to impose restrictions on it being placed on the market or to require its withdrawal from the market where there are reasons to suspect that, despite such conformity, the food is unsafe. 9. Where there are no specific Community provisions, food shall be deemed to be safe when it conforms to the specific provisions of national food law of the Member State in whose territory the food is marketed, such provisions being drawn up and applied without prejudice to the Treaty, in particular Articles 28 and 30 thereof.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E48009b56ee",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_20::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 20",
+      "location": "Article 20 — Responsibilities for feed: feed business operators",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "atisfy the feed safety requirements. It shall inform the competent authorities of the action taken to prevent risk arising from the use of that feed and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a feed. 4. Feed business operators shall collaborate with the competent authorities on action taken in order to avoid risks posed by a feed which they supply or have supplied.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E133737bd5a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 3",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E84bba6f619",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee1f61e0dc1",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table15_row13::02",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 15, row 13",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "analysis, shall be quantified and included in the sum. | For the pyrrolizidine alkaloids, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 2.4.11 | Pollen based food supplements Pollen and pollen products | 500 | The maximum level applies to the food supplements as placed on the market.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E0f3287ac2b",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row9::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 9",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.6 | Tree nuts to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food except products listed in 1.1.8 and 1.1.10 | 5,0 | 10,0 | - | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ea2cd152723",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_50::02",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 50",
+      "location": "Article 50 — Rapid alert system",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "o human health requiring rapid action; (c) any rejection, related to a direct or indirect risk to human health, of a batch, container or cargo of food or feed by a competent authority at a border post within the European Union. The notification shall be accompanied by a detailed explanation of the reasons for the action taken by the competent authorities of the Member State in which the notification was issued. It shall be followed, in good time, by supplementary information, in particular where the measures on which the notification is based are modified or withdrawn. The Commission shall immediately transmit to members of the network the notification and supplementary information received under the first and second subparagraphs. Where a batch, container or cargo is rejected by a competent authority at a border post within the European Union, the Commission shall immediately notify all the border posts within the European Union, as well as the third country of origin. 4. Where a food or feed which has been the subject of a notification under the rapid alert system has been dispatched to a third country, the Commission shall provide the latter with the appropriate information. 5. The Member States shall immediately inform the Commission of the action implemented or measures taken following receipt of the notifications and supplementary information transmitted under the rapid alert system. The Commission shall immediately transmit this information to the members of the network. 6. Participation in the rapid alert system may be opened up to applicant countries, third countries or international organisations, on the basis of agreements between the Community and those countries or international organisations, in accordance with the procedures defined in those agreements.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E2f98d29f52",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_50::01",
+      "regulation_id": "178/2002",
+      "source_document_celex": "02002R0178-20260101",
+      "basic_celex": "32002R0178",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "source_version": "2026-01-01",
+      "article": "Article 50",
+      "location": "Article 50 — Rapid alert system",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002R0178-20260101",
+      "text": "Article 50 Rapid alert system 1. A rapid alert system for the notification of a direct or indirect risk to human health deriving from food or feed is hereby established as a network. It shall involve the Member States, the Commission and the Authority. The Member States, the Commission and the Authority shall each designate a contact point, which shall be a member of the network. The Commission shall be responsible for managing the network. 2. Where a member of the network has any information relating to the existence of a serious direct or indirect risk to human health deriving from food or feed, this information shall be immediately notified to the Commission under the rapid alert system. The Commission shall transmit this information immediately to the members of the network. The Authority may supplement the notification with any scientific or technical information, which will facilitate rapid, appropriate risk management action by the Member States. 3. Without prejudice to other Community legislation, the Member States shall immediately notify the Commission under the rapid alert system of: (a) any measure they adopt which is aimed at restricting the placing on the market or forcing the withdrawal from the market or the recall of food or feed in order to protect human health and requiring rapid action; (b) any recommendation or agreement with professional operators which is aimed, on a voluntary or obligatory basis, at preventing, limiting or imposing specific conditions on the placing on the market or the eventual use of food or feed on account of a serious risk to human health requiring rapid action; (c) any rejection, related to a direct or indirect risk to human health, of a batch, container or cargo of food or feed by a competent authority at a border post",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E4365147f9d",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_3::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 3",
+      "location": "Article 3 — Definitions",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 3 Definitions For the purposes of this Regulation, the following definitions apply: (1) ‘food law’ means food law as defined in point (1) of Article 3 of Regulation (EC) No 178/2002; (2) ‘feed law’ means the laws, regulations and administrative provisions governing feed in general and feed safety in particular, whether at Union or national level at any stage of production, processing and distribution or use of feed; (3) ‘competent authorities’ means: (a) the central authorities of a Member State responsible for the organisation of official controls and of other official activities, in accordance with this Regulation and the rules referred to in Article 1(2); (b) any other authority to which that responsibility has been conferred; (c) where appropriate, the corresponding authorities of a third country; (4) ‘organic control authority’ means a public administrative organisation for organic production and labelling of organic products of a Member State to which the competent authorities have conferred, in whole or in part, their competences in relation to the application of Council Regulation (EC) No 834/2007 ( 3 ), including, where appropriate, the corresponding authority of a third country or operating in a third country; (5) ‘delegated body’ means a separate legal person to which the competent authorities have delegated certain official control tasks or certain tasks related to other official activities; (6) ‘control verification procedures’ means the arrangements put in place and actions performed by the competent authorities for the purpose of ensuring that official controls and other official activities are consistent and effective; (7) ‘control system’ means a system comprising the competent authorities and the resources, structures, arrangements and",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Edc27e0b423",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_137::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 137",
+      "location": "Article 137 — General obligations of the competent authorities as regards enforcement action",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 137 General obligations of the competent authorities as regards enforcement action 1. When acting in accordance with this Chapter, the competent authorities shall give priority to action to be taken to eliminate or contain risks to human, animal and plant health, animal welfare or, as regards GMOs and plant protection products, also to the environment. 2. In case of suspicion of non-compliance, the competent authorities shall perform an investigation in order to confirm or to eliminate that suspicion. 3. Where necessary, actions taken in accordance with paragraph 2 shall include: (a) the performance of intensified official controls on animals, goods and operators for an appropriate period; (b) the official detention of animals and goods and of any unauthorised substances or products as appropriate.",
+      "retrieved_by": "exact"
+    },
+    {
+      "evidence_id": "E76a0dd5eea",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 138",
+      "location": "Article 138 — Actions in the event of established non-compliance",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 138 Actions in the event of established non-compliance 1. Where the non-compliance is established, the competent authorities shall take: (a) any action necessary to determine the origin and extent of the non-compliance and to establish the operator’s responsibilities; and (b) appropriate measures to ensure that the operator concerned remedies the non-compliance and prevents further occurrences of such non-compliance. When deciding which measures to take, the competent authorities shall take account of the nature of that non-compliance and the operator’s past record with regard to compliance. 2. When acting in accordance with paragraph 1 of this Article, competent authorities shall take any measure they deem appropriate to ensure compliance with the rules referred to in Article 1(2), including, but not limited, to the following: (a) order or perform treatments on animals; (b) order the unloading, transfer to another means of transport, holding and care of animals, quarantine periods, the postponement of the slaughter of animals, and, if necessary, order that veterinary assistance be sought; (c) order treatments on goods, the alteration of labels or corrective information to be provided to consumers; (d) restrict or prohibit the placing on the market, the movement, the entry into the Union or the export of animals and goods; and prohibit their return to the Member State of dispatch or order their return to the Member State of dispatch; (e) order the operator to increase the frequency of own controls; (f) order certain activities of the operator concerned to be subject to increased or systematic official controls; (g) order the recall, withdrawal, removal and destruction of goods, authorising, where appropriate, the use of the goods for purposes other than those",
+      "retrieved_by": "exact"
+    },
+    {
+      "evidence_id": "Eda530a748c",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::02",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 138",
+      "location": "Article 138 — Actions in the event of established non-compliance",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "ect to increased or systematic official controls; (g) order the recall, withdrawal, removal and destruction of goods, authorising, where appropriate, the use of the goods for purposes other than those for which they were originally intended; (h) order the isolation or closure, for an appropriate period of time, of all or part of the business of the operator concerned, or its establishments, holdings or other premises; (i) order the cessation for an appropriate period of time of all or part of the activities of the operator concerned and, where relevant, of the internet sites it operates or employs; (j) order the suspension or withdrawal of the registration or approval of the establishment, plant, holding or means of transport concerned, of the authorisation of a transporter or of the certificate of competence of the driver; (k) order the slaughter or killing of animals provided that this is the most appropriate measure to safeguard human health as well as animal health and welfare. 3. The competent authorities shall provide the operator concerned, or its representative, with: (a) written notification of their decision concerning the action or measure to be taken in accordance with paragraphs 1 and 2, together with the reasons for that decision; and (b) information on any right of appeal against such decisions and on the applicable procedure and time limits with respect to such right of appeal. 4. All expenditure incurred under this Article shall be borne by the responsible operators. 5. The competent authorities, in the case of issuance of false or misleading official certificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the",
+      "retrieved_by": "exact"
+    },
+    {
+      "evidence_id": "E39fc026913",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::03",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 138",
+      "location": "Article 138 — Actions in the event of established non-compliance",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "ificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the authorisation to sign official certificates; (c) any other measure to prevent a reoccurrence of the offences referred to in Article 89(2).",
+      "retrieved_by": "exact"
+    },
+    {
+      "evidence_id": "E2f3776c84c",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_68::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 68",
+      "location": "Article 68 — Follow-up of decisions taken in relation to non-compliant consignments entering the Union from third countries",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 68 Follow-up of decisions taken in relation to non-compliant consignments entering the Union from third countries 1. The competent authorities shall: (a) invalidate the official certificates and as appropriate other relevant documents accompanying consignments which have been subject to measures pursuant to Article 66(3) and (6) and Article 67; and (b) cooperate in accordance with Articles 102 to 108 to take any further measures necessary to ensure that it is not possible to reintroduce consignments into the Union which have been refused entry in accordance with Article 66(1). 2. The competent authorities in the Member State where the official controls were performed shall supervise the application of the measures ordered in accordance with Article 66(3) and (6) and Article 67 to ensure that the consignment does not give rise to adverse effects on human, animal or plant health, animal welfare, or the environment, during or pending the application of those measures. Where appropriate, such application shall be completed under the supervision of the competent authorities of another Member State.",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "E7801370075",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::03",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 66",
+      "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "f this Article, and any order issued in accordance with paragraphs 3 and 6 of this Article and with Article 67 to: (a) the Commission; (b) the competent authorities of the other Member States; (c) the customs authorities; (d) the competent authorities of the third country of origin; and (e) the operator responsible for the consignment. That notification shall be performed via the IMSOC. ▼M4 5a. Plants, plant products or other objects subject to the measures referred to in Article 1(2), point (g), which enter the Union as part of passengers’ personal luggage or through postal services intended for personal consumption or use, shall be exempted from the notification obligation set out in paragraph 5 of this Article, if the non-compliance concerns the absence of the phytosanitary certificate or other official attestation as referred to in Article 99(1) of Regulation (EU) 2016/2031. The competent authorities shall keep a record of those cases of non-compliance and shall, on an annual basis, provide the Commission and the competent authorities of the other Member States with a report containing a summary of those records. That report shall be submitted via the IMSOC. ▼B 6. If a consignment of the categories of animals or goods referred to in Article 47(1) is not presented for the official controls referred to therein, or is not presented in accordance with the requirements laid down in Articles 50(1) and (3), 56(1), (3) and (4), or with the rules adopted under Article 48, Article 49(4), Article 51, Article 53(1) and Article 58, the competent authorities shall order that such consignment be retained or recalled, and placed under official detention without delay. Paragraphs 1, 3 and 5 of this Article shall apply to such consignments. 7. The measures referred to in this",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "Ebcbbe77002",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 66",
+      "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 66 Measures to be taken in cases of non-compliant consignments entering the Union 1. The competent authorities shall place under official detention any consignment of animals or goods entering the Union which does not comply with the rules referred to in Article 1(2) and shall refuse its entry into the Union. The competent authorities shall isolate or quarantine, as appropriate, any such consignment and the animals belonging to it shall be kept, cared for or treated under appropriate conditions pending any further decision. If possible, the competent authorities shall also take into account the interest of providing special care in respect of certain types of goods. 2. The Commission shall, by means of implementing acts, lay down rules on the practical arrangements for the isolation and quarantine provided for in the second subparagraph of paragraph 1 of this Article. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2). 3. The competent authority shall, as regards the consignment referred to in paragraph 1 order, without delay, the operator responsible for the consignment to: (a) destroy the consignment; (b) re-dispatch the consignment outside the Union in accordance with Article 72(1) and (2); or (c) subject the consignment to special treatment in accordance with Article 71(1) and (2) or to any other measure necessary to ensure compliance with the rules referred to in Article 1(2), and, where appropriate, allocate the consignment for purposes other than those for which it was originally intended. Any action referred to in points (a), (b) and (c) of the first subparagraph shall be performed in compliance with the rules referred to in Article 1(2), including in particular, as regards consignments of",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "E15886dca2f",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_120::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 120",
+      "location": "Article 120 — Commission controls in third countries",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 120 Commission controls in third countries 1. Commission experts may perform controls in third countries in order to: (a) verify the compliance or equivalence of third-country legislation and systems, including official certification and the issuance of official certificates, official labels, official marks and other official attestations, with the requirements laid down in the rules referred to in Article 1(2); (b) verify the capacity of the third country control system to ensure that consignments of animals and goods exported to the Union comply with relevant requirements established by the rules referred to in Article 1(2) or with requirements recognised to be at least equivalent thereto; (c) collect information and data to elucidate the causes of recurring or emerging problems in relation to exports of animals and goods from a third country. 2. The controls provided for in paragraph 1 shall have particular regard to: (a) the legislation of the third country; (b) the organisation of the third country’s competent authorities, their powers and independence, the supervision to which they are subject and the authority they have to enforce the applicable legislation effectively; (c) the training of staff of the competent authority of the third country in the performance of official controls; (d) the resources including analytical, testing and diagnostic facilities available to competent authorities; (e) the existence and operation of documented control procedures and control systems based on priorities; (f) where applicable, the situation regarding animal health, animal welfare, zoonoses and plant health, and procedures for notifying the Commission and relevant international bodies of outbreaks of animal diseases and pests of plants; (g) the extent and operation",
+      "retrieved_by": "scoped_search"
+    },
+    {
+      "evidence_id": "Ef75e8f9e54",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_74::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 74",
+      "location": "Article 74 — Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 74 Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries 1. When official controls on consignments of categories of animal and goods in respect of which specific pre-export controls have been approved in accordance with Article 73(1) reveal serious and recurrent non-compliance with the rules referred to in Article 1(2), Member States shall immediately: (a) notify the Commission and the other Member States and operators concerned via the IMSOC in addition to seeking administrative assistance in accordance with the procedures established in Articles 102 to 108; and (b) increase the number of official controls on consignments from the relevant third country and, where necessary to allow a proper analytical examination of the situation, keep an appropriate number of samples under appropriate storage conditions. 2. The Commission may, by means of implementing acts, withdraw the approval provided for in Article 73(1) where, following the official controls referred to in paragraph 1 of this Article, there are indications that the requirements laid down in Article 73(3) and (4) are no longer being met. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2).",
+      "retrieved_by": "scoped_search"
+    }
+  ],
+  "claims": [
+    {
+      "statement": "The supplied Article 19 text points to measures under Articles 137(2) and 138(2) for certain non-compliances, and to Articles 65 to 72 for certain non-compliances or suspicions involving goods from third countries; it does not provide the operative measure lists or their selection conditions.",
+      "evidence_ids": [
+        "E9a5b802b00"
+      ],
+      "support_quote": "measures referred to in Articles 137(2) and 138(2)",
+      "status": "supported",
+      "scope_note": "The cited provisions' contents are absent from the evidence, so specific actions such as rejection, return, treatment or destruction cannot be confirmed here.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "For food that has left the initial operator's immediate control, an operator that considers or has reason to believe it is not compliant with food-safety requirements must initiate withdrawal procedures and inform competent authorities.",
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "support_quote": "shall immediately initiate procedures to withdraw the food in question from the market",
+      "status": "supported",
+      "scope_note": "This is conditional on the operator's stated belief and the food having left its immediate control; the evidence does not establish that either condition holds for this consignment.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "If affected food may have reached consumers, the operator must effectively and accurately inform them of the withdrawal reason; recall from consumers is required if necessary because other measures are insufficient for a high level of health protection.",
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "support_quote": "if necessary, recall from consumers products already supplied to them",
+      "status": "supported",
+      "scope_note": "A recall is not shown to be automatic merely because a maximum level is exceeded.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Rapid-alert notification is required for information about a serious direct or indirect risk to human health; Member States must also notify specified protective measures requiring rapid action and certain risk-related border rejections.",
+      "evidence_ids": [
+        "E2f98d29f52",
+        "Ea2cd152723"
+      ],
+      "support_quote": "serious direct or indirect risk to human health",
+      "status": "supported",
+      "scope_note": "An exceedance alone is not established by this text as an automatic RASFF trigger; the relevant risk or measure conditions must be met.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The evidence does not establish which specific authority action would be selected for this shipment, whether it is at the border or already on the market, or whether any withdrawal, recall or notification trigger is met.",
+      "evidence_ids": [
+        "E9a5b802b00",
+        "E46c1b89564",
+        "E2f98d29f52"
+      ],
+      "support_quote": "the cases where the competent authorities",
+      "status": "supported",
+      "scope_note": "The measured concentration, consignment status, distribution history, applicable operative action provisions and risk assessment are not supplied.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Once non-compliance is established, competent authorities must take action to determine its origin and extent, establish the operator’s responsibilities, and ensure the operator remedies it and prevents recurrence. In choosing measures, they must take account of the nature of the non-compliance and the operator’s compliance record.",
+      "evidence_ids": [
+        "E76a0dd5eea"
+      ],
+      "support_quote": "appropriate measures to ensure that the operator concerned remedies the non-compliance",
+      "status": "supported",
+      "scope_note": "This is a general enforcement framework; the evidence does not establish that this shipment has been found non-compliant.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Possible authority measures include treatment of goods, changes to labels or corrective consumer information, restrictions or prohibitions on marketing, movement, entry into the Union or export, and recall, withdrawal, removal or destruction. The list is not exhaustive, and the evidence does not establish which measure would be selected.",
+      "evidence_ids": [
+        "E76a0dd5eea",
+        "Eda530a748c"
+      ],
+      "support_quote": "order the recall, withdrawal, removal and destruction of goods",
+      "status": "supported",
+      "scope_note": "The available text makes measures conditional on established non-compliance and allows the authority to choose measures it considers appropriate; it does not prescribe an automatic action for an aflatoxin exceedance.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "For a non-compliant consignment entering the Union, the cited text provides for official detention and refusal of entry; the authority may order destruction, re-dispatch outside the Union, or special treatment.",
+      "evidence_ids": [
+        "Ebcbbe77002"
+      ],
+      "support_quote": "shall place under official detention any consignment",
+      "status": "supported",
+      "scope_note": "This applies only if the consignment is entering the Union and is non-compliant with the relevant rules. The evidence does not establish this consignment’s border status or the conditions governing each disposition option.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "For non-compliant imported consignments subject to measures under the cited provisions, competent authorities must invalidate relevant accompanying certificates and documents and supervise the measures ordered.",
+      "evidence_ids": [
+        "E2f3776c84c"
+      ],
+      "support_quote": "invalidate the official certificates",
+      "status": "supported",
+      "scope_note": "The cited follow-up duties are conditional on the relevant import measures being applied; that has not been established for this shipment.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "If a food business operator considers or has reason to believe that food it handled is not compliant with food-safety requirements, and the food has left its immediate control, it must initiate withdrawal procedures and inform competent authorities.",
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "support_quote": "shall immediately initiate procedures to withdraw the food in question from the market",
+      "status": "supported",
+      "scope_note": "The evidence does not establish that the product has left an operator’s immediate control or that an operator has the relevant belief.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "If affected food may have reached consumers, the operator must inform them effectively and accurately of the reason for withdrawal; recall from consumers is required if necessary because other measures are insufficient to achieve a high level of health protection.",
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "support_quote": "if necessary, recall from consumers products already supplied to them",
+      "status": "supported",
+      "scope_note": "Recall is conditional, not shown to follow automatically from an exceedance.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Rapid-alert notification is tied to specified risk and response triggers, including information about a serious direct or indirect risk to human health, certain protective measures requiring rapid action, and certain risk-related border rejections.",
+      "evidence_ids": [
+        "E2f98d29f52",
+        "Ea2cd152723"
+      ],
+      "support_quote": "serious direct or indirect risk to human health",
+      "status": "supported",
+      "scope_note": "The evidence does not establish that an exceedance alone automatically triggers notification or that a trigger is met in this case.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "A supplied 2023/915 table excerpt lists dried figs with a maximum level of 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins; it is a snapshot observation, not proof of the currently applicable limit.",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "Dried figs | 6,0 | 10,0",
+      "status": "supported",
+      "scope_note": "The measured concentration and current-law applicability are not supplied. This excerpt does not establish that this shipment exceeds a limit.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "A supplied 2019/1793 table excerpt records a 20% identity and physical check frequency for a row showing CN code ex 2008 97 14 and hazard aflatoxins, but the excerpt does not establish that the row covers this dried-fig consignment.",
+      "evidence_ids": [
+        "Ee1a983f9cd"
+      ],
+      "support_quote": "Aflatoxins | 20",
+      "status": "supported",
+      "scope_note": "The country and full product/intended-use context needed to establish applicability to this shipment are not present in the excerpt.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Verify the currently operative contaminant maximum and any relevant product-category, intended-use, sampling and analytical conditions for this consignment; do not treat the listed snapshot limit as proof of an exceedance.",
+      "query": "2023/915 current operative Annex dried figs aflatoxin B1 maximum sampling analysis intended use",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "critical": true
+    },
+    {
+      "description": "Retrieve and verify the operative text and applicability of official-authority enforcement measures for established contaminant non-compliance, including selection conditions.",
+      "query": "2017/625 Article 138 full operative text established non-compliance measures selection conditions",
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 138",
+      "critical": true
+    },
+    {
+      "description": "Verify the applicable border procedure and disposition conditions, and establish whether this consignment is entering the Union and falls within the relevant official-control category.",
+      "query": "2017/625 Articles 47 66 68 current operative non-compliant imported consignment disposition special treatment re-dispatch",
+      "regulation_id": "2017/625",
+      "exact_provision": "Articles 47, 66 and 68",
+      "critical": true
+    },
+    {
+      "description": "Establish whether the food has left an operator’s immediate control, reached consumers, or presents a risk meeting notification conditions; verify the corresponding operator and authority duties.",
+      "query": "178/2002 Articles 19 and 50 current operative food withdrawal recall notification triggers",
+      "regulation_id": "178/2002",
+      "exact_provision": "Articles 19 and 50",
+      "critical": true
+    },
+    {
+      "description": "Verify the full 2019/1793 table entry and the shipment’s CN/TARIC classification, origin and intended use before concluding that the stated control frequency applies.",
+      "query": "2019/1793 current Annex Türkiye dried figs aflatoxins CN TARIC identity physical check frequency",
+      "regulation_id": "2019/1793",
+      "exact_provision": null,
+      "critical": false
+    }
+  ],
+  "conflicts": [],
+  "coverage_items": [
+    {
+      "coverage_id": "C1",
+      "task_id": "T1",
+      "issue": "The competent authority’s general enforcement options after established non-compliance, and the factors governing selection, are resolved: measures may include treatment, marketing or movement restrictions, and recall, withdrawal, removal or destruction; the authority must consider the nature of the non-compliance and the operator’s compliance record.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E76a0dd5eea",
+        "Eda530a748c"
+      ],
+      "claim_indices": [
+        5,
+        6
+      ],
+      "missing_elements": [],
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 138",
+      "search_query": "",
+      "rationale": "The evidence describes these as possible, not automatic, measures."
+    },
+    {
+      "coverage_id": "C2",
+      "task_id": "T1",
+      "issue": "The current in-force effect of the competent-authority measures and selection criteria must be verified before making a current-law conclusion.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E76a0dd5eea",
+        "Eda530a748c"
+      ],
+      "claim_indices": [
+        5,
+        6
+      ],
+      "missing_elements": [],
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 138",
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EU) 2017/625 Article 138, including measures and selection criteria for established non-compliance.",
+      "rationale": "Frozen-corpus text or its version metadata does not establish current legal effect."
+    },
+    {
+      "coverage_id": "C3",
+      "task_id": "T2",
+      "issue": "For a non-compliant consignment entering the Union, the evidence supports official detention and refusal of entry, with destruction, re-dispatch outside the Union, or special treatment among the possible dispositions; it does not resolve the conditions and procedures governing each option.",
+      "status": "partially_covered",
+      "gap_type": "legal_evidence",
+      "critical": true,
+      "evidence_ids": [
+        "Ebcbbe77002"
+      ],
+      "claim_indices": [
+        7
+      ],
+      "missing_elements": [
+        "The decision and procedural conditions for selecting or applying each disposition option."
+      ],
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 66",
+      "search_query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 66, including the decision and procedural conditions for detention, refusal of entry, destruction, re-dispatch and special treatment of non-compliant consignments.",
+      "rationale": "The consignment’s entry status and the applicability of the provision are also not established."
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T2",
+      "issue": "The current in-force effect of the border disposition provisions must be verified before stating current requirements.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "Ebcbbe77002"
+      ],
+      "claim_indices": [
+        7
+      ],
+      "missing_elements": [],
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 66",
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EU) 2017/625 Article 66 on measures for non-compliant consignments entering the Union.",
+      "rationale": "The retrieved text does not certify today’s law."
+    },
+    {
+      "coverage_id": "C5",
+      "task_id": "T3",
+      "issue": "Conditional operator duties are resolved: where food has left the operator’s immediate control and the operator considers or has reason to believe it is not compliant with food-safety requirements, the operator must initiate withdrawal and inform competent authorities; if food may have reached consumers, consumer information is required, and recall is required if necessary because other measures are insufficient for a high level of health protection.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "claim_indices": [
+        1,
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 19",
+      "search_query": "",
+      "rationale": "The evidence does not establish that these conditions hold for this consignment; it also does not make recall automatic on exceedance alone."
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T3",
+      "issue": "The current in-force effect of the operator withdrawal, consumer-information and recall duties must be verified before making a current-law conclusion.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E46c1b89564"
+      ],
+      "claim_indices": [
+        1,
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 19",
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EC) No 178/2002 Article 19 on food-operator withdrawal, consumer information and recall duties.",
+      "rationale": "The retrieved text does not certify today’s law."
+    },
+    {
+      "coverage_id": "C7",
+      "task_id": "T4",
+      "issue": "A supplied snapshot states dried-fig maximum levels for aflatoxin B1 and total aflatoxins, but does not resolve the applicable product-category or intended-use distinctions or establish the currently applicable maximum.",
+      "status": "partially_covered",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        12
+      ],
+      "missing_elements": [
+        "Verified current maximum and any applicable category or intended-use qualifications."
+      ],
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "search_query": "Verify the current operative dried-fig aflatoxin B1 maximum-level entry in Commission Regulation (EU) 2023/915, including category and intended-use qualifications.",
+      "rationale": "The snapshot is not proof of current applicability."
+    },
+    {
+      "coverage_id": "C8",
+      "task_id": "T4",
+      "issue": "Whether this shipment actually exceeds the applicable maximum cannot be determined from the supplied case facts because its measured concentration is not provided.",
+      "status": "missing_case_fact",
+      "gap_type": "case_fact",
+      "critical": false,
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "claim_indices": [
+        4,
+        12
+      ],
+      "missing_elements": [
+        "Measured concentration and evidence needed to compare it with the applicable maximum."
+      ],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": "The user’s question is conditional on an exceedance, so this missing fact does not prevent describing possible actions."
+    },
+    {
+      "coverage_id": "C9",
+      "task_id": "T5",
+      "issue": "The rapid-alert evidence identifies conditional triggers: information about a serious direct or indirect human-health risk, specified protective measures requiring rapid action, and certain risk-related border rejections. It does not establish that an exceedance alone automatically triggers notification or that a trigger is met here.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E2f98d29f52",
+        "Ea2cd152723"
+      ],
+      "claim_indices": [
+        3,
+        11
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 50",
+      "search_query": "",
+      "rationale": "The relevant risk or response conditions must be assessed; the evidence does not establish them for this shipment."
+    },
+    {
+      "coverage_id": "C10",
+      "task_id": "T5",
+      "issue": "The current in-force effect of the rapid-alert triggers and related information-sharing duties must be verified before making a current-law conclusion.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E2f98d29f52",
+        "Ea2cd152723"
+      ],
+      "claim_indices": [
+        3,
+        11
+      ],
+      "missing_elements": [],
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 50",
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EC) No 178/2002 Article 50 on rapid-alert triggers and information sharing.",
+      "rationale": "The retrieved text does not certify today’s law."
+    }
+  ],
+  "coverage_summary": {
+    "items": 10,
+    "critical_covered": 3,
+    "critical_total": 9,
+    "critical_coverage_ratio": 0.3333,
+    "unresolved_critical": 6,
+    "missing_parent_tasks": [],
+    "unresolved_by_type": {
+      "case_fact": 1,
+      "current_law": 5,
+      "interpretation_conflict": 0,
+      "legal_evidence": 1,
+      "unsupported_claim": 0
+    },
+    "note": "LLM-derived diagnostic coverage; NOT benchmark completeness or legal correctness."
+  },
+  "classified_gaps": [
+    {
+      "coverage_id": "C2",
+      "task_id": "T1",
+      "issue": "The current in-force effect of the competent-authority measures and selection criteria must be verified before making a current-law conclusion.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EU) 2017/625 Article 138, including measures and selection criteria for established non-compliance.",
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 138",
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C3",
+      "task_id": "T2",
+      "issue": "For a non-compliant consignment entering the Union, the evidence supports official detention and refusal of entry, with destruction, re-dispatch outside the Union, or special treatment among the possible dispositions; it does not resolve the conditions and procedures governing each option.",
+      "gap_type": "legal_evidence",
+      "status": "partially_covered",
+      "critical": true,
+      "search_query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 66, including the decision and procedural conditions for detention, refusal of entry, destruction, re-dispatch and special treatment of non-compliant consignments.",
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 66",
+      "missing_elements": [
+        "The decision and procedural conditions for selecting or applying each disposition option."
+      ]
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T2",
+      "issue": "The current in-force effect of the border disposition provisions must be verified before stating current requirements.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EU) 2017/625 Article 66 on measures for non-compliant consignments entering the Union.",
+      "regulation_id": "2017/625",
+      "exact_provision": "Article 66",
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T3",
+      "issue": "The current in-force effect of the operator withdrawal, consumer-information and recall duties must be verified before making a current-law conclusion.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EC) No 178/2002 Article 19 on food-operator withdrawal, consumer information and recall duties.",
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 19",
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C7",
+      "task_id": "T4",
+      "issue": "A supplied snapshot states dried-fig maximum levels for aflatoxin B1 and total aflatoxins, but does not resolve the applicable product-category or intended-use distinctions or establish the currently applicable maximum.",
+      "gap_type": "current_law",
+      "status": "partially_covered",
+      "critical": true,
+      "search_query": "Verify the current operative dried-fig aflatoxin B1 maximum-level entry in Commission Regulation (EU) 2023/915, including category and intended-use qualifications.",
+      "regulation_id": "2023/915",
+      "exact_provision": null,
+      "missing_elements": [
+        "Verified current maximum and any applicable category or intended-use qualifications."
+      ]
+    },
+    {
+      "coverage_id": "C8",
+      "task_id": "T4",
+      "issue": "Whether this shipment actually exceeds the applicable maximum cannot be determined from the supplied case facts because its measured concentration is not provided.",
+      "gap_type": "case_fact",
+      "status": "missing_case_fact",
+      "critical": false,
+      "search_query": "",
+      "regulation_id": null,
+      "exact_provision": null,
+      "missing_elements": [
+        "Measured concentration and evidence needed to compare it with the applicable maximum."
+      ]
+    },
+    {
+      "coverage_id": "C10",
+      "task_id": "T5",
+      "issue": "The current in-force effect of the rapid-alert triggers and related information-sharing duties must be verified before making a current-law conclusion.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify the current in-force text and amendments affecting Regulation (EC) No 178/2002 Article 50 on rapid-alert triggers and information sharing.",
+      "regulation_id": "178/2002",
+      "exact_provision": "Article 50",
+      "missing_elements": []
+    }
+  ],
+  "current_law_calls": [],
+  "trace": [
+    {
+      "node": "planner",
+      "planned_tasks": 5,
+      "queued": 5
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU official controls food non-compliance contaminant maximum level competent authority measures dried figs aflatoxin applicable provisions",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "Ef624e98067",
+        "E9a5b802b00",
+        "Eb2674e6c28",
+        "Eab5ca5a598",
+        "E3f00c01bc7"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 1
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU imported food non-compliant consignment border control rejection return destruction special treatment official controls aflatoxin provisions",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E6659dc58c6",
+        "E8faee60ab8",
+        "Ee1a983f9cd",
+        "E97b6c4ce16",
+        "E9d99216c2f"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 2
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU food business operator unsafe or non-compliant food withdrawal recall competent authority notification conditions retrieved legal text",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "Ed48dc8de6a",
+        "E46c1b89564",
+        "E42ee08dfc5",
+        "Ee636d4e1db",
+        "E48009b56ee"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 3
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU aflatoxin maximum levels dried figs product category intended use processing applicable limit sampling analysis legal text",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E133737bd5a",
+        "E84bba6f619",
+        "Ee1f61e0dc1",
+        "E0f3287ac2b"
+      ],
+      "new_evidence_count": 4,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 4
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU food safety serious risk non-compliance notification information exchange RASFF competent authority operator trigger legal text",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "Ea2cd152723",
+        "E2f98d29f52",
+        "E4365147f9d"
+      ],
+      "new_evidence_count": 3,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 5
+    },
+    {
+      "node": "validator",
+      "round": 1,
+      "claims": 7,
+      "supported": 5,
+      "gaps": 4,
+      "conflicts": 0,
+      "extracted_source_facts": 0,
+      "covered_source_facts": 0
+    },
+    {
+      "node": "coverage_tracker",
+      "round": 1,
+      "critical_covered": 3,
+      "critical_total": 11,
+      "unresolved_by_type": {
+        "case_fact": 1,
+        "current_law": 3,
+        "interpretation_conflict": 0,
+        "legal_evidence": 4,
+        "unsupported_claim": 0
+      }
+    },
+    {
+      "node": "gap_planner",
+      "targeted_queries": [
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 137(2), including available competent-authority measures and conditions for their selection.",
+          "top_k": 5,
+          "regulation_id": "2017/625",
+          "provision": "Article 137(2)",
+          "coverage_id": "C1"
+        },
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 138(2), including available competent-authority measures and conditions for their selection.",
+          "top_k": 5,
+          "regulation_id": "2017/625",
+          "provision": "Article 138(2)",
+          "coverage_id": "C2"
+        },
+        {
+          "phase": "targeted",
+          "mode": "search",
+          "query": "Retrieve operative Regulation (EU) 2017/625 provisions governing competent-authority decisions and disposition of non-compliant or suspected non-compliant third-country goods under Articles 65 to 72.",
+          "top_k": 5,
+          "regulation_id": "2017/625",
+          "coverage_id": "C3"
+        }
+      ],
+      "deferred_live_only": [
+        "Whether this consignment actually exceeds the applicable maximum cannot be determined without its measured concentration and relevant consignment evidence.",
+        "Current legal effect of the cited competent-authority provisions must be verified before making an article-level conclusion about available actions.",
+        "Current legal effect of the third-country-goods decision and disposition provisions must be verified before giving a current article-level conclusion.",
+        "Current legal applicability of the dried-fig aflatoxin maximum-level provision must be verified before applying it to the consignment."
+      ]
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "exact",
+      "actual_mode": "exact",
+      "phase": "targeted",
+      "query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 137(2), including available competent-authority measures and conditions for their selection.",
+      "provision": "Article 137(2)",
+      "law_scope": "2017/625",
+      "retrieved": 1,
+      "added_ids": [
+        "Edc27e0b423"
+      ],
+      "new_evidence_count": 1,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 6
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "exact",
+      "actual_mode": "exact",
+      "phase": "targeted",
+      "query": "Retrieve the operative text of Regulation (EU) 2017/625 Article 138(2), including available competent-authority measures and conditions for their selection.",
+      "provision": "Article 138(2)",
+      "law_scope": "2017/625",
+      "retrieved": 3,
+      "added_ids": [
+        "E76a0dd5eea",
+        "Eda530a748c",
+        "E39fc026913"
+      ],
+      "new_evidence_count": 3,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 7
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "scoped_search",
+      "phase": "targeted",
+      "query": "Retrieve operative Regulation (EU) 2017/625 provisions governing competent-authority decisions and disposition of non-compliant or suspected non-compliant third-country goods under Articles 65 to 72.",
+      "provision": null,
+      "law_scope": "2017/625",
+      "retrieved": 5,
+      "added_ids": [
+        "E2f3776c84c",
+        "E7801370075",
+        "Ebcbbe77002",
+        "E15886dca2f",
+        "Ef75e8f9e54"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 8
+    },
+    {
+      "node": "validator",
+      "round": 2,
+      "claims": 14,
+      "supported": 14,
+      "gaps": 5,
+      "conflicts": 0,
+      "extracted_source_facts": 0,
+      "covered_source_facts": 0
+    },
+    {
+      "node": "coverage_tracker",
+      "round": 2,
+      "critical_covered": 3,
+      "critical_total": 9,
+      "unresolved_by_type": {
+        "case_fact": 1,
+        "current_law": 5,
+        "interpretation_conflict": 0,
+        "legal_evidence": 1,
+        "unsupported_claim": 0
+      }
+    },
+    {
+      "node": "reporter",
+      "length": 3191,
+      "supported": 14
+    },
+    {
+      "node": "auditor",
+      "issues": [],
+      "resolution": "original_passed",
+      "used_fallback": false
+    }
+  ],
+  "final_output": "## 1. Short answer\n\nIf an exceedance of the applicable maximum is established, competent authorities may require corrective measures and may use enforcement measures such as treatment, restrictions on marketing or movement, or withdrawal, recall, removal or destruction. The measure is not automatic: the authority is to consider the nature of the non-compliance and the operator’s compliance record. [E76a0dd5eea] [Eda530a748c]\n\nFor a non-compliant consignment entering the Union, the supplied text also provides for official detention and refusal of entry, with possible destruction, re-dispatch or special treatment. The conditions for choosing among those options are not established by the supplied evidence. [Ebcbbe77002]\n\n## 2. Legal basis and relevant conditions\n\n- **Authority action:** The supplied text says authorities must determine the non-compliance’s origin and extent, establish the operator’s responsibilities, and take appropriate measures to remedy it and prevent recurrence. It lists possible measures, including goods treatment and “the recall, withdrawal, removal and destruction of goods”; these are options, not automatic consequences of an aflatoxin exceedance. [E76a0dd5eea] [Eda530a748c]\n- **Operator action:** If food has left the initial operator’s immediate control and the operator considers or has reason to believe it is unsafe, the supplied text says the operator must “immediately initiate procedures to withdraw” it and inform competent authorities. If it may have reached consumers, consumer information is required; consumer recall is conditional on it being necessary for health protection. [E46c1b89564]\n- **Rapid alert:** Notification is tied to specified risk or response triggers, including information about a “serious direct or indirect risk to human health.” An exceedance alone is not established as an automatic trigger. [E2f98d29f52] [Ea2cd152723]\n\n## 3. Uncertainties / verification needed\n\nThe shipment’s measured concentration, location and distribution status are not provided, so its actual non-compliance and whether any withdrawal, border or notification condition is met are **not established**. The cited legal texts also do not establish current applicability.\n\n**Critical uncovered issues**\n- **Current-law gap:** Verify the operative authority-measures text and selection conditions.\n- **Legal-evidence gap:** Verify the operative border procedure and the conditions for detention, refusal and each disposition option.\n- **Current-law gap:** Verify the operative operator withdrawal, consumer-information and recall duties, and rapid-alert triggers.\n- **Current-law gap:** Verify the currently applicable aflatoxin maximum and any relevant product-category or intended-use qualifications; the measured concentration is also needed to determine whether it is exceeded.\n\n**Practical next checks:** Confirm the applicable maximum and comparison with the analytical result; establish whether the consignment is entering the Union or has entered distribution; identify whether it has left the operator’s immediate control or reached consumers; and obtain current operative legal text before selecting or describing a mandatory action.",
+  "source_facts": [],
+  "audit_resolution": "original_passed",
+  "draft_output": "## 1. Short answer\n\nIf an exceedance of the applicable maximum is established, competent authorities may require corrective measures and may use enforcement measures such as treatment, restrictions on marketing or movement, or withdrawal, recall, removal or destruction. The measure is not automatic: the authority is to consider the nature of the non-compliance and the operator’s compliance record. [E76a0dd5eea] [Eda530a748c]\n\nFor a non-compliant consignment entering the Union, the supplied text also provides for official detention and refusal of entry, with possible destruction, re-dispatch or special treatment. The conditions for choosing among those options are not established by the supplied evidence. [Ebcbbe77002]\n\n## 2. Legal basis and relevant conditions\n\n- **Authority action:** The supplied text says authorities must determine the non-compliance’s origin and extent, establish the operator’s responsibilities, and take appropriate measures to remedy it and prevent recurrence. It lists possible measures, including goods treatment and “the recall, withdrawal, removal and destruction of goods”; these are options, not automatic consequences of an aflatoxin exceedance. [E76a0dd5eea] [Eda530a748c]\n- **Operator action:** If food has left the initial operator’s immediate control and the operator considers or has reason to believe it is unsafe, the supplied text says the operator must “immediately initiate procedures to withdraw” it and inform competent authorities. If it may have reached consumers, consumer information is required; consumer recall is conditional on it being necessary for health protection. [E46c1b89564]\n- **Rapid alert:** Notification is tied to specified risk or response triggers, including information about a “serious direct or indirect risk to human health.” An exceedance alone is not established as an automatic trigger. [E2f98d29f52] [Ea2cd152723]\n\n## 3. Uncertainties / verification needed\n\nThe shipment’s measured concentration, location and distribution status are not provided, so its actual non-compliance and whether any withdrawal, border or notification condition is met are **not established**. The cited legal texts also do not establish current applicability.\n\n**Critical uncovered issues**\n- **Current-law gap:** Verify the operative authority-measures text and selection conditions.\n- **Legal-evidence gap:** Verify the operative border procedure and the conditions for detention, refusal and each disposition option.\n- **Current-law gap:** Verify the operative operator withdrawal, consumer-information and recall duties, and rapid-alert triggers.\n- **Current-law gap:** Verify the currently applicable aflatoxin maximum and any relevant product-category or intended-use qualifications; the measured concentration is also needed to determine whether it is exceeded.\n\n**Practical next checks:** Confirm the applicable maximum and comparison with the analytical result; establish whether the consignment is entering the Union or has entered distribution; identify whether it has left the operator’s immediate control or reached consumers; and obtain current operative legal text before selecting or describing a mandatory action.",
+  "search_calls": 8,
+  "initial_searches": 5,
+  "targeted_searches": 3,
+  "validation_rounds": 2,
+  "llm_calls": 7,
+  "usage": {
+    "input_tokens": 42549,
+    "output_tokens": 13161
+  },
+  "audit_issues": [],
+  "stop_reason": "validation_budget",
+  "targeted_search_yield": 9,
+  "started_utc": "2026-10-21T12:27:13.117919+00:00",
+  "completed_utc": "2026-10-21T12:30:58.818909+00:00",
+  "latency_seconds": 225.7,
+  "status": "completed_pending_human_review"
+}

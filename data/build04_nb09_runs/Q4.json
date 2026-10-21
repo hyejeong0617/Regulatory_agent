@@ -1,0 +1,431 @@
+{
+  "experiment_id": "NB09_build04_investigation_v1",
+  "build": "Build04",
+  "qid": "Q4",
+  "question": "Are dried figs from Türkiye subject to increased official controls or special import conditions when entering the EU?",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "settings": {
+    "experiment_id": "NB09_build04_investigation_v1",
+    "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+    "initial_max": 5,
+    "targeted_max": 3,
+    "validation_max": 2,
+    "max_llm_calls": 12,
+    "enable_cellar_live": false,
+    "runtime_version": "nb09_build04_v1"
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "plan": [
+    {
+      "task_id": "T1",
+      "question": "Verify in the currently applicable EU import-control legislation whether dried figs originating in Türkiye are listed for aflatoxin controls, and identify the applicable listing and product scope.",
+      "priority": "high",
+      "search_query": "EUR-Lex current applicable Regulation (EU) 2019/1793 Annexes dried figs Türkiye aflatoxins listing amendments",
+      "expected_evidence_type": "Current official EU legal text, including relevant Annex entry and effective amending acts",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T2",
+      "question": "Determine whether the applicable listing imposes increased official controls, special import conditions, or both, and establish the scope and conditions for each measure.",
+      "priority": "high",
+      "search_query": "Regulation (EU) 2019/1793 Annex I Annex II dried figs Türkiye aflatoxins control frequency special conditions scope",
+      "expected_evidence_type": "Official legal text specifying control regime, product and hazard scope, and conditions of application",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T3",
+      "question": "Verify any documentary or border-presentation requirements attached to the applicable dried-fig listing, without assuming that they apply unless the listing establishes them.",
+      "priority": "high",
+      "search_query": "EU official import requirements dried figs Türkiye aflatoxins Regulation 2019/1793 common health entry document official certificate sampling analytical results",
+      "expected_evidence_type": "Applicable official legal provisions and official Commission guidance identifying required documents and entry procedures",
+      "needs_currentness": true
+    },
+    {
+      "task_id": "T4",
+      "question": "Check whether product description, intended use, or processing status affects whether the dried-fig import listing applies to this consignment.",
+      "priority": "medium",
+      "search_query": "Regulation (EU) 2019/1793 dried figs product description intended use processing scope Türkiye aflatoxins",
+      "expected_evidence_type": "Relevant legal definitions, product-code or commodity-description scope, and authoritative interpretive guidance",
+      "needs_currentness": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "Effd100d7a6",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E133737bd5a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 3",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E185d48d2d0",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_153::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 153",
+      "location": "Article 153 — Amendments to Regulation (EC) No 999/2001",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 153 Amendments to Regulation (EC) No 999/2001 Regulation (EC) No 999/2001 is amended as follows: (1) Articles 19 and 21 are deleted; (2) in Annex X, Chapters A and B are deleted.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E84bba6f619",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ebbfaecae2e",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_159::01",
+      "regulation_id": "2017/625",
+      "source_document_celex": "02017R0625-20250105",
+      "basic_celex": "32017R0625",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "source_version": "2025-01-05",
+      "article": "Article 159",
+      "location": "Article 159 — Amendments to Regulation (EC) No 1099/2009",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02017R0625-20250105",
+      "text": "Article 159 Amendments to Regulation (EC) No 1099/2009 Regulation (EC) No 1099/2009 is amended as follows: (1) In Article 2, point (q) is replaced by the following: ‘(q) “competent authorities” means competent authorities as defined in point (3) of Article 3 of Regulation ►C1 (EU) 2017/625 ◄ of the European Parliament and of the Council ( *6 ). (2) Article 22 is deleted.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3f00c01bc7",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 18",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Edfc5d5696a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row17::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 17",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.14 | Following dried spices: Capsicum spp. (dried fruits thereof, whole or ground, including chillies, chilli powder, cayenne or paprika) Pepper (fruits of Piper spp, including white and black pepper) Nutmeg ( Myristica fragrans ) Turmeric ( Curcuma longa ) Mixtures of dried spices containing one or more of the abovementioned dried spices | 5,0 | 10,0 | -",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E6755b594ef",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_3::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": "Article 3",
+      "location": "Article 3 — Sampling and analyses",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "Article 3 Sampling and analyses The sampling and the analyses to be carried out by competent authorities at border control posts or at control points referred to in Article 53(1)(a) of Regulation (EU) 2017/625, as part of physical checks on consignments of food and feed referred to in Article 1(1)(a) and (b), or in third countries for the purposes of the results of analyses which are required to accompany the consignments of food and feed referred to in Article 1(1)(b) as provided for in this Regulation shall be performed in accordance with the following requirements: ▼M12 (a) for food listed in Annexes I and II due to possible contamination risk by mycotoxins, including aflatoxins, the sampling and the analyses shall be performed in accordance with Commission Implementing Regulation (EU) 2023/2782 ( 1 ); ▼B (b) for feed listed in Annexes I and II due to possible contamination risk by mycotoxins, including aflatoxins, the sampling and the analyses shall be performed in accordance with Regulation (EC) No 152/2009; (c) for food and feed listed in Annexes I and II due to possible non-compliance with the maximum allowed levels of pesticides residues the sampling shall be performed in accordance with Directive 2002/63/EC; ▼M12 ————— ▼B (e) for food listed in Annexes I and II due to the risk of presence of Salmonella , the sampling and the analyses for the control of Salmonella shall be performed in accordance with the sampling procedures and the analytical reference methods laid down in Annex III; ▼M12 (f) the methods of sampling and analyses referred to in the footnotes to Annexes I and II shall be applied in relation to hazards other than those referred to in points (a), (b), (c) and (e). ▼B",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ee1a983f9cd",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::table4_row109::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Table 4, row 109",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Table context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Row: ex 2008 97 14 | 15 | Aflatoxins | 20",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3267189c5b",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::table5_row169::01",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Table 5, row 169",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Table context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Row: — Flours, meals and powder of dried figs | ex 1106 30 90 | 60",
+      "retrieved_by": "search"
+    }
+  ],
+  "claims": [
+    {
+      "statement": "The supplied extract places Türkiye-origin dried figs in Annex II, Section 1, row 14 of Regulation (EU) 2019/1793 and lists aflatoxins as a hazard for that entry.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs",
+      "status": "supported",
+      "scope_note": "This confirms what the supplied extract says; it does not by itself establish that this version is currently applicable.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "For the listed entry, the supplied extract specifies a 30% frequency of identity and physical checks.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "The extract identifies the check frequency but does not establish the current status of the listing or the full conditions of application.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Whether the listing currently imposes special import conditions, including any certificate, analytical-result, or border-presentation requirements, is not established by the supplied evidence.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Annex II, Section 1, logical row 14",
+      "status": "unverified",
+      "scope_note": "The supplied entry excerpt does not provide the provisions governing Annex II conditions or accompanying documents; do not infer specific requirements from the table location alone.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Verify the operative listing for Türkiye-origin dried figs and aflatoxins against the actual amending acts and effective dates, rather than relying on consolidated-document metadata.",
+      "query": "Regulation (EU) 2019/1793 Annex II Section 1 row Türkiye dried figs aflatoxins amendments effective date",
+      "regulation_id": "2019/1793",
+      "exact_provision": "Annex II, Section 1, row 14",
+      "critical": true
+    },
+    {
+      "description": "Retrieve the legal provisions specifying what Annex II listing entails, including whether special import conditions and accompanying documents apply to this entry.",
+      "query": "Regulation (EU) 2019/1793 Article special conditions Annex II accompanying documents dried figs Türkiye",
+      "regulation_id": "2019/1793",
+      "exact_provision": "Articles governing Annex II special conditions and entry requirements",
+      "critical": true
+    },
+    {
+      "description": "Verify the complete commodity-code and product-description scope for the consignment, including any relevant prepared or preserved fig products.",
+      "query": "Regulation (EU) 2019/1793 Annex II Türkiye dried figs complete CN TARIC codes product scope",
+      "regulation_id": "2019/1793",
+      "exact_provision": "Annex II, Section 1, row 14 and associated commodity-code entries",
+      "critical": true
+    },
+    {
+      "description": "Missing support: Whether the listing currently imposes special import conditions, including any certificate, analytical-result, or border-presentation requirements, is not estab",
+      "query": "Whether the listing currently imposes special import conditions, including any certificate, analytical-result, or border-presentation requirements, is not established by the supplied evidence.",
+      "regulation_id": null,
+      "exact_provision": null,
+      "critical": true
+    }
+  ],
+  "conflicts": [],
+  "current_law_calls": [],
+  "trace": [
+    {
+      "node": "planner",
+      "planned_tasks": 4,
+      "queued": 4
+    },
+    {
+      "node": "retriever",
+      "mode": "search",
+      "phase": "initial",
+      "query": "EUR-Lex current applicable Regulation (EU) 2019/1793 Annexes dried figs Türkiye aflatoxins listing amendments",
+      "retrieved": 5,
+      "added_ids": [
+        "Effd100d7a6",
+        "E133737bd5a",
+        "E185d48d2d0",
+        "E84bba6f619",
+        "Ebbfaecae2e"
+      ],
+      "search_count": 1
+    },
+    {
+      "node": "retriever",
+      "mode": "search",
+      "phase": "initial",
+      "query": "Regulation (EU) 2019/1793 Annex I Annex II dried figs Türkiye aflatoxins control frequency special conditions scope",
+      "retrieved": 5,
+      "added_ids": [
+        "E3f00c01bc7",
+        "Edfc5d5696a"
+      ],
+      "search_count": 2
+    },
+    {
+      "node": "retriever",
+      "mode": "search",
+      "phase": "initial",
+      "query": "EU official import requirements dried figs Türkiye aflatoxins Regulation 2019/1793 common health entry document official certificate sampling analytical results",
+      "retrieved": 5,
+      "added_ids": [
+        "E6755b594ef",
+        "Ee1a983f9cd"
+      ],
+      "search_count": 3
+    },
+    {
+      "node": "retriever",
+      "mode": "search",
+      "phase": "initial",
+      "query": "Regulation (EU) 2019/1793 dried figs product description intended use processing scope Türkiye aflatoxins",
+      "retrieved": 5,
+      "added_ids": [
+        "E3267189c5b"
+      ],
+      "search_count": 4
+    },
+    {
+      "node": "validator",
+      "round": 1,
+      "claims": 4,
+      "supported": 1,
+      "gaps": 6,
+      "conflicts": 0
+    },
+    {
+      "node": "gap_planner",
+      "targeted_queries": [
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Regulation (EU) 2019/1793 currently effective Annex II Section 1 Türkiye dried figs aflatoxins entry amendments",
+          "top_k": 5,
+          "regulation_id": "2019/1793",
+          "provision": "Annex II, Section 1, Türkiye dried-fig entry"
+        },
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Regulation (EU) 2019/1793 Annex II special conditions entry official certificate analytical results dried figs Türkiye",
+          "top_k": 5,
+          "regulation_id": "2019/1793",
+          "provision": "Annex II and provisions governing entry of Annex II consignments"
+        },
+        {
+          "phase": "targeted",
+          "mode": "exact",
+          "query": "Regulation (EU) 2019/1793 Türkiye dried figs CN codes product scope prepared preserved mixtures intended use",
+          "top_k": 5,
+          "regulation_id": "2019/1793",
+          "provision": "Annex II, Section 1, Türkiye entry and relevant scope provisions"
+        }
+      ]
+    },
+    {
+      "node": "retriever",
+      "mode": "exact",
+      "phase": "targeted",
+      "query": "Regulation (EU) 2019/1793 currently effective Annex II Section 1 Türkiye dried figs aflatoxins entry amendments",
+      "retrieved": 1,
+      "added_ids": [],
+      "search_count": 5
+    },
+    {
+      "node": "retriever",
+      "mode": "exact",
+      "phase": "targeted",
+      "query": "Regulation (EU) 2019/1793 Annex II special conditions entry official certificate analytical results dried figs Türkiye",
+      "retrieved": 1,
+      "added_ids": [],
+      "search_count": 6
+    },
+    {
+      "node": "retriever",
+      "mode": "exact",
+      "phase": "targeted",
+      "query": "Regulation (EU) 2019/1793 Türkiye dried figs CN codes product scope prepared preserved mixtures intended use",
+      "retrieved": 1,
+      "added_ids": [],
+      "search_count": 7
+    },
+    {
+      "node": "validator",
+      "round": 2,
+      "claims": 3,
+      "supported": 2,
+      "gaps": 4,
+      "conflicts": 0
+    },
+    {
+      "node": "reporter",
+      "length": 2292
+    },
+    {
+      "node": "auditor",
+      "issues": [
+        "The Article 3 description is not supported by the supplied verified claims. The draft cites E6755b594ef, but no verified claim or supporting quotation for that assertion is provided.",
+        "The statement that the extract covers “some fig-containing or processed products” is not supported by the verified evidence, which confirms only the dried-fig entry.",
+        "The draft says no sampling results are supplied, but the shared case states that aflatoxin B1 has been detected. The concentration and sampling details are not supplied, and detection alone does not establish a legal exceedance."
+      ],
+      "used_fallback": true
+    }
+  ],
+  "final_output": "## Evidence-supported findings (frozen snapshot)\n- The supplied extract places Türkiye-origin dried figs in Annex II, Section 1, row 14 of Regulation (EU) 2019/1793 and lists aflatoxins as a hazard for that entry. [Effd100d7a6]\n- For the listed entry, the supplied extract specifies a 30% frequency of identity and physical checks. [Effd100d7a6]\n\n## Information requiring verification\n- Verify the operative listing for Türkiye-origin dried figs and aflatoxins against the actual amending acts and effective dates, rather than relying on consolidated-document metadata.\n- Retrieve the legal provisions specifying what Annex II listing entails, including whether special import conditions and accompanying documents apply to this entry.\n- Verify the complete commodity-code and product-description scope for the consignment, including any relevant prepared or preserved fig products.\n- Missing support: Whether the listing currently imposes special import conditions, including any certificate, analytical-result, or border-presentation requirements, is not estab\n- The applicable law and shipment facts, including amendments and effective dates, were NOT fully verified.\n- A detection alone does not establish a shipment-specific legal exceedance or clearance decision.\n\n## Provenance and limits\n- Snapshot evidence only; current legal applicability unverified.\n- Audit issues: The Article 3 description is not supported by the supplied verified claims. The draft cites E6755b594ef, but no verified claim or supporting quotation for that assertion is provided.; The statement that the extract covers “some fig-containing or processed products” is not supported by the verified evidence, which confirms only the dried-fig entry.; The draft says no sampling results are supplied, but the shared case states that aflatoxin B1 has been detected. The concentration and sampling details are not supplied, and detection alone does not establish a legal exceedance.; Semantic audit did not pass",
+  "search_calls": 7,
+  "initial_searches": 4,
+  "targeted_searches": 3,
+  "validation_rounds": 2,
+  "llm_calls": 5,
+  "usage": {
+    "input_tokens": 13673,
+    "output_tokens": 6130
+  },
+  "audit_issues": [
+    "The Article 3 description is not supported by the supplied verified claims. The draft cites E6755b594ef, but no verified claim or supporting quotation for that assertion is provided.",
+    "The statement that the extract covers “some fig-containing or processed products” is not supported by the verified evidence, which confirms only the dried-fig entry.",
+    "The draft says no sampling results are supplied, but the shared case states that aflatoxin B1 has been detected. The concentration and sampling details are not supplied, and detection alone does not establish a legal exceedance."
+  ],
+  "started_utc": "2026-10-21T10:36:59.715719+00:00",
+  "completed_utc": "2026-10-21T10:38:31.448321+00:00",
+  "latency_seconds": 91.73,
+  "status": "completed_pending_human_review"
+}

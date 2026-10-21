@@ -1,0 +1,15 @@
+{
+  "experiment_id": "NB08_build03B_full_v1",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_output_tokens": 4096,
+  "instructions_sha256": "d9adaae57a480c3ebc67c8e5b283d1fe25e8e0b9a2a354fb291a864d075ea528",
+  "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+  "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+  "max_turns": 18,
+  "tools": [
+    "search_regulation",
+    "check_current_law"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿qid,question,baseline_available,build03_status,search_calls,current_law_calls,metadata_found_calls,unverified_or_partial_calls,baseline_chars,build03_chars
+Q1,A shipment of dried figs originating from Türkiye is found to contain aflatoxin B1. Which EU legislation is relevant to this case?,True,saved,4,2,2,0,1301,2242
+Q2,What is the applicable EU maximum level for aflatoxin B1 and total aflatoxins in dried figs intended for direct human consumption?,True,saved,1,1,1,0,786,1123
+Q3,Does the applicable limit change depending on whether the dried figs are intended for direct consumption or further processing/sorting?,True,saved,2,1,1,0,1425,1758
+Q4,Are dried figs from Türkiye subject to increased official controls or special import conditions when entering the EU?,True,saved,4,1,1,0,1064,1746
+Q5,"If so, what controls, sampling/testing requirements, or documentation requirements currently apply?",True,saved,8,2,2,0,2255,3858
+Q6,Which authorities or food business operators are responsible for the relevant actions when a non-compliant consignment is detected?,True,saved,6,1,1,0,2184,2946
+Q7,What regulatory actions may follow if aflatoxin levels exceed the applicable maximum level?,True,saved,5,2,2,0,907,2477
+Q8,Which parts of the assessment depend on current legislation and therefore require checking for amendments or updates?,True,saved,5,5,4,1,2752,3039
+Q9,"Provide the legal basis for each major conclusion, including regulation number and relevant article/annex where possible.",True,saved,9,4,4,0,3067,3883
+Q10,"Based on the evidence above, prepare a concise regulatory assessment for an EU food business operator handling this shipment. Clearly distinguish confirmed requirements from information that still requires verification.",True,saved,9,5,4,1,2089,3708

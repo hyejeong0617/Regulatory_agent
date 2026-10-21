@@ -1,0 +1,16 @@
+{
+  "experiment_id": "NB09_build04_investigation_v3",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+  "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+  "initial_max": 5,
+  "targeted_max": 3,
+  "validation_max": 2,
+  "max_llm_calls": 12,
+  "enable_cellar_live": false,
+  "coverage_tracker": "planner_task_plus_subissue_v1",
+  "gap_classification": "type_aware_v1",
+  "runtime_version": "nb09_build04_v3"
+}

@@ -1,0 +1,533 @@
+{
+  "experiment_id": "NB08_build03B_full_v1",
+  "arm": "Build03-B",
+  "qid": "Q7",
+  "question": "What regulatory actions may follow if aflatoxin levels exceed the applicable maximum level?",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "settings_sha256": "7a1e5868bd184560141f724e9744894e9fc14646b33d8efd376173b30fbbc31e",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "tools_available": [
+    "search_regulation",
+    "check_current_law"
+  ],
+  "retrieval_parity": {
+    "matched": 50,
+    "total": 50
+  },
+  "search_calls": [
+    {
+      "query": "Regulation (EC) No 178/2002 food not complying with food safety requirements withdrawal recall competent authorities enforcement; Regulation (EU) 2017/625 official controls non-compliant consignments import rejection destruction re-dispatch special treatment aflatoxin dried figs exceeding maximum level",
+      "top_k": 10,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 587,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_14::02",
+          "rrf_score": 0.030679156908665108,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 14",
+          "location": "Article 14 — Food safety requirements",
+          "heading": "Food safety requirements",
+          "text": "fe, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment is unsafe. 7. Food that complies with specific Community provisions governing food safety shall be deemed to be safe insofar as the aspects covered by the specific Community provisions are concerned. 8. Conformity of a food with specific provisions applicable to that food shall not bar the competent authorities from taking appropriate measures to impose restrictions on it being placed on the market or to require its withdrawal from the market where there are reasons to suspect that, despite such conformity, the food is unsafe. 9. Where there are no specific Community provisions, food shall be deemed to be safe when it conforms to the specific provisions of national food law of the Member State in whose territory the food is marketed, such provisions being drawn up and applied without prejudice to the Treaty, in particular Articles 28 and 30 thereof."
+        },
+        {
+          "rank": 2,
+          "chunk_index": 595,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_20::02",
+          "rrf_score": 0.025448143405889884,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 20",
+          "location": "Article 20 — Responsibilities for feed: feed business operators",
+          "heading": "Responsibilities for feed: feed business operators",
+          "text": "atisfy the feed safety requirements. It shall inform the competent authorities of the action taken to prevent risk arising from the use of that feed and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a feed. 4. Feed business operators shall collaborate with the competent authorities on action taken in order to avoid risks posed by a feed which they supply or have supplied."
+        },
+        {
+          "rank": 3,
+          "chunk_index": 588,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_15::01",
+          "rrf_score": 0.025,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 15",
+          "location": "Article 15 — Feed safety requirements",
+          "heading": "Feed safety requirements",
+          "text": "Article 15 Feed safety requirements 1. Feed shall not be placed on the market or fed to any food-producing animal if it is unsafe. 2. Feed shall be deemed to be unsafe for its intended use if it is considered to: — have an adverse effect on human or animal health; — make the food derived from food-producing animals unsafe for human consumption. 3. Where a feed which has been identified as not satisfying the feed safety requirement is part of a batch, lot or consignment of feed of the same class or description, it shall be presumed that all of the feed in that batch, lot or consignment is so affected, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment fails to satisfy the feed safety requirement. 4. Feed that complies with specific Community provisions governing feed safety shall be deemed to be safe insofar as the aspects covered by the specific Community provisions are concerned. 5. Conformity of a feed with specific provisions applicable to that feed shall not bar the competent authorities from taking appropriate measures to impose restrictions on it being placed on the market or to require its withdrawal from the market where there are reasons to suspect that, despite such conformity, the feed is unsafe. 6. Where there are no specific Community provisions, feed shall be deemed to be safe when it conforms to the specific provisions of national law governing feed safety of the Member State in whose territory the feed is in circulation, such provisions being drawn up and applied without prejudice to the Treaty, in particular Articles 28 and 30 thereof."
+        },
+        {
+          "rank": 4,
+          "chunk_index": 887,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_148::01",
+          "rrf_score": 0.022657450076804916,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 148",
+          "location": "Article 148 — Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+          "heading": "Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+          "text": "Article 148 Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments 1. Competent authorities shall establish procedures for food business operators to follow when applying for the approval of their establishments in accordance with Regulations (EC) No 852/2004 and (EC) No 853/2004. 2. Upon receipt of an application for approval from a food business operator, the competent authority shall make an on-site visit. 3. The competent authority shall approve an establishment for the activities concerned only if the food business operator has demonstrated that it complies with the relevant requirements of food law. 4. The competent authority may grant conditional approval if it appears that the establishment meets all the infrastructure and equipment requirements. It shall grant full approval only if it appears from a new official control of the establishment, carried out within three months of granting conditional approval, that the establishment meets the other relevant requirements of food law. If clear progress has been made but the establishment still does not meet all of the relevant requirements, the competent authority may prolong the conditional approval. However, conditional approval shall not exceed a total of six months, except in the case of factory and freezer vessels flying the flag of Member States, for which such conditional approval shall not exceed a total of 12 months. 5. The competent authority shall keep the approval of establishments under review when carrying out official controls."
+        },
+        {
+          "rank": 5,
+          "chunk_index": 783,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_71::01",
+          "rrf_score": 0.01639344262295082,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 71",
+          "location": "Article 71 — Special treatment of consignments",
+          "heading": "Special treatment of consignments",
+          "text": "Article 71 Special treatment of consignments 1. The special treatment of consignments provided for in point (c) of Article 66(3) and point (b) of Article 67 may, as appropriate, include: (a) treatment or processing, including decontamination, where appropriate, but excluding dilution, so that the consignment complies with the requirements of the rules referred to in Article 1(2), or with the requirements of a third country of re-dispatch; or (b) treatment in any other manner suitable for safe animal or human consumption or for purposes other than animal or human consumption. 2. The special treatment provided for in paragraph 1 shall: (a) be carried out effectively and ensure the elimination of any risk to human, animal or plant health, animal welfare or, as regards GMOs and plant protection products, also to the environment; (b) be documented and carried out under the control of the competent authorities or, where appropriate, under the control of the competent authorities of another Member State by mutual agreement; and (c) comply with the requirements laid down in the rules referred to in Article 1(2). 3. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning the requirements and the conditions in accordance with which the special treatment provided for in paragraph 1 of this Article is to take place. In the absence of rules adopted by delegated acts, such special treatment shall take place in accordance with national law."
+        },
+        {
+          "rank": 6,
+          "chunk_index": 720,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_27::02",
+          "rrf_score": 0.016129032258064516,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 27",
+          "location": "Article 27 — Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed",
+          "heading": "Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed",
+          "text": "to (e) of Article 1(2) to address newly identified risks which may arise through food or feed to human or animal health or, in relation to GMOs and plant protection products, also to the environment, or any such risks emerging from new patterns of production or consumption of food or feed, and which cannot be effectively addressed in the absence of such common rules regarding uniform minimum frequency of such official controls, where a minimum level of official control is necessary to respond to the specific hazards and risks which exist in relation to each category of food and feed and the different processes it undergoes. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2). 3. On duly justified imperative grounds of urgency relating to cases of serious risks to human or animal health or to the environment, the Commission shall adopt immediately applicable implementing acts in accordance with the procedure referred to in Article 145(3)."
+        },
+        {
+          "rank": 7,
+          "chunk_index": 784,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_72::01",
+          "rrf_score": 0.016129032258064516,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 72",
+          "location": "Article 72 — Re-dispatch of consignments",
+          "heading": "Re-dispatch of consignments",
+          "text": "Article 72 Re-dispatch of consignments 1. The competent authorities shall allow the re-dispatch of consignments subject to compliance with the following conditions: (a) the destination has been agreed with the operator responsible for the consignment; (b) the operator responsible for the consignment has informed the competent authorities of the Member State in writing that the competent authorities of the third country of origin or, if different, the third country of destination have been informed of the reasons and circumstances for the refusal of the entry into the Union of the consignment of animals or goods concerned; (c) where the third country of destination is not the third country of origin, the operator has obtained the agreement of the competent authorities of that third country of destination and those competent authorities have notified the competent authorities of the Member State that they are prepared to accept the consignment; and (d) in the case of consignments of animals, the re-dispatch is in compliance with animal welfare requirements. 2. The conditions set out in points (b) and (c) of paragraph 1 of this Article shall not apply to consignments of the categories of goods referred to in point (c) of Article 47(1)."
+        },
+        {
+          "rank": 8,
+          "chunk_index": 719,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_27::01",
+          "rrf_score": 0.015873015873015872,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 27",
+          "location": "Article 27 — Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed",
+          "heading": "Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed",
+          "text": "Article 27 Specific rules on official controls and for action taken by the competent authorities in cases of newly identified risks in relation to food and feed 1. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation by laying down rules for the performance of official controls on certain categories of food or feed to verify compliance with the rules referred to in points (a) to (e) of Article 1(2) and for action to be taken by the competent authorities following such official controls. Those delegated acts shall address newly identified risks which may arise through food or feed to human or animal health or, in relation to GMOs and plant protection products, also to the environment, or any such risks emerging from new patterns of production or consumption of food or feed, and which cannot be effectively addressed in the absence of such common rules. Those delegated acts shall lay down rules on: (a) uniform specific requirements for the performance of official controls to respond to the specific hazards and risks which exist in relation to each category of food and feed and the different processes it undergoes; and (b) the cases where the competent authorities, in relation to specific non-compliances, are to take one or more of the measures referred to in Articles 137(2) and 138(2). 2. The Commission may, by means of implementing acts, lay down rules on uniform practical arrangements on official controls performed on certain categories of food or feed to verify compliance with the rules referred to in points (a) to (e) of Article 1(2) to address newly identified risks which may arise through food or feed to human or animal health or, in relation to GMOs and plant protection products, also to the environment,"
+        },
+        {
+          "rank": 9,
+          "chunk_index": 775,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::01",
+          "rrf_score": 0.015873015873015872,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 66",
+          "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+          "heading": "Measures to be taken in cases of non-compliant consignments entering the Union",
+          "text": "Article 66 Measures to be taken in cases of non-compliant consignments entering the Union 1. The competent authorities shall place under official detention any consignment of animals or goods entering the Union which does not comply with the rules referred to in Article 1(2) and shall refuse its entry into the Union. The competent authorities shall isolate or quarantine, as appropriate, any such consignment and the animals belonging to it shall be kept, cared for or treated under appropriate conditions pending any further decision. If possible, the competent authorities shall also take into account the interest of providing special care in respect of certain types of goods. 2. The Commission shall, by means of implementing acts, lay down rules on the practical arrangements for the isolation and quarantine provided for in the second subparagraph of paragraph 1 of this Article. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2). 3. The competent authority shall, as regards the consignment referred to in paragraph 1 order, without delay, the operator responsible for the consignment to: (a) destroy the consignment; (b) re-dispatch the consignment outside the Union in accordance with Article 72(1) and (2); or (c) subject the consignment to special treatment in accordance with Article 71(1) and (2) or to any other measure necessary to ensure compliance with the rules referred to in Article 1(2), and, where appropriate, allocate the consignment for purposes other than those for which it was originally intended. Any action referred to in points (a), (b) and (c) of the first subparagraph shall be performed in compliance with the rules referred to in Article 1(2), including in particular, as regards consignments of"
+        },
+        {
+          "rank": 10,
+          "chunk_index": 586,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_14::01",
+          "rrf_score": 0.015625,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 14",
+          "location": "Article 14 — Food safety requirements",
+          "heading": "Food safety requirements",
+          "text": "Article 14 Food safety requirements 1. Food shall not be placed on the market if it is unsafe. 2. Food shall be deemed to be unsafe if it is considered to be: (a) injurious to health; (b) unfit for human consumption. 3. In determining whether any food is unsafe, regard shall be had: (a) to the normal conditions of use of the food by the consumer and at each stage of production, processing and distribution, and (b) to the information provided to the consumer, including information on the label, or other information generally available to the consumer concerning the avoidance of specific adverse health effects from a particular food or category of foods. 4. In determining whether any food is injurious to health, regard shall be had: (a) not only to the probable immediate and/or short-term and/or long-term effects of that food on the health of a person consuming it, but also on subsequent generations; (b) to the probable cumulative toxic effects; (c) to the particular health sensitivities of a specific category of consumers where the food is intended for that category of consumers. 5. In determining whether any food is unfit for human consumption, regard shall be had to whether the food is unacceptable for human consumption according to its intended use, for reasons of contamination, whether by extraneous matter or otherwise, or through putrefaction, deterioration or decay. 6. Where any food which is unsafe is part of a batch, lot or consignment of food of the same class or description, it shall be presumed that all the food in that batch, lot or consignment is also unsafe, unless following a detailed assessment there is no evidence that the rest of the batch, lot or consignment is unsafe. 7. Food that complies with specific Community provisions governing food safety"
+        }
+      ]
+    },
+    {
+      "query": "Regulation (EU) 2017/625 Articles 137 138 competent authority measures non-compliance prohibit placing on market restrict movement order withdrawal recall destruction; import consignment beyond border Articles 66 67",
+      "top_k": 8,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 874,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::02",
+          "rrf_score": 0.032266458495966696,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance",
+          "text": "ect to increased or systematic official controls; (g) order the recall, withdrawal, removal and destruction of goods, authorising, where appropriate, the use of the goods for purposes other than those for which they were originally intended; (h) order the isolation or closure, for an appropriate period of time, of all or part of the business of the operator concerned, or its establishments, holdings or other premises; (i) order the cessation for an appropriate period of time of all or part of the activities of the operator concerned and, where relevant, of the internet sites it operates or employs; (j) order the suspension or withdrawal of the registration or approval of the establishment, plant, holding or means of transport concerned, of the authorisation of a transporter or of the certificate of competence of the driver; (k) order the slaughter or killing of animals provided that this is the most appropriate measure to safeguard human health as well as animal health and welfare. 3. The competent authorities shall provide the operator concerned, or its representative, with: (a) written notification of their decision concerning the action or measure to be taken in accordance with paragraphs 1 and 2, together with the reasons for that decision; and (b) information on any right of appeal against such decisions and on the applicable procedure and time limits with respect to such right of appeal. 4. All expenditure incurred under this Article shall be borne by the responsible operators. 5. The competent authorities, in the case of issuance of false or misleading official certificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the"
+        },
+        {
+          "rank": 2,
+          "chunk_index": 875,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::03",
+          "rrf_score": 0.029877369007803793,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance",
+          "text": "ificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the authorisation to sign official certificates; (c) any other measure to prevent a reoccurrence of the offences referred to in Article 89(2)."
+        },
+        {
+          "rank": 3,
+          "chunk_index": 782,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_70::01",
+          "rrf_score": 0.029116045245077504,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 70",
+          "location": "Article 70 — Consistency of application of Articles 66, 67 and 68",
+          "heading": "Consistency of application of Articles 66, 67 and 68",
+          "text": "Article 70 Consistency of application of Articles 66, 67 and 68 The Commission shall, by means of implementing acts, lay down rules to ensure consistency across all border control posts referred to in Article 59(1), and control points referred to in point (a) of Article 53(1), of decisions and measures taken and orders issued by the competent authorities in accordance with Articles 66, 67 and 68 which are to be followed by the competent authorities when responding to common or recurring situations of non-compliance or risk. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2)."
+        },
+        {
+          "rank": 4,
+          "chunk_index": 777,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::03",
+          "rrf_score": 0.027884615384615386,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 66",
+          "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+          "heading": "Measures to be taken in cases of non-compliant consignments entering the Union",
+          "text": "f this Article, and any order issued in accordance with paragraphs 3 and 6 of this Article and with Article 67 to: (a) the Commission; (b) the competent authorities of the other Member States; (c) the customs authorities; (d) the competent authorities of the third country of origin; and (e) the operator responsible for the consignment. That notification shall be performed via the IMSOC. ▼M4 5a. Plants, plant products or other objects subject to the measures referred to in Article 1(2), point (g), which enter the Union as part of passengers’ personal luggage or through postal services intended for personal consumption or use, shall be exempted from the notification obligation set out in paragraph 5 of this Article, if the non-compliance concerns the absence of the phytosanitary certificate or other official attestation as referred to in Article 99(1) of Regulation (EU) 2016/2031. The competent authorities shall keep a record of those cases of non-compliance and shall, on an annual basis, provide the Commission and the competent authorities of the other Member States with a report containing a summary of those records. That report shall be submitted via the IMSOC. ▼B 6. If a consignment of the categories of animals or goods referred to in Article 47(1) is not presented for the official controls referred to therein, or is not presented in accordance with the requirements laid down in Articles 50(1) and (3), 56(1), (3) and (4), or with the rules adopted under Article 48, Article 49(4), Article 51, Article 53(1) and Article 58, the competent authorities shall order that such consignment be retained or recalled, and placed under official detention without delay. Paragraphs 1, 3 and 5 of this Article shall apply to such consignments. 7. The measures referred to in this"
+        },
+        {
+          "rank": 5,
+          "chunk_index": 787,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_74::01",
+          "rrf_score": 0.02736498731424429,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 74",
+          "location": "Article 74 — Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries",
+          "heading": "Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries",
+          "text": "Article 74 Non-compliance with, and withdrawal of, the approval of pre-export controls performed by third countries 1. When official controls on consignments of categories of animal and goods in respect of which specific pre-export controls have been approved in accordance with Article 73(1) reveal serious and recurrent non-compliance with the rules referred to in Article 1(2), Member States shall immediately: (a) notify the Commission and the other Member States and operators concerned via the IMSOC in addition to seeking administrative assistance in accordance with the procedures established in Articles 102 to 108; and (b) increase the number of official controls on consignments from the relevant third country and, where necessary to allow a proper analytical examination of the situation, keep an appropriate number of samples under appropriate storage conditions. 2. The Commission may, by means of implementing acts, withdraw the approval provided for in Article 73(1) where, following the official controls referred to in paragraph 1 of this Article, there are indications that the requirements laid down in Article 73(3) and (4) are no longer being met. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2)."
+        },
+        {
+          "rank": 6,
+          "chunk_index": 778,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::04",
+          "rrf_score": 0.027031963470319637,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 66",
+          "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+          "heading": "Measures to be taken in cases of non-compliant consignments entering the Union",
+          "text": "such consignment be retained or recalled, and placed under official detention without delay. Paragraphs 1, 3 and 5 of this Article shall apply to such consignments. 7. The measures referred to in this Article shall be applied at the expense of the operator responsible for the consignment."
+        },
+        {
+          "rank": 7,
+          "chunk_index": 770,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_64::01",
+          "rrf_score": 0.02594183740912095,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 64",
+          "location": "Article 64 — Minimum requirements for border control posts",
+          "heading": "Minimum requirements for border control posts",
+          "text": "Article 64 Minimum requirements for border control posts 1. Border control posts shall be located in the immediate vicinity of the point of entry into the Union and either in a place which is designated by the customs authorities in accordance with Article 135(1) and (2) of Regulation (EU) No 952/2013 or in a free zone. 2. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning the cases where and conditions under which a border control post may be situated at a distance other than in the immediate vicinity of the point of entry into the Union in cases of specific geographical constraints. 3. Border control posts shall have: (a) a sufficient number of suitably qualified staff; (b) premises or other facilities appropriate to the nature and volume of the categories of animals and goods handled; (c) equipment and premises or other facilities to allow the performance of official controls for each of the categories of animals and goods for which the border control post has been designated; (d) arrangements in place to ensure, as appropriate, access to any other equipment, premise and service necessary to apply the measures taken in accordance with Articles 65, 66 and 67 in cases of suspicion of non-compliance, non-compliant consignments or consignments presenting a risk; (e) contingency arrangements to ensure the smooth operation of official controls and the effective application of the measures taken in accordance with Articles 65, 66 and 67 in cases of unforeseeable and unexpected conditions or events; (f) the technology and equipment necessary for the efficient operation of the IMSOC and, as appropriate, of other computerised information management systems necessary for the handling and exchange of data"
+        },
+        {
+          "rank": 8,
+          "chunk_index": 768,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_62::01",
+          "rrf_score": 0.02558175373709354,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 62",
+          "location": "Article 62 — Withdrawal of the designation of border control posts",
+          "heading": "Withdrawal of the designation of border control posts",
+          "text": "Article 62 Withdrawal of the designation of border control posts 1. Where border control posts cease to comply with the requirements referred to in Article 64, the Member States shall: (a) withdraw the designation provided for in Article 59(1) for all or for certain categories of animals and goods for which the designation was made; and (b) remove those border control posts from the lists referred to in Article 60(1), for the categories of animals and goods for which the designation is withdrawn. 2. Member States shall inform the Commission and the other Member States of the withdrawal of the designation of a border control post as provided for in paragraph 1 and of the reasons for such withdrawal. 3. The Commission is empowered to adopt delegated acts in accordance with Article 144 to supplement this Regulation concerning the cases where, and the procedures by which, border control posts for which the designation has only been partially withdrawn in accordance with point (a) of paragraph 1 of this Article may be re-designated by way of derogation from Article 59. 4. This Article shall be without prejudice to Member States’ competence to decide on the withdrawal of designation of border control posts for reasons other than those referred to in this Regulation."
+        }
+      ]
+    },
+    {
+      "query": "Regulation 2017/625 Article 138(1) competent authority determine origin and extent of non-compliance and responsibilities operator take appropriate measures including intensify controls, restrict/prohibit placing on market, monitor, order withdrawal recall destruction Article 66 entry refusal consignment",
+      "top_k": 6,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 874,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::02",
+          "rrf_score": 0.03200204813108039,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance",
+          "text": "ect to increased or systematic official controls; (g) order the recall, withdrawal, removal and destruction of goods, authorising, where appropriate, the use of the goods for purposes other than those for which they were originally intended; (h) order the isolation or closure, for an appropriate period of time, of all or part of the business of the operator concerned, or its establishments, holdings or other premises; (i) order the cessation for an appropriate period of time of all or part of the activities of the operator concerned and, where relevant, of the internet sites it operates or employs; (j) order the suspension or withdrawal of the registration or approval of the establishment, plant, holding or means of transport concerned, of the authorisation of a transporter or of the certificate of competence of the driver; (k) order the slaughter or killing of animals provided that this is the most appropriate measure to safeguard human health as well as animal health and welfare. 3. The competent authorities shall provide the operator concerned, or its representative, with: (a) written notification of their decision concerning the action or measure to be taken in accordance with paragraphs 1 and 2, together with the reasons for that decision; and (b) information on any right of appeal against such decisions and on the applicable procedure and time limits with respect to such right of appeal. 4. All expenditure incurred under this Article shall be borne by the responsible operators. 5. The competent authorities, in the case of issuance of false or misleading official certificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the"
+        },
+        {
+          "rank": 2,
+          "chunk_index": 875,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_138::03",
+          "rrf_score": 0.031544957774465976,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 138",
+          "location": "Article 138 — Actions in the event of established non-compliance",
+          "heading": "Actions in the event of established non-compliance",
+          "text": "ificates or in the case of abuse of official certificates, shall take appropriate measures, including: (a) the temporary suspension of the certifying officer from its duties; (b) the withdrawal of the authorisation to sign official certificates; (c) any other measure to prevent a reoccurrence of the offences referred to in Article 89(2)."
+        },
+        {
+          "rank": 3,
+          "chunk_index": 781,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_69::01",
+          "rrf_score": 0.029709507042253523,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 69",
+          "location": "Article 69 — Failure by the operator to apply the measures ordered by the competent authorities",
+          "heading": "Failure by the operator to apply the measures ordered by the competent authorities",
+          "text": "Article 69 Failure by the operator to apply the measures ordered by the competent authorities 1. The operator responsible for the consignment shall carry out all the measures ordered by the competent authorities in accordance with Article 66(3) and (6) and Article 67 without delay and, at the latest, within 60 days from the day on which the competent authorities notified the operator concerned of their decision in accordance with Article 66(5). The competent authorities may specify a shorter period than the period of 60 days. 2. If, after the expiry of the period referred to in paragraph 1, no action has been taken by the operator concerned, the competent authorities shall order: (a) that the consignment be destroyed or subject to any other appropriate measure; (b) in the cases referred to in Article 67, that the consignment be destroyed in suitable facilities located as close as possible to the border control post, taking all measures necessary to protect human, animal or plant health, animal welfare or the environment. 3. The competent authorities may extend the period referred to in paragraphs 1 and 2 of this Article for the time necessary to obtain the results of the second expert opinion referred to in Article 35, provided that this is without adverse effects to human, animal and plant health, animal welfare or, as regards GMOs and plant protection products, also to the environment. 4. The measures referred to in this Article shall be applied at the expense of the operator responsible for the consignment."
+        },
+        {
+          "rank": 4,
+          "chunk_index": 773,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_65::01",
+          "rrf_score": 0.026878868258178604,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 65",
+          "location": "Article 65 — Suspicion of non-compliance and intensified official controls",
+          "heading": "Suspicion of non-compliance and intensified official controls",
+          "text": "Article 65 Suspicion of non-compliance and intensified official controls 1. In the event of suspicion of non-compliance of consignments of the categories of animals and goods referred to in Articles 44(1) and 47(1) with the rules referred to in Article 1(2), the competent authorities shall perform official controls in order to confirm or to eliminate that suspicion. 2. Consignments of animals and goods which are not declared by operators to consist of the categories of animals and goods referred to in Article 47(1), shall be subject to official controls by the competent authorities where there is reason to believe that such categories of animals or goods are present in the consignment. 3. The competent authorities shall place the consignments referred to in paragraphs 1 and 2 under official detention pending the outcome of the official controls provided for in those paragraphs. Where appropriate, those consignments shall be isolated or quarantined and animals shall be sheltered, fed, watered and as necessary treated, pending the outcome of the official controls. 4. Where the competent authorities have reasons to suspect fraudulent or deceptive practices by an operator responsible for the consignment or the official controls give grounds to believe that the rules referred to in Article 1(2) have been seriously or repeatedly infringed, they shall, where appropriate, and in addition to the measures provided for in Article 66(3), intensify as appropriate official controls on consignments with the same origin or use. 5. The competent authorities shall notify the Commission and the Member States through the IMSOC of their decision to perform intensified official controls, as provided for in paragraph 4 of this Article, indicating the reasons for their decision. 6. The"
+        },
+        {
+          "rank": 5,
+          "chunk_index": 778,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::04",
+          "rrf_score": 0.02481203007518797,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 66",
+          "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+          "heading": "Measures to be taken in cases of non-compliant consignments entering the Union",
+          "text": "such consignment be retained or recalled, and placed under official detention without delay. Paragraphs 1, 3 and 5 of this Article shall apply to such consignments. 7. The measures referred to in this Article shall be applied at the expense of the operator responsible for the consignment."
+        },
+        {
+          "rank": 6,
+          "chunk_index": 777,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::03",
+          "rrf_score": 0.023965141612200435,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 66",
+          "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+          "heading": "Measures to be taken in cases of non-compliant consignments entering the Union",
+          "text": "f this Article, and any order issued in accordance with paragraphs 3 and 6 of this Article and with Article 67 to: (a) the Commission; (b) the competent authorities of the other Member States; (c) the customs authorities; (d) the competent authorities of the third country of origin; and (e) the operator responsible for the consignment. That notification shall be performed via the IMSOC. ▼M4 5a. Plants, plant products or other objects subject to the measures referred to in Article 1(2), point (g), which enter the Union as part of passengers’ personal luggage or through postal services intended for personal consumption or use, shall be exempted from the notification obligation set out in paragraph 5 of this Article, if the non-compliance concerns the absence of the phytosanitary certificate or other official attestation as referred to in Article 99(1) of Regulation (EU) 2016/2031. The competent authorities shall keep a record of those cases of non-compliance and shall, on an annual basis, provide the Commission and the competent authorities of the other Member States with a report containing a summary of those records. That report shall be submitted via the IMSOC. ▼B 6. If a consignment of the categories of animals or goods referred to in Article 47(1) is not presented for the official controls referred to therein, or is not presented in accordance with the requirements laid down in Articles 50(1) and (3), 56(1), (3) and (4), or with the rules adopted under Article 48, Article 49(4), Article 51, Article 53(1) and Article 58, the competent authorities shall order that such consignment be retained or recalled, and placed under official detention without delay. Paragraphs 1, 3 and 5 of this Article shall apply to such consignments. 7. The measures referred to in this"
+        }
+      ]
+    },
+    {
+      "query": "Regulation 178/2002 Article 19 food business operator withdraw food from market if considers or has reason to believe food not in compliance with food safety requirements and initiate recall if reached consumer; notify competent authorities",
+      "top_k": 3,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 592,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01",
+          "rrf_score": 0.03252247488101534,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators",
+          "text": "Article 19 Responsibilities for food: food business operators 1. If a food business operator considers or has reason to believe that a food which it has imported, produced, processed, manufactured or distributed is not in compliance with the food safety requirements, it shall immediately initiate procedures to withdraw the food in question from the market where the food has left the immediate control of that initial food business operator and inform the competent authorities thereof. Where the product may have reached the consumer, the operator shall effectively and accurately inform the consumers of the reason for its withdrawal, and if necessary, recall from consumers products already supplied to them when other measures are not sufficient to achieve a high level of health protection. 2. A food business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the food shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the food-safety requirements and shall participate in contributing to the safety of the food by passing on relevant information necessary to trace a food, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A food business operator shall immediately inform the competent authorities if it considers or has reason to believe that a food which it has placed on the market may be injurious to human health. Operators shall inform the competent authorities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent"
+        },
+        {
+          "rank": 2,
+          "chunk_index": 887,
+          "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_148::01",
+          "rrf_score": 0.031746031746031744,
+          "file": "EU_2017_625_consolidated_2025-01-05.html",
+          "regulation_title": "REGULATION (EU) 2017/625 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 148",
+          "location": "Article 148 — Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+          "heading": "Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments",
+          "text": "Article 148 Relation with Regulations (EC) No 852/2004 and (EC) No 853/2004 regarding approval of food business establishments 1. Competent authorities shall establish procedures for food business operators to follow when applying for the approval of their establishments in accordance with Regulations (EC) No 852/2004 and (EC) No 853/2004. 2. Upon receipt of an application for approval from a food business operator, the competent authority shall make an on-site visit. 3. The competent authority shall approve an establishment for the activities concerned only if the food business operator has demonstrated that it complies with the relevant requirements of food law. 4. The competent authority may grant conditional approval if it appears that the establishment meets all the infrastructure and equipment requirements. It shall grant full approval only if it appears from a new official control of the establishment, carried out within three months of granting conditional approval, that the establishment meets the other relevant requirements of food law. If clear progress has been made but the establishment still does not meet all of the relevant requirements, the competent authority may prolong the conditional approval. However, conditional approval shall not exceed a total of six months, except in the case of factory and freezer vessels flying the flag of Member States, for which such conditional approval shall not exceed a total of 12 months. 5. The competent authority shall keep the approval of establishments under review when carrying out official controls."
+        },
+        {
+          "rank": 3,
+          "chunk_index": 593,
+          "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::02",
+          "rrf_score": 0.031544957774465976,
+          "file": "EU_2002_178_consolidated_2026-01-01.html",
+          "regulation_title": "REGULATION (EC) No 178/2002 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL",
+          "article": "Article 19",
+          "location": "Article 19 — Responsibilities for food: food business operators",
+          "heading": "Responsibilities for food: food business operators",
+          "text": "ities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent authorities, where this may prevent, reduce or eliminate a risk arising from a food. 4. Food business operators shall collaborate with the competent authorities on action taken to avoid or reduce risks posed by a food which they supply or have supplied."
+        }
+      ]
+    },
+    {
+      "query": "Regulation (EU) 2023/915 aflatoxins dried figs maximum levels placing on market Annex I figs",
+      "top_k": 3,
+      "results": [
+        {
+          "rank": 1,
+          "chunk_index": 1132,
+          "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+          "rrf_score": 0.03225806451612903,
+          "file": "EU_2019_1793_consolidated_2026-06-30.html",
+          "regulation_title": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793",
+          "article": null,
+          "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+          "heading": null,
+          "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14."
+        },
+        {
+          "rank": 2,
+          "chunk_index": 52,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+          "rrf_score": 0.032018442622950824,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 4, row 18",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0"
+        },
+        {
+          "rank": 3,
+          "chunk_index": 39,
+          "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+          "rrf_score": 0.031746031746031744,
+          "file": "EU_2023_915_consolidated_2026-08-19.html",
+          "regulation_title": "COMMISSION REGULATION (EU) 2023/915",
+          "article": null,
+          "location": "Table 4, row 3",
+          "heading": null,
+          "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0"
+        }
+      ]
+    }
+  ],
+  "current_law_calls": [
+    {
+      "regulation": "2017/625",
+      "basic_celex": "32017R0625",
+      "snapshot_date": "2025-01-05",
+      "snapshot_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "official_basic_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0625",
+      "official_metadata_endpoint": "https://publications.europa.eu/webapi/rdf/sparql",
+      "checked_utc": "2026-10-19T18:34:42.754506+00:00",
+      "status": "metadata_found",
+      "source": "EU Publications Office / Cellar SPARQL",
+      "latest_date_candidate": "2025-01-05",
+      "latest_celex_candidate": "02017R0625-20250105",
+      "observed_consolidations": [
+        {
+          "celex": "02017R0625-20250105",
+          "date": "2025-01-05",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02017R0625-20250105"
+        },
+        {
+          "celex": "02017R0625-20220128",
+          "date": "2022-01-28",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02017R0625-20220128"
+        },
+        {
+          "celex": "02017R0625-20211028",
+          "date": "2021-10-28",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02017R0625-20211028"
+        },
+        {
+          "celex": "02017R0625-20191214",
+          "date": "2019-12-14",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02017R0625-20191214"
+        },
+        {
+          "celex": "02017R0625-20170407",
+          "date": "2017-04-07",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02017R0625-20170407"
+        }
+      ],
+      "date_comparison": "matches_latest_observed_consolidation",
+      "article_level_changes_verified": false,
+      "application_date_verified": false,
+      "current_legal_status_verified": false,
+      "complete_consolidation_list_verified": false,
+      "as_of_date": "2026-10-19",
+      "relation_row_count": 0,
+      "celex_index_row_count": 22,
+      "lookup_methods": [
+        "relation",
+        "celex_index"
+      ],
+      "latest_candidate_official_url": "https://publications.europa.eu/resource/celex/02017R0625-20250105"
+    },
+    {
+      "regulation": "2023/915",
+      "basic_celex": "32023R0915",
+      "snapshot_date": "2026-08-19",
+      "snapshot_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "official_basic_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R0915",
+      "official_metadata_endpoint": "https://publications.europa.eu/webapi/rdf/sparql",
+      "checked_utc": "2026-10-19T18:34:42.754264+00:00",
+      "status": "metadata_found",
+      "source": "EU Publications Office / Cellar SPARQL",
+      "latest_date_candidate": "2026-08-19",
+      "latest_celex_candidate": "02023R0915-20260819",
+      "observed_consolidations": [
+        {
+          "celex": "02023R0915-20260819",
+          "date": "2026-08-19",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20260819"
+        },
+        {
+          "celex": "02023R0915-20251008",
+          "date": "2025-10-08",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20251008"
+        },
+        {
+          "celex": "02023R0915-20250701",
+          "date": "2025-07-01",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20250701"
+        },
+        {
+          "celex": "02023R0915-20250101",
+          "date": "2025-01-01",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20250101"
+        },
+        {
+          "celex": "02023R0915-20240722",
+          "date": "2024-07-22",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20240722"
+        },
+        {
+          "celex": "02023R0915-20240425",
+          "date": "2024-04-25",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20240425"
+        },
+        {
+          "celex": "02023R0915-20230810",
+          "date": "2023-08-10",
+          "official_celex_url": "https://publications.europa.eu/resource/celex/02023R0915-20230810"
+        }
+      ],
+      "date_comparison": "matches_latest_observed_consolidation",
+      "article_level_changes_verified": false,
+      "application_date_verified": false,
+      "current_legal_status_verified": false,
+      "complete_consolidation_list_verified": false,
+      "as_of_date": "2026-10-19",
+      "relation_row_count": 0,
+      "celex_index_row_count": 16,
+      "lookup_methods": [
+        "relation",
+        "celex_index"
+      ],
+      "latest_candidate_official_url": "https://publications.europa.eu/resource/celex/02023R0915-20260819"
+    }
+  ],
+  "final_output": "## 1. Short answer\n\nIf testing establishes that the dried figs exceed the applicable maximum level, the consignment is non-compliant. Depending on where it is and the circumstances, competent authorities may detain it, prevent its marketing, or require withdrawal, recall, destruction, re-dispatch, or an eligible form of special treatment. These are possible measures—not all automatic outcomes.\n\n## 2. Legal basis and relevant conditions\n\n- **At the Union border:** Under Regulation (EU) 2017/625, Article 66, a non-compliant consignment entering the Union is subject to official detention and refusal of entry. The operator responsible may be ordered to destroy it, re-dispatch it outside the Union, or undergo special treatment or another measure needed to ensure compliance. Re-dispatch and special treatment are subject to conditions; special treatment is not an assumed right, and dilution is excluded.\n- **If already in the market:** Under Article 138 of Regulation (EU) 2017/625, competent authorities may take appropriate enforcement action, including restricting or prohibiting placing on the market, and ordering withdrawal, recall, removal or destruction. The authority’s response depends on the established non-compliance and circumstances.\n- **Operator action:** Under Regulation (EC) No 178/2002, Article 19, an operator that considers or has reason to believe food it handled is not compliant with food-safety requirements must initiate withdrawal where applicable and inform the competent authorities. Consumer information and recall may be required if the product may have reached consumers and the conditions in that Article are met.\n\n## 3. Uncertainties / verification needed\n\nThe exact action depends on whether the consignment is still at the border or has entered the market, whether the result and applicable maximum level are established for the product’s classification and intended use, and the competent authority’s assessment. Do not assume that a particular treatment, re-dispatch, or consumer recall will be permitted or ordered.\n\nThe frozen corpus supports the provisions above. Cellar metadata observed consolidations dated **2025-01-05** for Regulation 2017/625 and **2026-08-19** for Regulation 2023/915, but the metadata does not verify article-level changes, application dates, or current legal status. Those details—and the applicable product-specific maximum level—should be checked before relying on a definitive enforcement conclusion.",
+  "started_utc": "2026-10-19T18:34:26.265612+00:00",
+  "completed_utc": "2026-10-19T18:35:06.199173+00:00",
+  "status": "evaluation_pending"
+}

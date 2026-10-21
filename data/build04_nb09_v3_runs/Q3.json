@@ -1,0 +1,691 @@
+{
+  "experiment_id": "NB09_build04_investigation_v3",
+  "build": "Build04",
+  "qid": "Q3",
+  "question": "Does the applicable limit change depending on whether the dried figs are intended for direct consumption or further processing/sorting?",
+  "benchmark_id": "regulatory_agent_v1_notion_2026-10-08",
+  "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+  "settings": {
+    "experiment_id": "NB09_build04_investigation_v3",
+    "benchmark_sha256": "2ee3bf32133c31bc62514cfa85e116bd5dd846a89b282a1a6f62f1ec849c3e4e",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "retrieval_config_sha256": "1e382b5d535d771aa854a9ca33c162b940026f1ffbd799d46c574c13b765d074",
+    "initial_max": 5,
+    "targeted_max": 3,
+    "validation_max": 2,
+    "max_llm_calls": 12,
+    "enable_cellar_live": false,
+    "coverage_tracker": "planner_task_plus_subissue_v1",
+    "gap_classification": "type_aware_v1",
+    "runtime_version": "nb09_build04_v3"
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "plan": [
+    {
+      "task_id": "T1",
+      "question": "Retrieve the frozen-corpus EU contaminant provisions and Annex entries specifying aflatoxin limits for dried figs, including any separate categories based on intended use.",
+      "priority": "high",
+      "search_query": "EU aflatoxin B1 maximum levels dried figs intended for direct human consumption further processing sorting physical treatment Annex",
+      "expected_evidence_type": "Exact text of the relevant regulation provisions and Annex table entries, with source identifiers",
+      "needs_currentness": false
+    },
+    {
+      "task_id": "T2",
+      "question": "Find the legal conditions, if any, for classifying dried figs as intended for sorting or other physical treatment before human consumption rather than for direct consumption.",
+      "priority": "high",
+      "search_query": "dried figs aflatoxin intended for sorting physical treatment before human consumption conditions identification labelling destination",
+      "expected_evidence_type": "Exact legal text governing product designation, intended use, and conditions attached to the relevant category",
+      "needs_currentness": false
+    },
+    {
+      "task_id": "T3",
+      "question": "Check whether the frozen-corpus text makes the applicable dried-fig category depend on the stated intended use, and identify what shipment evidence would establish that use without assuming facts not provided.",
+      "priority": "high",
+      "search_query": "EU dried figs aflatoxin category intended use evidence consignment documentation sorting further processing direct consumption",
+      "expected_evidence_type": "Relevant legal text plus any explicit documentary or traceability requirements in the corpus",
+      "needs_currentness": false
+    },
+    {
+      "task_id": "T4",
+      "question": "Record any currentness gap for the identified snapshot provisions that would require later verification against official EU sources before stating the rule as current law.",
+      "priority": "medium",
+      "search_query": "official EU current consolidated text aflatoxin dried figs Regulation 2023/915 amendments intended direct consumption sorting processing",
+      "expected_evidence_type": "Identification of the provisions and amendment history requiring separate official current-law verification",
+      "needs_currentness": true
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "E0f3287ac2b",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row9::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 9",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.6 | Tree nuts to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food except products listed in 1.1.8 and 1.1.10 | 5,0 | 10,0 | - | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ea24a0c3fa7",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row16::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 16",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.13 | Maize and rice to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food | 5,0 | 10,0 | -",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Eb9d3661be8",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row13::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 13",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.10 | Hazelnuts and Brazil nuts, to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food | 8,0 | 15,0 | - | If hazelnuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Ed9956e7b15",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row11::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 11",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.8 | Almonds, pistachios and apricot kernels to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as an ingredient in food | 12,0 | 15,0 | - | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the aflatoxin content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E1977c39193",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.3 | Pistachios to be subjected to sorting or other physical treatment before placing on the market for final consumer or use as an ingredient in food | 10,0 | If tree nuts ‘in shell’ are analysed, it is assumed, when calculating the ochratoxin A content, that all the contamination is on the edible part.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E10ca7eba5a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_5::02",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": "Article 5",
+      "location": "Article 5 — Food to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as a food ingredient",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "od which has been subjected to sorting or other physical treatment to reduce contamination levels may be placed on the market provided that the maximum levels set out in Annex I for food placed on the market for the final consumer or use as a food ingredient are not exceeded and that the treatment used has not resulted in the presence of other harmful residues.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E908c5eea55",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_5::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": "Article 5",
+      "location": "Article 5 — Food to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as a food ingredient",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "Article 5 Food to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as a food ingredient 1. Where a maximum level for a contaminant is set out in Annex I specifically as regards food to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as a food ingredient, such food may be placed on the market provided that: (a) it is not placed on the market for the final consumer or use as a food ingredient; (b) it complies with the maximum level set out in Annex I for that contaminant in that food to be subjected to sorting or other physical treatment before placing on the market for the final consumer or use as a food ingredient; and (c) it is labelled and marked in accordance with paragraph 2. 2. The label of each individual package and the original accompanying document of food referred to in paragraph 1, point (c), shall clearly show its use and bear the following information: ‘Product shall be subjected to sorting or other physical treatment to reduce [name contaminant(s)] contamination before placing on the market for the final consumer or use as a food ingredient’. The consignment/batch identification code shall be indelibly marked on each individual package of the consignment and on the original accompanying document. 3. Food to be subjected to sorting or other physical treatment to reduce contamination levels shall not prior to this be mixed with food placed on the market for the final consumer or with food intended for use as a food ingredient. 4. Food which has been subjected to sorting or other physical treatment to reduce contamination levels may be placed on the market provided that the maximum levels set out in Annex I for food placed on the",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "Effd100d7a6",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs",
+      "regulation_id": "2019/1793",
+      "source_document_celex": "02019R1793-20260630",
+      "basic_celex": "32019R1793",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "source_version": "2026-06-30",
+      "article": null,
+      "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02019R1793-20260630",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E84bba6f619",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 3, row 6",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E133737bd5a",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row3::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 3",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.1.1 | Dried vine fruits (currants, raisins and sultanas) and dried figs | 8,0",
+      "retrieved_by": "search"
+    },
+    {
+      "evidence_id": "E3f00c01bc7",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table4_row18::01",
+      "regulation_id": "2023/915",
+      "source_document_celex": "02023R0915-20260819",
+      "basic_celex": "32023R0915",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "source_version": "2026-08-19",
+      "article": null,
+      "location": "Table 4, row 18",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02023R0915-20260819",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1.2 | Ochratoxin A | Maximum level (μg/kg) | Remarks. Row: 1.2.11.2 | products containing at least 20 % dried vine fruits and/or dried figs | 4,0",
+      "retrieved_by": "search"
+    }
+  ],
+  "claims": [
+    {
+      "statement": "In the supplied Regulation (EU) 2023/915 snapshot, the dried-fig entry lists maximum levels of 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins.",
+      "evidence_ids": [
+        "E84bba6f619"
+      ],
+      "support_quote": "Row: 1.1.3 | Dried figs | 6,0 | 10,0",
+      "status": "supported",
+      "scope_note": "These values are read with the supplied table context identifying the two maximum-level columns as B1 and the sum of B1, B2, G1 and G2. This is a snapshot observation, not verification of current law.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The supplied dried-fig entry does not specify a separate aflatoxin limit for figs intended for sorting or other physical treatment; on this evidence, intended use does not change the listed dried-fig limit.",
+      "evidence_ids": [
+        "E84bba6f619",
+        "E0f3287ac2b"
+      ],
+      "support_quote": "Row: 1.1.3 | Dried figs | 6,0 | 10,0",
+      "status": "supported",
+      "scope_note": "The other cited row expressly identifies a sorting/physical-treatment category for tree nuts, not dried figs. This comparison supports the distinction in the supplied table only; it does not establish current-law status.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Article 5 provides special conditions where Annex I specifically sets a maximum level for food to be subjected to sorting or other physical treatment: the food must not be marketed for final consumers or as a food ingredient, must meet that category’s maximum level, and must be labelled and marked as specified.",
+      "evidence_ids": [
+        "E908c5eea55"
+      ],
+      "support_quote": "Where a maximum level for a contaminant is set out in Annex I specifically as regards food to be subjected to sorting or other physical treatment",
+      "status": "supported",
+      "scope_note": "The supplied dried-fig row does not itself identify such a separate category. Article 5 therefore does not, on the evidence provided, establish a different limit for these dried figs merely because sorting is intended.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "The supplied Türkiye import-control entry lists aflatoxins and ochratoxin A as hazards and a 30% frequency of identity and physical checks for the described dried-fig entry.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "This is a separate import-control snapshot fact; it does not determine whether the contaminant limit changes with intended use or establish the entry’s current applicability to a particular consignment.",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Frequency of identity and physical checks: 30%",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "Frequency of identity and physical checks: 30%",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    },
+    {
+      "statement": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "evidence_ids": [
+        "Effd100d7a6"
+      ],
+      "support_quote": "HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "status": "supported",
+      "scope_note": "Direct source quotation; snapshot only, legal applicability unverified",
+      "origin": "deterministic_source_fact",
+      "quote_verified": true,
+      "invalid_evidence_ids": [],
+      "current_applicability_status": "unverified"
+    }
+  ],
+  "gaps": [
+    {
+      "description": "Verify the dried-fig aflatoxin entry and the relevant Article 5 text against an official EU source effective for the relevant date; the supplied consolidated snapshot alone does not establish current applicability.",
+      "query": "official EUR-Lex current Regulation 2023/915 Annex I dried figs aflatoxin row 1.1.3 Article 5 amendments effective date",
+      "regulation_id": "2023/915",
+      "exact_provision": "Article 5 and Annex I, row 1.1.3",
+      "critical": true
+    }
+  ],
+  "conflicts": [],
+  "coverage_items": [
+    {
+      "coverage_id": "C1",
+      "task_id": "T1",
+      "issue": "The supplied Regulation (EU) 2023/915 snapshot lists dried figs at 6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins; it does not list a separate dried-fig limit for sorting or other physical treatment.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619",
+        "E0f3287ac2b"
+      ],
+      "claim_indices": [
+        0,
+        1
+      ],
+      "missing_elements": [],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C2",
+      "task_id": "T2",
+      "issue": "Article 5’s sorting/physical-treatment conditions apply where Annex I specifically sets a maximum level for that category. The supplied dried-fig entry does not identify such a separate category, so the evidence does not support a different dried-fig limit merely because sorting is intended.",
+      "status": "covered",
+      "gap_type": "none",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619",
+        "E908c5eea55"
+      ],
+      "claim_indices": [
+        1,
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C3",
+      "task_id": "T2",
+      "issue": "The exact labelling and marking requirements associated with Article 5 are not stated in the verified claim, which says only that the food must be labelled and marked as specified.",
+      "status": "partially_covered",
+      "gap_type": "legal_evidence",
+      "critical": false,
+      "evidence_ids": [
+        "E908c5eea55"
+      ],
+      "claim_indices": [
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": "2023/915",
+      "exact_provision": "Article 5",
+      "search_query": "Regulation (EU) 2023/915 full text Article 5 exact labelling and marking requirements for food subject to sorting or other physical treatment",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T3",
+      "issue": "The supplied evidence does not establish what documentation, if any, is legally required to demonstrate that a particular consignment of dried figs is intended for sorting or other physical treatment.",
+      "status": "missing_legal_evidence",
+      "gap_type": "legal_evidence",
+      "critical": false,
+      "evidence_ids": [
+        "E908c5eea55"
+      ],
+      "claim_indices": [
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": "2023/915",
+      "exact_provision": "Article 5",
+      "search_query": "Regulation (EU) 2023/915 Article 5 legal documentation or marking requirements to establish food is intended for sorting or other physical treatment before final-consumer marketing or use as a food ingredient",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C5",
+      "task_id": "T3",
+      "issue": "The actual intended use and supporting shipment evidence for this consignment are not provided, so its intended-use classification cannot be determined from the case facts.",
+      "status": "missing_case_fact",
+      "gap_type": "case_fact",
+      "critical": true,
+      "evidence_ids": [],
+      "claim_indices": [],
+      "missing_elements": [],
+      "regulation_id": null,
+      "exact_provision": null,
+      "search_query": "",
+      "rationale": ""
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T4",
+      "issue": "The supplied snapshot does not establish whether the dried-fig limit and relevant Article 5 text remain effective for the legally relevant date; official EU-source verification is still required.",
+      "status": "requires_live_verification",
+      "gap_type": "current_law",
+      "critical": true,
+      "evidence_ids": [
+        "E84bba6f619",
+        "E908c5eea55"
+      ],
+      "claim_indices": [
+        0,
+        2
+      ],
+      "missing_elements": [],
+      "regulation_id": "2023/915",
+      "exact_provision": "Annex I, row 1.1.3",
+      "search_query": "Verify against official EUR-Lex sources the current effective text and amendment history for Regulation (EU) 2023/915 Annex I row 1.1.3 on dried figs, and Article 5 on sorting or other physical treatment",
+      "rationale": ""
+    }
+  ],
+  "coverage_summary": {
+    "items": 6,
+    "critical_covered": 2,
+    "critical_total": 4,
+    "critical_coverage_ratio": 0.5,
+    "unresolved_critical": 2,
+    "missing_parent_tasks": [],
+    "unresolved_by_type": {
+      "case_fact": 1,
+      "current_law": 1,
+      "interpretation_conflict": 0,
+      "legal_evidence": 2,
+      "unsupported_claim": 0
+    },
+    "note": "LLM-derived diagnostic coverage; NOT benchmark completeness or legal correctness."
+  },
+  "classified_gaps": [
+    {
+      "coverage_id": "C3",
+      "task_id": "T2",
+      "issue": "The exact labelling and marking requirements associated with Article 5 are not stated in the verified claim, which says only that the food must be labelled and marked as specified.",
+      "gap_type": "legal_evidence",
+      "status": "partially_covered",
+      "critical": false,
+      "search_query": "Regulation (EU) 2023/915 full text Article 5 exact labelling and marking requirements for food subject to sorting or other physical treatment",
+      "regulation_id": "2023/915",
+      "exact_provision": "Article 5",
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C4",
+      "task_id": "T3",
+      "issue": "The supplied evidence does not establish what documentation, if any, is legally required to demonstrate that a particular consignment of dried figs is intended for sorting or other physical treatment.",
+      "gap_type": "legal_evidence",
+      "status": "missing_legal_evidence",
+      "critical": false,
+      "search_query": "Regulation (EU) 2023/915 Article 5 legal documentation or marking requirements to establish food is intended for sorting or other physical treatment before final-consumer marketing or use as a food ingredient",
+      "regulation_id": "2023/915",
+      "exact_provision": "Article 5",
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C5",
+      "task_id": "T3",
+      "issue": "The actual intended use and supporting shipment evidence for this consignment are not provided, so its intended-use classification cannot be determined from the case facts.",
+      "gap_type": "case_fact",
+      "status": "missing_case_fact",
+      "critical": true,
+      "search_query": "",
+      "regulation_id": null,
+      "exact_provision": null,
+      "missing_elements": []
+    },
+    {
+      "coverage_id": "C6",
+      "task_id": "T4",
+      "issue": "The supplied snapshot does not establish whether the dried-fig limit and relevant Article 5 text remain effective for the legally relevant date; official EU-source verification is still required.",
+      "gap_type": "current_law",
+      "status": "requires_live_verification",
+      "critical": true,
+      "search_query": "Verify against official EUR-Lex sources the current effective text and amendment history for Regulation (EU) 2023/915 Annex I row 1.1.3 on dried figs, and Article 5 on sorting or other physical treatment",
+      "regulation_id": "2023/915",
+      "exact_provision": "Annex I, row 1.1.3",
+      "missing_elements": []
+    }
+  ],
+  "current_law_calls": [],
+  "trace": [
+    {
+      "node": "planner",
+      "planned_tasks": 4,
+      "queued": 4
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU aflatoxin B1 maximum levels dried figs intended for direct human consumption further processing sorting physical treatment Annex",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E0f3287ac2b",
+        "Ea24a0c3fa7",
+        "Eb9d3661be8",
+        "Ed9956e7b15",
+        "E1977c39193"
+      ],
+      "new_evidence_count": 5,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 1
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "dried figs aflatoxin intended for sorting physical treatment before human consumption conditions identification labelling destination",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E10ca7eba5a",
+        "E908c5eea55",
+        "Effd100d7a6"
+      ],
+      "new_evidence_count": 3,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 2
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "EU dried figs aflatoxin category intended use evidence consignment documentation sorting further processing direct consumption",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E84bba6f619"
+      ],
+      "new_evidence_count": 1,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 3
+    },
+    {
+      "node": "retriever",
+      "requested_mode": "search",
+      "actual_mode": "search",
+      "phase": "initial",
+      "query": "official EU current consolidated text aflatoxin dried figs Regulation 2023/915 amendments intended direct consumption sorting processing",
+      "provision": null,
+      "law_scope": null,
+      "retrieved": 5,
+      "added_ids": [
+        "E133737bd5a",
+        "E3f00c01bc7"
+      ],
+      "new_evidence_count": 2,
+      "fallback_used": false,
+      "error": null,
+      "search_count": 4
+    },
+    {
+      "node": "validator",
+      "round": 1,
+      "claims": 8,
+      "supported": 8,
+      "gaps": 1,
+      "conflicts": 0,
+      "extracted_source_facts": 4,
+      "covered_source_facts": 4
+    },
+    {
+      "node": "coverage_tracker",
+      "round": 1,
+      "critical_covered": 2,
+      "critical_total": 4,
+      "unresolved_by_type": {
+        "case_fact": 1,
+        "current_law": 1,
+        "interpretation_conflict": 0,
+        "legal_evidence": 2,
+        "unsupported_claim": 0
+      }
+    },
+    {
+      "node": "reporter",
+      "length": 2038,
+      "supported": 8
+    },
+    {
+      "node": "auditor",
+      "issues": [],
+      "resolution": "original_passed",
+      "used_fallback": false
+    }
+  ],
+  "final_output": "## 1. Short assessment\n\n**The supplied snapshot does not show a different aflatoxin limit for dried figs simply because they are intended for sorting or other physical treatment.** It lists the dried-fig maximum levels as **6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins**. The dried-fig entry does not specify a separate sorting-treatment category. [E84bba6f619]\n\nThese are snapshot values, not confirmation of the law effective on the relevant date.\n\n## 2. Evidence-supported law\n\nThe supplied row reads: **“Dried figs | 6,0 | 10,0”** under the aflatoxin B1 and sum-of-aflatoxins columns. [E84bba6f619]\n\nArticle 5’s sorting/physical-treatment conditions apply where Annex I **specifically** sets a maximum level for food in that category. The supplied dried-fig row does not identify such a separate category, so the evidence does not support applying a different limit to these figs merely because sorting is intended. [E908c5eea55] The separate sorting-treatment entry cited in the snapshot is for tree nuts, not dried figs. [E0f3287ac2b]\n\n## 3. Facts/currentness to verify\n\nThe measured concentration, intended use, and any supporting shipment evidence are not provided. A detection alone does not establish that either listed maximum level is exceeded.\n\nThe supplied snapshot does not establish that these limits or the relevant Article 5 text are effective for the legally relevant date. [E84bba6f619] [E908c5eea55]\n\n## 4. Practical next checks\n\n- Confirm the analytical result for aflatoxin B1 and, where relevant, the sum of aflatoxins, then compare it with the applicable limit.\n- Confirm whether the consignment is intended for direct consumer use, as a food ingredient, or for sorting/physical treatment.\n- Verify the applicable official EU text and amendments for the relevant date.\n\n**CRITICAL uncovered issues**\n- **Current-law gap:** effective status of the dried-fig limit and Article 5 text is unverified.\n- **Case-fact gap:** the consignment’s intended use and supporting evidence are not provided.",
+  "source_facts": [
+    {
+      "fact_id": "F869ec2d5af",
+      "category": "product_scope",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures.",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures."
+    },
+    {
+      "fact_id": "F2696e62e07",
+      "category": "hazards",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Hazards listed for this logical entry: aflatoxins and ochratoxin A.",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Hazards listed for this logical entry: aflatoxins and ochratoxin A."
+    },
+    {
+      "fact_id": "F7eb008d703",
+      "category": "inspection_frequency",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "Frequency of identity and physical checks: 30%",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: Frequency of identity and physical checks: 30%"
+    },
+    {
+      "fact_id": "Fef9ae317ff",
+      "category": "commodity_code_example",
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "source_version": "2026-06-30",
+      "source_location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "quote": "HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90",
+      "snapshot_claim": "Frozen Regulation (EU) 2019/1793 at Annex II, Section 1, Row 14 — Türkiye dried-fig products: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90"
+    }
+  ],
+  "audit_resolution": "original_passed",
+  "draft_output": "## 1. Short assessment\n\n**The supplied snapshot does not show a different aflatoxin limit for dried figs simply because they are intended for sorting or other physical treatment.** It lists the dried-fig maximum levels as **6.0 μg/kg for aflatoxin B1 and 10.0 μg/kg for the sum of aflatoxins**. The dried-fig entry does not specify a separate sorting-treatment category. [E84bba6f619]\n\nThese are snapshot values, not confirmation of the law effective on the relevant date.\n\n## 2. Evidence-supported law\n\nThe supplied row reads: **“Dried figs | 6,0 | 10,0”** under the aflatoxin B1 and sum-of-aflatoxins columns. [E84bba6f619]\n\nArticle 5’s sorting/physical-treatment conditions apply where Annex I **specifically** sets a maximum level for food in that category. The supplied dried-fig row does not identify such a separate category, so the evidence does not support applying a different limit to these figs merely because sorting is intended. [E908c5eea55] The separate sorting-treatment entry cited in the snapshot is for tree nuts, not dried figs. [E0f3287ac2b]\n\n## 3. Facts/currentness to verify\n\nThe measured concentration, intended use, and any supporting shipment evidence are not provided. A detection alone does not establish that either listed maximum level is exceeded.\n\nThe supplied snapshot does not establish that these limits or the relevant Article 5 text are effective for the legally relevant date. [E84bba6f619] [E908c5eea55]\n\n## 4. Practical next checks\n\n- Confirm the analytical result for aflatoxin B1 and, where relevant, the sum of aflatoxins, then compare it with the applicable limit.\n- Confirm whether the consignment is intended for direct consumer use, as a food ingredient, or for sorting/physical treatment.\n- Verify the applicable official EU text and amendments for the relevant date.\n\n**CRITICAL uncovered issues**\n- **Current-law gap:** effective status of the dried-fig limit and Article 5 text is unverified.\n- **Case-fact gap:** the consignment’s intended use and supporting evidence are not provided.",
+  "search_calls": 4,
+  "initial_searches": 4,
+  "targeted_searches": 0,
+  "validation_rounds": 1,
+  "llm_calls": 5,
+  "usage": {
+    "input_tokens": 17684,
+    "output_tokens": 6146
+  },
+  "audit_issues": [],
+  "stop_reason": "unsearchable_or_unresolved_gaps",
+  "targeted_search_yield": 0,
+  "started_utc": "2026-10-21T12:12:01.353323+00:00",
+  "completed_utc": "2026-10-21T12:15:13.446575+00:00",
+  "latency_seconds": 192.09,
+  "status": "completed_pending_human_review"
+}
