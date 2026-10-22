@@ -1,0 +1,152 @@
+{
+  "qid": "Q10",
+  "question": "Based on the evidence above, prepare a concise regulatory assessment for an EU food business operator handling this shipment. Clearly distinguish confirmed requirements from information that still requires verification.",
+  "experiment": {
+    "experiment": "NB09_v4_lean_q5q9q10",
+    "benchmark_sha256": "ac7d7441c3918e4c5078140191655ae8af1a2417e9b59f2092325313bdea5bcb",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "max_llm_calls": 2,
+    "source_policy": "five_law_snapshot_only",
+    "route_status": "Q5_Q9_Q10_benchmark_exposed"
+  },
+  "final_output": "## Short answer\n\nB1 detection alone does not establish that the shipment exceeds the legal maximum: the concentration is unknown. For dried figs, the supplied extract sets a B1 maximum of **6.0 μg/kg** and a maximum of **10.0 μg/kg for the sum of aflatoxins B1, B2, G1 and G2**. [E84bba6f619]\n\nThe supplied evidence also lists Türkiye-origin dried figs for aflatoxin and ochratoxin A controls, with a **30% frequency of identity and physical checks**. [Effd100d7a6] The shipment’s compliance and its required border documentation cannot be confirmed from the facts provided.\n\n## Evidence-supported requirements\n\n- **Maximum levels:** For dried figs, the Annex I row gives the B1 and total-aflatoxin limits above. The total is assessed on a lower-bound basis, treating results below the limit of quantification as zero. [E84bba6f619]\n- **Product scope:** Those dried-fig limits also apply to products consisting only of dried figs or containing at least 80% dried figs. For other processed or compound products without a specific Union maximum level, apply the factors in Article 3, including processing effects, ingredient proportions and analytical quantification limits. During official control, the operator must provide and justify relevant factors and ingredient proportions; the authority may set a factor if the operator does not provide one or its justification is inadequate. [E84bba6f619] [Eb2674e6c28]\n- **Türkiye border controls:** The supplied Annex II entry covers dried figs and specified fig-containing products, identifies aflatoxins and ochratoxin A as hazards, and specifies a 30% frequency of identity and physical checks. Confirm that the actual product and tariff classification fall within the entry. [Effd100d7a6]\n- **Consignment records and notification:** Each Annex II consignment must have an identification code, including on individual bags or packaging (with an exception for outer packaging combining small packages). [Ef29f787b55] It must be accompanied by third-country official-authority sampling and analysis results; those results must carry the consignment code, and the analyses must be performed by an ISO/IEC 17025-accredited laboratory. [Efddbf710b7] For consignments covered by Article 47(1), the responsible operator must submit the relevant CHED information through IMSOC before physical arrival in the Union. [E5136c0dd46]\n- **If non-compliance is established at the border:** The competent authority must detain and refuse entry to a non-compliant consignment and may order measures such as re-dispatch or special treatment, as provided in Article 66. [Ebcbbe77002]\n- **If food is already on the market:** If the operator considers or has reason to believe food it handled is non-compliant, Article 19 requires immediate withdrawal procedures and notification to the competent authorities; if it may have reached consumers, the operator must inform them and, if needed, recall it. [E46c1b89564] These are post-market duties, distinct from border controls.\n\n## Missing facts / legal verification\n\n- The B1 concentration, other aflatoxin results and analytical method/quantification limits are needed to assess the limits. A positive detection alone does not show an exceedance.\n- Confirm whether the goods are raw dried figs, a fig-containing mixture, paste or another processed product; the ingredient proportions, intended use and applicable tariff classification are also needed.\n- Confirm the shipment’s border status, whether it has been placed on the market, and whether the required identification code, analysis results and CHED information are in place.\n- The supplied extract for Article 11 is incomplete, and Annex IV of Regulation 2019/1793 was not retrieved. Verify the full applicable certificate requirements and Annex IV requirements, as well as the applicable consolidated rules for the shipment’s entry date. [E3e3aed8c74]\n\n## Operator next steps\n\n1. Obtain the complete accredited-laboratory results for B1 and the aflatoxin sum; compare them with the applicable limit for the confirmed product.\n2. Verify the product’s scope and classification against the Annex II entry, then check the consignment code, third-country analysis results and CHED submission.\n3. If the shipment is still at the border, promptly provide the competent authority with the available records and follow its control decision. Do not treat detection alone as proof that refusal is required.\n4. If the food is already on the market and you have reason to believe it is non-compliant, initiate the Article 19 withdrawal and notification procedures; assess consumer information and recall where necessary.",
+  "evidence": [
+    {
+      "evidence_id": "E84bba6f619",
+      "regulation_id": "2023/915",
+      "requested_provision": "row 1.1.3",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "article": null,
+      "location": "Table 3, row 6",
+      "text": "COMMISSION REGULATION (EU) 2023/915. Table context: 1 | Mycotoxins || 1.1 | Aflatoxins | Maximum level (μg/kg) | Remarks || B 1 | Sum of B 1 , B 2 , G 1 and G 2 | M 1 | For the sum of aflatoxins, maximum levels refer to lower bound concentrations, which are calculated on the assumption that all the values below the limit of quantification are zero.. Row: 1.1.3 | Dried figs | 6,0 | 10,0 | - | In the case of food consisting of dried figs used as only ingredient or in the case of processed products consisting at least of 80 % from dried figs, the maximum levels as established for dried figs apply also to those products. In other cases, Article 3(1) and (2) apply.",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::table3_row6::01"
+    },
+    {
+      "evidence_id": "E1a5787f4ef",
+      "regulation_id": "2023/915",
+      "requested_provision": "Article 2",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "article": "Article 7",
+      "location": "Article 7 — Derogations from Article 2",
+      "text": "he following traditionally smoked meat and smoked meat products, smoked in their territory with levels of PAHs higher than those set out in point 5.1.6 of Annex I, provided that those products dot not contain more than 5,0 μg/kg for benzo(a)pyrene and 30,0 μg/kg for the sum of benzo(a)pyrene, benz(a)anthracene, benzo(b)fluoranthene and chrysene: (a) Ireland, Croatia, Cyprus, Spain, Poland and Portugal: traditionally smoked meat and meat products; (b) Latvia: traditionally smoked pork, hot smoked chicken meat, hot smoked sausages and hot smoked game meat; (c) Slovakia: salted traditionally smoked meat, traditionally smoked bacon, traditionally smoked sausage (klobása), where ‘traditionally smoked’ means developing smoke by burning woods (wood logs, wood sawdust, wood chips) in a smokehouse; (d) Finland: traditionally hot smoked meat and meat products; (e) Sweden: meat and meat products smoked over glowing wood or other plant materials. Those Member States and concerned food business operators shall continue to monitor the presence of PAHs in traditionally smoked meat and smoked meat products referred to in the first subparagraph and shall ensure that good smoking practices are implemented where possible, without losing typical organoleptic characteristics of those products. 4. By way of derogation from Article 2, the following Member States may authorise the placing on their respective market for the final consumer of the following traditionally smoked fish and smoked fishery products, smoked in their territory with levels of PAHs higher than those set out in point 5.1.7 of Annex I, provided that those smoked products do not contain more than 5,0 μg/kg for benzo(a)pyrene and 30,0 μg/kg for the sum of benzo(a)pyrene, benz(a)anthracene, benzo(b)fluoranthene and chrysene:",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_7::03"
+    },
+    {
+      "evidence_id": "Eb2674e6c28",
+      "regulation_id": "2023/915",
+      "requested_provision": "Article 3",
+      "source_file": "EU_2023_915_consolidated_2026-08-19.html",
+      "article": "Article 3",
+      "location": "Article 3 — Dried, diluted, processed and compound food",
+      "text": "Article 3 Dried, diluted, processed and compound food 1. Where no specific Union maximum levels are set out in Annex I for food which is dried, diluted, processed or compound food (i.e. composed of more than one ingredient), the following aspects shall be taken into account when applying the maximum levels set out in Annex I to such food: (a) changes of the concentration of the contaminant caused by drying or dilution processes; (b) changes of the concentration of the contaminant caused by processing; (c) the relative proportions of the ingredients in the product; (d) the analytical limit of quantification. 2. Where the competent authority carries out an official control, the food business operator shall provide and justify the specific concentration, dilution or processing factors for the drying, diluting or processing operations concerned or the specific concentration, dilution or processing factors for the dried, diluted, processed or compound food concerned as well as the proportion of ingredients for mixing operations concerned. Where the food business operator does not provide the necessary concentration, dilution or processing factor or where the competent authority deems that factor inappropriate in view of the justification given, the competent authority shall itself define that factor, based on the available information and with the objective of maximum protection of human health. 3. Where no specific Union maximum levels for food for infants and young children are set out in Annex I, Member States may provide for stricter maximum levels for such food.",
+      "chunk_id": "legal::EU_2023_915_consolidated_2026-08-19.html::art_3::01"
+    },
+    {
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Annex II row 14",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": null,
+      "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14.",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs"
+    },
+    {
+      "evidence_id": "Ef29f787b55",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 9",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 9",
+      "location": "Article 9 — Identification code",
+      "text": "Article 9 Identification code 1. Each consignment of food and feed listed in Annex II shall be identified with an identification code. 2. Each individual bag or packaging form of the consignment shall be identified with that identification code. ▼M12 3. By way of derogation from paragraph 2, in case of a consignment in which the bag or packaging combines several small packages, it is sufficient that the identification code of the consignment is mentioned on the bag or packaging combining these small packages. ▼B",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_9::01"
+    },
+    {
+      "evidence_id": "Efddbf710b7",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 10",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 10",
+      "location": "Article 10 — Results of sampling and analyses performed by the competent authorities of the third country",
+      "text": "Article 10 Results of sampling and analyses performed by the competent authorities of the third country 1. Each consignment of food and feed listed in Annex II shall be accompanied by the results of sampling and analyses performed on that consignment by the competent authorities of the third country of origin or of the country where the consignment is consigned from if that country is different from the country of origin. 2. On the basis of the results referred to in paragraph 1, the competent authorities shall ascertain: ▼M12 (a) compliance with Commission Regulation (EU) 2023/915 ( 2 ) and Directive 2002/32/EC on maximum levels of relevant mycotoxins, for consignments of food and feed listed in Annex II due to contamination risk by mycotoxins and plant toxins. ▼B (b) compliance with Regulation (EC) No 396/2005 on maximum residue levels of pesticides, for consignments of food and feed listed in Annex II due to contamination risk by pesticide residues; ▼M12 ————— ▼B (d) the absence of Salmonella in 25 g, for consignments of food listed in Annex II due to risk of microbiological contamination by Salmonella . ▼M12 ————— ▼B 4. The results of sampling and analyses referred to in paragraph 1 shall bear the identification code of the consignment to which they relate referred to in Article 9(1). 5. The analyses referred to in paragraph 1 shall be performed by laboratories accredited in accordance with the standard ISO/IEC 17025 on ‘General requirements for the competence of testing and calibration laboratories’.",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_10::01"
+    },
+    {
+      "evidence_id": "E3e3aed8c74",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 11",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 11",
+      "location": "Article 11 — Official certificate",
+      "text": "tificate shall be presented to the competent authority of the border control post of entry into the Union where the consignment is subjected to official controls; (h) the official certificate shall be issued before the consignment to which it relates leaves the control of the competent authorities in the third country issuing the certificate; (i) the official certificate shall be drawn up in the official language, or in one of the official languages, of the Member State of the border control post of entry into the Union; (j) the official certificate shall be valid for not more than four months from the date of issue, but in any case no longer than six months from the date of the results of the laboratory analyses referred to Article 10(1). 3. By way of derogation from point (i) of paragraph 2, a Member State may consent to official certificates being drawn up in another official language of the Union and accompanied, if necessary, by an authenticated translation. 4. The colour of the signature and of the stamp other than an embossed or watermarked stamp, which are referred to in point (c) of paragraph 2, shall be different to the colour of the printing. 5. Points (c) to (g) of paragraph 2 and paragraph 4 shall not apply to electronic official certificates issued in accordance with the requirements of Article 39(1) of Commission Implementing Regulation (EU) 2019/1715 ( 3 ). 6. Points (d), (e) and (f) of paragraph 2 shall not apply to official certificates issued in paper and completed in, and printed from, TRACES. 7. Competent authorities may issue a replacement official certificate only in accordance with the rules laid down in Article 6 of Commission Implementing Regulation (EU) 2020/2235 ( 4 ). 8. The official certificate shall be completed on the basis of the notes",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_11::02"
+    },
+    {
+      "evidence_id": "E5136c0dd46",
+      "regulation_id": "2017/625",
+      "requested_provision": "Article 56",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "article": "Article 56",
+      "location": "Article 56 — Use of the Common Health Entry Document (CHED) by the operator and by the competent authorities",
+      "text": "Article 56 Use of the Common Health Entry Document (CHED) by the operator and by the competent authorities 1. For each consignment of the categories of animals and goods referred to in Article 47(1) the operator responsible for the consignment shall complete the relevant part of the CHED, providing the information necessary for the immediate and complete identification of the consignment and its destination. 2. References in this Regulation to the CHED include a reference to its electronic equivalent. 3. The CHED shall be used by: (a) the operators responsible for consignments of the categories of animals and goods referred to in Article 47(1) in order to give prior notification to the competent authorities of the border control post of arrival of those consignments; and (b) the competent authorities of the border control post, in order to: (i) record the outcome of the official controls performed and any decisions taken on that basis, including the decision to reject a consignment; (ii) communicate the information referred to in point (i) through the IMSOC. 4. Operators responsible for the consignment shall give prior notification in accordance with point (a) of paragraph 3 by completing and submitting the relevant part of the CHED into the IMSOC for transmission to the competent authorities of the border control post prior to the physical arrival of the consignment into the Union. 5. The competent authorities of the border control post shall finalise the CHED as soon as: (a) all official controls required by Article 49(1) have been performed; (b) the results from physical checks, where such checks are required, are available; and (c) a decision on the consignment has been taken in accordance with Article 55 and recorded on the CHED.",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_56::01"
+    },
+    {
+      "evidence_id": "Ebcbbe77002",
+      "regulation_id": "2017/625",
+      "requested_provision": "Article 66",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "article": "Article 66",
+      "location": "Article 66 — Measures to be taken in cases of non-compliant consignments entering the Union",
+      "text": "Article 66 Measures to be taken in cases of non-compliant consignments entering the Union 1. The competent authorities shall place under official detention any consignment of animals or goods entering the Union which does not comply with the rules referred to in Article 1(2) and shall refuse its entry into the Union. The competent authorities shall isolate or quarantine, as appropriate, any such consignment and the animals belonging to it shall be kept, cared for or treated under appropriate conditions pending any further decision. If possible, the competent authorities shall also take into account the interest of providing special care in respect of certain types of goods. 2. The Commission shall, by means of implementing acts, lay down rules on the practical arrangements for the isolation and quarantine provided for in the second subparagraph of paragraph 1 of this Article. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 145(2). 3. The competent authority shall, as regards the consignment referred to in paragraph 1 order, without delay, the operator responsible for the consignment to: (a) destroy the consignment; (b) re-dispatch the consignment outside the Union in accordance with Article 72(1) and (2); or (c) subject the consignment to special treatment in accordance with Article 71(1) and (2) or to any other measure necessary to ensure compliance with the rules referred to in Article 1(2), and, where appropriate, allocate the consignment for purposes other than those for which it was originally intended. Any action referred to in points (a), (b) and (c) of the first subparagraph shall be performed in compliance with the rules referred to in Article 1(2), including in particular, as regards consignments of",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_66::01"
+    },
+    {
+      "evidence_id": "E46c1b89564",
+      "regulation_id": "178/2002",
+      "requested_provision": "Article 19",
+      "source_file": "EU_2002_178_consolidated_2026-01-01.html",
+      "article": "Article 19",
+      "location": "Article 19 — Responsibilities for food: food business operators",
+      "text": "Article 19 Responsibilities for food: food business operators 1. If a food business operator considers or has reason to believe that a food which it has imported, produced, processed, manufactured or distributed is not in compliance with the food safety requirements, it shall immediately initiate procedures to withdraw the food in question from the market where the food has left the immediate control of that initial food business operator and inform the competent authorities thereof. Where the product may have reached the consumer, the operator shall effectively and accurately inform the consumers of the reason for its withdrawal, and if necessary, recall from consumers products already supplied to them when other measures are not sufficient to achieve a high level of health protection. 2. A food business operator responsible for retail or distribution activities which do not affect the packaging, labelling, safety or integrity of the food shall, within the limits of its respective activities, initiate procedures to withdraw from the market products not in compliance with the food-safety requirements and shall participate in contributing to the safety of the food by passing on relevant information necessary to trace a food, cooperating in the action taken by producers, processors, manufacturers and/or the competent authorities. 3. A food business operator shall immediately inform the competent authorities if it considers or has reason to believe that a food which it has placed on the market may be injurious to human health. Operators shall inform the competent authorities of the action taken to prevent risks to the final consumer and shall not prevent or discourage any person from cooperating, in accordance with national law and legal practice, with the competent",
+      "chunk_id": "legal::EU_2002_178_consolidated_2026-01-01.html::art_19::01"
+    }
+  ],
+  "missing_provisions": [
+    {
+      "law": "2019/1793",
+      "provision": "Annex IV"
+    }
+  ],
+  "llm_calls": 1,
+  "search_calls": 0,
+  "local_provision_lookups": 11,
+  "usage": {
+    "input_tokens": 4061,
+    "output_tokens": 1486
+  },
+  "latency_seconds": 17.43,
+  "repair_attempted": false,
+  "audit": {
+    "missing_sections": [],
+    "invalid_citations": [],
+    "has_citations": true,
+    "uncited_retrieved_core_provisions": [],
+    "cited_ids": [
+      "E3e3aed8c74",
+      "E46c1b89564",
+      "E5136c0dd46",
+      "E84bba6f619",
+      "Eb2674e6c28",
+      "Ebcbbe77002",
+      "Ef29f787b55",
+      "Efddbf710b7",
+      "Effd100d7a6"
+    ],
+    "passed": true
+  },
+  "score_status": "human_review_pending",
+  "created_utc": "2026-10-22T08:26:52.945868+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "experiment": "NB09_v4_lean_q5q9q10",
+  "benchmark_sha256": "ac7d7441c3918e4c5078140191655ae8af1a2417e9b59f2092325313bdea5bcb",
+  "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_llm_calls": 2,
+  "source_policy": "five_law_snapshot_only",
+  "route_status": "Q5_Q9_Q10_benchmark_exposed"
+}

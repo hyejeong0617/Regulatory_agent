@@ -1,0 +1,142 @@
+{
+  "qid": "Q5",
+  "question": "If so, what controls, sampling/testing requirements, or documentation requirements currently apply?",
+  "experiment": {
+    "experiment": "NB09_v4_lean_q5q9q10",
+    "benchmark_sha256": "ac7d7441c3918e4c5078140191655ae8af1a2417e9b59f2092325313bdea5bcb",
+    "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "max_llm_calls": 2,
+    "source_policy": "five_law_snapshot_only",
+    "route_status": "Q5_Q9_Q10_benchmark_exposed"
+  },
+  "final_output": "## Short answer\n\nYes. The supplied Regulation (EU) 2019/1793 snapshot lists Türkiye-origin dried figs for aflatoxins and ochratoxin A, with an overall 30% frequency of identity and physical checks. B1 detection alone does not establish that a maximum level was exceeded; the concentration and applicable limit are needed. [Effd100d7a6] [E5b4949e334]\n\n## Evidence-supported requirements\n\n- **Border checks and testing:** Competent authorities carry out identity and physical checks, including sampling and laboratory analysis, at the Annex II frequency. The 30% frequency applies overall to the entry, not to every consignment. [E5b4949e334] [Effd100d7a6]\n- **Sampling method:** Sampling and analysis for mycotoxins in listed food must follow Commission Implementing Regulation (EU) 2023/2782. [E6755b594ef]\n- **Third-country test results:** Each Annex II consignment must be accompanied by sampling and analysis results from the competent authority of the country of origin, or of the country of consignment if different. For mycotoxin-risk consignments, authorities use the results to assess compliance with Regulation (EU) 2023/915. The laboratory must be accredited to ISO/IEC 17025, and the results must bear the consignment identification code. [Efddbf710b7]\n- **Identification and packaging:** Each consignment must have an identification code, which must appear on each bag or packaging form. If an outer package combines several small packages, the code on that outer package is sufficient. [Ef29f787b55]\n- **Certificate:** The supplied Article 11 extract supports that the official certificate is presented to the competent authority at the Union border control post. The visible text also specifies issuance before the consignment leaves the issuing authorities’ control, language and validity conditions. [E3e3aed8c74]\n- **CHED, notification and release:** The operator must provide the relevant consignment information in the CHED and submit it through IMSOC before physical arrival. [E5136c0dd46] Prior notification is generally due at least one working day before expected arrival, with a four-hour period permitted where logistical constraints prevent that. [E2015741215] Customs may release an Annex II consignment for free circulation only upon presentation of a duly finalised CHED confirming compliance. [E1ff538872d]\n\n## Missing facts / legal verification\n\n- The B1 concentration, product form and intended use are unknown. The supplied extracts do not give the numerical maximum level, so they cannot establish whether the result is an exceedance.\n- The Article 11 extract is incomplete, and Annex IV is unretrieved. The full certificate requirements, particulars and model therefore cannot be confirmed from the supplied materials. [E3e3aed8c74]\n- The Annex II entry is supplied as a snapshot. It supports the stated rule in that snapshot, but does not establish live applicability on the consignment’s import date.\n- The extracts address border controls and release, not post-market withdrawal or recall requirements.\n\n## Operator next steps\n\n1. Obtain the laboratory report, including the B1 concentration, method, sampling information and lot identity; confirm the product form and intended use.\n2. Check the result against the applicable maximum level in Regulation (EU) 2023/915 and verify the applicable controls for the import date.\n3. Ensure the required third-country test results, laboratory accreditation and identification code correspond to the consignment, and mark the packaging as required.\n4. Complete the CHED and prior notification, and verify the full official-certificate requirements before dispatch.\n5. Keep the lot identifiable; do not treat detection alone as proof of non-compliance.",
+  "evidence": [
+    {
+      "evidence_id": "Effd100d7a6",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Annex II row 14",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": null,
+      "location": "Annex II, Section 1, Row 14 — Türkiye dried-fig products",
+      "text": "COMMISSION IMPLEMENTING REGULATION (EU) 2019/1793. Legal location: Annex II, Section 1, logical row 14 — Türkiye (TR). Product scope: dried figs; mixtures of nuts or dried fruits containing figs; dried fig paste; dried figs prepared or preserved, including mixtures. Hazards listed for this logical entry: aflatoxins and ochratoxin A. Frequency of identity and physical checks: 30%. Table column context: Row | Country of origin | Food and feed (intended use) | CN code ( 1 ) | TARIC sub-division | Hazard | Frequency of identity and physical checks (%). Underlying consolidated-HTML rows grouped into this one logical entry: HTML row 135: 14 | Türkiye (TR) | — Dried figs | 0804 20 90 || HTML row 136: — Mixtures of nuts or dried fruits containing figs | ex 0813 50 99 | 50 || HTML row 137: — Dried fig paste | ex 2007 10 10 | 50 || HTML row 138: ex 2007 10 99 | 20 || HTML row 139: ex 2007 99 39 | 01; 02 || HTML row 140: ex 2007 99 50 | 31 || HTML row 141: ex 2007 99 97 | 21 || HTML row 142: — Dried figs, prepared or preserved, including mixtures | ex 2008 97 12 | 11 || HTML row 143: ex 2008 97 14 | 11 || HTML row 144: ex 2008 97 16 | 11 || HTML row 145: ex 2008 97 18 | 11 || HTML row 146: ex 2008 97 32 | 11 || HTML row 147: ex 2008 97 34 | 11 || HTML row 148: ex 2008 97 36 | 11 || HTML row 149: ex 2008 97 38 | 11 || HTML row 150: ex 2008 97 51 | 11 | Aflatoxins and | 30 || HTML row 151: ex 2008 97 59 | 11 | Ochratoxin A. The row-group reconstruction is specific to the supplied Regulation (EU) 2019/1793 consolidated version dated 2026-06-30. Cross-check basis: Commission Implementing Regulation (EU) 2025/1441, Annex I, row 14.",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::annexII_row14_turkiye_figs"
+    },
+    {
+      "evidence_id": "E6755b594ef",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 3",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 3",
+      "location": "Article 3 — Sampling and analyses",
+      "text": "Article 3 Sampling and analyses The sampling and the analyses to be carried out by competent authorities at border control posts or at control points referred to in Article 53(1)(a) of Regulation (EU) 2017/625, as part of physical checks on consignments of food and feed referred to in Article 1(1)(a) and (b), or in third countries for the purposes of the results of analyses which are required to accompany the consignments of food and feed referred to in Article 1(1)(b) as provided for in this Regulation shall be performed in accordance with the following requirements: ▼M12 (a) for food listed in Annexes I and II due to possible contamination risk by mycotoxins, including aflatoxins, the sampling and the analyses shall be performed in accordance with Commission Implementing Regulation (EU) 2023/2782 ( 1 ); ▼B (b) for feed listed in Annexes I and II due to possible contamination risk by mycotoxins, including aflatoxins, the sampling and the analyses shall be performed in accordance with Regulation (EC) No 152/2009; (c) for food and feed listed in Annexes I and II due to possible non-compliance with the maximum allowed levels of pesticides residues the sampling shall be performed in accordance with Directive 2002/63/EC; ▼M12 ————— ▼B (e) for food listed in Annexes I and II due to the risk of presence of Salmonella , the sampling and the analyses for the control of Salmonella shall be performed in accordance with the sampling procedures and the analytical reference methods laid down in Annex III; ▼M12 (f) the methods of sampling and analyses referred to in the footnotes to Annexes I and II shall be applied in relation to hazards other than those referred to in points (a), (b), (c) and (e). ▼B",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_3::01"
+    },
+    {
+      "evidence_id": "E1ff538872d",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 4",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 4",
+      "location": "Article 4 — Release for free circulation",
+      "text": "Article 4 Release for free circulation The custom authorities shall only allow the release for free circulation of consignments of food and feed listed in Annexes I and II upon presentation of a duly finalised Common Health Entry Document (CHED) as provided for in Article 57(2)(b) of Regulation (EU) 2017/625, which confirms that the consignment is in compliance with the applicable rules referred to in Article 1(2) of that Regulation.",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_4::01"
+    },
+    {
+      "evidence_id": "E5b4949e334",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 8",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 8",
+      "location": "Article 8 — Frequency of identity checks and physical checks",
+      "text": "Article 8 Frequency of identity checks and physical checks 1. The competent authorities at border control post and at control points referred to in Article 53(1)(a) of Regulation (EU) 2017/625 shall carry out identity and physical checks, including sampling and laboratory analyses, on consignments of food and feed listed in Annex II, at the frequency set out in that Annex. 2. The frequency of identity and physical checks set out in an entry in Annex II shall be applied as an overall frequency for all products falling under that entry. ▼M9 ————— ▼B",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_8::01"
+    },
+    {
+      "evidence_id": "Ef29f787b55",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 9",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 9",
+      "location": "Article 9 — Identification code",
+      "text": "Article 9 Identification code 1. Each consignment of food and feed listed in Annex II shall be identified with an identification code. 2. Each individual bag or packaging form of the consignment shall be identified with that identification code. ▼M12 3. By way of derogation from paragraph 2, in case of a consignment in which the bag or packaging combines several small packages, it is sufficient that the identification code of the consignment is mentioned on the bag or packaging combining these small packages. ▼B",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_9::01"
+    },
+    {
+      "evidence_id": "Efddbf710b7",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 10",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 10",
+      "location": "Article 10 — Results of sampling and analyses performed by the competent authorities of the third country",
+      "text": "Article 10 Results of sampling and analyses performed by the competent authorities of the third country 1. Each consignment of food and feed listed in Annex II shall be accompanied by the results of sampling and analyses performed on that consignment by the competent authorities of the third country of origin or of the country where the consignment is consigned from if that country is different from the country of origin. 2. On the basis of the results referred to in paragraph 1, the competent authorities shall ascertain: ▼M12 (a) compliance with Commission Regulation (EU) 2023/915 ( 2 ) and Directive 2002/32/EC on maximum levels of relevant mycotoxins, for consignments of food and feed listed in Annex II due to contamination risk by mycotoxins and plant toxins. ▼B (b) compliance with Regulation (EC) No 396/2005 on maximum residue levels of pesticides, for consignments of food and feed listed in Annex II due to contamination risk by pesticide residues; ▼M12 ————— ▼B (d) the absence of Salmonella in 25 g, for consignments of food listed in Annex II due to risk of microbiological contamination by Salmonella . ▼M12 ————— ▼B 4. The results of sampling and analyses referred to in paragraph 1 shall bear the identification code of the consignment to which they relate referred to in Article 9(1). 5. The analyses referred to in paragraph 1 shall be performed by laboratories accredited in accordance with the standard ISO/IEC 17025 on ‘General requirements for the competence of testing and calibration laboratories’.",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_10::01"
+    },
+    {
+      "evidence_id": "E3e3aed8c74",
+      "regulation_id": "2019/1793",
+      "requested_provision": "Article 11",
+      "source_file": "EU_2019_1793_consolidated_2026-06-30.html",
+      "article": "Article 11",
+      "location": "Article 11 — Official certificate",
+      "text": "tificate shall be presented to the competent authority of the border control post of entry into the Union where the consignment is subjected to official controls; (h) the official certificate shall be issued before the consignment to which it relates leaves the control of the competent authorities in the third country issuing the certificate; (i) the official certificate shall be drawn up in the official language, or in one of the official languages, of the Member State of the border control post of entry into the Union; (j) the official certificate shall be valid for not more than four months from the date of issue, but in any case no longer than six months from the date of the results of the laboratory analyses referred to Article 10(1). 3. By way of derogation from point (i) of paragraph 2, a Member State may consent to official certificates being drawn up in another official language of the Union and accompanied, if necessary, by an authenticated translation. 4. The colour of the signature and of the stamp other than an embossed or watermarked stamp, which are referred to in point (c) of paragraph 2, shall be different to the colour of the printing. 5. Points (c) to (g) of paragraph 2 and paragraph 4 shall not apply to electronic official certificates issued in accordance with the requirements of Article 39(1) of Commission Implementing Regulation (EU) 2019/1715 ( 3 ). 6. Points (d), (e) and (f) of paragraph 2 shall not apply to official certificates issued in paper and completed in, and printed from, TRACES. 7. Competent authorities may issue a replacement official certificate only in accordance with the rules laid down in Article 6 of Commission Implementing Regulation (EU) 2020/2235 ( 4 ). 8. The official certificate shall be completed on the basis of the notes",
+      "chunk_id": "legal::EU_2019_1793_consolidated_2026-06-30.html::art_11::02"
+    },
+    {
+      "evidence_id": "E5136c0dd46",
+      "regulation_id": "2017/625",
+      "requested_provision": "Article 56",
+      "source_file": "EU_2017_625_consolidated_2025-01-05.html",
+      "article": "Article 56",
+      "location": "Article 56 — Use of the Common Health Entry Document (CHED) by the operator and by the competent authorities",
+      "text": "Article 56 Use of the Common Health Entry Document (CHED) by the operator and by the competent authorities 1. For each consignment of the categories of animals and goods referred to in Article 47(1) the operator responsible for the consignment shall complete the relevant part of the CHED, providing the information necessary for the immediate and complete identification of the consignment and its destination. 2. References in this Regulation to the CHED include a reference to its electronic equivalent. 3. The CHED shall be used by: (a) the operators responsible for consignments of the categories of animals and goods referred to in Article 47(1) in order to give prior notification to the competent authorities of the border control post of arrival of those consignments; and (b) the competent authorities of the border control post, in order to: (i) record the outcome of the official controls performed and any decisions taken on that basis, including the decision to reject a consignment; (ii) communicate the information referred to in point (i) through the IMSOC. 4. Operators responsible for the consignment shall give prior notification in accordance with point (a) of paragraph 3 by completing and submitting the relevant part of the CHED into the IMSOC for transmission to the competent authorities of the border control post prior to the physical arrival of the consignment into the Union. 5. The competent authorities of the border control post shall finalise the CHED as soon as: (a) all official controls required by Article 49(1) have been performed; (b) the results from physical checks, where such checks are required, are available; and (c) a decision on the consignment has been taken in accordance with Article 55 and recorded on the CHED.",
+      "chunk_id": "legal::EU_2017_625_consolidated_2025-01-05.html::art_56::01"
+    },
+    {
+      "evidence_id": "E2015741215",
+      "regulation_id": "2019/1013",
+      "requested_provision": "Article 1",
+      "source_file": "EU_2019__1013_original.html",
+      "article": "Article 1",
+      "location": "Article 1 — Prior notification of consignments",
+      "text": "Article 1 Prior notification of consignments 1. The operator responsible for a consignment falling within the categories of animals and goods referred to in Article 47(1) of Regulation (EU) 2017/625 shall give prior notification, to the competent authority of the border control post of first arrival into the Union, at least one working day before the expected arrival of the consignment. 2. By way of derogation from paragraph 1, where logistical constraints prevent compliance with the time limit set out in that paragraph, the competent authorities of the border control posts may apply a period of prior notification of at least four hours before the expected arrival of the consignment. 3. By way of derogation from paragraph 1, the competent authorities of border control posts designated for imports of unprocessed logs and sawn and chipped wood in accordance with Article 4 of Commission Delegated Regulation (EU) 2019/1012 may apply a period of prior notification of up to five working days before the expected arrival of such consignments.",
+      "chunk_id": "legal::EU_2019__1013_original.html::art_1::01"
+    }
+  ],
+  "missing_provisions": [
+    {
+      "law": "2019/1793",
+      "provision": "Annex IV"
+    }
+  ],
+  "llm_calls": 2,
+  "search_calls": 0,
+  "local_provision_lookups": 10,
+  "usage": {
+    "input_tokens": 7553,
+    "output_tokens": 2559
+  },
+  "latency_seconds": 58.26,
+  "repair_attempted": true,
+  "audit": {
+    "missing_sections": [],
+    "invalid_citations": [],
+    "has_citations": true,
+    "uncited_retrieved_core_provisions": [],
+    "cited_ids": [
+      "E1ff538872d",
+      "E2015741215",
+      "E3e3aed8c74",
+      "E5136c0dd46",
+      "E5b4949e334",
+      "E6755b594ef",
+      "Ef29f787b55",
+      "Efddbf710b7",
+      "Effd100d7a6"
+    ],
+    "passed": true
+  },
+  "score_status": "human_review_pending",
+  "created_utc": "2026-10-22T08:26:16.042280+00:00"
+}

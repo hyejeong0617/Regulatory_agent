@@ -1,0 +1,11 @@
+{
+  "experiment_id": "NB09_build04_adaptive_v4_devpilot",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "max_llm_calls": 4,
+  "benchmark_sha256": "ac7d7441c3918e4c5078140191655ae8af1a2417e9b59f2092325313bdea5bcb",
+  "chunks_sha256": "cbb12351b77c3e940db6ff33e597219f5e515b2bf3226f8fdea81ec71e6e117f",
+  "adaptive_research": true,
+  "case_study_exposure": "in_sample_dev",
+  "official_live_law_check": false
+}
