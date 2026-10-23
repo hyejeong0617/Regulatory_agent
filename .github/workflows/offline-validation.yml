@@ -1,0 +1,65 @@
+name: Offline repository validation
+on:
+  push:
+    branches: [refactor/organize-research-layout]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Structure and notebook JSON
+        run: python tests/check_layout.py
+      - name: Compile Python notebook code without executing it
+        run: |
+          python - <<'PY'
+          import ast, json, pathlib
+          count = 0
+          failures = []
+          for path in pathlib.Path("notebooks").rglob("*.ipynb"):
+              doc = json.loads(path.read_text(encoding="utf-8"))
+              for idx, cell in enumerate(doc["cells"]):
+                  if cell["cell_type"] != "code":
+                      continue
+                  source = "".join(cell["source"])
+                  # Jupyter line magics and shell cells are handled by IPython, not Python AST.
+                  if any(line.lstrip().startswith(("!", "%", "?")) for line in source.splitlines()):
+                      continue
+                  try:
+                      ast.parse(source, filename=f"{path}:{idx}")
+                      count += 1
+                  except SyntaxError as exc:
+                      failures.append(f"{path} cell {idx}: {exc}")
+          print(f"Parsed {count} standard Python cells")
+          if failures:
+              raise SystemExit("\n".join(failures))
+          PY
+      - name: Check frozen data and saved result JSON can be read
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path(".")
+          for folder in ["data/benchmark", "data/processed", "results/build03", "results/build04"]:
+              assert (root/folder).is_dir(), folder
+          for path in [root/"data/benchmark/benchmark_questions_v1.json",
+                       root/"data/processed/parsed_regulation_library.json",
+                       root/"data/processed/chunks_legal_aware.json",
+                       root/"results/build03/manifest.json",
+                       root/"results/build04/manifest.json"]:
+              value=json.loads(path.read_text(encoding="utf-8"))
+              assert value, f"Empty file: {path}"
+              print(f"PASS {path}")
+          for folder in ["results/build03", "results/build04"]:
+              questions=[p for p in (root/folder).glob("Q*.json") if p.stem[1:].isdigit()]
+              assert len(questions)==10, f"{folder}: expected 10 frozen question files, got {len(questions)}"
+              for p in questions: json.loads(p.read_text(encoding="utf-8"))
+              print(f"PASS {folder}: 10 valid answer JSON files")
+          PY
