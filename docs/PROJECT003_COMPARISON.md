@@ -26,7 +26,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 | 03-B — Tools | 9/10 | 6/10 | 4/10 | Owner-reviewed against frozen verified reference |
 | 04 v3 — Investigation | 8/10 | 10/10 | 3/10 | Owner-reviewed against frozen verified reference |
 
-These published Track A aggregate numbers are preserved from [its existing evaluation record](../EVALUATION.md). Detailed reviewer judgments/reference are not fully represented in the public repository's worksheet templates, so the aggregate ratings cannot be independently reconstructed from the public files alone.
+These published Track A aggregate numbers are preserved from [its existing evaluation record](EVALUATION.md). Detailed reviewer judgments/reference are not fully represented in the public repository's worksheet templates, so the aggregate ratings cannot be independently reconstructed from the public files alone.
 
 ### Track B evaluation status — provisional, not a finalized Gold Standard score
 
