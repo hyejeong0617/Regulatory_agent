@@ -26,3 +26,9 @@ Generation/live-probe defaults were disabled in NB04b, NB08, NB09 v3 (including 
 See [VALIDATION.md](VALIDATION.md) for exact commands, dependency scope, results, and exclusions. The earlier clone/network limitation has been resolved. Selective real notebook cells now run offline with temporary outputs, while frozen artifact hashes are checked before and after execution.
 
 `tests/frozen_artifacts.json` records SHA-256 hashes for all 94 historical HTML/JSON/JSONL/CSV artifacts at pre-validation commit `92dd5a2b33e2a52bdf18286ff2f1b82f7aab7d2c`. The original main commit `d04694c0b7bf9915ee47e7cd14a8f7bcc8c4fa2e` has the same 94 data blobs in the reorganized tree. No migration was repeated and no historical records were deleted.
+
+## Public-reference privacy update (2026-10-23)
+
+The published benchmark JSON `source` metadata was sanitized to remove a private workspace URL. Its ten question strings and stable `benchmark_id` were retained so historical notebooks and results remain identifiable. The corresponding entry in `tests/frozen_artifacts.json` now checks the sanitized public file. This **one metadata-only change** is an intentional exception to the original 94-blob byte-for-byte migration record described above; those historical statements still refer to the earlier refactor snapshot. Documentation and notebook Markdown were also edited to remove private workspace references; notebook executable code and stored model outputs were not modified.
+
+This cleanup does not rewrite historical Git commits or guarantee that links from prior commits are no longer accessible. The public clone's benchmark source metadata is no longer a private URL.

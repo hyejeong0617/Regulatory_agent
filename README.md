@@ -72,7 +72,7 @@ archive/          # prior notebook versions and older diagnostics
 README.md
 ```
 
-**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. All 94 original data/result artifacts remain unchanged. This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
+**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. Of the 94 originally tracked research data/result artifacts, only the benchmark JSON's private source-URL metadata has been redacted; all ten questions and other research outputs remain unchanged. The public benchmark hash is updated in the frozen manifest (see [privacy provenance note](docs/MIGRATION.md#public-reference-privacy-update-2026-10-23)). This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
 
 ## Reproducing the offline checks
 
@@ -110,7 +110,7 @@ The Lean pilot uses QID-specific legal-article routes discovered during developm
 
 ## Related independent experiment
 
-A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its reviewed findings and comparison are kept in [Notion's Codex-built comparison](https://app.notion.com/p/401695ed0f6281989347c86c678e376e). The Codex implementation is **not part of this repository**; the [independent Codex-built repository](https://github.com/hyejeong0617/regulatory-investigation-agent) is available.
+A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its evaluation results are documented in the [Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md). The Codex implementation is **not part of this repository**; the [independent Codex-built repository](https://github.com/hyejeong0617/regulatory-investigation-agent) is available.
 
 No claim of AI-led or human-guided general superiority follows from one case and differently resourced systems.
 
@@ -119,7 +119,7 @@ No claim of AI-led or human-guided general superiority follows from one case and
 - [Benchmark questions](data/benchmark/benchmark_questions_v1.json); fixed user-verified Gold Standard is maintained separately from generation inputs.
 - The five original EUR-Lex files are under `data/legal_sources/`, the fixed questions under `data/benchmark/`, and derived datasets under `data/processed/`. Their consolidation dates are historical snapshots, **not live legal advice**.
 - Some intermediate/diagnostic run outputs in `experiments/` and `archive/` predate the final build. Use the canonical links above for definitive implementations.
-- See [4-Week Sprint](https://app.notion.com/p/3f0695ed0f62807ab467ce8fcf5f6432), [Verified Reference & Build Comparison](https://app.notion.com/p/3f3695ed0f6281889dd9eae76ddcf0b6), and [2026 AI × Domain Roadmap](https://app.notion.com/p/3ef695ed0f62817fbc75d0517b32abf1).
+- For public research context, see [Project 003 comparison](docs/PROJECT003_COMPARISON.md), [Track A quality evaluation](docs/EVALUATION.md), and [validation notes](docs/VALIDATION.md).
 
 ## License and third-party materials
 

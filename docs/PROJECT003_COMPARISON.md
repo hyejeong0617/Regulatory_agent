@@ -31,7 +31,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 
 **Track A — Human-guided Builds 01–04:** Owner-reviewed against the frozen Verified Reference. The [Track A evaluation](EVALUATION.md) describes each architecture's outcomes, trade-offs and supporting records. Public worksheet templates do not expose every final individual human grading judgment.
 
-**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. These have **not** been independently reviewed by the owner. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) and [original Notion scoring record](https://app.notion.com/p/401695ed0f6281989347c86c678e376e).
+**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. These have **not** been independently reviewed by the owner. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) .
 
 **Execution caveats:** Codex Q5 was retained from a pre-freeze development smoke test with matching v1 settings, not rerun as a held-out post-freeze test. Codex Q9 was incomplete and counted No in the preliminary quality review. The agent's `partial` and `incomplete` workflow statuses are **not** Correct/Grounded/Complete judgments. See the [Track B execution report](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md).
 
@@ -41,7 +41,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 - Track B illustrates how an AI coding agent can implement a testable, auditable agent from requirements without inheriting Track A's code or responses. Its citation checking rejects exact-quote mismatches but cannot guarantee correct legal entailment.
 - Both systems can miss conditions buried in complex Annex tables, external referenced acts, and date-specific law. The Codex v1 Q9 interruption is an observed execution limitation.
 - Different retrieval, prompts, development sequences and execution budgets mean the tracks are **not** identical-condition controlled trials. Ten interrelated questions on one case do not measure general regulatory accuracy.
-- Human review of Track B's provisional grading remains outstanding; the numerical Codex scores above reflect the existing 2026-10-22 Notion AI evaluation. Future held-out evaluations should use new cases not exposed during development.
+- Human review of Track B's provisional grading remains outstanding; the numerical Codex scores above reflect the documented provisional AI-assisted review dated 2026-10-22. Future held-out evaluations should use new cases not exposed during development.
 
 ## Evidence and source links
 
@@ -51,7 +51,6 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 - [Track B independent implementation](https://github.com/hyejeong0617/regulatory-investigation-agent)
 - [Track B evaluation protocol](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/evaluation_protocol.md)
 - [Track B dedicated quality evaluation (AI-reviewed, provisional)](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md)
-- [Original Codex AI-reviewed record (Notion)](https://app.notion.com/p/401695ed0f6281989347c86c678e376e)
 - [Track B retained v1 execution results](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md)
 
 **Research status:** Both implementations and their original outputs are frozen. This document is a provenance-aware portfolio comparison, not a legal advice service.

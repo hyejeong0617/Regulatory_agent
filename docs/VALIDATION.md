@@ -1,5 +1,7 @@
 # Offline refactor validation — 2026-10-23
 
+> **Historical verification note:** The PASS results below describe the pre-redaction research snapshot. A later public-privacy update replaced the private workspace URL in `data/benchmark/benchmark_questions_v1.json` with a non-URL source label, preserving all ten question texts and the benchmark identifier. `tests/frozen_artifacts.json` was updated to validate the public, metadata-redacted benchmark file; the other frozen data/result contents were not intentionally changed. The historical original hash is preserved in Git history. Full offline checks must be rerun on this PR before claiming post-redaction validation.
+
 This validates the repository reorganization and selected real notebook cells.
 It does not rerun Q1–Q10 generation, regrade answers, or establish current law.
 
