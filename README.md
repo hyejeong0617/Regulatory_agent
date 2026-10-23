@@ -23,7 +23,7 @@ These results describe one benchmark, not general regulatory accuracy. The human
 
 ## Companion implementation and shared comparison
 
-This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. Track B's preliminary AI-assisted ratings have not yet been human-verified and are not included in the owner-reviewed Track A table above.
+This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. Track B's Q1–Q10 AI-assisted ratings were individually reviewed and **confirmed by the project owner on 2026-10-23**, with no changes (Correct 5/10, Grounded 8/10, Complete 2/10, Yes-only). Track B remains a separate implementation and is summarized in the shared comparison.
 
 ## Canonical notebooks
 
