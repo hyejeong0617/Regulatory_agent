@@ -19,20 +19,34 @@ All scores concern **one case**: Türkiye-origin dried figs with aflatoxin B1 de
 
 Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratings do not contribute to the numerator.
 
-| Track A build | Correct Yes | Grounded Yes | Complete Yes | Assessment status |
+| Implementation | Correct Yes | Grounded Yes | Complete Yes | Assessment status |
 | --- | ---: | ---: | ---: | --- |
 | 01 — Prompt-only | 5/10 | 0/10 | 2/10 | Owner-reviewed against frozen verified reference |
 | 02 — Static hybrid RAG | 5/10 | 9/10 | 2/10 | Owner-reviewed against frozen verified reference |
 | 03-B — Tools | 9/10 | 6/10 | 4/10 | Owner-reviewed against frozen verified reference |
 | 04 v3 — Investigation | 8/10 | 10/10 | 3/10 | Owner-reviewed against frozen verified reference |
+| **Codex-built v1** | **5/10** | **8/10** | **2/10** | **AI-reviewed (provisional; owner verification pending)** |
 
 These published Track A aggregate numbers are preserved from [its existing evaluation record](EVALUATION.md). Detailed reviewer judgments/reference are not fully represented in the public repository's worksheet templates, so the aggregate ratings cannot be independently reconstructed from the public files alone.
 
-### Track B evaluation status — provisional, not a finalized Gold Standard score
+### Track B evaluation status — AI-reviewed (provisional)
 
-The Codex repository publishes the Q1–Q10 source questions, outputs, event logs, and [execution report](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md). That report describes **nine** selected `partial` assessments and **one** `incomplete` run (Q9). These are **execution/coverage statuses, not correctness scores**.
+The source for the Codex quality scores is the internal Notion research record: [Codex-built Agent vs Human-guided Builds — Comparative Evaluation (v1)](https://app.notion.com/p/401695ed0f6281989347c86c678e376e), dated **2026-10-22**. It contains explicit **Q1–Q10 question-level Yes/Partial/No ratings** and failure analysis against the project's Verified Reference. Its Yes-only totals are **Correct 5/10, Grounded 8/10, Complete 2/10**. These are **AI-reviewed, provisional, not independently human-verified**. The detailed grading record is maintained in Notion, not bundled with this public repository; public readers cannot reconstruct the subjective judgments solely from the published agent outputs.
 
-A separate AI-assisted comparison has been discussed, but its original per-question scoring record has **not been verified from these public repositories** and has **not been human-verified**. Consequently no numerical Codex Correct/Grounded/Complete claim is placed in the main scored table. When a verifiable grading artifact is available, record its provenance and version and label it **AI-reviewed (provisional)** until owner review is complete.
+| Codex question | Correct | Grounded | Complete | Key recorded finding |
+| --- | --- | --- | --- | --- |
+| Q1 | Yes | Yes | Yes | Relevant legal instruments identified |
+| Q2 | No | Partial | No | Numeric maximum-level claims rejected during quote validation |
+| Q3 | Yes | Yes | Yes | Processing/sorting conditions handled |
+| Q4 | Partial | Yes | Partial | Import-control detail and check-frequency gaps |
+| Q5 | Partial | Yes | No | Import documentation and procedure incomplete |
+| Q6 | Yes | Yes | Partial | Responsibilities partially covered |
+| Q7 | Yes | Yes | Partial | Enforcement conditions incompletely covered |
+| Q8 | Yes | Yes | Partial | Applicability-date/update-check details incomplete |
+| Q9 | No | No | No | Execution incomplete; zero accepted claims |
+| Q10 | Partial | Yes | No | Operator-focused synthesis incomplete |
+
+The separate Codex [execution report](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md) records **nine** selected `partial` assessments and **one** `incomplete` run (Q9). Those labels are workflow/coverage statuses, **not** Gold Standard correctness grades. The Notion question-level evaluation is the source for the provisional Correct/Grounded/Complete values above. When the owner completes an independent review, publish that as a new version rather than silently changing the original AI-reviewed assessment.
 
 **Q5 provenance:** the selected Q5 result was a pre-freeze development smoke test using the subsequently frozen v1 code, matching model/reasoning, corpus and runtime limits, with no prior answer supplied. It was retained rather than rerun. The other nine questions were attempted independently post-freeze. Q5 is comparable as a selected v1 run but is **not** a held-out post-freeze test. Do not describe these as ten independently held-out evaluations.
 
@@ -42,7 +56,7 @@ A separate AI-assisted comparison has been discussed, but its original per-quest
 - Track B illustrates how an AI coding agent can implement a testable, auditable agent from requirements without inheriting Track A's code or responses. Its citation checking rejects exact-quote mismatches but cannot guarantee correct legal entailment.
 - Both systems can miss conditions buried in complex Annex tables, external referenced acts, and date-specific law. The Codex v1 Q9 interruption is an observed execution limitation.
 - Different retrieval, prompts, development sequences and execution budgets mean the tracks are **not** identical-condition controlled trials. Ten interrelated questions on one case do not measure general regulatory accuracy.
-- Human review of Track B's provisional grading remains outstanding. Future held-out evaluations should use new cases not exposed during development.
+- Human review of Track B's provisional grading remains outstanding; the numerical Codex scores above reflect the existing 2026-10-22 Notion AI evaluation. Future held-out evaluations should use new cases not exposed during development.
 
 ## Evidence and source links
 
@@ -51,6 +65,7 @@ A separate AI-assisted comparison has been discussed, but its original per-quest
 - [Track A offline validation](VALIDATION.md)
 - [Track B independent implementation](https://github.com/hyejeong0617/regulatory-investigation-agent)
 - [Track B evaluation protocol](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/evaluation_protocol.md)
+- [Codex AI-reviewed item-level comparison (Notion, provisional)](https://app.notion.com/p/401695ed0f6281989347c86c678e376e)
 - [Track B retained v1 execution results](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md)
 
 **Research status:** Both implementations and their original outputs are frozen. This document is a provenance-aware portfolio comparison, not a legal advice service.
