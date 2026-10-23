@@ -1,6 +1,6 @@
 # EU Food Regulatory Agent — Architecture Learning Lab
 
-**Scientific AI Builder · Human-guided, AI-assisted development · October 2026**
+**Scientific AI Builder · Project 003 · Track A: Human-guided, AI-assisted development · October 2026**
 
 A controlled learning experiment comparing **Prompt-only → Static RAG → Tools → Investigation Agent** on one frozen EU food-regulatory case: **Türkiye-origin dried figs with aflatoxin B1 detected**.
 
@@ -18,6 +18,10 @@ Ten questions (Q1–Q10), one fixed case, five versioned EUR-Lex HTML snapshots.
 | **04 v3 · Investigation** | 8/10 | **10/10** | 3/10 | Highest Grounded count; costly iterative investigation |
 
 These results describe one benchmark, not general regulatory accuracy. The human-guided builds used AI coding assistance.
+
+## Companion implementation and shared comparison
+
+This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. Track B's preliminary AI-assisted ratings have not yet been human-verified and are not included in the owner-reviewed Track A table above.
 
 ## Canonical notebooks
 
