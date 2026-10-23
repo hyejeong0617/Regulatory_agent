@@ -104,3 +104,8 @@ No original HTML, question, saved answer, evaluation judgment or historical reco
 was modified. No model prompt, retrieval algorithm, threshold or agent workflow
 was changed. The separate Codex-built project was not changed. The existing PR
 remains open; no merge is performed by this validation.
+
+The integrity manifest records original Git-blob SHA-256 hashes and their exact
+LF-to-CRLF checkout equivalents for Windows `core.autocrlf`. No files are normalized
+or rewritten by the check. This avoids treating Git's checkout line-ending expansion
+as research-data corruption while still rejecting any content changes.

@@ -12,7 +12,10 @@ ROOT = Path(__file__).resolve().parents[1]
 def check_integrity():
     manifest = json.loads((ROOT / "tests/frozen_artifacts.json").read_text())
     for name, digest in manifest["sha256"].items():
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, name
+        # Git autocrlf may expand LF to CRLF on Windows. Both hashes are derived
+        # from the original Git blob, not from regenerated research outputs.
+        allowed = {digest, manifest["windows_crlf_sha256"][name]}
+        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() in allowed, name
     print(f"PASS: {len(manifest['sha256'])} frozen artifact SHA-256 hashes")
 
 
