@@ -53,12 +53,20 @@ notebooks/
 experiments/
   build03_diagnostics/
   build04_v4_pilots/
-data/             # FROZEN LEGACY PATH — still used by existing notebooks
+data/
+  legal_sources/  # five frozen EUR-Lex HTML snapshots
+  benchmark/      # fixed Q1–Q10 question set
+  processed/      # parsed/chunked library and retrieval artifacts
+results/
+  build01_02/     # generated baseline records
+  build03/        # NB08 Q1–Q10 execution outputs
+  build04/        # NB09 v3 outputs + v4 pilot subfolders
+docs/             # architecture, evaluation, limitations, migration notes
 archive/          # prior notebook versions and older diagnostics
 README.md
 ```
 
-**Migration status:** This branch organizes notebooks without altering their execution logic. The originally recorded notebooks access `Path("data")` relative to the **current working directory**. Therefore, open and run them with the **repository root as the Jupyter working directory**; do not switch CWD to the notebook's folder. The desired `data/legal_sources`, `data/benchmark`, `data/processed` and `results/` split is **not yet applied**: moving those files without a coordinated path migration would break the frozen notebooks. See the migration PR before merging.
+**Migration status:** Data and results were reorganized without modifying source HTML, benchmark JSON or saved run-result contents (blob hashes are preserved in Git). Notebook path references were updated for the new layout. `Path("data")` remains in some legacy checks and diagnostic code; run Jupyter with the repository root as CWD. **Static GitHub-backed path checks completed; full clean-environment notebook execution is not yet verified.** See [MIGRATION](docs/MIGRATION.md).
 
 ## Running the notebooks
 
@@ -68,7 +76,7 @@ From the **repository root**:
 jupyter lab
 ```
 
-In Jupyter, navigate to the notebook in `notebooks/` and verify `Path.cwd()` points to the repository root. Run notebook cells in NB01 → NB02 → NB03 → NB04b order to rebuild the early pipeline; NB08/NB09 depend on frozen upstream artifacts in `data/`. Install the imports required by each notebook in an appropriate environment; a consolidated dependency lockfile has **not** yet been verified.
+In Jupyter, navigate to the notebook in `notebooks/` and verify `Path.cwd()` points to the repository root. Run notebook cells in NB01 → NB02 → NB03 → NB04b order to rebuild the early pipeline; NB08/NB09 depend on frozen upstream artifacts in `data/processed/` and `results/build01_02/`. Install the imports required by each notebook in an appropriate environment; a consolidated dependency lockfile has **not** yet been verified.
 
 **Important:** Paid execution is opt-in (see notebook-specific flags and credentials). The notebooks contain historical research runs; reproduction may invoke paid APIs. Do not rerun frozen benchmark outputs merely to view results. Internet access is required for some law-version checks.
 
@@ -76,7 +84,7 @@ In Jupyter, navigate to the notebook in `notebooks/` and verify `Path.cwd()` poi
 
 The full NB09 v3 Q1–Q10 evaluation recorded **527,148 tokens, 69 LLM calls, 64 searches**, and **2,232.93 s** aggregate elapsed time. Its Grounded result was strongest, but Correct and Complete remained below Build03-B.
 
-The v4 pilot compared Q5/Q9/Q10 using existing [run outputs](data/):
+The v4 pilot compared Q5/Q9/Q10 using existing [run outputs](results/build04/):
 
 | Q5/Q9/Q10 only | Build04 v3 | Lean RAG v4 | Adaptive Agent v4 |
 | --- | ---: | ---: | ---: |
@@ -94,7 +102,7 @@ The earlier **Claude-built parallel comparison was cancelled**. No claim of AI-l
 
 ## Reproducibility, sources and limitations
 
-- [Benchmark questions](data/benchmark_questions_v1.json); fixed user-verified Gold Standard is maintained separately from generation inputs.
-- The five original EUR-Lex files and derived datasets are kept under `data/` during migration. Their consolidation dates are historical snapshots, **not live legal advice**.
-- Some intermediate/diagnostic run outputs in `data/` predate the final build. Use the canonical links above for definitive implementations.
+- [Benchmark questions](data/benchmark/benchmark_questions_v1.json); fixed user-verified Gold Standard is maintained separately from generation inputs.
+- The five original EUR-Lex files are under `data/legal_sources/`, the fixed questions under `data/benchmark/`, and derived datasets under `data/processed/`. Their consolidation dates are historical snapshots, **not live legal advice**.
+- Some intermediate/diagnostic run outputs in `experiments/` and `archive/` predate the final build. Use the canonical links above for definitive implementations.
 - See [4-Week Sprint](https://app.notion.com/p/3f0695ed0f62807ab467ce8fcf5f6432), [Verified Reference & Build Comparison](https://app.notion.com/p/3f3695ed0f6281889dd9eae76ddcf0b6), and [2026 AI × Domain Roadmap](https://app.notion.com/p/3ef695ed0f62817fbc75d0517b32abf1).
