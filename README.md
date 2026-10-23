@@ -1,6 +1,6 @@
 # EU Food Regulatory Agent — Architecture Learning Lab
 
-**Scientific AI Builder · Human-guided, AI-assisted development · October 2026**
+**Scientific AI Builder · Project 003 · Track A: Human-guided, AI-assisted development · October 2026**
 
 A controlled learning experiment comparing **Prompt-only → Static RAG → Tools → Investigation Agent** on one frozen EU food-regulatory case: **Türkiye-origin dried figs with aflatoxin B1 detected**.
 
@@ -18,6 +18,10 @@ Ten questions (Q1–Q10), one fixed case, five versioned EUR-Lex HTML snapshots.
 | **04 v3 · Investigation** | 8/10 | **10/10** | 3/10 | Highest Grounded count; costly iterative investigation |
 
 These results describe one benchmark, not general regulatory accuracy. The human-guided builds used AI coding assistance.
+
+## Companion implementation and shared comparison
+
+This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. Track B's preliminary AI-assisted ratings have not yet been human-verified and are not included in the owner-reviewed Track A table above.
 
 ## Canonical notebooks
 
@@ -104,7 +108,7 @@ The Lean pilot uses QID-specific legal-article routes discovered during developm
 
 ## Related independent experiment
 
-A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its reviewed findings and comparison are kept in [Notion's Codex-built comparison](https://app.notion.com/p/401695ed0f6281989347c86c678e376e). The Codex implementation is **not part of this repository**; a separate source-only repository is planned.
+A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its reviewed findings and comparison are kept in [Notion's Codex-built comparison](https://app.notion.com/p/401695ed0f6281989347c86c678e376e). The Codex implementation is **not part of this repository**; the [independent Codex-built repository](https://github.com/hyejeong0617/regulatory-investigation-agent) is available.
 
 No claim of AI-led or human-guided general superiority follows from one case and differently resourced systems.
 
@@ -114,3 +118,9 @@ No claim of AI-led or human-guided general superiority follows from one case and
 - The five original EUR-Lex files are under `data/legal_sources/`, the fixed questions under `data/benchmark/`, and derived datasets under `data/processed/`. Their consolidation dates are historical snapshots, **not live legal advice**.
 - Some intermediate/diagnostic run outputs in `experiments/` and `archive/` predate the final build. Use the canonical links above for definitive implementations.
 - See [4-Week Sprint](https://app.notion.com/p/3f0695ed0f62807ab467ce8fcf5f6432), [Verified Reference & Build Comparison](https://app.notion.com/p/3f3695ed0f6281889dd9eae76ddcf0b6), and [2026 AI × Domain Roadmap](https://app.notion.com/p/3ef695ed0f62817fbc75d0517b32abf1).
+
+## License and third-party materials
+
+Original software code and project-authored documentation for which the copyright holder can grant permission are available under the [MIT License](LICENSE) (Copyright © 2026 Hyejeong Lee).
+
+**Third-party materials are not relicensed under MIT.** In particular, the EU legislation HTML snapshots in `data/legal_sources/` retain their original provenance and applicable reuse conditions. Other third-party materials, if any, remain subject to their own rights and licenses. See the frozen source metadata and repository documentation. The software is a research/portfolio implementation, not legal advice or an official EU or OpenAI service.
