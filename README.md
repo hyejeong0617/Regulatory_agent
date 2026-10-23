@@ -72,7 +72,7 @@ archive/          # prior notebook versions and older diagnostics
 README.md
 ```
 
-**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. All 94 original data/result artifacts remain unchanged. This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
+**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. Of the 94 originally tracked research data/result artifacts, only the benchmark JSON's private source-URL metadata has been redacted; all ten questions and other research outputs remain unchanged. The public benchmark hash is updated in the frozen manifest (see [privacy provenance note](docs/MIGRATION.md#public-reference-privacy-update-2026-10-23)). This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
 
 ## Reproducing the offline checks
 
