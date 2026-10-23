@@ -6,7 +6,7 @@ This document records the existing Build 01–04 evaluation results and their in
 
 ## Case, reference and scoring
 
-All four builds were applied to the same ten related questions (Q1–Q10) about **Türkiye-origin dried figs with aflatoxin B1 detected**, with concentration and shipment stage unspecified. Five frozen EUR-Lex snapshots support source-based analysis; the corpus is not verified current law. The project owner reviewed the original comparison against a frozen [Verified Reference](https://app.notion.com/p/3fa695ed0f62819d96b6ee13706bdb3b).
+All four builds were applied to the same ten related questions (Q1–Q10) about **Türkiye-origin dried figs with aflatoxin B1 detected**, with concentration and shipment stage unspecified. Five frozen EUR-Lex snapshots support source-based analysis; the corpus is not verified current law. The project owner reviewed the original comparison against a separately maintained frozen reference. The detailed reference is not published with this repository.
 
 The three dimensions were **Correct** (materially accurate conclusions), **Grounded** (relevant, traceable source support) and **Complete** (coverage of key legal issues, conditions and unknowns). Each was rated **Yes / Partial / No**. Values below count **Yes only**; Partial is not counted as half a point.
 
