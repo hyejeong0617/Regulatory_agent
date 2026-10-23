@@ -1,16 +1,33 @@
-# Repository layout migration
+# Repository migration and verification
 
-**Current state:** canonical and experimental notebook files were separated in a dedicated branch. The original `data/` directory (including source HTML, benchmark, processed caches and evaluation outputs) remains in its original location **intentionally** because frozen notebooks directly read and write `Path("data")`.
+## Current organization
 
-**Proposed future data migration:**
-- `data/EU_*.html` → `data/legal_sources/`
-- `data/benchmark_questions_v1.json` and benchmark/config manifests → `data/benchmark/`
-- `data/parsed_regulation_library.json`, `data/chunks_*.json`, retrieval artifacts → `data/processed/`
-- `data/build03_nb08_B_official_runs` → `results/build03/`
-- `data/build04_nb09_v3_runs` → `results/build04/`
-- Previous Build01–02 run outputs → `results/build01_02/`
-- Other diagnostic results → `experiments/` or `archive/`
+- `notebooks/build01_02/`: canonical NB01–NB04b
+- `notebooks/build03/`: canonical NB08
+- `notebooks/build04/`: frozen NB09_v3
+- `experiments/build03_diagnostics/`: exploratory tools and historical diagnostic data
+- `experiments/build04_v4_pilots/`: Lean/Adaptive pilot notebooks
+- `data/legal_sources/`: five original versioned EUR-Lex snapshots
+- `data/benchmark/`: Q1–Q10 benchmark questions
+- `data/processed/`: parsed library, chunks and retrieval artifacts
+- `results/build01_02/`, `results/build03/`, `results/build04/`: saved generation and evaluation outputs
+- `archive/`: superseded notebooks and older diagnostic outputs
 
-**Before moving data:** introduce a small, single path configuration shared by every canonical notebook, or use compatibility migration that preserves the original baseline. Validate static references and notebook CWD, then execute offline smoke checks from the root using a clean environment. Re-running paid Q1–Q10 is not required to confirm file-load paths. Keep immutable historical results and original Git history intact.
+94 original `data/` blobs were moved without modifying their Git blob hashes. Source versions and saved answers were not regenerated. Notebook source references were edited to use the reorganized paths, preserving execution algorithms and existing paid-run switches.
 
-**Reproduction caution:** moving `.ipynb` files is not equivalent to changing process CWD. Start Jupyter from the project root; check `Path.cwd()` rather than assuming the current notebook folder is used.
+## Running notebooks
+
+Run Jupyter from the repository root, rather than from inside `notebooks/`. Some historical code still uses `Path("data")` as a working-directory assertion, so `Path.cwd()` must be the repository root. If notebooks open in a Jupyter environment that changes the kernel CWD to their own folders, configure the notebook to run at root before executing.
+
+Suggested sequence: NB01 → NB02 → NB03 → NB04b → NB08 → NB09_v3. The latter builds depend on earlier frozen artifacts; do not overwrite historical outputs with casual reruns. Paid calls require explicit notebook-specific opt-in.
+
+## Verification status
+
+- **Verified through GitHub object tree:** all 94 original data/result file blobs still exist unchanged (same SHA).
+- **Verified through GitHub object tree:** README file links resolve to stored files.
+- **Statically inspected:** 16 active and experimental notebooks for explicit file references after moving paths.
+- **Not verified:** actually executing Jupyter notebooks, parsing HTML end-to-end, package dependency installation, external law APIs, paid model inference, and workflow parity after migration. The current environment could not clone the repository to run Python/Jupyter. Do not describe notebooks as runtime-tested.
+
+## Additional offline checks
+
+From a clone of this branch and a clean Python environment, check source files and generated artifacts exist, run `python tests/check_layout.py` (no API calls), and open the notebooks with `Path.cwd()` set to repository root. Next, selectively run read-only input-loading/parsing cells offline and compare expected row counts/identifiers before merging into `main`. A complete deterministic dependency lockfile remains future work.
