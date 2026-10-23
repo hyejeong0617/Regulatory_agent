@@ -17,6 +17,8 @@ Ten questions (Q1–Q10), one fixed case, five versioned EUR-Lex HTML snapshots.
 | **03-B · Tools** | **9/10** | 6/10 | **4/10** | Highest Correct and Complete counts |
 | **04 v3 · Investigation** | 8/10 | **10/10** | 3/10 | Highest Grounded count; costly iterative investigation |
 
+For architecture-specific findings and evaluation limitations, see the [Track A Build 01–04 quality evaluation](docs/EVALUATION.md). For the complete five-implementation overview, see the [Project 003 comparison](docs/PROJECT003_COMPARISON.md).
+
 These results describe one benchmark, not general regulatory accuracy. The human-guided builds used AI coding assistance.
 
 ## Companion implementation and shared comparison
