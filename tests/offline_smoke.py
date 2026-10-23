@@ -21,6 +21,15 @@ sys.dont_write_bytecode = True
 os.environ.update(HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1", HF_HUB_DISABLE_TELEMETRY="1")
 
 
+def audit_path(path, dir_fd=None):
+    target = Path(os.fsdecode(path))
+    if not target.is_absolute() and dir_fd is not None and dir_fd >= 0:
+        # Linux shutil.rmtree uses unlink(name, dir_fd=temporary_directory_fd).
+        # Resolving that name against kernel CWD would falsely identify a repo file.
+        target = Path(os.readlink(f"/proc/self/fd/{dir_fd}")) / target
+    return target.resolve()
+
+
 def guard(event, args):
     if event in {"socket.connect", "socket.getaddrinfo", "subprocess.Popen", "os.system"}:
         raise RuntimeError(f"Offline smoke blocked {event}")
@@ -31,8 +40,9 @@ def guard(event, args):
             if Path(os.fsdecode(path)).resolve().is_relative_to(ROOT):
                 raise RuntimeError(f"Frozen checkout write blocked: {path}")
     if event in {"os.remove", "os.rename", "os.rmdir"}:
-        for path in args[:2] if event == "os.rename" else args[:1]:
-            if isinstance(path, (str, bytes, os.PathLike)) and Path(os.fsdecode(path)).resolve().is_relative_to(ROOT):
+        pairs = [(args[0], args[2]), (args[1], args[3])] if event == "os.rename" else [(args[0], args[1])]
+        for path, dir_fd in pairs:
+            if isinstance(path, (str, bytes, os.PathLike)) and audit_path(path, dir_fd).is_relative_to(ROOT):
                 raise RuntimeError(f"Frozen checkout mutation blocked: {event}")
 
 
@@ -84,6 +94,22 @@ def main():
     try:
         with tempfile.TemporaryDirectory(prefix="regulatory-offline-") as folder:
             temp = Path(folder)
+            # Exercise the protection without performing an actual deletion/write.
+            for event, args in [("os.remove", (str(ROOT / "README.md"), -1)),
+                                ("open", (str(ROOT / "README.md"), "w", os.O_WRONLY)),
+                                ("socket.connect", ())]:
+                try:
+                    guard(event, args)
+                except RuntimeError:
+                    pass
+                else:
+                    raise AssertionError(f"Protection failed: {event}")
+            if sys.platform.startswith("linux"):
+                fd = os.open(temp, os.O_RDONLY)
+                try:
+                    guard("os.remove", ("parsed.json", fd))  # Safe temp location.
+                finally:
+                    os.close(fd)
             parsed, naive, legal = [temp / name for name in ("parsed.json", "naive.json", "legal.json")]
             run(notebook("NB01_regulation_library.ipynb"), [2, 4, 7, 9, 30], outputs={"OUT_JSON": parsed})
             same_json(parsed, "data/processed/parsed_regulation_library.json")
