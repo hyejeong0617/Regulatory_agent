@@ -15,19 +15,14 @@
 
 94 original `data/` blobs were moved without modifying their Git blob hashes. Source versions and saved answers were not regenerated. Notebook source references were edited to use the reorganized paths, preserving execution algorithms and existing paid-run switches.
 
-## Running notebooks
+## Path compatibility and execution defaults
 
-Run Jupyter from the repository root, rather than from inside `notebooks/`. Some historical code still uses `Path("data")` as a working-directory assertion, so `Path.cwd()` must be the repository root. If notebooks open in a Jupyter environment that changes the kernel CWD to their own folders, configure the notebook to run at root before executing.
+All 16 canonical/experimental notebooks discover the repository root in their first code cell. Root and nested kernel directories are supported; external kernels require `REGULATORY_AGENT_ROOT`. The helper explicitly changes the kernel working directory to that root. Existing relative data, result, and cross-build paths then resolve consistently. Archived notebooks are historical records and were not changed.
 
-Suggested sequence: NB01 → NB02 → NB03 → NB04b → NB08 → NB09_v3. The latter builds depend on earlier frozen artifacts; do not overwrite historical outputs with casual reruns. Paid calls require explicit notebook-specific opt-in.
+Generation/live-probe defaults were disabled in NB04b, NB08, NB09 v3 (including its later override), and the three v4 pilots. This changes execution opt-in only, not prompts, algorithms, thresholds, or saved results. Existing export cells still target frozen paths; use `tests/offline_smoke.py` for safe inspection, not Run All. Future experiments must choose fresh output paths.
 
-## Verification status
+## Verification
 
-- **Verified through GitHub object tree:** all 94 original data/result file blobs still exist unchanged (same SHA).
-- **Verified through GitHub object tree:** README file links resolve to stored files.
-- **Statically inspected:** 16 active and experimental notebooks for explicit file references after moving paths.
-- **Not verified:** actually executing Jupyter notebooks, parsing HTML end-to-end, package dependency installation, external law APIs, paid model inference, and workflow parity after migration. The current environment could not clone the repository to run Python/Jupyter. Do not describe notebooks as runtime-tested.
+See [VALIDATION.md](VALIDATION.md) for exact commands, dependency scope, results, and exclusions. The earlier clone/network limitation has been resolved. Selective real notebook cells now run offline with temporary outputs, while frozen artifact hashes are checked before and after execution.
 
-## Additional offline checks
-
-From a clone of this branch and a clean Python environment, check source files and generated artifacts exist, run `python tests/check_layout.py` (no API calls), and open the notebooks with `Path.cwd()` set to repository root. Next, selectively run read-only input-loading/parsing cells offline and compare expected row counts/identifiers before merging into `main`. A complete deterministic dependency lockfile remains future work.
+`tests/frozen_artifacts.json` records SHA-256 hashes for all 94 historical HTML/JSON/JSONL/CSV artifacts at pre-validation commit `92dd5a2b33e2a52bdf18286ff2f1b82f7aab7d2c`. The original main commit `d04694c0b7bf9915ee47e7cd14a8f7bcc8c4fa2e` has the same 94 data blobs in the reorganized tree. No migration was repeated and no historical records were deleted.

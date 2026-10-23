@@ -66,19 +66,27 @@ archive/          # prior notebook versions and older diagnostics
 README.md
 ```
 
-**Migration status:** Data and results were reorganized without modifying source HTML, benchmark JSON or saved run-result contents (blob hashes are preserved in Git). Notebook path references were updated for the new layout. `Path("data")` remains in some legacy checks and diagnostic code; run Jupyter with the repository root as CWD. **Static GitHub-backed path checks completed; full clean-environment notebook execution is not yet verified.** See [MIGRATION](docs/MIGRATION.md).
+**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. All 94 original data/result artifacts remain unchanged. This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
 
-## Running the notebooks
+## Reproducing the offline checks
 
-From the **repository root**:
+Use **Python 3.11** and a fresh environment. Dependency installation needs internet; the tests themselves block network connections and writes to tracked research files.
 
 ```bash
-jupyter lab
+python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows PowerShell: .\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python tests/check_layout.py
+python tests/check_notebooks.py
+python tests/offline_smoke.py
 ```
 
-In Jupyter, navigate to the notebook in `notebooks/` and verify `Path.cwd()` points to the repository root. Run notebook cells in NB01 → NB02 → NB03 → NB04b order to rebuild the early pipeline; NB08/NB09 depend on frozen upstream artifacts in `data/processed/` and `results/build01_02/`. Install the imports required by each notebook in an appropriate environment; a consolidated dependency lockfile has **not** yet been verified.
+The default smoke test needs no model download or API key. For full local Dense + BM25 + RRF parity, pre-cache `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, then run `python tests/offline_smoke.py --dense`. The dense test fails if the model is unavailable; it does not download it. See [environment and cache instructions](docs/VALIDATION.md).
 
-**Important:** Paid execution is opt-in (see notebook-specific flags and credentials). The notebooks contain historical research runs; reproduction may invoke paid APIs. Do not rerun frozen benchmark outputs merely to view results. Internet access is required for some law-version checks.
+For interactive exploration, install `requirements-notebooks.txt` and run `jupyter lab`. The first code cell in each active/experimental notebook discovers the repository root from the kernel's current directory and parents. For a kernel launched outside the checkout, set `REGULATORY_AGENT_ROOT` to its absolute path before running that cell. Archived notebooks retain their historical assumptions.
+
+Paid generation/live-probe flags now default to **False**, including the later NB09 override cell. **Do not Run All to inspect frozen results:** NB01–03 export cells and some later summary/config cells still write historical output paths even with paid calls disabled. Use the smoke script, which redirects permitted exports to a temporary directory and compares them with frozen artifacts. Any deliberate new experiment needs separate output paths before executing export or generation cells. Model prompts, retrieval algorithms, thresholds, and existing notebook outputs are unchanged.
 
 ## Build04 evaluation and experimental pilots
 
@@ -98,7 +106,7 @@ The Lean pilot uses QID-specific legal-article routes discovered during developm
 
 A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its reviewed findings and comparison are kept in [Notion's Codex-built comparison](https://app.notion.com/p/401695ed0f6281989347c86c678e376e). The Codex implementation is **not part of this repository**; a separate source-only repository is planned.
 
-The earlier **Claude-built parallel comparison was cancelled**. No claim of AI-led or human-guided general superiority follows from one case and differently resourced systems.
+No claim of AI-led or human-guided general superiority follows from one case and differently resourced systems.
 
 ## Reproducibility, sources and limitations
 
