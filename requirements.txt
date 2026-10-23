@@ -1,0 +1,14 @@
+# Direct notebook dependencies; Python 3.11 recommended. Not a historical lockfile.
+# Upper bounds keep this refactor within the existing API families.
+beautifulsoup4>=4.12,<5
+lxml>=5,<7
+numpy>=1.26,<3
+pandas>=2.2,<4
+rank-bm25==0.2.2
+sentence-transformers>=3.4,<7
+requests>=2.32,<3
+openai>=1.60,<4
+openai-agents>=0.1,<1
+pydantic>=2,<3
+langgraph>=0.2,<2
+ipython>=8,<10
