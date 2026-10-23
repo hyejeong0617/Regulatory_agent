@@ -25,13 +25,13 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 | 02 — Static hybrid RAG | 5/10 | 9/10 | 2/10 | Owner-reviewed against frozen verified reference |
 | 03-B — Tools | 9/10 | 6/10 | 4/10 | Owner-reviewed against frozen verified reference |
 | 04 v3 — Investigation | 8/10 | 10/10 | 3/10 | Owner-reviewed against frozen verified reference |
-| **Codex-built v1** | **5/10** | **8/10** | **2/10** | **AI-reviewed (provisional; owner verification pending)** |
+| **Codex-built v1** | **5/10** | **8/10** | **2/10** | **Human-confirmed 2026-10-23** |
 
 ## Evaluation provenance and detailed reports
 
 **Track A — Human-guided Builds 01–04:** Owner-reviewed against the frozen Verified Reference. The [Track A evaluation](EVALUATION.md) describes each architecture's outcomes, trade-offs and supporting records. Public worksheet templates do not expose every final individual human grading judgment.
 
-**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. These have **not** been independently reviewed by the owner. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) .
+**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. The owner **confirmed all Q1–Q10 judgments individually on 2026-10-23** against the original run records and frozen Gold Standard; none of the provisional ratings changed. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) .
 
 **Execution caveats:** Codex Q5 was retained from a pre-freeze development smoke test with matching v1 settings, not rerun as a held-out post-freeze test. Codex Q9 was incomplete and counted No in the preliminary quality review. The agent's `partial` and `incomplete` workflow statuses are **not** Correct/Grounded/Complete judgments. See the [Track B execution report](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md).
 
@@ -41,7 +41,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 - Track B illustrates how an AI coding agent can implement a testable, auditable agent from requirements without inheriting Track A's code or responses. Its citation checking rejects exact-quote mismatches but cannot guarantee correct legal entailment.
 - Both systems can miss conditions buried in complex Annex tables, external referenced acts, and date-specific law. The Codex v1 Q9 interruption is an observed execution limitation.
 - Different retrieval, prompts, development sequences and execution budgets mean the tracks are **not** identical-condition controlled trials. Ten interrelated questions on one case do not measure general regulatory accuracy.
-- Human review of Track B's provisional grading remains outstanding; the numerical Codex scores above reflect the documented provisional AI-assisted review dated 2026-10-22. Future held-out evaluations should use new cases not exposed during development.
+- Human review of Track B's initial AI-assisted grading was completed on 2026-10-23; the numerical Codex scores above reflect the documented provisional AI-assisted review dated 2026-10-22. Future held-out evaluations should use new cases not exposed during development.
 
 ## Evidence and source links
 
@@ -50,7 +50,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 - [Track A offline validation](VALIDATION.md)
 - [Track B independent implementation](https://github.com/hyejeong0617/regulatory-investigation-agent)
 - [Track B evaluation protocol](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/evaluation_protocol.md)
-- [Track B dedicated quality evaluation (AI-reviewed, provisional)](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md)
+- [Track B dedicated quality evaluation (human-confirmed)](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md)
 - [Track B retained v1 execution results](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md)
 
 **Research status:** Both implementations and their original outputs are frozen. This document is a provenance-aware portfolio comparison, not a legal advice service.
