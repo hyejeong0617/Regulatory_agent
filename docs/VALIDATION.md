@@ -19,14 +19,14 @@ It does not rerun Q1–Q10 generation, regrade answers, or establish current law
 | Build03 / Build04 saved records | PASS | Q1–Q10 loaded for each build; QIDs checked |
 | Lean / both Adaptive v4 notebooks | PASS | Local preview, input loading and comparison against saved v3/pilot records |
 | Frozen integrity | PASS | 94 SHA-256 hashes before/after; original main's 94 Git blobs preserved; existing notebook cell outputs/execution counts unchanged |
-| Python 3.11 clean GitHub Actions runtime | PENDING | Updated workflow installs dependencies and runs the no-model-download suite; check the latest PR commit's Actions result |
+| Python 3.11 clean GitHub Actions runtime | PASS | [Successful run](https://github.com/hyejeong0617/Regulatory_agent/actions/runs/39931930020): dependency installation, pip check, runtime suite and tracked-file preservation |
 | Paid LLM generation / complete benchmark rerun | NOT TESTED | Deliberately excluded; no API key used |
 | Live law/version services | NOT TESTED | Network denied during smoke execution; mocked parsing does not certify live currentness |
 | Complete notebooks / archived notebooks | NOT TESTED | Only allowlisted cells executed; archive and historical export workflows are not certified |
 
 No unresolved local smoke-test failures remain. Initial sandbox temporary-directory
 permissions and a test harness's handling of diagnostic `%pip` commands were
-resolved without changing research computations. The HTML parser emitted its
+resolved without changing research computations. Linux directory-relative temporary-file cleanup was also tested and corrected in the harness; the subsequent complete CI run passed. The HTML parser emitted its
 existing XML-as-HTML warning; its complete output nevertheless equals the frozen
 artifact. The pre-existing local Anaconda environment also warned about optional
 `numexpr`; the core tests passed. Prefer the clean environment below.
@@ -109,3 +109,10 @@ The integrity manifest records original Git-blob SHA-256 hashes and their exact
 LF-to-CRLF checkout equivalents for Windows `core.autocrlf`. No files are normalized
 or rewritten by the check. This avoids treating Git's checkout line-ending expansion
 as research-data corruption while still rejecting any content changes.
+
+## Merge recommendation
+
+**READY TO MERGE** for the repository refactor, subject to final human review.
+Local dense parity and clean Python 3.11 offline CI pass; no remaining refactor
+blockers are known. This recommendation does not certify paid model reruns,
+live law checks, archive execution, or unrestricted notebook Run All.
