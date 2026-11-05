@@ -190,7 +190,7 @@ def evidence_list(records: list, build: str) -> None:
 def show_answer(build: str, data: dict, qid: str) -> None:
     item = data.get("builds", {}).get(build)
     with st.container(border=True):
-        st.subheader(build, divider=False)
+        st.subheader(build)
         st.caption(BUILDS[build])
         if not isinstance(item, dict):
             st.error(f"The stored {build} record is missing for {qid}.")
