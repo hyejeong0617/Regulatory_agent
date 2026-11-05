@@ -1,385 +1,397 @@
-"""AI Architecture Evaluation Explorer — historical, read-only Project 003 demo.
+"""AI Architecture Evaluation Explorer — immutable saved-result viewer.
 
-Five implementations and ten related questions, using original public frozen
-records. No generation, legal advice, hidden grading, or API credentials.
+No network calls, model inference, credentials, new grading, or live legal advice.
+All Q1–Q10 answers are bundled from the two publicly released research tracks.
 """
 from __future__ import annotations
 
+import html
 import json
-import re
-from typing import Any
-from urllib.parse import quote
+from pathlib import Path
 
-import pandas as pd
-import requests
 import streamlit as st
 
-A_REPO = "hyejeong0617/Regulatory_agent"
-B_REPO = "hyejeong0617/regulatory-investigation-agent"
-# Pin exact public revisions to preserve historical result identity.
-A_REV = "db9803c2f0b8c39ccb6aa4dcd825eefd48c9c5ac"
-B_REV = "73d4ce039183ec8d395cf8b6cd02613b01a668e6"
-A_RAW = "https://raw.githubusercontent.com/" + A_REPO + "/" + A_REV + "/"
-B_RAW = "https://raw.githubusercontent.com/" + B_REPO + "/" + B_REV + "/"
-A_WEB = "https://github.com/" + A_REPO + "/blob/" + A_REV + "/"
-B_WEB = "https://github.com/" + B_REPO + "/blob/" + B_REV + "/"
+DATA_DIR = Path(__file__).resolve().parent / "data"
+TRACK_A = "https://github.com/hyejeong0617/Regulatory_agent"
+TRACK_B = "https://github.com/hyejeong0617/regulatory-investigation-agent"
 
-BUILD_NAMES = {
-    "Build 01": "Prompt-only",
+BUILDS = {
+    "Build 01": "Prompt-only baseline",
     "Build 02": "Static hybrid RAG",
     "Build 03-B": "Tools + targeted retrieval",
     "Build 04 v3": "Multi-step investigation",
-    "Codex-built v1": "Independent Codex-led implementation",
+    "Codex-built v1": "Separate Codex-led investigation",
 }
-COUNTS = {
+SCORES = {
     "Build 01": (5, 0, 2),
     "Build 02": (5, 9, 2),
     "Build 03-B": (9, 6, 4),
     "Build 04 v3": (8, 10, 3),
     "Codex-built v1": (5, 8, 2),
 }
-# These question-level labels are published only for Track B.
-B_GRADES = {
-    "Q1": ("Yes", "Yes", "Yes"),
-    "Q2": ("No", "Partial", "No"),
-    "Q3": ("Yes", "Yes", "Yes"),
-    "Q4": ("Partial", "Yes", "Partial"),
-    "Q5": ("Partial", "Yes", "No"),
-    "Q6": ("Yes", "Yes", "Partial"),
-    "Q7": ("Yes", "Yes", "Partial"),
-    "Q8": ("Yes", "Yes", "Partial"),
-    "Q9": ("No", "No", "No"),
-    "Q10": ("Partial", "Yes", "No"),
+# Only the Codex-built track has publicly available final individual ratings.
+CODEX_GRADES = {
+    "Q1": ("Yes", "Yes", "Yes"), "Q2": ("No", "Partial", "No"),
+    "Q3": ("Yes", "Yes", "Yes"), "Q4": ("Partial", "Yes", "Partial"),
+    "Q5": ("Partial", "Yes", "No"), "Q6": ("Yes", "Yes", "Partial"),
+    "Q7": ("Yes", "Yes", "Partial"), "Q8": ("Yes", "Yes", "Partial"),
+    "Q9": ("No", "No", "No"), "Q10": ("Partial", "Yes", "No"),
 }
-B_SLUG = {
-    "Q1": "32d833f3", "Q2": "8845886b", "Q3": "9fc58f1a",
-    "Q4": "6866b007", "Q5": "a08c925f", "Q6": "f8bdff3f",
-    "Q7": "0f27e1c3", "Q8": "6fbba5df", "Q9": "c7c58bd6",
-    "Q10": "80548726",
-}
-FAILURES = {
-    "Q1": "Compare how each architecture identifies relevant EU-law instruments.",
-    "Q2": "Codex v1 rejected the 6/10 µg/kg numerical claims from accepted legal requirements, although the values appeared in unresolved commentary.",
-    "Q3": "The handling of dried-fig sorting and processing conditions can differ across architectures.",
-    "Q4": "Codex v1 identified import-control provisions but did not conclusively resolve Annex II hazard and check-frequency pairing.",
-    "Q5": "Codex v1 did not settle the certificate, prior notification and applicable inspection-frequency requirements. Its retained run was development-exposed.",
-    "Q6": "Compare the coverage of operator and competent-authority responsibilities.",
-    "Q7": "Review how conditional non-compliance and regulatory actions were synthesized.",
-    "Q8": "Distinguish historical legal snapshots from provisions requiring current verification.",
-    "Q9": "Codex v1 ended with an incomplete execution. Its No/No/No outcome does not establish a legal-reasoning error.",
-    "Q10": "Codex v1 lacked a fully supported synthesis of key import documentation and obligations.",
+QUESTION_NOTES = {
+    "Q1": "Compare which relevant EU legal instruments each approach identified.",
+    "Q2": "Codex v1 rejected the 6 and 10 µg/kg numbers as accepted legal claims; the values remained in its unresolved-issues commentary.",
+    "Q3": "Processing and sorting exceptions require careful interpretation of the dried-fig-specific provisions.",
+    "Q4": "Codex v1 did not fully resolve Annex II hazard/check-frequency pairing.",
+    "Q5": "Codex v1 left certificate, prior-notification and check-frequency conditions unresolved. Its Q5 result was retained from a development smoke test.",
+    "Q6": "Compare the coverage of food-business-operator and competent-authority obligations.",
+    "Q7": "Review how each answer distinguishes established facts from conditional corrective measures.",
+    "Q8": "Historical legal snapshots are not proof of current requirements.",
+    "Q9": "Codex v1 ended with incomplete execution; this is not evidence of incorrect legal reasoning.",
+    "Q10": "Codex v1 did not completely synthesize the relevant border documentation and other conditions.",
 }
 
 st.set_page_config(
-    page_title="EU Regulatory Agent | Architecture Evaluation Explorer",
-    page_icon="⚖️",
+    page_title="AI Architecture Evaluation Explorer | Scientific AI Builder",
+    page_icon="🔬",
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Deliberately scoped CSS and a light Streamlit theme. No generic "*"/"p,li,div"
+# overrides: those caused unreadable native tabs, metrics and table widgets.
 st.markdown(
     """
     <style>
-    .stApp {background-color: #F7F9FC; color: #17253A;}
-    .block-container {max-width: 1560px; padding-top: 1.6rem; padding-bottom: 4rem;}
-    [data-testid="stSidebar"] {background: #13273C;}
-    [data-testid="stSidebar"] * {color: #ECF3F7 !important;}
-    [data-testid="stSidebar"] [data-baseweb="select"] * {color: #17253A !important;}
-    .kicker {font-size: .75rem; font-weight: 750; letter-spacing: .13em; color: #287A82; text-transform: uppercase;}
-    .hero {border: 1px solid #DCE5EB; border-radius: 18px; padding: 1.6rem 1.8rem; background: #FFF;}
-    .hero h1 {font-size: 2rem; font-weight: 800; color: #17334C; margin: .28rem 0 .5rem;}
-    .hero p {font-size: 1rem; color: #506679; margin: 0;}
-    .subtle {font-size: .86rem; color: #647689;}
-    div[data-testid="stMetric"] {background: #FFF; border: 1px solid #DFE7ED; padding: 1rem; border-radius: 13px;}
-    div[data-testid="stVerticalBlockBorderWrapper"] {background: #FFF;}
-    a {color: #167682;}
+    .stApp { background: #F5F8FB; }
+    .block-container { max-width: 1510px; padding-top: 1.55rem; padding-bottom: 3.6rem; }
+    [data-testid="stSidebar"] { background: #E8F0F5; border-right: 1px solid #D1DFE8; }
+    [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] p, [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] a { color: #223B50 !important; }
+    [data-testid="stSidebar"] a { text-decoration: none; font-weight: 600; }
+    [data-testid="stSidebar"] a:hover { color: #087E85 !important; text-decoration: underline; }
+    [data-testid="stSidebar"] hr { border-color: #CDDAE3; }
+    [data-testid="stMain"] h1, [data-testid="stMain"] h2,
+    [data-testid="stMain"] h3 { color: #16364E; }
+    .hero { background: #FFF; border: 1px solid #DBE6ED; border-radius: 17px;
+            padding: 1.4rem 1.65rem; box-shadow: 0 3px 14px rgba(25,55,79,.035); }
+    .hero .eyebrow { font-size: .72rem; letter-spacing: .13em; font-weight: 800;
+                     color: #0F8588; text-transform: uppercase; }
+    .hero h1 { margin: .25rem 0 .52rem; font-size: clamp(1.5rem, 3vw, 2.12rem);
+               font-weight: 790; color: #16364E; line-height: 1.2; }
+    .hero p { margin: 0; color: #577084; font-size: .95rem; line-height: 1.55; }
+    .kpi { background: white; border: 1px solid #DBE6ED; border-radius: 14px;
+           padding: 1rem 1.2rem; min-height: 106px; }
+    .kpi .label { font-size: .84rem; color: #526A7D; font-weight: 680; }
+    .kpi .num { font-size: 2rem; font-weight: 790; color: #16364E; line-height: 1.35; }
+    .kpi .detail { font-size: .78rem; color: #697D8F; }
+    .scorewrap { background: white; border: 1px solid #DBE6ED; border-radius: 14px;
+                 padding: 1.05rem 1.25rem; overflow-x: auto; }
+    .scoregrid { display: grid; grid-template-columns: minmax(160px, 1.55fr)
+                 repeat(3, minmax(100px, 1fr)); min-width: 545px;
+                 align-items: center; gap: .7rem 1.05rem; }
+    .scorehead { font-size: .78rem; font-weight: 750; color: #4C6477;
+                 border-bottom: 1px solid #DFE8EE; padding: .1rem 0 .72rem; }
+    .scorename { font-weight: 700; font-size: .9rem; color: #1B3A51; }
+    .scorecell { font-size: .85rem; font-weight: 650; color: #2E4B61; }
+    .barback { background: #E7EEF3; height: 7px; border-radius: 12px;
+               margin-top: .34rem; overflow: hidden; }
+    .barfill { background: #208C91; height: 100%; border-radius: 12px; }
+    .tagline { color: #527087; font-size: .83rem; }
+    .grade { padding: .22rem .6rem; border-radius: 99px; font-size: .76rem;
+             font-weight: 740; display: inline-block; margin: .15rem .3rem .2rem 0; }
+    .grade-yes { background: #E5F5ED; color: #176B45; }
+    .grade-no { background: #FCEDEC; color: #A34441; }
+    .grade-partial { background: #FFF2D9; color: #895D0C; }
+    .grade-none { background: #ECF1F5; color: #576E81; }
+    .statusnote { padding: .58rem .82rem; background: #EEF5F8;
+                  border-left: 3px solid #238B90; color: #36586C;
+                  border-radius: 5px; font-size: .85rem; margin-bottom: .65rem; }
+    .stButton > button, [data-testid="stLinkButton"] a { border-radius: 9px; }
+    div[data-testid="stVerticalBlockBorderWrapper"] { border-color: #DBE6ED; border-radius: 13px; }
+    [data-testid="stRadio"] [role="radiogroup"] { gap: .55rem; }
+    [data-testid="stRadio"] label { border-radius: 8px; }
+    [data-testid="stAlert"] { border-radius: 10px; }
+    @media (max-width: 760px) {
+        .block-container { padding-left: 1rem; padding-right: 1rem; }
+        .hero { padding: 1.05rem 1.15rem; }
+    }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def get_text(url: str) -> str:
-    """Read version-pinned public GitHub raw files; fail closed on HTTP errors."""
-    response = requests.get(url, timeout=22, headers={"User-Agent": "Project003-Evaluation-Explorer/1.0"})
-    response.raise_for_status()
-    return response.text
+@st.cache_data(show_spinner=False)
+def read_question(qid: str) -> dict:
+    """Read bundled, fixed public results. The app never fetches from GitHub at runtime."""
+    if qid not in [f"Q{i}" for i in range(1, 11)]:
+        raise ValueError("Unrecognized benchmark question")
+    path = DATA_DIR / f"{qid}.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("qid") != qid or not isinstance(data.get("builds"), dict):
+        raise ValueError(f"Malformed bundled {qid} record")
+    return data
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def get_baselines() -> dict[tuple[str, str], dict[str, Any]]:
-    records: dict[tuple[str, str], dict[str, Any]] = {}
-    path = "results/build01_02/nb04b_context_repaired_openai_luna_generation_results.jsonl"
-    for line in get_text(A_RAW + path).splitlines():
-        if not line.strip():
-            continue
-        item = json.loads(line)
-        name = {"prompt_only": "Build 01", "rag": "Build 02"}.get(item.get("mode"))
-        qid = item.get("qid")
-        if name and qid:
-            records[(qid, name)] = {
-                "question": item.get("question", ""),
-                "answer": item.get("answer", ""),
-                "status": "Saved generation",
-                "evidence": [],
-                "metrics": {"input_tokens": item.get("input_tokens"),
-                            "output_tokens": item.get("output_tokens")},
-                "url": A_WEB + path,
-                "notes": "Build 01 has no retrieval evidence." if name == "Build 01" else "Answer citation tags refer to retrieved source evidence; the frozen result record may not contain an expanded evidence trail.",
-            }
-    return records
+def grade_badge(label: str, value: str) -> str:
+    klass = value.lower() if value in ("Yes", "No", "Partial") else "none"
+    return '<span class="grade grade-' + klass + '">' + html.escape(label) + ": " + html.escape(value) + "</span>"
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def get_questions() -> list[dict[str, str]]:
-    # Prefer the actual questions attached to canonical saved baseline outputs.
-    baselines = get_baselines()
-    questions = []
-    for i in range(1, 11):
-        qid = "Q" + str(i)
-        record = baselines.get((qid, "Build 01"), baselines.get((qid, "Build 02"), {}))
-        questions.append({"qid": qid, "question": record.get("question", "")})
-    return questions
+def kpi(label: str, number: str, detail: str) -> None:
+    st.markdown(
+        '<div class="kpi"><div class="label">' + html.escape(label)
+        + '</div><div class="num">' + html.escape(number)
+        + '</div><div class="detail">' + html.escape(detail) + "</div></div>",
+        unsafe_allow_html=True,
+    )
 
 
-@st.cache_data(ttl=3600, show_spinner=False)
-def get_build(qid: str, name: str) -> dict[str, Any]:
-    if name in ("Build 01", "Build 02"):
-        return get_baselines()[(qid, name)]
-    if name == "Build 03-B":
-        path = "results/build03/" + qid + ".json"
-        rec = json.loads(get_text(A_RAW + path))
-        evidence = []
-        for call in rec.get("search_calls", []):
-            for hit in call.get("results", []):
-                evidence.append({
-                    "id": hit.get("chunk_id", ""),
-                    "regulation": hit.get("regulation_title", ""),
-                    "location": hit.get("location", ""),
-                    "text": hit.get("text", ""),
-                    "url": "",
-                })
-        return {
-            "question": rec.get("question", ""), "answer": rec.get("final_output", ""),
-            "status": "Saved run (historic status: " + str(rec.get("status", "unknown")) + ")",
-            "evidence": evidence, "metrics": {"search_calls": len(rec.get("search_calls", []))},
-            "url": A_WEB + path,
-            "notes": "Search results are retrieved evidence, not necessarily cited or accepted legal conclusions.",
-        }
-    if name == "Build 04 v3":
-        path = "results/build04/" + qid + ".json"
-        rec = json.loads(get_text(A_RAW + path))
-        evidence = []
-        for hit in rec.get("evidence", []):
-            evidence.append({
-                "id": hit.get("evidence_id", ""), "regulation": hit.get("regulation_id", ""),
-                "location": hit.get("location", ""), "text": hit.get("text", ""),
-                "url": hit.get("source_url", ""),
-            })
-        return {
-            "question": rec.get("question", ""), "answer": rec.get("final_output", ""),
-            "status": "Saved run (historic status: " + str(rec.get("status", "unknown")) + ")",
-            "evidence": evidence,
-            "metrics": {"llm_calls": rec.get("llm_calls"), "search_calls": rec.get("search_calls"),
-                        "time_sec": rec.get("latency_seconds"),
-                        "tokens": sum(int(rec.get("usage", {}).get(k) or 0) for k in ("input_tokens", "output_tokens"))},
-            "url": A_WEB + path,
-            "notes": "Evidence includes retrieved snippets; not every snippet necessarily supports the final answer.",
-        }
-    slug = B_SLUG[qid]
-    path = "evaluation/v1/raw/" + qid + "/question-" + qid + "-" + slug + ".json"
-    rec = json.loads(get_text(B_RAW + path))
-    evidence = []
-    for hit in rec.get("evidence", []):
-        evidence.append({
-            "id": hit.get("id", ""), "regulation": hit.get("regulation", ""),
-            "location": hit.get("location", ""), "text": hit.get("text", ""),
-            "url": "",
-        })
-    return {
-        "question": rec.get("question", ""), "answer": rec.get("final_answer", ""),
-        "status": str(rec.get("status", "unknown")).upper(),
-        "evidence": evidence, "metrics": rec.get("metrics", {}),
-        "url": B_WEB + path,
-        "notes": "Workflow status (partial/incomplete) is separate from Correct/Grounded/Complete quality scores.",
-    }
+def scoring_table() -> None:
+    items = ['<div class="scorewrap"><div class="scoregrid">',
+             '<div class="scorehead">Implementation</div>',
+             '<div class="scorehead">Correct</div>',
+             '<div class="scorehead">Grounded</div>',
+             '<div class="scorehead">Complete</div>']
+    for build, counts in SCORES.items():
+        items.append('<div class="scorename">' + html.escape(build) + "</div>")
+        for val in counts:
+            items.append(
+                '<div class="scorecell">' + str(val) + ' / 10'
+                + '<div class="barback"><div class="barfill" style="width:'
+                + str(val * 10) + '%"></div></div></div>'
+            )
+    items.append("</div></div>")
+    st.markdown("".join(items), unsafe_allow_html=True)
 
 
-def safe_external_link(url: str) -> str:
-    """Restrict rendering of arbitrary external URLs to source HTTP(S) links."""
-    return url if isinstance(url, str) and re.match(r"^https://", url) else ""
-
-
-def show_evidence(rec: dict[str, Any], prefix: str, max_items: int = 15) -> None:
-    items = rec.get("evidence", [])
-    if not items:
-        st.info("No expanded evidence records in this saved output. See the original answer and source file.")
+def evidence_list(records: list, build: str) -> None:
+    if not records:
+        if build == "Build 01":
+            st.info("Prompt-only: no retrieval evidence was used.")
+        else:
+            st.info("Expanded evidence snippets are not included in this bundled result. Original answer citation markers are retained.")
         return
-    st.caption(str(len(items)) + " recorded retrieved evidence items. The first " + str(min(len(items), max_items)) + " are displayed; retrieval is not equivalent to legal validation.")
-    for i, e in enumerate(items[:max_items]):
-        label = str(e.get("regulation") or "Legal source") + " · " + str(e.get("location") or e.get("id") or ("item " + str(i + 1)))
-        with st.expander(label[:160]):
-            if e.get("text"):
-                st.write(str(e["text"])[:3500])
-            if safe_external_link(e.get("url", "")):
-                st.link_button("Open historical source URL", e["url"], key=prefix + "_ev_" + str(i))
+    st.caption(
+        f"{len(records)} selected evidence snippets from the original run. "
+        "These are retrieved excerpts, not independently verified accepted legal claims."
+    )
+    for index, row in enumerate(records):
+        title = str(row.get("regulation") or "Legal source")
+        where = str(row.get("location") or row.get("id") or f"Item {index + 1}")
+        with st.expander(f"{title} · {where}"[:155]):
+            st.write(row.get("text") or "(No snippet text stored.)")
+            url = row.get("url") or ""
+            if url.startswith("https://"):
+                st.link_button("Historical legal source", url)
 
 
-st.sidebar.markdown("### ⚖️ Scientific AI Builder")
-st.sidebar.caption("Project 003 · Historical evaluation")
-st.sidebar.markdown("---")
-st.sidebar.markdown("**Scope**")
-st.sidebar.write("One dried-fig/aflatoxin B1 regulatory case; ten related questions; five implementations.")
-st.sidebar.markdown("**Provenance**")
-st.sidebar.markdown("[Track A repository](https://github.com/hyejeong0617/Regulatory_agent)")
-st.sidebar.markdown("[Track B repository](https://github.com/hyejeong0617/regulatory-investigation-agent)")
-st.sidebar.markdown("[Evaluation methodology](https://github.com/hyejeong0617/Regulatory_agent/blob/main/docs/PROJECT003_COMPARISON.md)")
-st.sidebar.markdown("---")
-st.sidebar.caption("Research prototype · No model inference · Not legal advice")
+def show_answer(build: str, data: dict, qid: str) -> None:
+    item = data.get("builds", {}).get(build)
+    with st.container(border=True):
+        st.subheader(build, divider=False)
+        st.caption(BUILDS[build])
+        if not isinstance(item, dict):
+            st.error(f"The stored {build} record is missing for {qid}.")
+            return
+        status = str(item.get("status", "unknown"))
+        if build == "Codex-built v1" and status == "incomplete":
+            st.warning("Execution incomplete: this is not a completed regulatory answer.")
+        else:
+            st.markdown(
+                '<div class="statusnote">Saved execution status: '
+                + html.escape(status) + "</div>",
+                unsafe_allow_html=True,
+            )
+        if build == "Codex-built v1":
+            grades = CODEX_GRADES[qid]
+            st.markdown(
+                grade_badge("Correct", grades[0])
+                + grade_badge("Grounded", grades[1])
+                + grade_badge("Complete", grades[2]),
+                unsafe_allow_html=True,
+            )
+            st.caption("Owner-confirmed assessment of AI-assisted ratings; not externally validated.")
+        else:
+            st.caption("Individual final Track A grades are not fully public. Aggregate Yes-only counts are on Overview.")
+
+        st.markdown("**Original recorded response**")
+        answer = item.get("answer")
+        if isinstance(answer, str) and answer.strip():
+            st.markdown(answer)
+        else:
+            st.info("No completed response available in the archived record.")
+
+        source = item.get("url", "")
+        if isinstance(source, str) and source.startswith("https://github.com/"):
+            st.link_button("View original frozen record on GitHub", source)
+
+        with st.expander("Retrieved legal excerpts"):
+            evidence_list(item.get("evidence") or [], build)
+        with st.expander("Recorded execution information"):
+            st.json({"status": status, "metrics": item.get("metrics") or {}, "original_source": source})
+
+
+with st.sidebar:
+    st.markdown("### 🔬 Scientific AI Builder")
+    st.caption("Project 003 · Research portfolio")
+    st.divider()
+    st.markdown("**Case study**")
+    st.write("Türkiye · Dried figs · Aflatoxin B1")
+    st.markdown("**Study design**")
+    st.write("One case · 10 related questions · 5 implementations")
+    st.divider()
+    st.markdown("**Research sources**")
+    st.markdown(f"[Track A · Architecture lab]({TRACK_A})")
+    st.markdown(f"[Track B · Codex-built v1]({TRACK_B})")
+    st.markdown(f"[Full comparison]({TRACK_A}/blob/main/docs/PROJECT003_COMPARISON.md)")
+    st.divider()
+    st.caption("Historical evidence only. No live inference or legal advice.")
 
 st.markdown(
-    '<div class="hero"><div class="kicker">Food Safety × Applied AI · Interactive Research</div>'
+    '<section class="hero"><div class="eyebrow">Food Safety × Applied AI · Interactive Research</div>'
     '<h1>AI Architecture Evaluation Explorer</h1>'
-    '<p>Explore original saved Q1–Q10 outputs from Prompt-only, Hybrid RAG, Tools, '
-    'Investigation Agent and an independently Codex-built Agent.</p></div>',
+    '<p>Compare original saved answers across prompt-only LLM, hybrid RAG, targeted tools, '
+    'multi-step investigation and an independent Codex-built agent.</p></section>',
     unsafe_allow_html=True,
 )
 st.write("")
-st.info(
-    "This app replays historical public research artifacts. It does not run an AI model, "
-    "verify current EU law or produce new regulatory assessments. Scores are exploratory, "
-    "and the ten questions belong to one case."
+st.caption("Historical, read-only research viewer · No API key · No new model calls · Not a current-law compliance service")
+
+page = st.radio(
+    "Explore",
+    ["Overview & findings", "Compare original answers", "Evidence & limitations"],
+    horizontal=True,
+    label_visibility="collapsed",
 )
 
-overview, compare, evidence_tab = st.tabs(["Overview & findings", "Compare original answers", "Evidence & limitations"])
-
-with overview:
-    st.subheader("Architecture comparison · Frozen Yes-only counts")
-    frame = pd.DataFrame([
-        {"Implementation": n, "Correct": vals[0], "Grounded": vals[1], "Complete": vals[2]}
-        for n, vals in COUNTS.items()
-    ]).set_index("Implementation")
-    st.dataframe(frame, use_container_width=True, column_config={
-        "Correct": st.column_config.ProgressColumn("Correct Yes / 10", min_value=0, max_value=10),
-        "Grounded": st.column_config.ProgressColumn("Grounded Yes / 10", min_value=0, max_value=10),
-        "Complete": st.column_config.ProgressColumn("Complete Yes / 10", min_value=0, max_value=10),
-    })
-    st.caption(
-        "Correct, Grounded and Complete are separate owner-reviewed Yes/Partial/No dimensions. "
-        "Only Yes is counted. Track A public worksheets do not reconstruct all final question-level grades; "
-        "the detailed legal reference is private. Track B's AI-assisted ratings were owner-confirmed 2026-10-23, "
-        "not independently externally validated."
+if page == "Overview & findings":
+    st.subheader("Five architectures · Frozen evaluation")
+    st.markdown(
+        "Only **Yes** ratings are counted. Each dimension is scored separately; "
+        "a better source-grounding score does not necessarily indicate greater answer quality."
     )
+    scoring_table()
+    st.write("")
     a, b, c = st.columns(3)
     with a:
-        st.metric("Cases", "1", help="One selected Türkiye dried-fig/aflatoxin B1 case.")
+        kpi("Case studies", "1", "One Türkiye dried-fig case")
     with b:
-        st.metric("Related questions", "10")
+        kpi("Benchmark questions", "10", "Related, not independent")
     with c:
-        st.metric("Implementations", "5", help="Four Track A builds and one independent Track B implementation.")
-    st.markdown("#### Research narrative")
+        kpi("Implementations", "5", "Four Track A + one Track B")
+
+    st.info(
+        "Track A scores are historical owner-reviewed aggregates; public grading worksheets "
+        "do not reproduce all question-level final judgments. Track B individual ratings "
+        "were AI-assisted and owner-confirmed on 2026-10-23, not externally validated."
+    )
+    st.subheader("From RASFF evidence to regulatory AI", divider="gray")
     st.markdown(
-        "**Historical RASFF EDA (2020–2025)** → three candidate scenarios → "
-        "**Türkiye dried figs / aflatoxin B1** → ten fixed questions → five implementations."
+        "**RASFF EDA (2020–2025)** → three regulatory case candidates → "
+        "**Türkiye dried figs / aflatoxin B1** → ten questions → architecture evaluation."
     )
     st.markdown(
-        "The original [RASFF candidate artifacts](https://github.com/hyejeong0617/rasff_risk_predictor/tree/main/RASFF_Rebuild/artifacts) "
-        "informed **case selection**, not model training, runtime retrieval, or the legal reference. "
-        "Case counts are notifications, not incidence or risk rates."
+        "The [public RASFF analysis artifacts]"
+        "(https://github.com/hyejeong0617/rasff_risk_predictor/tree/main/RASFF_Rebuild/artifacts) "
+        "were used to **identify a case**, not for LLM training, runtime retrieval or legal grading. "
+        "Notification counts are not population risk or incident rates."
     )
-    st.markdown("#### Key observations")
+    st.subheader("Key observations", divider="gray")
     st.markdown(
-        "1. Greater source grounding did **not** consistently produce higher correctness or completeness.\n"
-        "2. Exact-quote checking may reject useful but poorly traced claims; Annex-table interpretation "
-        "and issue coverage remain distinct challenges.\n"
-        "3. A stopped execution (Codex Q9) is a reliability problem, not proof of a legal-reasoning error."
+        "- Greater grounding did **not consistently** increase correctness or completeness.\n"
+        "- Exact-quotation checks, complex Annex interpretation and issue coverage can fail independently.\n"
+        "- An incomplete workflow (Codex Q9) demonstrates execution reliability limits, not proven legal reasoning error."
     )
 
-with compare:
+elif page == "Compare original answers":
+    st.subheader("Compare original answers")
     try:
-        questions = get_questions()
-        labels = {q["qid"]: q["qid"] + " · " + q["question"] for q in questions}
-        selected_qid = st.selectbox("Benchmark question", list(labels), format_func=lambda x: labels[x], index=0)
-        st.markdown("**Original question**")
-        st.write(next(q["question"] for q in questions if q["qid"] == selected_qid))
-        selected_builds = st.multiselect(
-            "Implementations to compare", list(BUILD_NAMES), default=list(BUILD_NAMES),
-        )
-        if not selected_builds:
-            st.warning("Select at least one implementation.")
-        else:
-            st.caption("Answer text is drawn from version-pinned public results. Expand the source evidence for supporting snippets.")
-            for offset in range(0, len(selected_builds), 2):
-                cols = st.columns(2)
-                for i, name in enumerate(selected_builds[offset:offset + 2]):
-                    with cols[i]:
-                        with st.container(border=True):
-                            st.markdown("#### " + name)
-                            st.caption(BUILD_NAMES[name])
-                            try:
-                                rec = get_build(selected_qid, name)
-                                status = rec.get("status", "Unknown")
-                                if name == "Codex-built v1" and status == "INCOMPLETE":
-                                    st.warning("Execution incomplete — not a completed legal answer.")
-                                else:
-                                    st.caption("Historical run status: " + status)
-                                if name == "Codex-built v1":
-                                    grades = B_GRADES[selected_qid]
-                                    st.markdown(
-                                        "**Question-level owner-confirmed grading:** "
-                                        "Correct " + grades[0] + " · Grounded " + grades[1] +
-                                        " · Complete " + grades[2]
-                                    )
-                                else:
-                                    st.caption("Question-level final grading not fully published for Track A; see aggregate summary on Overview.")
-                                answer = rec.get("answer", "")
-                                st.markdown(answer if answer else "_No completed answer available in the frozen record._")
-                                st.link_button("Open original saved output", rec["url"], use_container_width=True)
-                                with st.expander("Retrieved evidence and source snippets"):
-                                    show_evidence(rec, selected_qid + "_" + name.replace(" ", "_"))
-                                with st.expander("Recorded execution metadata"):
-                                    st.json({"status": status, "metrics": rec.get("metrics", {}),
-                                             "source": rec["url"]})
-                                    st.caption(rec.get("notes", ""))
-                            except (requests.RequestException, ValueError, KeyError) as exc:
-                                st.error("This source record could not be loaded. The app will not fabricate a replacement answer.")
-                                st.caption(type(exc).__name__ + ": " + str(exc)[:180])
-            st.markdown("#### Recorded interpretation for this question")
-            st.info(FAILURES[selected_qid])
-            st.caption("These failure notes are descriptive research annotations, not fresh question-level adjudications for all five builds.")
-    except (requests.RequestException, ValueError, KeyError, StopIteration) as exc:
-        st.error("Unable to load the canonical questions from GitHub. Check network access or try again later.")
-        st.caption(type(exc).__name__ + ": " + str(exc)[:200])
+        options = {f"Q{i}": read_question(f"Q{i}")["question"] for i in range(1, 11)}
+    except (OSError, ValueError, KeyError, json.JSONDecodeError) as err:
+        st.error("Saved local benchmark files could not be read. Please check the deployed repository bundle.")
+        st.code(str(err))
+        st.stop()
 
-with evidence_tab:
-    st.subheader("Methods, evaluation provenance & known boundaries")
+    qid = st.selectbox(
+        "Select benchmark question",
+        list(options),
+        format_func=lambda value: f"{value} · {options[value]}",
+    )
+    st.markdown("**Question**")
+    st.write(options[qid])
+    chosen = st.multiselect(
+        "Implementations",
+        list(BUILDS),
+        default=list(BUILDS),
+        help="Select one or more frozen runs; no new AI response is generated.",
+    )
+    view = st.radio(
+        "Answer layout",
+        ["Single-column reading", "Two-column comparison"],
+        horizontal=True,
+    )
+    st.caption(
+        "Each card contains the original stored response, source link, selected evidence "
+        "and execution information. The answer text is not regenerated."
+    )
+    try:
+        record = read_question(qid)
+    except (OSError, ValueError, KeyError, json.JSONDecodeError) as err:
+        st.error(f"The bundled record for {qid} cannot be opened.")
+        st.code(str(err))
+        st.stop()
+
+    if not chosen:
+        st.info("Select at least one implementation to compare.")
+    elif view == "Single-column reading":
+        for build in chosen:
+            show_answer(build, record, qid)
+    else:
+        for start in range(0, len(chosen), 2):
+            columns = st.columns(2, gap="medium")
+            for index, build in enumerate(chosen[start:start + 2]):
+                with columns[index]:
+                    show_answer(build, record, qid)
+
+    st.subheader(f"Research note · {qid}", divider="gray")
+    st.info(QUESTION_NOTES[qid])
+    st.caption("Interpretive notes are sourced from existing project evaluations; not fresh grading across all five runs.")
+
+else:
+    st.subheader("Evidence provenance and research boundaries")
     st.markdown(
-        "**Original records:** Track A Build 01/02 JSONL and Build 03/04 per-question JSON; "
-        "Track B original per-question JSON. Source links within each card lead to immutable revisions."
+        "**Source preservation:** Q1–Q10 answer texts and selected evidence excerpts are bundled "
+        "from the two public frozen GitHub revisions. Each answer card links to its full "
+        "original record. Build 01 and 02 originated in one generation JSONL; Builds 03 "
+        "and 04 and Codex v1 originated in question-level JSON files."
     )
     st.markdown(
-        "**Evidence display:** Build 01 has no retrieval. Build 02 answers include citation tokens, "
-        "but expanded evidence links are not uniformly embedded in the saved baseline JSONL. "
-        "Build 03/04 and Codex records preserve retrieved source snippets at differing levels of detail. "
-        "An extracted snippet is not automatically a validated legal conclusion."
+        "**Evidence display:** Build 01 did not retrieve sources. Build 02's archived answers "
+        "include citation markers but the expanded supporting evidence is not stored in the "
+        "same JSONL record. Build 03, Build 04 and Codex preserved different kinds of "
+        "retrieved legal excerpts. The app shows selected excerpts, not all tool logs."
     )
     st.markdown(
-        "**Scores:** Aggregate counts are historical owner-reviewed results; individual Track A "
-        "final ratings cannot all be independently reconstructed from the published worksheets. "
-        "Track B individual grading is published but its reference remains private. "
-        "The comparison is exploratory, not an independently validated general benchmark."
+        "**Scores:** Track A public worksheets do not fully reconstruct its historical "
+        "owner-reviewed individual ratings. The detailed legal reference remains private. "
+        "Track B's initial AI-assisted question-level labels were confirmed by the owner "
+        "but not independently externally validated. Workflow states (e.g., incomplete) "
+        "and regulatory-answer grades are distinct."
     )
     st.markdown(
-        "**Boundary conditions:** One case and ten related development-exposed questions; "
-        "five historical EU-law snapshots; unequal prompts, development sequences and budgets; "
-        "no verified current-law applicability or production compliance performance."
+        "**Scientific constraints:** One development-exposed case with ten related questions; "
+        "historical EUR-Lex snapshots; unequal development conditions, prompts and budgets; "
+        "no prospective legal-validity or real-world regulatory-compliance assessment."
     )
     st.markdown(
-        "**Further research (not implemented):** Unseen independent cases (Extension B); "
-        "a larger standardized and independently adjudicated benchmark (Extension C)."
+        "**Future extensions (not implemented):** independently selected unseen cases "
+        "(Extension B) and a standardized multi-case benchmark with reproducible "
+        "question-level adjudication (Extension C)."
     )
     st.markdown(
-        "[Track A evaluation](https://github.com/hyejeong0617/Regulatory_agent/blob/main/docs/EVALUATION.md) · "
-        "[Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) · "
-        "[Shared methodology](https://github.com/hyejeong0617/Regulatory_agent/blob/main/docs/PROJECT003_COMPARISON.md)"
+        f"[Track A evaluation]({TRACK_A}/blob/main/docs/EVALUATION.md) · "
+        f"[Track B evaluation]({TRACK_B}/blob/main/docs/QUALITY_EVALUATION.md) · "
+        f"[Shared methodology]({TRACK_A}/blob/main/docs/PROJECT003_COMPARISON.md)"
     )
