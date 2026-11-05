@@ -1,0 +1,35 @@
+name: Evaluation Explorer static QA
+
+on:
+  push:
+    paths:
+      - "evaluation_explorer/**"
+      - ".github/workflows/evaluation-explorer-qa.yml"
+  pull_request:
+    paths:
+      - "evaluation_explorer/**"
+      - ".github/workflows/evaluation-explorer-qa.yml"
+
+jobs:
+  python-syntax:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Streamlit source without executing it
+        run: python -B -c "import ast, pathlib; ast.parse(pathlib.Path('evaluation_explorer/app.py').read_text(encoding='utf-8'))"
+      - name: Verify basic frozen-source references and absence of API credentials
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('evaluation_explorer/app.py').read_text(encoding='utf-8')
+          for phrase in ('Build 01','Build 02','Build 03-B','Build 04 v3','Codex-built v1','B_SLUG','get_baselines','get_build','st.tabs'):
+              assert phrase in s, phrase
+          assert 'OPENAI_API_KEY' not in s
+          assert 'st.secrets' not in s
+          print("Static explorer structure: PASS")
+          PY
