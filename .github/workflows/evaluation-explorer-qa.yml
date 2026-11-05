@@ -22,6 +22,8 @@ jobs:
           python-version: "3.11"
       - name: Compile Streamlit source without executing it
         run: python -B -c "import ast, pathlib; ast.parse(pathlib.Path('evaluation_explorer/app.py').read_text(encoding='utf-8'))"
+      - name: Verify all archived results and answer provenance
+        run: python -B evaluation_explorer/test_data.py
       - name: Verify basic frozen-source references and absence of API credentials
         run: |
           python - <<'PY'
