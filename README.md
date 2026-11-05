@@ -1,146 +1,150 @@
-# EU Food Regulatory Agent — Architecture Learning Lab
+# EU Food Regulatory Agent — AI Architecture Evaluation
 
-**Scientific AI Builder · Project 003 · Track A: Human-guided, AI-assisted development · October 2026**
+**Scientific AI Builder · Project 003 | Food Safety × Regulatory Intelligence × Applied AI**
 
-An exploratory, case-driven learning experiment comparing **Prompt-only → Static RAG → Tools → Investigation Agent** on one frozen EU food-regulatory case: **Türkiye-origin dried figs with aflatoxin B1 detected**.
+A case-driven research project investigating how **retrieval, tools and agentic investigation** affect the correctness, evidence grounding and completeness of EU food-regulatory answers.
 
-> **Status:** Builds 01–04 completed and evaluated. **Build04 Full Investigation v3** is the frozen final implementation. Lean RAG and Adaptive Agent v4 are exploratory Q5/Q9/Q10 pilots, not final replacements. This is **not** a production regulatory compliance tool or legal advice.
+**[▶ Open the AI Architecture Evaluation Explorer](https://regulatoryagent-comparison.streamlit.app/)** · [View the Streamlit source](evaluation_explorer/app.py) · [Compare all five implementations](docs/PROJECT003_COMPARISON.md) · [Explore the independent Codex-built agent](https://github.com/hyejeong0617/regulatory-investigation-agent)
 
-## Interactive Evaluation Explorer (Streamlit source)
+> **Research demo, not a live regulatory assistant.** The Streamlit app displays original, saved Q1–Q10 answers and selected supporting records. It does **not** generate new answers, validate current legislation or provide legal advice. The hosted URL was supplied after deployment by the project owner; full hosted/browser QA has not been independently verified here.
 
-[**AI Architecture Evaluation Explorer**](evaluation_explorer/README.md) is a read-only Streamlit app for selecting Q1–Q10 and comparing the **original saved answers** from four Track A builds and the independent Codex-built v1. It shows available retrieved evidence, recorded execution states and qualified evaluation results; **Codex Q9 is an incomplete run**. No model calls or API keys are needed. The app's [source](evaluation_explorer/app.py) and [local/deployment guide](evaluation_explorer/README.md) are published; **a public hosted Streamlit URL has not yet been verified**.
+## Project at a glance
 
-## Research Origin / Case Selection
+| | Research scope |
+| --- | --- |
+| **Research question** | How do increasing levels of retrieval, tools and investigation change **Correct**, **Grounded** and **Complete** outcomes? |
+| **Case** | Türkiye-origin dried figs with aflatoxin B1 detected |
+| **Benchmark** | 10 related questions about **one** case; five frozen EU-law HTML snapshots |
+| **Implementations** | Four human-guided Track A builds + one independent Codex-built Track B agent |
+| **Interactive demo** | Read-only Streamlit Explorer showing **50 saved question–implementation answers/records** |
+| **Central finding** | Stronger source grounding did **not** consistently lead to greater correctness or completeness |
 
-**Research question:** How do retrieval, tools and investigation steps change grounding, correctness and completeness on a fixed food-regulatory case?
+### Try the interactive demo
 
-The research chain was **RASFF EDA (2020–2025) → three candidate scenarios → Türkiye dried figs / aflatoxin B1 → Q1–Q10 → architecture comparison**. The three scenarios considered were Poland poultry / *Salmonella Enteritidis*, Türkiye dried figs / aflatoxin B1, and India sesame seeds / ethylene oxide. The Türkiye case was selected for the focused study; its regulatory questions and implemented comparison are documented in the [public benchmark](data/benchmark/benchmark_questions_v1.json), [canonical notebooks](#canonical-notebooks), and [architecture comparison](docs/PROJECT003_COMPARISON.md). The underlying RASFF candidate patterns are documented in the public EDA artifacts linked below. This is a documented research choice, not a statistically validated ranking of cases.
+The **[AI Architecture Evaluation Explorer](https://regulatoryagent-comparison.streamlit.app/)** lets visitors:
 
-Public EDA evidence: [category-level candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_case_candidates.csv), [individual-hazard candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_individual_hazard_candidates.csv), and [subject drilldown](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_subject_drilldown.csv). The 297 Türkiye / fruits-and-vegetables / aflatoxin B1 notifications are **not a dried-fig-only count**. Likewise, the 212 India / nuts-and-seeds / ethylene oxide notifications are not necessarily sesame-only. Notification counts and recorded serious shares are case-discovery statistics, not incidence, population risk or validated legal conclusions; selection was a research decision, not a statistically optimal ranking.
+1. Inspect five implementations' frozen Yes-only evaluation totals.
+2. Select Q1–Q10 and compare **original saved answers side by side**, including Build 03-B versus Build 04 v3.
+3. Expand available retrieved legal excerpts, run metadata and original GitHub source links.
+4. Explore documented failure modes, including Codex v1's **incomplete Q9 run**.
 
-**RASFF informed case discovery only:** it was not used for model training, inference retrieval or the legal reference. Legal analysis used the frozen EU-law sources and a separately maintained reference.
+All answer texts come from the original published artifacts bundled with the app. There is **no OpenAI API key, paid inference or live law lookup**. See [Explorer methodology and local setup](evaluation_explorer/README.md).
 
-## At a glance
+## From RASFF data analysis to a regulatory AI research question
 
-Ten questions (Q1–Q10), one fixed case, five versioned EUR-Lex HTML snapshots. Each build was evaluated on **Correct**, **Grounded** and **Complete**, labeled Yes / Partial / No. Values below count **Yes only**, not Partial.
+This project started with exploratory analysis of EU Rapid Alert System for Food and Feed (**RASFF**) notifications from 2020–2025, rather than an arbitrary chatbot prompt.
 
-| Build | Correct | Grounded | Complete | Outcome |
-| --- | ---: | ---: | ---: | --- |
-| 01 · Prompt-only | 5/10 | 0/10 | 2/10 | Initial baseline; incorrect dried-fig sorting generalization |
-| 02 · Static hybrid RAG | 5/10 | 9/10 | 2/10 | Better grounding, fixed Top-5 evidence coverage gaps |
-| **03-B · Tools** | **9/10** | 6/10 | **4/10** | Highest Correct and Complete counts |
-| **04 v3 · Investigation** | 8/10 | **10/10** | 3/10 | Highest Grounded count; costly iterative investigation |
+```text
+RASFF notification EDA
+    ↓ origin × food category × hazard patterns
+Three candidate regulatory scenarios
+    ↓ research selection
+Türkiye · dried figs · aflatoxin B1
+    ↓ ten related regulatory questions + frozen EU legal corpus
+Prompt-only → Hybrid RAG → Tools → Investigation Agent
+    ↘ independent Codex-built implementation and comparative evaluation
+```
 
-**Evaluation provenance:** These are historical owner-reviewed aggregate ratings. The detailed reference is private and public worksheets do not fully reconstruct the final question-level judgments; the results have not been independently externally validated.
+The three candidate scenarios were **Poland / poultry / Salmonella Enteritidis**, **Türkiye / dried figs / aflatoxin B1** and **India / sesame seeds / ethylene oxide**. The Türkiye scenario was selected for a focused, multi-provision regulatory investigation, including contaminant limits, import controls, operator responsibilities and source-based synthesis.
 
-For architecture-specific findings and evaluation limitations, see the [Track A Build 01–04 quality evaluation](docs/EVALUATION.md). For the complete five-implementation overview, see the [Project 003 comparison](docs/PROJECT003_COMPARISON.md).
+**Public case-selection evidence:** [category-level RASFF candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_case_candidates.csv), [individual-hazard candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_individual_hazard_candidates.csv) and [subject/product drilldown](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_subject_drilldown.csv).
 
-**Main outcome:** Greater grounding did not consistently imply greater correctness or completeness. These are ten related questions about one case, not ten independent scenarios or general regulatory accuracy.
+The saved analysis includes **297** Türkiye-origin *fruits and vegetables* notifications involving aflatoxin B1—**not 297 dried-fig-only notifications**. Notification frequencies do not measure product-specific incidence or population risk, and the scenario was **not** selected by a statistically validated optimization algorithm.
 
-**Project owner contribution:** Problem formulation, RASFF-informed case selection, regulatory analysis and question design, Track A architecture decisions, evaluation criteria, human review and interpretation. Track A implementation used AI coding assistance. Track B architecture and coding were led by Codex under human-defined requirements, corpus and budget limits.
+**RASFF was used for case discovery and research design only:** it was **not** model-training data, the agent's runtime retrieval corpus or the legal answer reference. Regulatory assessment used five frozen historical EUR-Lex snapshots and a separately maintained owner-verified reference.
 
-## Companion implementation and shared comparison
+## Architecture design — Track A
 
-This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. AI-assisted question-level ratings were individually confirmed by the project owner on 2026-10-23; they have not been independently externally validated. The initial review was on 2026-10-22; owner confirmation against the frozen reference and original run records made no changes (Correct 5/10, Grounded 8/10, Complete 2/10, Yes-only).
-
-## Canonical notebooks
-
-| Stage | Files | Purpose |
+| Build | Approach | What was tested |
 | --- | --- | --- |
-| Build01–02 · Source preparation | [NB01](notebooks/build01_02/NB01_regulation_library.ipynb) → [NB02](notebooks/build01_02/NB02_chunking_v2_rowgroup_fix.ipynb) | Parse frozen HTML laws and build legal-aware chunks |
-| Build02 · Retrieval | [NB03](notebooks/build01_02/NB03_final_hybrid_static_RAG.ipynb) | Freeze Dense + BM25 + Reciprocal Rank Fusion (Top-5) |
-| Build01–02 · Benchmark | [NB04b](notebooks/build01_02/NB04b_context_repaired_full_rerun_OpenAI_GPT6_Luna_v2.ipynb) | Matched prompt-only versus RAG Q1–Q10 run |
-| Build03-B · Tools | [NB08](notebooks/build03/NB08_build03B_Q1_Q10_gap_analysis.ipynb) | Dynamic evidence/tool retrieval and Q1–Q10 evaluation |
-| **Build04 · Final** | **[NB09_v3](notebooks/build04/NB09_v3.ipynb)** | Full Investigation workflow, frozen Q1–Q10 |
+| **01 · Prompt-only** | LLM without retrieved legal evidence | Baseline response generation |
+| **02 · Hybrid RAG** | Legal-aware chunks, dense retrieval + BM25 + reciprocal rank fusion, fixed Top-5 context | Whether static retrieval improves evidence grounding |
+| **03-B · Tools** | Retrieval plus targeted search and related tool calls | Whether targeted evidence gathering closes missing-provision gaps |
+| **04 v3 · Investigation** | Plan → retrieve/tools → validate → check issue coverage → re-search → report | Whether multi-step investigation improves grounded and complete analysis |
 
-Exploratory notebooks belong in [Build03 diagnostics](experiments/build03_diagnostics) and [Build04 v4 pilots](experiments/build04_v4_pilots). Superseded variants stay under [archive](archive). Do **not** interpret pilot results as replacement Build04 scores.
+**Build 04 v3 is the frozen final Track A implementation.** Build 04 v4 Lean RAG and Adaptive Agent were **three-question (Q5/Q9/Q10) exploratory pilots**, not replacements for its final benchmark.
 
-## How the architectures differ
+The companion **[Track B — Codex-built Regulatory Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent)** was independently architected and coded by Codex under human-defined requirements, source materials, evaluation constraints and budget. It is a distinct implementation, **not a fifth Track A notebook** and not a controlled human-versus-AI productivity study.
 
-```text
-Frozen EU-law documents
-  ├─ Build01: prompt-only LLM (no retrieved evidence)
-  ├─ Build02: parsing → legal chunks → dense/BM25/RRF → fixed Top-5 → LLM
-  ├─ Build03: baseline retrieval + targeted tools and additional lookups
-  └─ Build04: plan → retrieve/tools → validate → check coverage → re-search → report
-```
+## Frozen evaluation results
 
-**Observation:** Additional retrieval improves grounding when the right provision is available; more agent steps do not guarantee higher answer completeness.
+The same ten related questions were assessed for **Correct** (material conclusions), **Grounded** (traceable legal evidence) and **Complete** (coverage of required issues/conditions). The categorical ratings were **Yes / Partial / No**; the numbers below count **Yes only**.
 
-## Repository layout
+| Implementation | Correct | Grounded | Complete |
+| --- | ---: | ---: | ---: |
+| Build 01 · Prompt-only | 5/10 | 0/10 | 2/10 |
+| Build 02 · Hybrid RAG | 5/10 | 9/10 | 2/10 |
+| **Build 03-B · Tools** | **9/10** | 6/10 | **4/10** |
+| **Build 04 v3 · Investigation** | 8/10 | **10/10** | 3/10 |
+| Codex-built v1 | 5/10 | 8/10 | 2/10 |
 
-```text
-notebooks/
-  build01_02/     # canonical NB01–NB04b
-  build03/        # canonical NB08
-  build04/        # frozen NB09_v3
-experiments/
-  build03_diagnostics/
-  build04_v4_pilots/
-data/
-  legal_sources/  # five frozen EUR-Lex HTML snapshots
-  benchmark/      # fixed Q1–Q10 question set
-  processed/      # parsed/chunked library and retrieval artifacts
-results/
-  build01_02/     # generated baseline records
-  build03/        # NB08 Q1–Q10 execution outputs
-  build04/        # NB09 v3 outputs + v4 pilot subfolders
-docs/             # architecture, evaluation, limitations, migration notes
-archive/          # prior notebook versions and older diagnostics
-README.md
-```
+**What the results show within this case:**
 
-**Validation status (2026-11-05):** On the current post-redaction checkout, layout, notebook syntax/root discovery, all 94 frozen artifact hashes and the guarded non-dense offline smoke checks passed. Dense retrieval parity remains historical validation from 2026-10-23 and was not rerun. No paid generation, live-law checks or complete notebook runs were performed. Only the benchmark's private source-URL metadata was redacted in the earlier privacy update; question texts and research outputs were preserved. See [validation evidence and boundaries](docs/VALIDATION.md) and [privacy provenance](docs/MIGRATION.md#public-reference-privacy-update-2026-10-23).
+- **Grounding ≠ completeness.** Static RAG greatly improved the number of grounded responses over the prompt-only baseline without improving the count of complete responses.
+- **More agent steps ≠ best answer quality.** Build 04 v3 had the highest grounding count, while Build 03-B had the highest correctness and completeness counts.
+- **Failure analysis matters.** The independent Codex-built agent exposed quotation-validation over-rejection (Q2), complex Annex/table and procedural gaps, and an **incomplete execution at Q9**. The latter is an execution limitation, **not** demonstrated erroneous legal reasoning.
 
-## Reproducing the offline checks
+**Evidence and grading boundary:** Track A totals are historical owner-reviewed aggregates; not every final question-level judgment can be reconstructed from the public worksheets, and the detailed reference is private. Track B's initial AI-assisted question-level ratings (2026-10-22) were individually confirmed by the owner (2026-10-23) without changes, **not independently externally validated**. Codex Q5 is a retained development-exposed smoke run. See [Track A evaluation](docs/EVALUATION.md), [combined methodology and scores](docs/PROJECT003_COMPARISON.md) and [Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md).
 
-Use **Python 3.11** and a fresh environment. Dependency installation needs internet; the tests themselves block network connections and writes to tracked research files.
+### Efficiency is an exploratory observation, not a controlled comparison
+
+The frozen Build 04 v3 Q1–Q10 run recorded **527,148 tokens, 69 LLM calls, 64 searches and 2,232.93 seconds**. A later pilot limited to Q5/Q9/Q10 recorded:
+
+| Pilot Q5/Q9/Q10 | Tokens | LLM calls | Run time |
+| --- | ---: | ---: | ---: |
+| Build 04 v3 | 200,983 | 22 | 748.86 s |
+| Lean RAG v4 | 21,487 | 4 | 95.12 s |
+| Adaptive Agent v4 | 20,619 | 7 | 97.11 s |
+
+The Lean pilot used development-informed **question-ID-specific routes**, so these figures **do not establish blind generalization, controlled latency/cost superiority or equivalent answer quality**.
+
+## My contribution and AI collaboration
+
+**Project owner:** problem formulation; RASFF-informed scenario selection; regulatory research and benchmark question design; human-guided architecture direction for Track A; evaluation criteria, answer review, interpretation and scientific limitations.
+
+**AI-assisted implementation:** code and documentation support for Track A. **Codex-led independent development:** Track B architecture and implementation within owner-specified research requirements, frozen legal corpus and budget. This work does not claim sole manual coding authorship or independently certified regulatory accuracy.
+
+**Methods / technologies:** Python, Jupyter, legal-source parsing, dense retrieval, BM25, reciprocal rank fusion (RRF), LLMs, tool calling, investigation workflows, structured run logs, evidence/coverage checking, Streamlit and GitHub CI.
+
+## Explore code, results and reproducibility
+
+| Resource | What to inspect |
+| --- | --- |
+| [Explorer](evaluation_explorer/README.md) · [source](evaluation_explorer/app.py) | Read-only demo with bundled Q1–Q10 answer records, two-column comparison and local setup |
+| [Benchmark questions](data/benchmark/benchmark_questions_v1.json) | Ten fixed questions; private verified legal-answer reference excluded |
+| [Canonical notebooks](notebooks/) | Build sequence and original experiments |
+| [Track A frozen results](results/) | Saved generation outputs, tool runs, agent outputs and three-question v4 pilots |
+| [Five-implementation comparison](docs/PROJECT003_COMPARISON.md) | Track A/B boundaries, evidence provenance and quality scores |
+| [Offline validation](docs/VALIDATION.md) | Checks performed, historical dense parity and reproducibility boundaries |
+| [Track B repository](https://github.com/hyejeong0617/regulatory-investigation-agent) | Separate Codex-built CLI, frozen Q1–Q10 records and execution report |
+
+### Run the Explorer locally
 
 ```bash
-python -m venv .venv
-# Linux/macOS: source .venv/bin/activate
-# Windows PowerShell: .\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
+python -m pip install -r evaluation_explorer/requirements.txt
+python -B evaluation_explorer/test_data.py
+streamlit run evaluation_explorer/app.py
+```
+
+The Explorer uses **bundled public historical output** and requires no API key. For the research notebooks and offline checks, use **Python 3.11**, install `requirements.txt`, then run:
+
+```bash
 python tests/check_layout.py
 python tests/check_notebooks.py
 python tests/offline_smoke.py
 ```
 
-The default smoke test needs no model download or API key. For full local Dense + BM25 + RRF parity, pre-cache `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, then run `python tests/offline_smoke.py --dense`. The dense test fails if the model is unavailable; it does not download it. See [environment and cache instructions](docs/VALIDATION.md).
+The current post-redaction checkout passed selective layout, notebook syntax/root discovery, **94 frozen artifact hash** and guarded non-dense offline smoke checks on 2026-11-05. Historical dense retrieval parity was **not** rerun; neither were paid generation, complete notebooks or live-law checks. **Do not run all notebooks casually:** some historical export cells can overwrite saved output paths. Details: [validation](docs/VALIDATION.md), [migration/privacy provenance](docs/MIGRATION.md).
 
-For interactive exploration, install `requirements-notebooks.txt` and run `jupyter lab`. The first code cell in each active/experimental notebook discovers the repository root from the kernel's current directory and parents. For a kernel launched outside the checkout, set `REGULATORY_AGENT_ROOT` to its absolute path before running that cell. Archived notebooks retain their historical assumptions.
+## Limitations and research status
 
-Paid generation/live-probe flags now default to **False**, including the later NB09 override cell. **Do not Run All to inspect frozen results:** NB01–03 export cells and some later summary/config cells still write historical output paths even with paid calls disabled. Use the smoke script, which redirects permitted exports to a temporary directory and compares them with frozen artifacts. Any deliberate new experiment needs separate output paths before executing export or generation cells. Model prompts, retrieval algorithms, thresholds, and existing notebook outputs are unchanged.
+1. **Limited evaluation scope:** one dried-fig case, ten related and development-exposed questions; no independent, held-out multi-case evaluation.
+2. **Evaluation provenance:** private reference, incomplete public Track A individual grading trail, and no independent external adjudication.
+3. **Unequal implementation conditions:** architectures, prompts, search strategies and budgets differed; results do not prove one development approach is generally superior.
+4. **Historical law and retrieval gaps:** five archived EU-law versions, complex Annex conditions and missing external provisions; **not current compliance guidance or a production system**.
 
-## Build04 evaluation and experimental pilots
+**Status: Research builds and frozen outputs complete; interactive historical-results Explorer deployed (owner-reported URL).** Future work could evaluate unseen regulatory cases and establish a multi-case benchmark with independently reviewed grading and standardized budgets; these **have not been implemented**.
 
-The full NB09 v3 Q1–Q10 evaluation recorded **527,148 tokens, 69 LLM calls, 64 searches**, and **2,232.93 s** aggregate elapsed time. Its Grounded result was strongest, but Correct and Complete remained below Build03-B.
+## License and source materials
 
-The v4 pilot compared Q5/Q9/Q10 using existing [run outputs](results/build04/):
-
-| Q5/Q9/Q10 only | Build04 v3 | Lean RAG v4 | Adaptive Agent v4 |
-| --- | ---: | ---: | ---: |
-| Tokens | 200,983 | 21,487 | 20,619 |
-| LLM calls | 22 | 4 | 7 |
-| Model-run time | 748.86s | 95.12s | 97.11s |
-
-The Lean pilot uses QID-specific legal-article routes discovered during development; it is not a blind autonomous discovery benchmark. Pilot quality scores remain provisional. These figures do not establish controlled cost or latency superiority.
-
-## Related independent experiment
-
-A separate **Codex-built Regulatory Agent v1** was autonomously implemented as an AI-led coding experiment against the same domain brief. Ten run JSON records were obtained, including an incomplete Q9 execution. Its evaluation results are documented in the [Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md). The Codex implementation is **not part of this repository**; the [independent Codex-built repository](https://github.com/hyejeong0617/regulatory-investigation-agent) is available.
-
-No claim of AI-led or human-guided general superiority follows from one case and differently resourced systems.
-
-## Reproducibility, sources and limitations
-
-- [Benchmark questions](data/benchmark/benchmark_questions_v1.json); fixed user-verified Gold Standard is maintained separately from generation inputs.
-- The five original EUR-Lex files are under `data/legal_sources/`, the fixed questions under `data/benchmark/`, and derived datasets under `data/processed/`. Their consolidation dates are historical snapshots, **not live legal advice**.
-- Some intermediate/diagnostic run outputs in `experiments/` and `archive/` predate the final build. Use the canonical links above for definitive implementations.
-- For public research context, see [Project 003 comparison](docs/PROJECT003_COMPARISON.md), [Track A quality evaluation](docs/EVALUATION.md), and [validation notes](docs/VALIDATION.md).
-
-## License and third-party materials
-
-Original software code and project-authored documentation for which the copyright holder can grant permission are available under the [MIT License](LICENSE) (Copyright © 2026 Hyejeong Lee).
-
-**Third-party materials are not relicensed under MIT.** In particular, the EU legislation HTML snapshots in `data/legal_sources/` retain their original provenance and applicable reuse conditions. Other third-party materials, if any, remain subject to their own rights and licenses. See the frozen source metadata and repository documentation. The software is a research/portfolio implementation, not legal advice or an official EU or OpenAI service.
+Original software and project-authored documentation available under the [MIT License](LICENSE) (Copyright © 2026 Hyejeong Lee). Third-party EUR-Lex HTML snapshots and other external materials retain their original rights and applicable reuse conditions. This is an independent research portfolio project, not an official EU or OpenAI service.
