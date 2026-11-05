@@ -286,7 +286,7 @@ def evidence_list(records: list, build: str) -> None:
                 st.link_button("Historical legal source", url)
 
 
-def show_answer(build: str, data: dict, qid: str) -> None:
+def show_answer(build: str, data: dict, qid: str, *, side_by_side: bool = False) -> None:
     item = data.get("builds", {}).get(build)
     with st.container(border=True):
         st.subheader(build)
@@ -317,7 +317,15 @@ def show_answer(build: str, data: dict, qid: str) -> None:
 
         st.markdown("**Original recorded response**")
         answer = item.get("answer")
-        if isinstance(answer, str) and answer.strip():
+        if side_by_side:
+            # Equal-height panels allow parallel reading with independent scrollbars.
+            # A separate scroll area keeps references and evidence controls visible.
+            with st.container(height=490, border=False):
+                if isinstance(answer, str) and answer.strip():
+                    st.markdown(answer)
+                else:
+                    st.info("No completed response available in the archived record.")
+        elif isinstance(answer, str) and answer.strip():
             st.markdown(answer)
         else:
             st.info("No completed response available in the archived record.")
@@ -366,20 +374,20 @@ page = st.radio(
 )
 
 if page == "Overview & findings":
+    a, b, c = st.columns(3)
+    with a:
+        kpi("Case study", "1", "Türkiye · Dried figs · Aflatoxin B1")
+    with b:
+        kpi("Benchmark questions", "10", "Related, not independent")
+    with c:
+        kpi("Implementations", "5", "Four Track A + one Track B")
+    st.write("")
     st.subheader("Five architectures · Frozen evaluation")
     st.markdown(
         "Only **Yes** ratings are counted. Each dimension is scored separately; "
         "a better source-grounding score does not necessarily indicate greater answer quality."
     )
     scoring_table()
-    st.write("")
-    a, b, c = st.columns(3)
-    with a:
-        kpi("Case studies", "1", "One Türkiye dried-fig case")
-    with b:
-        kpi("Benchmark questions", "10", "Related, not independent")
-    with c:
-        kpi("Implementations", "5", "Four Track A + one Track B")
 
     st.info(
         "Track A scores are historical owner-reviewed aggregates; public grading worksheets "
@@ -421,19 +429,21 @@ elif page == "Compare original answers":
     st.markdown("**Question**")
     st.write(options[qid])
     chosen = st.multiselect(
-        "Implementations",
+        "Implementations to compare",
         list(BUILDS),
-        default=list(BUILDS),
-        help="Select one or more frozen runs; no new AI response is generated.",
+        default=["Build 03-B", "Build 04 v3"],
+        help="Select two or more saved runs for side-by-side comparison; all five are available.",
     )
     view = st.radio(
-        "Answer layout",
-        ["Single-column reading", "Two-column comparison"],
+        "Comparison layout",
+        ["2 columns", "3 columns", "Single-column reading"],
         horizontal=True,
+        help="Two columns is best for reading full answers. Each answer scrolls independently.",
     )
     st.caption(
-        "Each card contains the original stored response, source link, selected evidence "
-        "and execution information. The answer text is not regenerated."
+        "Side-by-side cards have independently scrollable answer panels of equal height. "
+        "All answers are original frozen outputs, not regenerated. "
+        "When all five are selected, additional cards continue in the next row."
     )
     try:
         record = read_question(qid)
@@ -448,11 +458,15 @@ elif page == "Compare original answers":
         for build in chosen:
             show_answer(build, record, qid)
     else:
-        for start in range(0, len(chosen), 2):
-            columns = st.columns(2, gap="medium")
-            for index, build in enumerate(chosen[start:start + 2]):
+        column_count = 2 if view == "2 columns" else 3
+        if len(chosen) == 1:
+            st.caption("Select another implementation to compare answers side by side.")
+        for start in range(0, len(chosen), column_count):
+            row_builds = chosen[start:start + column_count]
+            columns = st.columns(column_count, gap="medium")
+            for index, build in enumerate(row_builds):
                 with columns[index]:
-                    show_answer(build, record, qid)
+                    show_answer(build, record, qid, side_by_side=True)
 
     st.subheader(f"Research note · {qid}", divider="gray")
     st.info(QUESTION_NOTES[qid])
