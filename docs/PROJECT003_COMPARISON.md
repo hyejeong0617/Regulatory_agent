@@ -2,7 +2,7 @@
 
 **Scientific AI Builder · October 2026 · Frozen research case**
 
-Two complementary approaches investigate EU food-regulatory questions using the same ten-question case and five frozen EUR-Lex HTML snapshots.
+Two complementary approaches investigate EU food-regulatory questions using the same ten-question case and five frozen EUR-Lex HTML snapshots. The [case-selection provenance](../README.md#research-origin--case-selection) links RASFF EDA, three candidate scenarios and the selected Türkiye dried-fig case. RASFF informed discovery, not training, inference retrieval or the legal reference.
 
 | Track | Repository | Development approach | Main implementation |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 
 **Track A — Human-guided Builds 01–04:** Owner-reviewed against the frozen Verified Reference. The [Track A evaluation](EVALUATION.md) describes each architecture's outcomes, trade-offs and supporting records. Public worksheet templates do not expose every final individual human grading judgment.
 
-**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. The owner **confirmed all Q1–Q10 judgments individually on 2026-10-23** against the original run records and frozen Gold Standard; none of the provisional ratings changed. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) .
+**Track B — Codex-built v1:** A separate AI-assisted question-level review on **2026-10-22** produced the provisional **5/10 Correct, 8/10 Grounded, 2/10 Complete** Yes-only counts. AI-assisted question-level ratings were individually confirmed by the project owner on 2026-10-23; they have not been independently externally validated. Confirmation used the original run records and frozen Gold Standard; none of the initial ratings changed. See the [dedicated Track B quality evaluation](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md) .
 
 **Execution caveats:** Codex Q5 was retained from a pre-freeze development smoke test with matching v1 settings, not rerun as a held-out post-freeze test. Codex Q9 was incomplete and counted No in the preliminary quality review. The agent's `partial` and `incomplete` workflow statuses are **not** Correct/Grounded/Complete judgments. See the [Track B execution report](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/evaluation/v1/EVALUATION_REPORT.md).
 
@@ -41,7 +41,7 @@ Ratings use **Yes / Partial / No**. The table counts **Yes only**; partial ratin
 - Track B illustrates how an AI coding agent can implement a testable, auditable agent from requirements without inheriting Track A's code or responses. Its citation checking rejects exact-quote mismatches but cannot guarantee correct legal entailment.
 - Both systems can miss conditions buried in complex Annex tables, external referenced acts, and date-specific law. The Codex v1 Q9 interruption is an observed execution limitation.
 - Different retrieval, prompts, development sequences and execution budgets mean the tracks are **not** identical-condition controlled trials. Ten interrelated questions on one case do not measure general regulatory accuracy.
-- Human review of Track B's initial AI-assisted grading was completed on 2026-10-23; the numerical Codex scores above reflect the documented provisional AI-assisted review dated 2026-10-22. Future held-out evaluations should use new cases not exposed during development.
+- Human review of Track B's initial AI-assisted grading was completed on 2026-10-23; the numerical Codex scores above preserve the initial AI-assisted review dated 2026-10-22, with no changes on owner confirmation. Future held-out evaluations should use new cases not exposed during development.
 
 ## Evidence and source links
 

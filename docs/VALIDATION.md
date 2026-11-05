@@ -1,6 +1,26 @@
-# Offline refactor validation — 2026-10-23
+# Offline validation — current checks and historical refactor evidence
 
-> **Historical verification note:** The PASS results below describe the pre-redaction research snapshot. A later public-privacy update replaced the private workspace URL in `data/benchmark/benchmark_questions_v1.json` with a non-URL source label, preserving all ten question texts and the benchmark identifier. `tests/frozen_artifacts.json` was updated to validate the public, metadata-redacted benchmark file; the other frozen data/result contents were not intentionally changed. The historical original hash is preserved in Git history. Full offline checks must be rerun on this PR before claiming post-redaction validation.
+> **Historical verification note:** The PASS results in the historical section describe the pre-redaction research snapshot. A later public-privacy update replaced the private workspace URL in `data/benchmark/benchmark_questions_v1.json` with a non-URL source label, preserving all ten question texts and the benchmark identifier. `tests/frozen_artifacts.json` was updated to validate the public, metadata-redacted benchmark file; the other frozen data/result contents were not intentionally changed. The historical original hash is preserved in Git history. The post-redaction checks below establish current selective offline validation; dense retrieval parity remains historical and was not rerun.
+
+## Current post-redaction checks — 2026-11-05
+
+Executed on Windows with the existing Python 3.13.5 environment after fast-forwarding to `1ebb4cdd186da67fbdb60872a6ec149cd55f2103`. The Phase 2 changes are documentation only; no packages were installed and no model was downloaded.
+
+| Check | Result | Scope |
+| --- | --- | --- |
+| `python -B tests/check_layout.py` | PASS | Five law files, 13 essential paths, notebook JSON |
+| `python -B tests/check_notebooks.py` | PASS | All 94 public-manifest hashes, 16 notebooks, 223 compiled cells, root/nested/external directory discovery |
+| `python -B tests/offline_smoke.py` with `PYTHONIOENCODING=utf-8` | PASS | Frozen parsing/chunking equality, BM25 initialization, prompt/config loading, tool registration, mocked Cellar tests, Build04 graph and deterministic checks, pilot previews and saved Q1–Q10 record loading |
+| Frozen research-file preservation | PASS | All 94 hashes passed before and after smoke execution |
+| Dense retrieval parity, paid inference, live-law services, full notebook execution | NOT TESTED | No new benchmark answers or grades were generated |
+
+The first notebook check was blocked by a sandbox directory permission and passed on an authorized rerun. The first smoke invocation stopped while printing an en dash under Windows cp949; the unchanged test passed with UTF-8 console output. Existing optional `numexpr` version and XML-as-HTML parser warnings did not prevent completion. The smoke harness blocked network access and checkout writes, with permitted exports directed to temporary storage. The two package-installation magic lines were not executed.
+
+**Existing CI evidence:** [Track A run 39949077992](https://github.com/hyejeong0617/Regulatory_agent/actions/runs/39949077992) passed at `186ca96412ad054fae38f422fbd6a03ceef1855e`, before the public benchmark metadata redaction. It is historical evidence, not CI certification of this documentation release. The existing workflow does not trigger on pushes to `main`; it was not changed. Current local selective checks above do not reproduce the full paid benchmark or certify current legislation.
+
+## Historical refactor validation — 2026-10-23
+
+The remaining sections preserve the historical refactor record, including its then-current PR and merge recommendation. They are not new Phase 2 test results.
 
 This validates the repository reorganization and selected real notebook cells.
 It does not rerun Q1–Q10 generation, regrade answers, or establish current law.

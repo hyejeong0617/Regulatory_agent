@@ -2,9 +2,19 @@
 
 **Scientific AI Builder · Project 003 · Track A: Human-guided, AI-assisted development · October 2026**
 
-A controlled learning experiment comparing **Prompt-only → Static RAG → Tools → Investigation Agent** on one frozen EU food-regulatory case: **Türkiye-origin dried figs with aflatoxin B1 detected**.
+An exploratory, case-driven learning experiment comparing **Prompt-only → Static RAG → Tools → Investigation Agent** on one frozen EU food-regulatory case: **Türkiye-origin dried figs with aflatoxin B1 detected**.
 
 > **Status:** Builds 01–04 completed and evaluated. **Build04 Full Investigation v3** is the frozen final implementation. Lean RAG and Adaptive Agent v4 are exploratory Q5/Q9/Q10 pilots, not final replacements. This is **not** a production regulatory compliance tool or legal advice.
+
+## Research Origin / Case Selection
+
+**Research question:** How do retrieval, tools and investigation steps change grounding, correctness and completeness on a fixed food-regulatory case?
+
+The research chain was **RASFF EDA (2020–2025) → three candidate scenarios → Türkiye dried figs / aflatoxin B1 → Q1–Q10 → architecture comparison**. The alternatives were Poland poultry / Salmonella Enteritidis and India sesame seeds / ethylene oxide. The [historical candidate-design record](https://app.notion.com/p/3f4695ed0f6280638234c03709d0e81f) selects the Türkiye case as the primary deep dive; the [historical sprint record](https://app.notion.com/p/3f0695ed0f62807ab467ce8fcf5f6432) connects it to the four builds. These Notion records may require access and retain historical status wording; current evaluation provenance is documented below.
+
+Public EDA evidence: [category-level candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_case_candidates.csv), [individual-hazard candidates](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_individual_hazard_candidates.csv), and [subject drilldown](https://github.com/hyejeong0617/rasff_risk_predictor/blob/main/RASFF_Rebuild/artifacts/regulatory_agent_subject_drilldown.csv). The 297 Türkiye / fruits-and-vegetables / aflatoxin B1 notifications are **not a dried-fig-only count**. Likewise, the 212 India / nuts-and-seeds / ethylene oxide notifications are not necessarily sesame-only. Notification counts and recorded serious shares are case-discovery statistics, not incidence, population risk or validated legal conclusions; selection was a research decision, not a statistically optimal ranking.
+
+**RASFF informed case discovery only:** it was not used for model training, inference retrieval or the legal reference. Legal analysis used the frozen EU-law sources and a separately maintained reference.
 
 ## At a glance
 
@@ -17,13 +27,17 @@ Ten questions (Q1–Q10), one fixed case, five versioned EUR-Lex HTML snapshots.
 | **03-B · Tools** | **9/10** | 6/10 | **4/10** | Highest Correct and Complete counts |
 | **04 v3 · Investigation** | 8/10 | **10/10** | 3/10 | Highest Grounded count; costly iterative investigation |
 
+**Evaluation provenance:** These are historical owner-reviewed aggregate ratings. The detailed reference is private and public worksheets do not fully reconstruct the final question-level judgments; the results have not been independently externally validated.
+
 For architecture-specific findings and evaluation limitations, see the [Track A Build 01–04 quality evaluation](docs/EVALUATION.md). For the complete five-implementation overview, see the [Project 003 comparison](docs/PROJECT003_COMPARISON.md).
 
-These results describe one benchmark, not general regulatory accuracy. The human-guided builds used AI coding assistance.
+**Main outcome:** Greater grounding did not consistently imply greater correctness or completeness. These are ten related questions about one case, not ten independent scenarios or general regulatory accuracy.
+
+**Project owner contribution:** Problem formulation, RASFF-informed case selection, regulatory analysis and question design, Track A architecture decisions, evaluation criteria, human review and interpretation. Track A implementation used AI coding assistance. Track B architecture and coding were led by Codex under human-defined requirements, corpus and budget limits.
 
 ## Companion implementation and shared comparison
 
-This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. Track B's Q1–Q10 AI-assisted ratings were individually reviewed and **confirmed by the project owner on 2026-10-23**, with no changes (Correct 5/10, Grounded 8/10, Complete 2/10, Yes-only). Track B remains a separate implementation and is summarized in the shared comparison.
+This repository is **Track A** of [Scientific AI Builder — Project 003](docs/PROJECT003_COMPARISON.md). An [independent Codex-built Agent v1](https://github.com/hyejeong0617/regulatory-investigation-agent) was implemented under human-defined requirements without reusing these notebooks or answers. It is a separate Track B, **not** a fifth notebook build. See the [shared architecture and evaluation comparison](docs/PROJECT003_COMPARISON.md) for scope, provenance, and differences in assessment status. AI-assisted question-level ratings were individually confirmed by the project owner on 2026-10-23; they have not been independently externally validated. The initial review was on 2026-10-22; owner confirmation against the frozen reference and original run records made no changes (Correct 5/10, Grounded 8/10, Complete 2/10, Yes-only).
 
 ## Canonical notebooks
 
@@ -72,7 +86,7 @@ archive/          # prior notebook versions and older diagnostics
 README.md
 ```
 
-**Validation status:** Offline parsing and chunking reproduce the frozen JSON; local cached-model retrieval matches all 50 ordered chunks in NB03, NB08 and NB09 v3. Build04 graph initialization and its deterministic evidence/coverage/reporting tests pass. Of the 94 originally tracked research data/result artifacts, only the benchmark JSON's private source-URL metadata has been redacted; all ten questions and other research outputs remain unchanged. The public benchmark hash is updated in the frozen manifest (see [privacy provenance note](docs/MIGRATION.md#public-reference-privacy-update-2026-10-23)). This is selective offline validation, not proof that complete notebooks or paid generation reproduce historical runs. See [validation report](docs/VALIDATION.md).
+**Validation status (2026-11-05):** On the current post-redaction checkout, layout, notebook syntax/root discovery, all 94 frozen artifact hashes and the guarded non-dense offline smoke checks passed. Dense retrieval parity remains historical validation from 2026-10-23 and was not rerun. No paid generation, live-law checks or complete notebook runs were performed. Only the benchmark's private source-URL metadata was redacted in the earlier privacy update; question texts and research outputs were preserved. See [validation evidence and boundaries](docs/VALIDATION.md) and [privacy provenance](docs/MIGRATION.md#public-reference-privacy-update-2026-10-23).
 
 ## Reproducing the offline checks
 

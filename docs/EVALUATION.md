@@ -17,7 +17,7 @@ The three dimensions were **Correct** (materially accurate conclusions), **Groun
 | 03-B — Tools | 9/10 | 6/10 | 4/10 | Owner-reviewed |
 | 04 v3 — Investigation | 8/10 | 10/10 | 3/10 | Owner-reviewed |
 
-The same figures appeared in the pre-existing Track A evaluation summary; no results were regraded for this documentation revision. Public manual-evaluation worksheets include unfilled or REVIEW fields, and the full reference-based judgment trail remains outside this GitHub repository; these aggregate figures therefore cannot be independently reconstructed from those worksheets alone.
+These are historical owner-reviewed aggregate ratings, not independently externally validated results. The same figures appeared in the pre-existing Track A evaluation summary; no results were regraded for this documentation revision. Public manual-evaluation worksheets include unfilled or REVIEW fields, and the full reference-based judgment trail remains outside this GitHub repository; these aggregate figures therefore cannot be independently reconstructed from those worksheets alone.
 
 ## Build-by-build interpretation
 
@@ -53,6 +53,8 @@ The frozen Build04 v3 run recorded **527,148 tokens, 69 LLM calls, 64 searches, 
 - [Frozen Build 1–2 outputs](../results/build01_02/), [Build 3 outputs](../results/build03/), [Build 4 outputs](../results/build04/).
 - [Offline validation and boundaries](VALIDATION.md).
 - [Project 003 — All five implementations](PROJECT003_COMPARISON.md).
-- [Track B — Codex quality assessment (AI-reviewed, provisional)](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md).
+- [Track B — Codex quality assessment (AI-assisted, owner-confirmed)](https://github.com/hyejeong0617/regulatory-investigation-agent/blob/main/docs/QUALITY_EVALUATION.md).
+
+AI-assisted question-level ratings were individually confirmed by the project owner on 2026-10-23; they have not been independently externally validated. The initial review was on 2026-10-22; owner confirmation used the frozen reference and original Q1–Q10 records without score changes.
 
 Build04's experimental Lean/Adaptive v4 Q5/Q9/Q10 pilots are **not** substitutes for the frozen Build04 v3 score. The completed v1 results are preserved; none were modified by this documentation update.
