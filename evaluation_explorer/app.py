@@ -112,6 +112,105 @@ st.markdown(
     [data-testid="stRadio"] [role="radiogroup"] { gap: .55rem; }
     [data-testid="stRadio"] label { border-radius: 8px; }
     [data-testid="stAlert"] { border-radius: 10px; }
+
+    /* Contrast guard: Streamlit deployment can retain a dark text theme even
+       when the page background is light. Scope overrides to the main content. */
+    [data-testid="stMain"], [data-testid="stMainBlockContainer"] {
+        color: #213A50 !important;
+        background-color: #F5F8FB;
+    }
+    [data-testid="stMain"] [data-testid="stMarkdownContainer"],
+    [data-testid="stMain"] [data-testid="stMarkdownContainer"] p,
+    [data-testid="stMain"] [data-testid="stMarkdownContainer"] li,
+    [data-testid="stMain"] [data-testid="stMarkdownContainer"] strong,
+    [data-testid="stMain"] [data-testid="stMarkdownContainer"] em,
+    [data-testid="stMain"] [data-testid="stText"],
+    [data-testid="stMain"] [data-testid="stCaptionContainer"],
+    [data-testid="stMain"] [data-testid="stWidgetLabel"] p,
+    [data-testid="stMain"] [data-testid="stHeading"] {
+        color: #213A50 !important;
+    }
+    [data-testid="stMain"] [data-testid="stCaptionContainer"] p {
+        color: #546B7D !important;
+    }
+    /* Navigation radio: visible labeled cards, not anonymous colored dots. */
+    [data-testid="stMain"] [data-testid="stRadio"] [role="radiogroup"] {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: stretch;
+        gap: .55rem !important;
+        margin: .45rem 0 1rem;
+    }
+    [data-testid="stMain"] [data-testid="stRadio"] [role="radiogroup"] > label {
+        display: inline-flex !important;
+        align-items: center;
+        min-height: 2.55rem;
+        background: #FFFFFF;
+        border: 1px solid #C9D9E4;
+        border-radius: 10px !important;
+        padding: .44rem .8rem;
+        cursor: pointer;
+    }
+    [data-testid="stMain"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) {
+        background: #DFF2F1;
+        border-color: #13858B;
+        box-shadow: inset 0 0 0 1px #13858B;
+    }
+    [data-testid="stMain"] [data-testid="stRadio"] label p,
+    [data-testid="stMain"] [data-testid="stRadio"] label span,
+    [data-testid="stMain"] [data-testid="stRadio"] label div,
+    [data-testid="stMain"] [data-testid="stRadio"] [data-testid="stMarkdownContainer"] p {
+        color: #183B53 !important;
+        font-weight: 650 !important;
+        opacity: 1 !important;
+    }
+    [data-testid="stMain"] [data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) p {
+        color: #086F73 !important;
+    }
+    /* Text-entry labels, selectors and multi-select tags must retain contrast. */
+    [data-testid="stMain"] [data-baseweb="select"] > div,
+    [data-testid="stMain"] [data-baseweb="select"] [role="combobox"],
+    [data-testid="stMain"] [data-baseweb="input"] > div {
+        background-color: #FFFFFF !important;
+        color: #20384E !important;
+        border-color: #CADAE5 !important;
+    }
+    [data-testid="stMain"] [data-baseweb="select"] input,
+    [data-testid="stMain"] [data-baseweb="select"] span,
+    [data-testid="stMain"] [data-baseweb="select"] div,
+    [data-testid="stMain"] [data-baseweb="input"] input {
+        color: #20384E !important;
+        -webkit-text-fill-color: #20384E !important;
+    }
+    [data-testid="stMain"] [data-baseweb="tag"] {
+        background-color: #DCF2F0 !important;
+        color: #145E63 !important;
+    }
+    [data-testid="stMain"] [data-baseweb="tag"] span {
+        color: #145E63 !important;
+        -webkit-text-fill-color: #145E63 !important;
+    }
+    [data-testid="stMain"] [data-testid="stExpander"],
+    [data-testid="stMain"] [data-testid="stVerticalBlockBorderWrapper"] {
+        background: #FFFFFF;
+        color: #213A50 !important;
+    }
+    [data-testid="stMain"] [data-testid="stExpander"] summary,
+    [data-testid="stMain"] [data-testid="stExpander"] summary p,
+    [data-testid="stMain"] [data-testid="stExpander"] summary span {
+        color: #213A50 !important;
+    }
+    [data-testid="stMain"] a:not([data-testid="stLinkButton"] a) {
+        color: #087984 !important;
+    }
+    [data-testid="stMain"] [data-testid="stLinkButton"] a {
+        background: #FFFFFF !important;
+        color: #106B75 !important;
+        border: 1px solid #B9D2DC !important;
+    }
+    [data-testid="stMain"] [data-testid="stAlert"] p {
+        color: #25475B !important;
+    }
     @media (max-width: 760px) {
         .block-container { padding-left: 1rem; padding-right: 1rem; }
         .hero { padding: 1.05rem 1.15rem; }
