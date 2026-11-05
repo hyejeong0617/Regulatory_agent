@@ -6,6 +6,10 @@ An exploratory, case-driven learning experiment comparing **Prompt-only → Stat
 
 > **Status:** Builds 01–04 completed and evaluated. **Build04 Full Investigation v3** is the frozen final implementation. Lean RAG and Adaptive Agent v4 are exploratory Q5/Q9/Q10 pilots, not final replacements. This is **not** a production regulatory compliance tool or legal advice.
 
+## Interactive Evaluation Explorer (Streamlit source)
+
+[**AI Architecture Evaluation Explorer**](evaluation_explorer/README.md) is a read-only Streamlit app for selecting Q1–Q10 and comparing the **original saved answers** from four Track A builds and the independent Codex-built v1. It shows available retrieved evidence, recorded execution states and qualified evaluation results; **Codex Q9 is an incomplete run**. No model calls or API keys are needed. The app's [source](evaluation_explorer/app.py) and [local/deployment guide](evaluation_explorer/README.md) are published; **a public hosted Streamlit URL has not yet been verified**.
+
 ## Research Origin / Case Selection
 
 **Research question:** How do retrieval, tools and investigation steps change grounding, correctness and completeness on a fixed food-regulatory case?
